@@ -101,7 +101,7 @@ export default async function ExpressPage() {
                   <span>Book Pickup Online (My Wash)</span>
                 </Link>
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-all"
@@ -291,7 +291,7 @@ export default async function ExpressPage() {
                   <span>Schedule on My Wash</span>
                 </Link>
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-white/20 px-6 py-3 text-xs font-bold text-white hover:bg-white/30 transition-all"

@@ -60,19 +60,35 @@
     bubble.addEventListener('mouseenter', pop);
   });
 
-  // ----- Video pause when offscreen -----
+  // ----- Video playback & pause when offscreen -----
   var heroVideo = document.querySelector('.hero-video-box video');
-  if (heroVideo && 'IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          heroVideo.play().catch(function () {});
-        } else {
-          heroVideo.pause();
-        }
-      });
-    }, { threshold: 0.1 });
-    obs.observe(heroVideo);
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+
+    var startVideo = function () {
+      heroVideo.play().catch(function () {});
+    };
+
+    startVideo();
+    ['click', 'touchstart', 'scroll'].forEach(function (evt) {
+      window.addEventListener(evt, startVideo, { once: true, passive: true });
+    });
+
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            heroVideo.play().catch(function () {});
+          } else if (window.scrollY > 250) {
+            // Guard against pausing on initial page load at top of page
+            heroVideo.pause();
+          }
+        });
+      }, { threshold: 0.1 });
+      obs.observe(heroVideo);
+    }
   }
 
   // ----- Footer year -----

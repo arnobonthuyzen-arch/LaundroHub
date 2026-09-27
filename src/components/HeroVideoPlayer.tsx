@@ -89,7 +89,8 @@ export function HeroVideoPlayer() {
             if (!animId) {
               animId = requestAnimationFrame(checkTime);
             }
-          } else {
+          } else if (entry && !entry.isIntersecting && window.scrollY > 250) {
+            // Only pause if actually scrolled down away from the hero!
             isVisible = false;
             video.pause();
             if (animId) {
@@ -98,7 +99,7 @@ export function HeroVideoPlayer() {
             }
           }
         },
-        { threshold: 0.1 }
+        { threshold: 0.05 }
       );
       observer.observe(video);
     }
@@ -123,7 +124,7 @@ export function HeroVideoPlayer() {
         autoPlay
         playsInline
         loop
-        preload="metadata"
+        preload="auto"
         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
       />
 

@@ -79,7 +79,7 @@ export default function RetirementVillagesPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20laundry%20services%20for%20a%20retirement%20village/resident`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20laundry%20services%20for%20a%20retirement%20village/resident`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -215,7 +215,7 @@ export default function RetirementVillagesPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'm%20interested%20in%20laundry%20services%20for%20a%20retirement%20village`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20interested%20in%20laundry%20services%20for%20a%20retirement%20village`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 text-xs font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"

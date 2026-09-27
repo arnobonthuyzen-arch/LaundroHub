@@ -5,7 +5,7 @@ export const BUSINESS_INFO = {
   tagline: "We care for the clothes you wear.",
   phone: "064 830 8785",
   phoneRaw: "+27648308785",
-  whatsappUrl: "https://wa.me/27648308785",
+  whatsappUrl: "https://api.whatsapp.com/send?phone=27648308785&text=Hello%20Laundro-Hub,%20I'd%20like%20to%20inquire%20about%20your%20laundry%20services",
   email: "info@laundro-hub.co.za",
   address: {
     name: "The Towers Shopping Centre",

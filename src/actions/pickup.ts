@@ -95,7 +95,7 @@ export async function submitPickupRequest(
     `*Speed:* ${speedNames[data.speed] || data.speed}`
   );
 
-  const whatsappConfirmationUrl = `https://wa.me/27648308785?text=${waText}`;
+  const whatsappConfirmationUrl = `https://api.whatsapp.com/send?phone=27648308785&text=${waText}`;
 
   // Log dispatch order
   console.info("[My Wash - Pickup Request Logged]", {

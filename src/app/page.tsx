@@ -72,7 +72,7 @@ export default async function HomePage() {
                 Pristine washing, crisp steam ironing, and heavy bedding care. Drop off at The Towers in Langenhovenpark or book our Express van right to your door.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2 w-full sm:w-auto relative z-30">
                 <a
                   href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"

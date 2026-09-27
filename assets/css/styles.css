@@ -811,6 +811,8 @@ fieldset.field { border: 0; margin: 0; padding: 0; }
 }
 
 .hero-modern__actions {
+  position: relative;
+  z-index: 30;
   display: flex;
   flex-direction: column;
   gap: 12px;

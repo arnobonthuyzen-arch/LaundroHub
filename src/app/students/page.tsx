@@ -79,7 +79,7 @@ export default async function StudentsPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20monthly%20package`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20monthly%20package`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -250,7 +250,7 @@ export default async function StudentsPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 text-xs font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"

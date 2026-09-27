@@ -78,7 +78,7 @@ export default function AirbnbPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I'm%20an%20Airbnb%20host%20in%20Bloemfontein%20interested%20in%20your%20turnover%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20an%20Airbnb%20host%20in%20Bloemfontein%20interested%20in%20your%20turnover%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -266,7 +266,7 @@ export default function AirbnbPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20I%20host%20an%20Airbnb%20and%20want%20to%20set%20up%20a%20turnover%20account`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I%20host%20an%20Airbnb%20and%20want%20to%20set%20up%20a%20turnover%20account`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 text-xs font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"

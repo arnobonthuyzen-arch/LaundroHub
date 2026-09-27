@@ -78,7 +78,7 @@ export default function SportEventsPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20we%20have%20a%20sports%20team/tournament%20in%20Bloemfontein%20needing%20match%20kit%20laundry`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20have%20a%20sports%20team/tournament%20in%20Bloemfontein%20needing%20match%20kit%20laundry`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -214,7 +214,7 @@ export default function SportEventsPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://wa.me/27648308785?text=Hi%20Laundro-Hub,%20our%20sports%20team%20is%20traveling%20to%20Bloemfontein%20for%20a%20tournament`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20our%20sports%20team%20is%20traveling%20to%20Bloemfontein%20for%20a%20tournament`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 text-xs font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"

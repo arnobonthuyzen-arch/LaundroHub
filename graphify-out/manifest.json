@@ -1,8 +1,8 @@
 {
   "assets/js/main.js": {
-    "mtime": 1790436475.0,
-    "seen": 1790463989.7253602,
-    "ast_hash": "c9179be7138e37ba29dc4c41f64cb832",
+    "mtime": 1790493631.0267837,
+    "seen": 1790493705.52376,
+    "ast_hash": "75d3eae0af1b84f03409c9bd4860fb29",
     "semantic_hash": ""
   },
   "next.config.ts": {
@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1790477022.9783301,
-    "seen": 1790477047.191356,
-    "ast_hash": "ba54c1ec852f9e5011ec624fce422cbc",
+    "mtime": 1790493608.3985302,
+    "seen": 1790493705.523777,
+    "ast_hash": "f14ebb46d6fc47d41719813d396bbf12",
     "semantic_hash": ""
   },
   "src/app/robots.ts": {
@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "src/components/HeroVideoPlayer.tsx": {
-    "mtime": 1790473810.9302833,
-    "seen": 1790475856.580179,
-    "ast_hash": "0b9285d1e18710b759b40afd6129be88",
+    "mtime": 1790493500.6324825,
+    "seen": 1790493705.523788,
+    "ast_hash": "cf3145cb6aa4e9ee7ccc9f20a502225b",
     "semantic_hash": ""
   },
   "src/components/MobileNav.tsx": {
@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "src/lib/data.ts": {
-    "mtime": 1790467072.7126362,
-    "seen": 1790467108.4919732,
-    "ast_hash": "f1f9df67c1a540cde45ad0f71adc991c",
+    "mtime": 1790493592.0212939,
+    "seen": 1790493705.5237918,
+    "ast_hash": "1b700021b5168c03bc6377dd47b61f0c",
     "semantic_hash": ""
   },
   "src/lib/types.ts": {
@@ -204,57 +204,57 @@
     "semantic_hash": ""
   },
   "about.html": {
-    "mtime": 1790467104.314349,
-    "seen": 1790467108.491977,
-    "ast_hash": "a14882f3eae5d1ca526a3dd6f69ebfb5",
+    "mtime": 1790493654.9420025,
+    "seen": 1790493705.523796,
+    "ast_hash": "9f414c09b2fdaa574c217c14efb8bd50",
     "semantic_hash": ""
   },
   "bedding-linen.html": {
-    "mtime": 1790467104.3149054,
-    "seen": 1790467108.491977,
-    "ast_hash": "d63c02ec4ef4d4b3d109dc93e0fb8bfc",
+    "mtime": 1790493654.9427044,
+    "seen": 1790493705.523797,
+    "ast_hash": "ba200fa76c870f97fe4092c572241225",
     "semantic_hash": ""
   },
   "collection-delivery.html": {
-    "mtime": 1790467104.3153603,
-    "seen": 1790467108.491978,
-    "ast_hash": "66801a9b2f444d41a542836bdd853db1",
+    "mtime": 1790493654.942872,
+    "seen": 1790493705.523798,
+    "ast_hash": "4326a1cbc861f718bd6609a38470e095",
     "semantic_hash": ""
   },
   "contact.html": {
-    "mtime": 1790467104.3157918,
-    "seen": 1790467108.4919791,
-    "ast_hash": "1bd9ecadbaab4f3de0c8e0e9015f0eb7",
+    "mtime": 1790493654.942154,
+    "seen": 1790493705.523798,
+    "ast_hash": "b5b5c8f01909180df0a5dccdaeff396c",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1790467104.316298,
-    "seen": 1790467108.49198,
-    "ast_hash": "f63212106096ab7549315f5a93f2d79b",
+    "mtime": 1790493654.941332,
+    "seen": 1790493705.523799,
+    "ast_hash": "d92d89278cb9b727c180225c23468159",
     "semantic_hash": ""
   },
   "ironing.html": {
-    "mtime": 1790467104.3167326,
-    "seen": 1790467108.49198,
-    "ast_hash": "2aa8e4c095206efb05218c0af4d92e86",
+    "mtime": 1790493654.9435704,
+    "seen": 1790493705.523799,
+    "ast_hash": "55a06575389c966c9620fb64dadccae1",
     "semantic_hash": ""
   },
   "monthly-packages.html": {
-    "mtime": 1790467104.3172896,
-    "seen": 1790467108.491981,
-    "ast_hash": "cd7158b4408df07bfcde082abc7c91a0",
+    "mtime": 1790493654.9415214,
+    "seen": 1790493705.5238001,
+    "ast_hash": "835cc1dedfe23366252d0cab5ffa71dc",
     "semantic_hash": ""
   },
   "services.html": {
-    "mtime": 1790467104.31781,
-    "seen": 1790467108.491981,
-    "ast_hash": "8cbb955c4a8da951fdf21c1ec5cabfd5",
+    "mtime": 1790493654.9437356,
+    "seen": 1790493705.523801,
+    "ast_hash": "21a170c9f83ff2022a9f89b5bad99b76",
     "semantic_hash": ""
   },
   "washing-drying.html": {
-    "mtime": 1790467104.318241,
-    "seen": 1790467108.491982,
-    "ast_hash": "4f61812c3fd6b5dcc3b23aa1cef7d1e1",
+    "mtime": 1790493654.9422858,
+    "seen": 1790493705.523801,
+    "ast_hash": "6482d64f979256c2fac7f4f0dba6e8a3",
     "semantic_hash": ""
   },
   "assets/icons/basket.svg": {
@@ -840,9 +840,9 @@
     "semantic_hash": ""
   },
   "src/actions/pickup.ts": {
-    "mtime": 1790464483.1302392,
-    "seen": 1790464740.117576,
-    "ast_hash": "01cabe024e8a95c190bbcadaee154150",
+    "mtime": 1790493600.441776,
+    "seen": 1790493705.523766,
+    "ast_hash": "69932f0049e632b1f3bcfbd92557e186",
     "semantic_hash": ""
   },
   "src/app/my-wash/loading.tsx": {
@@ -864,33 +864,33 @@
     "semantic_hash": ""
   },
   "src/app/airbnb/page.tsx": {
-    "mtime": 1790468475.907369,
-    "seen": 1790469157.9995599,
-    "ast_hash": "567b8b888580051268e337258832b981",
+    "mtime": 1790493665.1459641,
+    "seen": 1790493705.523768,
+    "ast_hash": "bf7e392645fa2ce5c6abc4882e8f2f0d",
     "semantic_hash": ""
   },
   "src/app/express/page.tsx": {
-    "mtime": 1790468510.2885664,
-    "seen": 1790469157.999564,
-    "ast_hash": "560724639f561797b70a6c0ebe318dce",
+    "mtime": 1790493665.1466968,
+    "seen": 1790493705.5237708,
+    "ast_hash": "2c977316fe80af0b26d881d08230f9e5",
     "semantic_hash": ""
   },
   "src/app/hospitality/page.tsx": {
-    "mtime": 1790468486.9925852,
-    "seen": 1790469157.9995651,
-    "ast_hash": "dc68a58f437cd87c0fd7a62eacb8584a",
+    "mtime": 1790493665.1446993,
+    "seen": 1790493705.523773,
+    "ast_hash": "0d44eba99cc892513bf710c638fc0009",
     "semantic_hash": ""
   },
   "src/app/schools/page.tsx": {
-    "mtime": 1790468498.1574028,
-    "seen": 1790469157.999572,
-    "ast_hash": "a509a888b2a43666d69a6b34cf13bb34",
+    "mtime": 1790493665.1478288,
+    "seen": 1790493705.5237792,
+    "ast_hash": "01542d3a753bd05f513704c346a47987",
     "semantic_hash": ""
   },
   "src/app/students/page.tsx": {
-    "mtime": 1790468463.6079533,
-    "seen": 1790469157.999577,
-    "ast_hash": "8f80ee7d37eaa30ecaf5e09c66575ee0",
+    "mtime": 1790493665.147541,
+    "seen": 1790493705.523784,
+    "ast_hash": "7a07289dbd4c2cb5f53616d931b657ee",
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
@@ -900,21 +900,51 @@
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {
-    "mtime": 1790469200.885558,
-    "seen": 1790469347.262351,
-    "ast_hash": "3f92d3b1a1246a5f027c2a389155501e",
+    "mtime": 1790493665.1468797,
+    "seen": 1790493705.523772,
+    "ast_hash": "4f08ffc1c9c3569da50d054d1de71050",
     "semantic_hash": ""
   },
   "src/app/retirement-villages/page.tsx": {
-    "mtime": 1790469213.1584466,
-    "seen": 1790469347.262358,
-    "ast_hash": "61afca7dffde97a0080149fee1dd24d5",
+    "mtime": 1790493665.1455193,
+    "seen": 1790493705.523778,
+    "ast_hash": "036396e6e2b83d327689496b14e3ae7c",
     "semantic_hash": ""
   },
   "src/app/sport-events/page.tsx": {
-    "mtime": 1790469225.790011,
-    "seen": 1790469347.262364,
-    "ast_hash": "581ccaadb84f3708c503dd0196183c17",
+    "mtime": 1790493665.147188,
+    "seen": 1790493705.523784,
+    "ast_hash": "a5a040d7ee0663bad36b539b9800bc51",
+    "semantic_hash": ""
+  },
+  "assets/videos/frame1.jpg": {
+    "mtime": 1790493477.6842353,
+    "seen": 1790493705.523832,
+    "ast_hash": "2a0cf1069f603045d316e8179f7dab5c",
+    "semantic_hash": ""
+  },
+  "assets/videos/frame5.jpg": {
+    "mtime": 1790493477.6833725,
+    "seen": 1790493705.523833,
+    "ast_hash": "b2a80d88ebe830a7aadc96f1b1f1956a",
+    "semantic_hash": ""
+  },
+  "assets/videos/frame9.jpg": {
+    "mtime": 1790493477.678133,
+    "seen": 1790493705.5238342,
+    "ast_hash": "56b2ac6593f3a00e036677845ef6d139",
+    "semantic_hash": ""
+  },
+  "assets/videos/loop-wash-poster.jpg": {
+    "mtime": 1790493477.682393,
+    "seen": 1790493705.5238342,
+    "ast_hash": "2a0cf1069f603045d316e8179f7dab5c",
+    "semantic_hash": ""
+  },
+  "assets/videos/loop-wash.mp4": {
+    "mtime": 1790493477.6886604,
+    "seen": 1790493705.523871,
+    "ast_hash": "ea5497c05b96818d096dde47c271e8b4",
     "semantic_hash": ""
   }
 }
