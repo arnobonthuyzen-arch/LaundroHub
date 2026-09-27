@@ -19,15 +19,18 @@ export function HeroVideoPlayer() {
     video.loop = true;
 
     const tryPlay = () => {
-      video.play().catch(() => {
-        // If the browser still blocks auto-play, trigger on first touch/scroll/click
-        const resumeOnInteraction = () => {
-          video.play().catch(() => {});
-        };
-        window.addEventListener("click", resumeOnInteraction, { once: true, passive: true });
-        window.addEventListener("touchstart", resumeOnInteraction, { once: true, passive: true });
-        window.addEventListener("scroll", resumeOnInteraction, { once: true, passive: true });
-      });
+      const playPromise = video.play();
+      if (playPromise && playPromise.catch) {
+        playPromise.catch(() => {
+          // If browser power-saving or gesture policy intercepts, kickstart on first user gesture
+          const resumeOnInteraction = () => {
+            video.play().catch(() => {});
+          };
+          window.addEventListener("click", resumeOnInteraction, { once: true, passive: true });
+          window.addEventListener("touchstart", resumeOnInteraction, { once: true, passive: true });
+          window.addEventListener("scroll", resumeOnInteraction, { once: true, passive: true });
+        });
+      }
     };
 
     tryPlay();
@@ -57,7 +60,6 @@ export function HeroVideoPlayer() {
         else if (currentTime < 0.75) {
           if (isFadingIn) {
             isFadingIn = false;
-            // Short delay after loop point before fading out
             setTimeout(() => {
               if (overlay) {
                 overlay.style.transition = "opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1)";
@@ -77,7 +79,7 @@ export function HeroVideoPlayer() {
 
     animId = requestAnimationFrame(checkTime);
 
-    // Pause video and cancel animation loop when scrolled out of viewport (saves mobile battery & CPU)
+    // Pause video and cancel animation loop ONLY when scrolled deep down out of viewport
     let observer: IntersectionObserver | null = null;
     if (typeof IntersectionObserver !== "undefined") {
       observer = new IntersectionObserver(
@@ -89,8 +91,8 @@ export function HeroVideoPlayer() {
             if (!animId) {
               animId = requestAnimationFrame(checkTime);
             }
-          } else if (entry && !entry.isIntersecting && window.scrollY > 250) {
-            // Only pause if actually scrolled down away from the hero!
+          } else if (entry && !entry.isIntersecting && window.scrollY > 300) {
+            // Guard against pausing at the top of the page on initial load
             isVisible = false;
             video.pause();
             if (animId) {
@@ -117,8 +119,8 @@ export function HeroVideoPlayer() {
 
       {/* Main Looping Video */}
       <video
+        id="hero-loop-video"
         ref={videoRef}
-        src="/videos/loop-wash.mp4"
         poster="/videos/loop-wash-poster.jpg"
         muted
         autoPlay
@@ -126,6 +128,16 @@ export function HeroVideoPlayer() {
         loop
         preload="auto"
         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+      >
+        <source src="/videos/loop-wash.webm" type="video/webm" />
+        <source src="/videos/loop-wash.mp4" type="video/mp4" />
+      </video>
+
+      {/* Instant playback bootstrap script running during initial HTML parsing */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(){var v=document.getElementById('hero-loop-video');if(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;var p=v.play();if(p&&p.catch){p.catch(function(){});}}})();`,
+        }}
       />
 
       {/* Elegant White Dissolve Overlay */}

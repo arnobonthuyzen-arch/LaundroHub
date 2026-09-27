@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "src/components/HeroVideoPlayer.tsx": {
-    "mtime": 1790493500.6324825,
-    "seen": 1790493705.523788,
-    "ast_hash": "cf3145cb6aa4e9ee7ccc9f20a502225b",
+    "mtime": 1790494476.2309313,
+    "seen": 1790494522.21022,
+    "ast_hash": "7c701b629b7879a25626165deb599966",
     "semantic_hash": ""
   },
   "src/components/MobileNav.tsx": {
@@ -228,9 +228,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1790493654.941332,
-    "seen": 1790493705.523799,
-    "ast_hash": "d92d89278cb9b727c180225c23468159",
+    "mtime": 1790494493.6112132,
+    "seen": 1790494522.21023,
+    "ast_hash": "20f2077716e7fbd000da86bb03ae8da1",
     "semantic_hash": ""
   },
   "ironing.html": {
@@ -834,9 +834,9 @@
     "semantic_hash": ""
   },
   "public/videos/loop-wash.mp4": {
-    "mtime": 1790454365.3404393,
-    "seen": 1790463989.72551,
-    "ast_hash": "ea5497c05b96818d096dde47c271e8b4",
+    "mtime": 1790494438.763202,
+    "seen": 1790494522.210301,
+    "ast_hash": "79156de450ebbde3eb9d03f0cb02ca20",
     "semantic_hash": ""
   },
   "src/actions/pickup.ts": {
@@ -942,15 +942,27 @@
     "semantic_hash": ""
   },
   "assets/videos/loop-wash.mp4": {
-    "mtime": 1790493477.6886604,
-    "seen": 1790493705.523871,
-    "ast_hash": "ea5497c05b96818d096dde47c271e8b4",
+    "mtime": 1790494460.1103103,
+    "seen": 1790494522.2102988,
+    "ast_hash": "79156de450ebbde3eb9d03f0cb02ca20",
     "semantic_hash": ""
   },
   "server.js": {
     "mtime": 1790494178.8433053,
     "seen": 1790494239.438252,
     "ast_hash": "25562c581e64045f3542274c82572261",
+    "semantic_hash": ""
+  },
+  "assets/videos/loop-wash.webm": {
+    "mtime": 1790494460.1176376,
+    "seen": 1790494522.2103,
+    "ast_hash": "024f09046245fae0f6a18dd8801a7085",
+    "semantic_hash": ""
+  },
+  "public/videos/loop-wash.webm": {
+    "mtime": 1790494460.113835,
+    "seen": 1790494522.2103019,
+    "ast_hash": "024f09046245fae0f6a18dd8801a7085",
     "semantic_hash": ""
   }
 }

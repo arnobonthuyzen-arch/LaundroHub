@@ -152,11 +152,25 @@
         <span class="dot"></span>
         <span>Laundro-Hub Care</span>
       </div>
-      <video poster="assets/videos/loop-wash-poster.jpg" autoplay loop muted playsinline webkit-playsinline preload="auto">
+      <video id="hero-loop-video-static" poster="assets/videos/loop-wash-poster.jpg" autoplay loop muted playsinline webkit-playsinline preload="auto">
+        <source src="assets/videos/loop-wash.webm" type="video/webm">
         <source src="assets/videos/loop-wash.mp4" type="video/mp4">
+        <source src="videos/loop-wash.webm" type="video/webm">
         <source src="videos/loop-wash.mp4" type="video/mp4">
         <source src="public/videos/loop-wash.mp4" type="video/mp4">
       </video>
+      <script>
+        (function(){
+          var v = document.getElementById('hero-loop-video-static');
+          if (v) {
+            v.muted = true;
+            v.defaultMuted = true;
+            v.playsInline = true;
+            var p = v.play();
+            if (p && p.catch) { p.catch(function(){}); }
+          }
+        })();
+      </script>
     </div>
   </div>
 </section>
