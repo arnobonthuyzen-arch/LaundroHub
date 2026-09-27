@@ -122,6 +122,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="preconnect" href="https://api.whatsapp.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.whatsapp.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

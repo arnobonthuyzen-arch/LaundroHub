@@ -2383,7 +2383,7 @@
       "file_type": "code",
       "norm_label": "app",
       "source_file": "server.js",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "server_createserver",
@@ -2405,7 +2405,7 @@
       "file_type": "code",
       "norm_label": "handle",
       "source_file": "server.js",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "server_next",
@@ -4733,13 +4733,24 @@
     },
     {
       "source": "server",
-      "target": "server_handle",
+      "target": "server_app",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "server.js",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "server",
+      "target": "server_handle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "server.js",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -4762,17 +4773,6 @@
       "confidence_score": 1.0,
       "source_file": "server.js",
       "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "server",
-      "target": "server_app",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "server.js",
-      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -6055,5 +6055,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "18f0c32374eecedce7922df293b91c78c4bb6a35"
+  "built_at_commit": "221c5ed20f8dd8717344bd40918895a5e9f5576f"
 }
