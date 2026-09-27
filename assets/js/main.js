@@ -47,6 +47,34 @@
     }
   }
 
+  // ----- Bubble popping -----
+  document.querySelectorAll('.laundry-bubble').forEach(function (bubble) {
+    var pop = function () {
+      if (bubble.classList.contains('laundry-bubble-pop')) return;
+      bubble.classList.add('laundry-bubble-pop');
+      setTimeout(function () {
+        bubble.classList.remove('laundry-bubble-pop');
+      }, 1800);
+    };
+    bubble.addEventListener('click', pop);
+    bubble.addEventListener('mouseenter', pop);
+  });
+
+  // ----- Video pause when offscreen -----
+  var heroVideo = document.querySelector('.hero-video-box video');
+  if (heroVideo && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          heroVideo.play().catch(function () {});
+        } else {
+          heroVideo.pause();
+        }
+      });
+    }, { threshold: 0.1 });
+    obs.observe(heroVideo);
+  }
+
   // ----- Footer year -----
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
