@@ -17,19 +17,6 @@
       "source_location": "L22"
     },
     {
-      "id": "src_actions_contact_contactformdata",
-      "label": "ContactFormData",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contactformdata",
-      "source_file": "src/actions/contact.ts",
-      "source_location": "L17"
-    },
-    {
       "id": "src_actions_pickup_pickuprequestdata",
       "label": "PickupRequestData",
       "_callable": true,
@@ -67,32 +54,6 @@
       "norm_label": "mywashformprops",
       "source_file": "src/components/my-wash/MyWashForm.tsx",
       "source_location": "L24"
-    },
-    {
-      "id": "src_lib_types_actionstate",
-      "label": "ActionState",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "actionstate",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_types_suburbcoverage",
-      "label": "SuburbCoverage",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "suburbcoverage",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L36"
     },
     {
       "id": "src_components_navdropdown_sectormenuitem",
@@ -147,6 +108,19 @@
       "source_location": "L13"
     },
     {
+      "id": "src_lib_types_suburbcoverage",
+      "label": "SuburbCoverage",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "suburbcoverage",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L36"
+    },
+    {
       "id": "src_components_herobubbles_bubbleconfig",
       "label": "BubbleConfig",
       "_callable": true,
@@ -158,6 +132,32 @@
       "norm_label": "bubbleconfig",
       "source_file": "src/components/HeroBubbles.tsx",
       "source_location": "L5"
+    },
+    {
+      "id": "src_actions_contact_contactformdata",
+      "label": "ContactFormData",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "contactformdata",
+      "source_file": "src/actions/contact.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_types_actionstate",
+      "label": "ActionState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "actionstate",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_app_airbnb_page_airbnbpage",
@@ -205,7 +205,7 @@
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L107"
+      "source_location": "L113"
     },
     {
       "id": "src_app_retirement_villages_page_retirementvillagespage",
@@ -292,18 +292,6 @@
       "source_location": "L27"
     },
     {
-      "id": "src_actions_contact_submitcontactform",
-      "label": "submitContactForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "submitcontactform()",
-      "source_file": "src/actions/contact.ts",
-      "source_location": "L19"
-    },
-    {
       "id": "src_actions_pickup_submitpickuprequest",
       "label": "submitPickupRequest()",
       "_callable": true,
@@ -314,30 +302,6 @@
       "norm_label": "submitpickuprequest()",
       "source_file": "src/actions/pickup.ts",
       "source_location": "L39"
-    },
-    {
-      "id": "src_components_contactform_contactform",
-      "label": "ContactForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contactform()",
-      "source_file": "src/components/ContactForm.tsx",
-      "source_location": "L113"
-    },
-    {
-      "id": "src_components_contactform_submitbutton",
-      "label": "SubmitButton()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "submitbutton()",
-      "source_file": "src/components/ContactForm.tsx",
-      "source_location": "L89"
     },
     {
       "id": "src_components_my_wash_mywashform_mywashform",
@@ -410,6 +374,18 @@
       "norm_label": "getsuburbs()",
       "source_file": "src/lib/data.ts",
       "source_location": "L191"
+    },
+    {
+      "id": "src_app_about_page_aboutpage",
+      "label": "AboutPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "about/page.tsx",
+      "file_type": "code",
+      "norm_label": "aboutpage()",
+      "source_file": "src/app/about/page.tsx",
+      "source_location": "L13"
     },
     {
       "id": "src_app_about_loading_aboutloading",
@@ -568,18 +544,6 @@
       "source_location": "L152"
     },
     {
-      "id": "src_app_about_page_aboutpage",
-      "label": "AboutPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "aboutpage()",
-      "source_file": "src/app/about/page.tsx",
-      "source_location": "L13"
-    },
-    {
       "id": "src_app_page_homepage",
       "label": "HomePage()",
       "_callable": true,
@@ -736,6 +700,42 @@
       "source_location": "L6"
     },
     {
+      "id": "src_actions_contact_submitcontactform",
+      "label": "submitContactForm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "submitcontactform()",
+      "source_file": "src/actions/contact.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_components_contactform_contactform",
+      "label": "ContactForm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "contactform()",
+      "source_file": "src/components/ContactForm.tsx",
+      "source_location": "L113"
+    },
+    {
+      "id": "src_components_contactform_submitbutton",
+      "label": "SubmitButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "submitbutton()",
+      "source_file": "src/components/ContactForm.tsx",
+      "source_location": "L89"
+    },
+    {
       "id": "src_app_airbnb_page",
       "label": "airbnb/page.tsx",
       "_origin": "ast",
@@ -824,6 +824,17 @@
       "source_location": "L8"
     },
     {
+      "id": "src_app_layout_caveat",
+      "label": "caveat",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "caveat",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L20"
+    },
+    {
       "id": "src_app_layout_figtree",
       "label": "figtree",
       "_origin": "ast",
@@ -843,7 +854,7 @@
       "file_type": "code",
       "norm_label": "jsonld",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L74"
+      "source_location": "L80"
     },
     {
       "id": "src_app_layout_metadata",
@@ -854,7 +865,7 @@
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L26"
+      "source_location": "L32"
     },
     {
       "id": "src_app_layout_viewport",
@@ -865,7 +876,7 @@
       "file_type": "code",
       "norm_label": "viewport",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L20"
+      "source_location": "L26"
     },
     {
       "id": "src_app_retirement_villages_page",
@@ -989,28 +1000,6 @@
       "source_location": "L3"
     },
     {
-      "id": "src_actions_contact",
-      "label": "contact.ts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contact.ts",
-      "source_file": "src/actions/contact.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_actions_contact_contactformschema",
-      "label": "contactFormSchema",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contactformschema",
-      "source_file": "src/actions/contact.ts",
-      "source_location": "L7"
-    },
-    {
       "id": "src_actions_pickup",
       "label": "pickup.ts",
       "_origin": "ast",
@@ -1031,39 +1020,6 @@
       "norm_label": "pickuprequestschema",
       "source_file": "src/actions/pickup.ts",
       "source_location": "L7"
-    },
-    {
-      "id": "src_components_contactform",
-      "label": "ContactForm.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contactform.tsx",
-      "source_file": "src/components/ContactForm.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_contactform_account_categories",
-      "label": "ACCOUNT_CATEGORIES",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "account_categories",
-      "source_file": "src/components/ContactForm.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_components_contactform_initialstate",
-      "label": "initialState",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "initialstate",
-      "source_file": "src/components/ContactForm.tsx",
-      "source_location": "L85"
     },
     {
       "id": "src_components_my_wash_mywashform",
@@ -1097,17 +1053,6 @@
       "norm_label": "initial_state",
       "source_file": "src/components/my-wash/MyWashForm.tsx",
       "source_location": "L59"
-    },
-    {
-      "id": "src_lib_types",
-      "label": "types.ts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "types.ts",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L1"
     },
     {
       "id": "postcss_load_config",
@@ -1273,6 +1218,28 @@
       "norm_label": "nextconfig",
       "source_file": "next.config.ts",
       "source_location": "L4"
+    },
+    {
+      "id": "src_app_about_page",
+      "label": "about/page.tsx",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "about/page.tsx",
+      "file_type": "code",
+      "norm_label": "about/page.tsx",
+      "source_file": "src/app/about/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_about_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "about/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/about/page.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_app_about_loading",
@@ -1726,17 +1693,6 @@
       "source_location": "L29"
     },
     {
-      "id": "package",
-      "label": "package.json",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "package.json",
-      "source_file": "package.json",
-      "source_location": "L1"
-    },
-    {
       "id": "package_devdependencies",
       "label": "devDependencies",
       "_origin": "ast",
@@ -1825,94 +1781,6 @@
       "source_location": "L27"
     },
     {
-      "id": "package_name",
-      "label": "name",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "name",
-      "source_file": "package.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "package_private",
-      "label": "private",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "private",
-      "source_file": "package.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "package_scripts",
-      "label": "scripts",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "package.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "package_scripts_build",
-      "label": "build",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "build",
-      "source_file": "package.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "package_scripts_dev",
-      "label": "dev",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "dev",
-      "source_file": "package.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "package_scripts_lint",
-      "label": "lint",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "lint",
-      "source_file": "package.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "package_scripts_start",
-      "label": "start",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "start",
-      "source_file": "package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "package_version",
-      "label": "version",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "devDependencies",
-      "file_type": "code",
-      "norm_label": "version",
-      "source_file": "package.json",
-      "source_location": "L3"
-    },
-    {
       "id": "autoprefixer",
       "label": "autoprefixer",
       "_origin": "ast",
@@ -1988,6 +1856,17 @@
       "norm_label": "typescript",
       "source_file": "package.json",
       "source_location": "L27"
+    },
+    {
+      "id": "package",
+      "label": "package.json",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "package.json",
+      "source_file": "package.json",
+      "source_location": "L1"
     },
     {
       "id": "package_dependencies",
@@ -2078,6 +1957,94 @@
       "source_location": "L18"
     },
     {
+      "id": "package_name",
+      "label": "name",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "name",
+      "source_file": "package.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "package_private",
+      "label": "private",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "private",
+      "source_file": "package.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "scripts",
+      "source_file": "package.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "package_scripts_build",
+      "label": "build",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "build",
+      "source_file": "package.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "package_scripts_dev",
+      "label": "dev",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "dev",
+      "source_file": "package.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "package_scripts_lint",
+      "label": "lint",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "lint",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "package_scripts_start",
+      "label": "start",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "start",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "package_version",
+      "label": "version",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "version",
+      "source_file": "package.json",
+      "source_location": "L3"
+    },
+    {
       "id": "clsx",
       "label": "clsx",
       "_origin": "ast",
@@ -2153,28 +2120,6 @@
       "norm_label": "zod",
       "source_file": "package.json",
       "source_location": "L18"
-    },
-    {
-      "id": "src_app_about_page",
-      "label": "about/page.tsx",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "about/page.tsx",
-      "source_file": "src/app/about/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_about_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/about/page.tsx",
-      "source_location": "L7"
     },
     {
       "id": "src_app_services_slug_page",
@@ -2287,6 +2232,17 @@
       "source_location": "L163"
     },
     {
+      "id": "src_lib_types",
+      "label": "types.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "types.ts",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_app_services_page",
       "label": "services/page.tsx",
       "_origin": "ast",
@@ -2351,6 +2307,61 @@
       "norm_label": "herovideoplayer.tsx",
       "source_file": "src/components/HeroVideoPlayer.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_actions_contact",
+      "label": "contact.ts",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "contact.ts",
+      "source_file": "src/actions/contact.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_actions_contact_contactformschema",
+      "label": "contactFormSchema",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "contactformschema",
+      "source_file": "src/actions/contact.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_components_contactform",
+      "label": "ContactForm.tsx",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "contactform.tsx",
+      "source_file": "src/components/ContactForm.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_contactform_account_categories",
+      "label": "ACCOUNT_CATEGORIES",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "account_categories",
+      "source_file": "src/components/ContactForm.tsx",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_components_contactform_initialstate",
+      "label": "initialState",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ContactForm.tsx",
+      "file_type": "code",
+      "norm_label": "initialstate",
+      "source_file": "src/components/ContactForm.tsx",
+      "source_location": "L85"
     },
     {
       "id": "readme",
@@ -4893,7 +4904,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L107",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -4909,7 +4920,7 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_app_layout_viewport",
+      "target": "src_app_layout_caveat",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4920,7 +4931,7 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_app_layout_metadata",
+      "target": "src_app_layout_viewport",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4931,13 +4942,13 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_app_layout_jsonld",
+      "target": "src_app_layout_metadata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L74",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -4949,6 +4960,17 @@
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_jsonld",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L80",
       "weight": 1.0
     },
     {

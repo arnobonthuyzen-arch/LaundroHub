@@ -1,11 +1,11 @@
 # Graph Report - laundro-hub-website  (2026-09-27)
 
 ## Corpus Check
-- 47 files · ~251,474 words
+- 47 files · ~251,484 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 214 nodes · 301 edges · 25 communities (10 shown, 4 thin omitted)
+- 215 nodes · 302 edges · 27 communities (11 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -17,11 +17,13 @@
 - dependencies
 - data.ts
 - app/page.tsx
+- ContactForm.tsx
 - Laundro-Hub website
 - postcss.config.mjs
 - my-wash/page.tsx
 - main.js
 - next.config.ts
+- about/page.tsx
 - tailwind.config.ts
 - NavDropdown.tsx
 
@@ -52,35 +54,39 @@
 ## Import Cycles
 - None detected.
 
-## Communities (25 total, 4 thin omitted)
+## Communities (27 total, 5 thin omitted)
 
 ### Community 0 - "BUSINESS_INFO"
 Cohesion: 0.09
-Nodes (17): metadata, metadata, metadata, bricolage, figtree, jsonLd, metadata, viewport (+9 more)
+Nodes (18): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+10 more)
 
 ### Community 1 - "MyWashForm.tsx"
-Cohesion: 0.13
-Nodes (16): ContactFormData, contactFormSchema, submitContactForm(), PickupRequestData, pickupRequestSchema, PickupSuccessData, submitPickupRequest(), ACCOUNT_CATEGORIES (+8 more)
+Cohesion: 0.24
+Nodes (8): PickupRequestData, pickupRequestSchema, PickupSuccessData, submitPickupRequest(), AVAILABLE_SERVICES, INITIAL_STATE, MyWashForm(), MyWashFormProps
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.07
 Nodes (26): dom, dom.iterable, esnext, next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts, **/*.tsx (+18 more)
 
 ### Community 3 - "devDependencies"
-Cohesion: 0.08
-Nodes (23): autoprefixer, devDependencies, autoprefixer, postcss, tailwindcss, @types/node, @types/react, @types/react-dom (+15 more)
+Cohesion: 0.13
+Nodes (15): autoprefixer, devDependencies, autoprefixer, postcss, tailwindcss, @types/node, @types/react, @types/react-dom (+7 more)
 
 ### Community 4 - "dependencies"
-Cohesion: 0.13
-Nodes (15): clsx, lucide-react, next, dependencies, clsx, lucide-react, next, react (+7 more)
+Cohesion: 0.08
+Nodes (23): clsx, lucide-react, next, dependencies, clsx, lucide-react, next, react (+15 more)
 
 ### Community 5 - "data.ts"
-Cohesion: 0.12
-Nodes (19): metadata, HomePage(), generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata (+11 more)
+Cohesion: 0.13
+Nodes (19): HomePage(), generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage() (+11 more)
 
 ### Community 7 - "app/page.tsx"
 Cohesion: 0.32
 Nodes (5): metadata, BubbleConfig, BUBBLES, HeroBubbles(), HeroVideoPlayer()
+
+### Community 8 - "ContactForm.tsx"
+Cohesion: 0.27
+Nodes (7): ContactFormData, contactFormSchema, submitContactForm(), ACCOUNT_CATEGORIES, ContactForm(), initialState, ActionState
 
 ### Community 9 - "Laundro-Hub website"
 Cohesion: 0.29
@@ -95,24 +101,24 @@ Cohesion: 0.33
 Nodes (3): NavDropdown(), SECTOR_ITEMS, SectorMenuItem
 
 ## Knowledge Gaps
-- **90 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+85 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 130 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **91 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+86 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 131 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `devDependencies`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `data.ts`, `app/page.tsx`, `ContactForm.tsx`, `my-wash/page.tsx`, `about/page.tsx`?**
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `data.ts`, `app/page.tsx`, `ContactForm.tsx`, `my-wash/page.tsx`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
-  _90 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _91 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**
-  _Cohesion score 0.09411764705882353 - nodes in this community are weakly interconnected._
-- **Should `MyWashForm.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.13043478260869565 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09047619047619047 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
+- **Should `devDependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+- **Should `dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
