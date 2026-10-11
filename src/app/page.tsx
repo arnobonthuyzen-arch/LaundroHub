@@ -19,6 +19,7 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { getServices, getPricingPlans, getSuburbs, BUSINESS_INFO } from "@/lib/data";
 import { HeroBubbles } from "@/components/HeroBubbles";
 import { HeroVideoPlayer } from "@/components/HeroVideoPlayer";
+import TowersMapWrapper from "@/components/TowersMapWrapper";
 
 export const metadata: Metadata = {
   title: "Laundro-Hub | Premium Laundry, Ironing & Collection in Bloemfontein",
@@ -476,21 +477,33 @@ export default async function HomePage() {
       </section>
 
       {/* Location / Visit us Section */}
-      <section className="py-16 bg-white border-t border-brand-line">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-sm font-bold uppercase tracking-wider text-brand-teal">
-                Drop-in Store
+      <section className="py-16 sm:py-20 bg-white border-t border-brand-line">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="lg:col-span-6 space-y-5">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-teal/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-teal">
+                <MapPin className="h-3.5 w-3.5" />
+                Drop-in Store &bull; Langenhovenpark
               </span>
-              <h2 className="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">
                 Visit us at The Towers Shopping Centre
               </h2>
-              <p className="mt-4 text-base text-brand-body leading-relaxed">
-                Conveniently located in Langenhovenpark, Bloemfontein (opposite the car wash, old Panarottis location). Ample secure parking and friendly counter staff ready to weigh and receive your laundry.
+              <p className="text-base text-brand-body leading-relaxed">
+                Conveniently located in <strong className="text-brand-deep">Langenhovenpark, Bloemfontein</strong> &mdash; right <strong className="text-brand-purple">opposite the car wash</strong> (old Panarottis location). Easy ground-floor access, ample free parking, and friendly counter staff ready to weigh and receive your laundry.
               </p>
 
-              <div className="mt-6 space-y-3">
+              <div className="grid grid-cols-2 gap-3 pt-1">
+                <div className="rounded-xl border border-brand-line bg-brand-ground p-3 text-left">
+                  <span className="block text-[11px] font-bold text-brand-muted uppercase tracking-wider">Location</span>
+                  <strong className="text-sm text-brand-deep">Opposite Car Wash</strong>
+                </div>
+                <div className="rounded-xl border border-brand-line bg-brand-ground p-3 text-left">
+                  <span className="block text-[11px] font-bold text-brand-muted uppercase tracking-wider">Parking</span>
+                  <strong className="text-sm text-brand-teal">Ample Free Parking</strong>
+                </div>
+              </div>
+
+              <div className="space-y-2.5 pt-2">
                 {BUSINESS_INFO.hours.map((h) => (
                   <div key={h.days} className="flex items-center justify-between border-b border-brand-line/60 pb-2 text-sm">
                     <span className="font-semibold text-brand-deep">{h.days}</span>
@@ -499,42 +512,82 @@ export default async function HomePage() {
                 ))}
               </div>
 
-              <div className="mt-8 flex gap-4">
+              <div className="pt-3 flex flex-wrap items-center gap-3.5">
                 <a
                   href={BUSINESS_INFO.address.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.02]"
                 >
-                  <MapPin className="h-4 w-4" />
-                  Get Google Maps Directions
+                  <MapPin className="h-4 w-4 text-brand-mint" />
+                  <span>Get Google Maps Directions</span>
+                </a>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hello%20Laundro-Hub,%20I%20have%20a%20question%20about%20visiting%20your%20Towers%20store`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                  <span>WhatsApp The Counter</span>
                 </a>
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-line shadow-elevated group">
-              <Image
-                src="/img/storefront-window1.jpg"
-                alt="Laundro-Hub storefront at The Towers Shopping Centre"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute top-4 right-4 flex items-center gap-3 rounded-2xl bg-white/95 backdrop-blur-md p-2.5 pr-4 border border-brand-line/80 shadow-md">
-                <div className="relative h-12 w-12 rounded-xl overflow-hidden border border-brand-line shrink-0">
-                  <Image
-                    src="/img/store-sign.jpg"
-                    alt="Laundro-Hub store sign"
-                    fill
-                    className="object-cover"
-                  />
+            <div className="lg:col-span-6">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border-2 border-brand-line shadow-elevated group">
+                <Image
+                  src="/img/storefront-window1.jpg"
+                  alt="Laundro-Hub storefront at The Towers Shopping Centre"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute top-4 right-4 flex items-center gap-3 rounded-2xl bg-white/95 backdrop-blur-md p-2.5 pr-4 border border-brand-line/80 shadow-lg">
+                  <div className="relative h-12 w-12 rounded-xl overflow-hidden border border-brand-line shrink-0">
+                    <Image
+                      src="/img/store-sign.jpg"
+                      alt="Laundro-Hub store sign"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <span className="block text-xs font-bold text-brand-deep leading-tight">The Towers Store</span>
+                    <span className="text-[11px] text-brand-teal font-bold">Opposite car wash</span>
+                  </div>
                 </div>
-                <div className="text-left">
-                  <span className="block text-xs font-bold text-brand-deep leading-tight">The Towers Store</span>
-                  <span className="text-[11px] text-brand-teal font-medium">Opposite car wash</span>
+
+                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-brand-deep/90 backdrop-blur-md p-3.5 text-white border border-white/10 shadow-lg">
+                  <p className="text-xs font-semibold leading-snug">
+                    The Towers Shopping Centre &bull; Langenhovenpark &bull; Bloemfontein
+                  </p>
+                  <p className="text-[11px] text-brand-mint/90 mt-0.5">
+                    Drop your basket at the counter in under 2 minutes
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Interactive Leaflet Map Component (Client-Side with SSR Disabled) */}
+          <div className="pt-4 space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+              <div>
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-teal">
+                  <MapPin className="h-3.5 w-3.5 text-brand-purple" />
+                  Interactive Location Map
+                </span>
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep tracking-tight mt-1">
+                  Find us opposite the car wash at The Towers
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-brand-muted font-medium">
+                Du Plessis Road &amp; Koppie Road, Langenhovenpark, Bloemfontein
+              </p>
+            </div>
+
+            <TowersMapWrapper />
           </div>
         </div>
       </section>

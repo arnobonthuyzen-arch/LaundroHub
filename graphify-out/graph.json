@@ -4,6 +4,19 @@
   "graph": {},
   "nodes": [
     {
+      "id": "src_components_mobilenav_mobilenavprops",
+      "label": "MobileNavProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "mobilenavprops",
+      "source_file": "src/components/MobileNav.tsx",
+      "source_location": "L22"
+    },
+    {
       "id": "src_actions_contact_contactformdata",
       "label": "ContactFormData",
       "_callable": true,
@@ -108,26 +121,13 @@
       "source_location": "L36"
     },
     {
-      "id": "src_components_mobilenav_mobilenavprops",
-      "label": "MobileNavProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "mobilenavprops",
-      "source_file": "src/components/MobileNav.tsx",
-      "source_location": "L22"
-    },
-    {
       "id": "src_components_navdropdown_sectormenuitem",
       "label": "SectorMenuItem",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 26,
-      "community_name": "layout.tsx",
+      "community_name": "NavDropdown.tsx",
       "file_type": "code",
       "norm_label": "sectormenuitem",
       "source_file": "src/components/NavDropdown.tsx",
@@ -140,7 +140,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "[slug]/page.tsx",
+      "community_name": "data.ts",
       "file_type": "code",
       "norm_label": "servicepageprops",
       "source_file": "src/app/services/[slug]/page.tsx",
@@ -153,23 +153,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "HeroBubbles.tsx",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "bubbleconfig",
       "source_file": "src/components/HeroBubbles.tsx",
       "source_location": "L5"
-    },
-    {
-      "id": "src_app_about_page_aboutpage",
-      "label": "AboutPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "aboutpage()",
-      "source_file": "src/app/about/page.tsx",
-      "source_location": "L13"
     },
     {
       "id": "src_app_airbnb_page_airbnbpage",
@@ -177,7 +165,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "airbnbpage()",
       "source_file": "src/app/airbnb/page.tsx",
@@ -189,7 +177,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "healthcarepage()",
       "source_file": "src/app/healthcare/page.tsx",
@@ -201,23 +189,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "hospitalitypage()",
       "source_file": "src/app/hospitality/page.tsx",
       "source_location": "L25"
     },
     {
-      "id": "src_app_page_homepage",
-      "label": "HomePage()",
+      "id": "src_app_layout_rootlayout",
+      "label": "RootLayout()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "homepage()",
-      "source_file": "src/app/page.tsx",
-      "source_location": "L29"
+      "norm_label": "rootlayout()",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L113"
     },
     {
       "id": "src_app_retirement_villages_page_retirementvillagespage",
@@ -225,7 +213,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "retirementvillagespage()",
       "source_file": "src/app/retirement-villages/page.tsx",
@@ -237,23 +225,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "schoolspage()",
       "source_file": "src/app/schools/page.tsx",
       "source_location": "L25"
-    },
-    {
-      "id": "src_app_sitemap_sitemap",
-      "label": "sitemap()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "sitemap()",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L4"
     },
     {
       "id": "src_app_sport_events_page_sporteventspage",
@@ -261,47 +237,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "sporteventspage()",
       "source_file": "src/app/sport-events/page.tsx",
       "source_location": "L25"
     },
     {
-      "id": "src_app_students_page_studentspage",
-      "label": "StudentsPage()",
+      "id": "src_components_footer_footer",
+      "label": "Footer()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "studentspage()",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L25"
+      "norm_label": "footer()",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L7"
     },
     {
-      "id": "src_app_what_we_offer_page_whatweofferpage",
-      "label": "WhatWeOfferPage()",
+      "id": "src_components_header_header",
+      "label": "Header()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "whatweofferpage()",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_components_herovideoplayer_herovideoplayer",
-      "label": "HeroVideoPlayer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "herovideoplayer()",
-      "source_file": "src/components/HeroVideoPlayer.tsx",
-      "source_location": "L6"
+      "norm_label": "header()",
+      "source_file": "src/components/Header.tsx",
+      "source_location": "L9"
     },
     {
       "id": "src_components_icons_whatsappicon_whatsappicon",
@@ -309,35 +273,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "whatsappicon()",
       "source_file": "src/components/icons/WhatsAppIcon.tsx",
       "source_location": "L7"
     },
     {
-      "id": "src_lib_data_getpricingplans",
-      "label": "getPricingPlans()",
+      "id": "src_components_mobilenav_mobilenav",
+      "label": "MobileNav()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "getpricingplans()",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L195"
-    },
-    {
-      "id": "src_lib_data_getservices",
-      "label": "getServices()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "getservices()",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L183"
+      "norm_label": "mobilenav()",
+      "source_file": "src/components/MobileNav.tsx",
+      "source_location": "L28"
     },
     {
       "id": "src_actions_contact_submitcontactform",
@@ -362,6 +314,18 @@
       "norm_label": "submitpickuprequest()",
       "source_file": "src/actions/pickup.ts",
       "source_location": "L40"
+    },
+    {
+      "id": "src_app_my_wash_page_mywashpage",
+      "label": "MyWashPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "MyWashForm.tsx",
+      "file_type": "code",
+      "norm_label": "mywashpage()",
+      "source_file": "src/app/my-wash/page.tsx",
+      "source_location": "L60"
     },
     {
       "id": "src_components_contactform_contactform",
@@ -453,7 +417,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "contactpage()",
       "source_file": "src/app/contact/page.tsx",
@@ -465,23 +429,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "expresspage()",
       "source_file": "src/app/express/page.tsx",
       "source_location": "L26"
-    },
-    {
-      "id": "src_app_my_wash_page_mywashpage",
-      "label": "MyWashPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "my-wash/page.tsx",
-      "file_type": "code",
-      "norm_label": "mywashpage()",
-      "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L60"
     },
     {
       "id": "src_lib_data_getsuburbs",
@@ -489,7 +441,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "getsuburbs()",
       "source_file": "src/lib/data.ts",
@@ -616,60 +568,12 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_layout_rootlayout",
-      "label": "RootLayout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "rootlayout()",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L113"
-    },
-    {
-      "id": "src_components_footer_footer",
-      "label": "Footer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "footer()",
-      "source_file": "src/components/Footer.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_components_header_header",
-      "label": "Header()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "header()",
-      "source_file": "src/components/Header.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_components_mobilenav_mobilenav",
-      "label": "MobileNav()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "mobilenav()",
-      "source_file": "src/components/MobileNav.tsx",
-      "source_location": "L28"
-    },
-    {
       "id": "src_components_navdropdown_navdropdown",
       "label": "NavDropdown()",
       "_callable": true,
       "_origin": "ast",
       "community": 26,
-      "community_name": "layout.tsx",
+      "community_name": "NavDropdown.tsx",
       "file_type": "code",
       "norm_label": "navdropdown()",
       "source_file": "src/components/NavDropdown.tsx",
@@ -681,7 +585,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 26,
-      "community_name": "layout.tsx",
+      "community_name": "NavDropdown.tsx",
       "file_type": "code",
       "norm_label": "handleclickoutside()",
       "source_file": "src/components/NavDropdown.tsx",
@@ -693,11 +597,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 26,
-      "community_name": "layout.tsx",
+      "community_name": "NavDropdown.tsx",
       "file_type": "code",
       "norm_label": "handlekeydown()",
       "source_file": "src/components/NavDropdown.tsx",
       "source_location": "L152"
+    },
+    {
+      "id": "src_app_about_page_aboutpage",
+      "label": "AboutPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "aboutpage()",
+      "source_file": "src/app/about/page.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_app_page_homepage",
+      "label": "HomePage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "homepage()",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L30"
     },
     {
       "id": "src_app_services_slug_page_generatemetadata",
@@ -705,7 +633,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "[slug]/page.tsx",
+      "community_name": "data.ts",
       "file_type": "code",
       "norm_label": "generatemetadata()",
       "source_file": "src/app/services/[slug]/page.tsx",
@@ -717,7 +645,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "[slug]/page.tsx",
+      "community_name": "data.ts",
       "file_type": "code",
       "norm_label": "generatestaticparams()",
       "source_file": "src/app/services/[slug]/page.tsx",
@@ -729,11 +657,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "[slug]/page.tsx",
+      "community_name": "data.ts",
       "file_type": "code",
       "norm_label": "servicedetailpage()",
       "source_file": "src/app/services/[slug]/page.tsx",
       "source_location": "L39"
+    },
+    {
+      "id": "src_app_sitemap_sitemap",
+      "label": "sitemap()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "sitemap()",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_app_students_page_studentspage",
+      "label": "StudentsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "studentspage()",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_app_what_we_offer_page_whatweofferpage",
+      "label": "WhatWeOfferPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "whatweofferpage()",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_lib_data_getpricingplans",
+      "label": "getPricingPlans()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "getpricingplans()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L195"
     },
     {
       "id": "src_lib_data_getservicebyslug",
@@ -741,11 +717,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "[slug]/page.tsx",
+      "community_name": "data.ts",
       "file_type": "code",
       "norm_label": "getservicebyslug()",
       "source_file": "src/lib/data.ts",
       "source_location": "L188"
+    },
+    {
+      "id": "src_lib_data_getservices",
+      "label": "getServices()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "getservices()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L183"
     },
     {
       "id": "src_app_services_page_servicespage",
@@ -765,40 +753,54 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "HeroBubbles.tsx",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "herobubbles()",
       "source_file": "src/components/HeroBubbles.tsx",
       "source_location": "L108"
     },
     {
-      "id": "src_app_about_page",
-      "label": "about/page.tsx",
+      "id": "src_components_herovideoplayer_herovideoplayer",
+      "label": "HeroVideoPlayer()",
+      "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
+      "community": 7,
+      "community_name": "app/page.tsx",
       "file_type": "code",
-      "norm_label": "about/page.tsx",
-      "source_file": "src/app/about/page.tsx",
-      "source_location": "L1"
+      "norm_label": "herovideoplayer()",
+      "source_file": "src/components/HeroVideoPlayer.tsx",
+      "source_location": "L6"
     },
     {
-      "id": "src_app_about_page_metadata",
-      "label": "metadata",
+      "id": "src_components_towersmap_createtowersicon",
+      "label": "createTowersIcon()",
+      "_callable": true,
       "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
+      "community": 7,
+      "community_name": "app/page.tsx",
       "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/about/page.tsx",
-      "source_location": "L7"
+      "norm_label": "createtowersicon()",
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_components_towersmapwrapper_towersmapwrapper",
+      "label": "TowersMapWrapper()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "towersmapwrapper()",
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L22"
     },
     {
       "id": "src_app_airbnb_page",
       "label": "airbnb/page.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "airbnb/page.tsx",
       "source_file": "src/app/airbnb/page.tsx",
@@ -809,7 +811,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/airbnb/page.tsx",
@@ -820,7 +822,7 @@
       "label": "healthcare/page.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "healthcare/page.tsx",
       "source_file": "src/app/healthcare/page.tsx",
@@ -831,7 +833,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/healthcare/page.tsx",
@@ -842,7 +844,7 @@
       "label": "hospitality/page.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "hospitality/page.tsx",
       "source_file": "src/app/hospitality/page.tsx",
@@ -853,40 +855,95 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/hospitality/page.tsx",
       "source_location": "L19"
     },
     {
-      "id": "src_app_page",
-      "label": "app/page.tsx",
+      "id": "src_app_layout",
+      "label": "layout.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "app/page.tsx",
-      "source_file": "src/app/page.tsx",
+      "norm_label": "layout.tsx",
+      "source_file": "src/app/layout.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_page_metadata",
+      "id": "src_app_layout_bricolage",
+      "label": "bricolage",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "bricolage",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_layout_caveat",
+      "label": "caveat",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "caveat",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_app_layout_figtree",
+      "label": "figtree",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "figtree",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_app_layout_jsonld",
+      "label": "jsonLd",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "jsonld",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_app_layout_metadata",
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
-      "source_file": "src/app/page.tsx",
-      "source_location": "L23"
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "src_app_layout_viewport",
+      "label": "viewport",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "viewport",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L26"
     },
     {
       "id": "src_app_retirement_villages_page",
       "label": "retirement-villages/page.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "retirement-villages/page.tsx",
       "source_file": "src/app/retirement-villages/page.tsx",
@@ -897,7 +954,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/retirement-villages/page.tsx",
@@ -908,7 +965,7 @@
       "label": "schools/page.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "schools/page.tsx",
       "source_file": "src/app/schools/page.tsx",
@@ -919,29 +976,18 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/schools/page.tsx",
       "source_location": "L19"
     },
     {
-      "id": "src_app_sitemap",
-      "label": "sitemap.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "sitemap.ts",
-      "source_file": "src/app/sitemap.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_app_sport_events_page",
       "label": "sport-events/page.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "sport-events/page.tsx",
       "source_file": "src/app/sport-events/page.tsx",
@@ -952,54 +998,10 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/sport-events/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_app_students_page",
-      "label": "students/page.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "students/page.tsx",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_students_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_app_what_we_offer_page",
-      "label": "what-we-offer/page.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "what-we-offer/page.tsx",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_what_we_offer_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/what-we-offer/page.tsx",
       "source_location": "L19"
     },
     {
@@ -1007,21 +1009,21 @@
       "label": "Footer.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "footer.tsx",
       "source_file": "src/components/Footer.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_components_herovideoplayer",
-      "label": "HeroVideoPlayer.tsx",
+      "id": "src_components_header",
+      "label": "Header.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "herovideoplayer.tsx",
-      "source_file": "src/components/HeroVideoPlayer.tsx",
+      "norm_label": "header.tsx",
+      "source_file": "src/components/Header.tsx",
       "source_location": "L1"
     },
     {
@@ -1029,21 +1031,21 @@
       "label": "WhatsAppIcon.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "whatsappicon.tsx",
       "source_file": "src/components/icons/WhatsAppIcon.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_lib_data",
-      "label": "data.ts",
+      "id": "src_components_mobilenav",
+      "label": "MobileNav.tsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "data.ts",
-      "source_file": "src/lib/data.ts",
+      "norm_label": "mobilenav.tsx",
+      "source_file": "src/components/MobileNav.tsx",
       "source_location": "L1"
     },
     {
@@ -1051,44 +1053,11 @@
       "label": "BUSINESS_INFO",
       "_origin": "ast",
       "community": 0,
-      "community_name": "data.ts",
+      "community_name": "BUSINESS_INFO",
       "file_type": "code",
       "norm_label": "business_info",
       "source_file": "src/lib/data.ts",
       "source_location": "L3"
-    },
-    {
-      "id": "src_lib_data_pricing_plans",
-      "label": "PRICING_PLANS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "pricing_plans",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L123"
-    },
-    {
-      "id": "src_lib_data_services",
-      "label": "SERVICES",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "services",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_lib_data_suburbs",
-      "label": "SUBURBS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "suburbs",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L169"
     },
     {
       "id": "src_actions_contact",
@@ -1132,6 +1101,50 @@
       "file_type": "code",
       "norm_label": "pickuprequestschema",
       "source_file": "src/actions/pickup.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_my_wash_page",
+      "label": "my-wash/page.tsx",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "MyWashForm.tsx",
+      "file_type": "code",
+      "norm_label": "my-wash/page.tsx",
+      "source_file": "src/app/my-wash/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_my_wash_page_faqs",
+      "label": "FAQS",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "MyWashForm.tsx",
+      "file_type": "code",
+      "norm_label": "faqs",
+      "source_file": "src/app/my-wash/page.tsx",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_app_my_wash_page_how_it_works_steps",
+      "label": "HOW_IT_WORKS_STEPS",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "MyWashForm.tsx",
+      "file_type": "code",
+      "norm_label": "how_it_works_steps",
+      "source_file": "src/app/my-wash/page.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_app_my_wash_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "MyWashForm.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/my-wash/page.tsx",
       "source_location": "L8"
     },
     {
@@ -1271,7 +1284,7 @@
       "label": "contact/page.tsx",
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "contact/page.tsx",
       "source_file": "src/app/contact/page.tsx",
@@ -1282,7 +1295,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/contact/page.tsx",
@@ -1293,7 +1306,7 @@
       "label": "express/page.tsx",
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "express/page.tsx",
       "source_file": "src/app/express/page.tsx",
@@ -1304,55 +1317,11 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 11,
-      "community_name": "my-wash/page.tsx",
+      "community_name": "contact/page.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/express/page.tsx",
       "source_location": "L20"
-    },
-    {
-      "id": "src_app_my_wash_page",
-      "label": "my-wash/page.tsx",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "my-wash/page.tsx",
-      "file_type": "code",
-      "norm_label": "my-wash/page.tsx",
-      "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_my_wash_page_faqs",
-      "label": "FAQS",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "my-wash/page.tsx",
-      "file_type": "code",
-      "norm_label": "faqs",
-      "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L41"
-    },
-    {
-      "id": "src_app_my_wash_page_how_it_works_steps",
-      "label": "HOW_IT_WORKS_STEPS",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "my-wash/page.tsx",
-      "file_type": "code",
-      "norm_label": "how_it_works_steps",
-      "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_app_my_wash_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "my-wash/page.tsx",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L8"
     },
     {
       "id": "assets_js_main",
@@ -1828,110 +1797,11 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_layout",
-      "label": "layout.tsx",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "layout.tsx",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_layout_bricolage",
-      "label": "bricolage",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "bricolage",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_layout_caveat",
-      "label": "caveat",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "caveat",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_app_layout_figtree",
-      "label": "figtree",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "figtree",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_app_layout_jsonld",
-      "label": "jsonLd",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "jsonld",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_app_layout_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_app_layout_viewport",
-      "label": "viewport",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "viewport",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_components_header",
-      "label": "Header.tsx",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "header.tsx",
-      "source_file": "src/components/Header.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_mobilenav",
-      "label": "MobileNav.tsx",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "mobilenav.tsx",
-      "source_file": "src/components/MobileNav.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_navdropdown",
       "label": "NavDropdown.tsx",
       "_origin": "ast",
       "community": 26,
-      "community_name": "layout.tsx",
+      "community_name": "NavDropdown.tsx",
       "file_type": "code",
       "norm_label": "navdropdown.tsx",
       "source_file": "src/components/NavDropdown.tsx",
@@ -1942,7 +1812,7 @@
       "label": "SECTOR_ITEMS",
       "_origin": "ast",
       "community": 26,
-      "community_name": "layout.tsx",
+      "community_name": "NavDropdown.tsx",
       "file_type": "code",
       "norm_label": "sector_items",
       "source_file": "src/components/NavDropdown.tsx",
@@ -1968,7 +1838,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L24"
     },
     {
       "id": "package_devdependencies_autoprefixer",
@@ -1979,7 +1849,7 @@
       "file_type": "code",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L29"
     },
     {
       "id": "package_devdependencies_postcss",
@@ -1990,7 +1860,7 @@
       "file_type": "code",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L30"
     },
     {
       "id": "package_devdependencies_tailwindcss",
@@ -2001,7 +1871,18 @@
       "file_type": "code",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L31"
+    },
+    {
+      "id": "package_devdependencies_types_leaflet",
+      "label": "@types/leaflet",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@types/leaflet",
+      "source_file": "package.json",
+      "source_location": "L25"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -2012,7 +1893,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L26"
     },
     {
       "id": "package_devdependencies_types_react",
@@ -2023,7 +1904,7 @@
       "file_type": "code",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L27"
     },
     {
       "id": "package_devdependencies_types_react_dom",
@@ -2034,7 +1915,7 @@
       "file_type": "code",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L28"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -2045,7 +1926,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L32"
     },
     {
       "id": "package_name",
@@ -2144,7 +2025,7 @@
       "file_type": "concept",
       "norm_label": "autoprefixer",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L29"
     },
     {
       "id": "postcss",
@@ -2155,7 +2036,7 @@
       "file_type": "concept",
       "norm_label": "postcss",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L30"
     },
     {
       "id": "tailwindcss",
@@ -2166,7 +2047,18 @@
       "file_type": "concept",
       "norm_label": "tailwindcss",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L31"
+    },
+    {
+      "id": "types_leaflet",
+      "label": "@types/leaflet",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "devDependencies",
+      "file_type": "concept",
+      "norm_label": "@types/leaflet",
+      "source_file": "package.json",
+      "source_location": "L25"
     },
     {
       "id": "types_node",
@@ -2177,7 +2069,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L26"
     },
     {
       "id": "types_react",
@@ -2188,7 +2080,7 @@
       "file_type": "concept",
       "norm_label": "@types/react",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L27"
     },
     {
       "id": "types_react_dom",
@@ -2199,7 +2091,7 @@
       "file_type": "concept",
       "norm_label": "@types/react-dom",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L28"
     },
     {
       "id": "typescript",
@@ -2210,7 +2102,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L32"
     },
     {
       "id": "package_dependencies",
@@ -2235,6 +2127,17 @@
       "source_location": "L13"
     },
     {
+      "id": "package_dependencies_leaflet",
+      "label": "leaflet",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "leaflet",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
       "id": "package_dependencies_lucide_react",
       "label": "lucide-react",
       "_origin": "ast",
@@ -2243,7 +2146,7 @@
       "file_type": "code",
       "norm_label": "lucide-react",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "package_dependencies_next",
@@ -2254,7 +2157,7 @@
       "file_type": "code",
       "norm_label": "next",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "package_dependencies_nodemailer",
@@ -2265,7 +2168,7 @@
       "file_type": "code",
       "norm_label": "nodemailer",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "package_dependencies_react",
@@ -2276,7 +2179,7 @@
       "file_type": "code",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "package_dependencies_react_dom",
@@ -2287,7 +2190,18 @@
       "file_type": "code",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
+    },
+    {
+      "id": "package_dependencies_react_leaflet",
+      "label": "react-leaflet",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "react-leaflet",
+      "source_file": "package.json",
+      "source_location": "L20"
     },
     {
       "id": "package_dependencies_tailwind_merge",
@@ -2298,7 +2212,7 @@
       "file_type": "code",
       "norm_label": "tailwind-merge",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "package_dependencies_types_nodemailer",
@@ -2320,7 +2234,7 @@
       "file_type": "code",
       "norm_label": "zod",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L22"
     },
     {
       "id": "clsx",
@@ -2334,6 +2248,17 @@
       "source_location": "L13"
     },
     {
+      "id": "leaflet",
+      "label": "leaflet",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "concept",
+      "norm_label": "leaflet",
+      "source_file": "package.json",
+      "source_location": "L14"
+    },
+    {
       "id": "lucide_react",
       "label": "lucide-react",
       "_origin": "ast",
@@ -2342,7 +2267,7 @@
       "file_type": "concept",
       "norm_label": "lucide-react",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "next",
@@ -2353,7 +2278,7 @@
       "file_type": "concept",
       "norm_label": "next",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L16"
     },
     {
       "id": "nodemailer",
@@ -2364,7 +2289,7 @@
       "file_type": "concept",
       "norm_label": "nodemailer",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L17"
     },
     {
       "id": "react",
@@ -2375,7 +2300,7 @@
       "file_type": "concept",
       "norm_label": "react",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "react_dom",
@@ -2386,7 +2311,18 @@
       "file_type": "concept",
       "norm_label": "react-dom",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L19"
+    },
+    {
+      "id": "react_leaflet",
+      "label": "react-leaflet",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "dependencies",
+      "file_type": "concept",
+      "norm_label": "react-leaflet",
+      "source_file": "package.json",
+      "source_location": "L20"
     },
     {
       "id": "tailwind_merge",
@@ -2397,7 +2333,7 @@
       "file_type": "concept",
       "norm_label": "tailwind-merge",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L21"
     },
     {
       "id": "types_nodemailer",
@@ -2419,18 +2355,139 @@
       "file_type": "concept",
       "norm_label": "zod",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L22"
+    },
+    {
+      "id": "src_app_about_page",
+      "label": "about/page.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "about/page.tsx",
+      "source_file": "src/app/about/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_about_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/about/page.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_app_services_slug_page",
       "label": "[slug]/page.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "[slug]/page.tsx",
+      "community_name": "data.ts",
       "file_type": "code",
       "norm_label": "[slug]/page.tsx",
       "source_file": "src/app/services/[slug]/page.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_app_sitemap",
+      "label": "sitemap.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "sitemap.ts",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_students_page",
+      "label": "students/page.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "students/page.tsx",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_students_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_app_what_we_offer_page",
+      "label": "what-we-offer/page.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "what-we-offer/page.tsx",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_what_we_offer_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_lib_data",
+      "label": "data.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "data.ts",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_data_pricing_plans",
+      "label": "PRICING_PLANS",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "pricing_plans",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L123"
+    },
+    {
+      "id": "src_lib_data_services",
+      "label": "SERVICES",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "services",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_lib_data_suburbs",
+      "label": "SUBURBS",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "suburbs",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L169"
     },
     {
       "id": "src_app_services_page",
@@ -2444,11 +2501,33 @@
       "source_location": "L1"
     },
     {
+      "id": "src_app_page",
+      "label": "app/page.tsx",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "app/page.tsx",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L24"
+    },
+    {
       "id": "src_components_herobubbles",
       "label": "HeroBubbles.tsx",
       "_origin": "ast",
       "community": 7,
-      "community_name": "HeroBubbles.tsx",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "herobubbles.tsx",
       "source_file": "src/components/HeroBubbles.tsx",
@@ -2459,11 +2538,55 @@
       "label": "BUBBLES",
       "_origin": "ast",
       "community": 7,
-      "community_name": "HeroBubbles.tsx",
+      "community_name": "app/page.tsx",
       "file_type": "code",
       "norm_label": "bubbles",
       "source_file": "src/components/HeroBubbles.tsx",
       "source_location": "L15"
+    },
+    {
+      "id": "src_components_herovideoplayer",
+      "label": "HeroVideoPlayer.tsx",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "herovideoplayer.tsx",
+      "source_file": "src/components/HeroVideoPlayer.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_towersmap",
+      "label": "TowersMap.tsx",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "towersmap.tsx",
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_towersmapwrapper",
+      "label": "TowersMapWrapper.tsx",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "towersmapwrapper.tsx",
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_towersmapwrapper_towersmap",
+      "label": "TowersMap",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/page.tsx",
+      "file_type": "code",
+      "norm_label": "towersmap",
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L7"
     },
     {
       "id": "server",
@@ -2686,7 +2809,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/page.tsx",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -2698,7 +2821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/page.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -2710,7 +2833,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/page.tsx",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -2822,6 +2945,19 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_towersmapwrapper_towersmap",
+      "target": "src_components_towersmap",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "deferred": true,
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "tsconfig_compileroptions_lib",
       "target": "ref_dom",
       "relation": "extends",
@@ -2930,6 +3066,18 @@
       "weight": 1.0
     },
     {
+      "source": "package_dependencies_leaflet",
+      "target": "leaflet",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
       "source": "package_dependencies_lucide_react",
       "target": "lucide_react",
       "relation": "imports",
@@ -2938,7 +3086,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -2950,7 +3098,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -2962,7 +3110,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -2974,7 +3122,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -2986,7 +3134,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies_react_leaflet",
+      "target": "react_leaflet",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -2998,7 +3158,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -3022,7 +3182,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -3034,7 +3194,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -3046,7 +3206,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -3058,7 +3218,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies_types_leaflet",
+      "target": "types_leaflet",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -3070,7 +3242,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -3082,7 +3254,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -3094,7 +3266,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -3106,7 +3278,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -3491,6 +3663,18 @@
       "context": "import",
       "source_file": "src/app/page.tsx",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_page",
+      "target": "src_components_towersmapwrapper_towersmapwrapper",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -3902,6 +4086,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_towersmap",
+      "target": "src_components_icons_whatsappicon_whatsappicon",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_towersmap",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_data",
       "target": "src_lib_types_pricingplan",
       "relation": "imports",
@@ -4252,6 +4460,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_page",
+      "target": "src_components_towersmapwrapper",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_retirement_villages_page",
       "target": "src_components_icons_whatsappicon",
       "relation": "imports_from",
@@ -4590,6 +4810,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_towersmap",
+      "target": "src_components_icons_whatsappicon",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_towersmap",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_data",
       "target": "src_lib_types",
       "relation": "imports_from",
@@ -4655,7 +4899,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -4715,7 +4959,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_lucide_react",
+      "target": "package_dependencies_leaflet",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4726,7 +4970,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_next",
+      "target": "package_dependencies_lucide_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4737,7 +4981,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_nodemailer",
+      "target": "package_dependencies_next",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4748,7 +4992,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
+      "target": "package_dependencies_nodemailer",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4759,7 +5003,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
+      "target": "package_dependencies_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4770,7 +5014,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_tailwind_merge",
+      "target": "package_dependencies_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4781,7 +5025,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_zod",
+      "target": "package_dependencies_react_leaflet",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4791,30 +5035,30 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwind_merge",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_types_leaflet",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4825,7 +5069,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_autoprefixer",
+      "target": "package_devdependencies_types_node",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4836,7 +5080,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_postcss",
+      "target": "package_devdependencies_types_react",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4847,7 +5091,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_types_react_dom",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4858,13 +5102,46 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_autoprefixer",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_postcss",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -5447,7 +5724,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/page.tsx",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -5458,7 +5735,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/page.tsx",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -5902,6 +6179,39 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_towersmap",
+      "target": "src_components_towersmap_createtowersicon",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/TowersMap.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_towersmapwrapper",
+      "target": "src_components_towersmapwrapper_towersmapwrapper",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_towersmapwrapper",
+      "target": "src_components_towersmapwrapper_towersmap",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_data",
       "target": "src_lib_data_pricing_plans",
       "relation": "contains",
@@ -6307,6 +6617,15 @@
       "source_file": "postcss.config.mjs"
     },
     {
+      "source": "src_components_towersmapwrapper",
+      "target": "src_components_towersmap",
+      "relation": "dynamic_import",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/TowersMapWrapper.tsx"
+    },
+    {
       "source": "assets_js_main_rationale_29",
       "target": "assets_js_main",
       "relation": "rationale_for",
@@ -6367,5 +6686,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "828078c704a86851d129baf19bbf0eab1acf029f"
+  "built_at_commit": "e77deb851939f412a2a2b0743b933cbdedd63f16"
 }
