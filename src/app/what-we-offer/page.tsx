@@ -12,6 +12,13 @@ import {
   Clock,
   ShieldCheck,
   Scale,
+  GraduationCap,
+  Home,
+  Hotel,
+  School,
+  Trophy,
+  Stethoscope,
+  HeartHandshake,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { BUSINESS_INFO, getServices, getPricingPlans } from "@/lib/data";
@@ -401,7 +408,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">🎓</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-lav text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <GraduationCap className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Students &amp; Residences
                 </h4>
@@ -419,7 +428,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">🏡</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-tealbg text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <Home className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Airbnb Hosts
                 </h4>
@@ -437,7 +448,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">🏨</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-lav text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <Hotel className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Hotels &amp; Guesthouses
                 </h4>
@@ -455,7 +468,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">🏫</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-tealbg text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <School className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Schools &amp; Hostels
                 </h4>
@@ -473,7 +488,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">🏆</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-lav text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <Trophy className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Sport Events &amp; Tournaments
                 </h4>
@@ -491,7 +508,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">🏥</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-tealbg text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <Stethoscope className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Healthcare &amp; Clinics
                 </h4>
@@ -509,7 +528,9 @@ export default async function WhatWeOfferPage() {
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
             >
               <div>
-                <span className="text-2xl mb-3 block">👵</span>
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-lav text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
+                  <HeartHandshake className="h-6 w-6 transition-transform group-hover:scale-110" />
+                </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
                   Retirement Villages
                 </h4>
