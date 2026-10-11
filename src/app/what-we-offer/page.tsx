@@ -309,8 +309,8 @@ export default async function WhatWeOfferPage() {
               <div className="lg:col-span-5">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
                   <Image
-                    src="/img/collection.jpg"
-                    alt="Laundro-Hub Express Van Collection"
+                    src="/img/express-delivery.jpg"
+                    alt="Laundro-Hub Express Doorstep Delivery"
                     fill
                     className="object-cover"
                   />

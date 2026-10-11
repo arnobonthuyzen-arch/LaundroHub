@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "src/lib/data.ts": {
-    "mtime": 1791753279.5422063,
-    "seen": 1791753334.256268,
-    "ast_hash": "1f2f45e5f559fc542aace1c553ef7388",
+    "mtime": 1791753727.73133,
+    "seen": 1791753839.479626,
+    "ast_hash": "54167114df6a63dcfb7a4fbff3788013",
     "semantic_hash": ""
   },
   "src/lib/types.ts": {
@@ -216,9 +216,9 @@
     "semantic_hash": ""
   },
   "collection-delivery.html": {
-    "mtime": 1791743019.7213032,
-    "seen": 1791745652.4064908,
-    "ast_hash": "1417f47be67cb2939a9ec204a5b78967",
+    "mtime": 1791753758.1777701,
+    "seen": 1791753839.479638,
+    "ast_hash": "3259cf2c11c2e9397a773a29f0215f9b",
     "semantic_hash": ""
   },
   "contact.html": {
@@ -246,9 +246,9 @@
     "semantic_hash": ""
   },
   "services.html": {
-    "mtime": 1791743216.6708703,
-    "seen": 1791745652.406496,
-    "ast_hash": "5f6410e072920cb6a3fb0fc680c9df80",
+    "mtime": 1791753787.0934496,
+    "seen": 1791753839.479645,
+    "ast_hash": "715e1e82b53f18e0ad4469a16dcadfa1",
     "semantic_hash": ""
   },
   "washing-drying.html": {
@@ -870,9 +870,9 @@
     "semantic_hash": ""
   },
   "src/app/express/page.tsx": {
-    "mtime": 1791752734.675281,
-    "seen": 1791752991.8150651,
-    "ast_hash": "253c30cec0036573c80cc282cb485c31",
+    "mtime": 1791753697.4800968,
+    "seen": 1791753839.479585,
+    "ast_hash": "bf056db221b12c3f01df0bb75b4d3702",
     "semantic_hash": ""
   },
   "src/app/hospitality/page.tsx": {
@@ -894,9 +894,9 @@
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
-    "mtime": 1791753252.9598198,
-    "seen": 1791753334.2562518,
-    "ast_hash": "f4a7f886c8d6111bb40283a85398a25d",
+    "mtime": 1791753682.514378,
+    "seen": 1791753839.479611,
+    "ast_hash": "29add5ac217bc18604380362af669ee4",
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {
@@ -1041,6 +1041,18 @@
     "mtime": 1791753161.6166968,
     "seen": 1791753334.256408,
     "ast_hash": "5f5250b76ed3d1f38bf59f4871e0d067",
+    "semantic_hash": ""
+  },
+  "assets/img/express-delivery.jpg": {
+    "mtime": 1791753651.1103094,
+    "seen": 1791753839.4796858,
+    "ast_hash": "3b6008c9af38597c88d9df79abed36f7",
+    "semantic_hash": ""
+  },
+  "public/img/express-delivery.jpg": {
+    "mtime": 1791753651.1071997,
+    "seen": 1791753839.479761,
+    "ast_hash": "3b6008c9af38597c88d9df79abed36f7",
     "semantic_hash": ""
   }
 }

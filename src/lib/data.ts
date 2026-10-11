@@ -97,7 +97,7 @@ const SERVICES: ServiceItem[] = [
       "Flexible morning, midday & afternoon windows",
     ],
     icon: "/icons/truck.svg",
-    image: "/img/collection.jpg",
+    image: "/img/express-delivery.jpg",
     href: "/services/collection-delivery",
   },
   {

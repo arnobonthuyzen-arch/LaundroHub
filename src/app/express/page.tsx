@@ -115,7 +115,7 @@ export default async function ExpressPage() {
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-brand-line/80 shadow-elevated">
                 <Image
-                  src="/img/collection.jpg"
+                  src="/img/express-delivery.jpg"
                   alt="Laundro-Hub Express van collection in Bloemfontein"
                   fill
                   priority
