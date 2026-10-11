@@ -124,6 +124,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://api.whatsapp.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://api.whatsapp.com" />
+        <link rel="preconnect" href="https://maps.google.com" />
+        <link rel="dns-prefetch" href="https://maps.google.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
