@@ -18,7 +18,8 @@ There is no framework and no build step, so any editor or AI IDE (such as Antigr
 | `ironing.html` | Ironing |
 | `bedding-linen.html` | Bedding & Linen |
 | `collection-delivery.html` | Drop-Off & Collection (Laundro-Hub Express) |
-| `monthly-packages.html` | Monthly Packages |
+| `school-hostels.html` | School Hostels & Student Living |
+| `monthly-packages.html` | Canonical alias/redirect to `school-hostels.html` |
 | `about.html` | About us |
 | `contact.html` | Contact + booking/quote form |
 
@@ -43,7 +44,7 @@ assets/
 
 Search the project for `[` to find every placeholder:
 
-- `[R —]` – prices (price table, service pages, monthly packages) and `[— kg]` package allowances
+- `[R —]` – prices (price table, service pages, hostel & student plans) and `[— kg]` allowances
 - `[Opening hours]` / `[— to —]` – store hours (home, contact, collection page)
 - `[Add suburb]` – areas you collect from (contact + collection page)
 - `[Add a few lines about the founders…]` – About page

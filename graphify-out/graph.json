@@ -325,7 +325,7 @@
       "file_type": "code",
       "norm_label": "getpricingplans()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L191"
+      "source_location": "L195"
     },
     {
       "id": "src_lib_data_getservices",
@@ -337,7 +337,7 @@
       "file_type": "code",
       "norm_label": "getservices()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L181"
+      "source_location": "L183"
     },
     {
       "id": "src_actions_contact_submitcontactform",
@@ -493,7 +493,7 @@
       "file_type": "code",
       "norm_label": "getsuburbs()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L195"
+      "source_location": "L199"
     },
     {
       "id": "src_app_about_loading_aboutloading",
@@ -745,7 +745,7 @@
       "file_type": "code",
       "norm_label": "getservicebyslug()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L186"
+      "source_location": "L188"
     },
     {
       "id": "src_app_services_page_servicespage",
@@ -1088,7 +1088,7 @@
       "file_type": "code",
       "norm_label": "suburbs",
       "source_file": "src/lib/data.ts",
-      "source_location": "L167"
+      "source_location": "L169"
     },
     {
       "id": "src_actions_contact",
@@ -2553,7 +2553,7 @@
       "node_kind": "heading",
       "norm_label": "before going live: things to fill in",
       "source_file": "README.md",
-      "source_location": "L42"
+      "source_location": "L43"
     },
     {
       "id": "readme_contact_details_used",
@@ -2565,7 +2565,7 @@
       "node_kind": "heading",
       "norm_label": "contact details used",
       "source_file": "README.md",
-      "source_location": "L54"
+      "source_location": "L55"
     },
     {
       "id": "readme_laundro_hub_website",
@@ -2613,7 +2613,7 @@
       "node_kind": "heading",
       "norm_label": "structure",
       "source_file": "README.md",
-      "source_location": "L25"
+      "source_location": "L26"
     }
   ],
   "links": [
@@ -4952,7 +4952,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -4963,7 +4963,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -4974,7 +4974,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L54",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -5920,7 +5920,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L167",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -5931,7 +5931,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L181",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -5942,7 +5942,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L186",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -5953,7 +5953,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L191",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -5964,7 +5964,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L195",
+      "source_location": "L199",
       "weight": 1.0
     },
     {
@@ -6367,5 +6367,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f45211da302715b5d19856a54ed3a2de298cc012"
+  "built_at_commit": "828078c704a86851d129baf19bbf0eab1acf029f"
 }

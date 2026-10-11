@@ -206,18 +206,18 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Monthly Packages Preview */}
+      {/* School Hostels & Student Living Preview */}
       <section className="py-20 bg-brand-lav/40 border-y border-brand-line">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-bold uppercase tracking-wider text-brand-purple">
-              Monthly Subscriptions
+              Hostels &amp; Student Living
             </span>
             <h2 className="mt-2 font-display text-3xl sm:text-5xl font-extrabold text-brand-deep tracking-tight">
-              Laundry on autopilot.
+              Boarding school &amp; hostel laundry made simple.
             </h2>
             <p className="mt-4 text-base text-brand-body">
-              Save up to 25% with dedicated monthly kilograms. Weekly doorstep collections, priority turnaround, and zero laundry stress.
+              Scheduled weekly batch runs for school boarding hostels, UFS/CUT residences, and student communes in Bloemfontein. Tagged bags, uniform pressing, and zero mix-ups.
             </p>
           </div>
 
@@ -288,7 +288,7 @@ export default async function HomePage() {
                         : "bg-brand-purple text-white hover:bg-brand-deep"
                     }`}
                   >
-                    Sign up for {plan.name}
+                    Inquire about {plan.name}
                   </Link>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export default async function HomePage() {
                   Students &amp; Residences
                 </h3>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  Monthly kg packages, UFS &amp; CUT hostel collection points, and hassle-free wash &amp; fold.
+                  Batch laundry runs, UFS &amp; CUT residence pickups, and hassle-free wash &amp; fold.
                 </p>
               </div>
               <span className="mt-6 inline-flex items-center text-xs font-bold text-brand-purple group-hover:translate-x-1 transition-transform">

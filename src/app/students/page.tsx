@@ -19,17 +19,17 @@ import { BUSINESS_INFO, getPricingPlans } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Student Laundry & Residence Packages | Laundro-Hub Bloemfontein",
   description:
-    "Affordable monthly laundry packages for UFS Kovsies, CUT, college students, and residences. Scheduled doorstep pickup, individual bag washing, and fresh folding.",
+    "Affordable student & residence laundry plans for UFS Kovsies, CUT, college students, and residences. Scheduled doorstep pickup, individual bag washing, and fresh folding.",
 };
 
 export default async function StudentsPage() {
   const plans = await getPricingPlans();
-  const studentPlan = plans.find((p) => p.id === "student-single") || plans[0];
+  const studentPlan = plans.find((p) => p.id === "student-res") || plans[0];
 
   const studentBenefits = [
     {
-      title: "Predictable Monthly Budget",
-      desc: "No coin machines, broken residence washers, or unexpected expenses. Pay a fixed monthly bundle rate for your kilograms.",
+      title: "Predictable Term or Monthly Budget",
+      desc: "No coin machines, broken residence washers, or unexpected expenses. Clear per-student or commune pricing.",
       icon: Calendar,
     },
     {
@@ -74,12 +74,12 @@ export default async function StudentsPage() {
                 Student Laundry Made <span className="text-brand-purple">Effortless.</span>
               </h1>
               <p className="text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-                Focus on tests, assignments, and campus life — we take care of the washing, drying, and folding. Monthly packages with weekly residence pickup across Bloemfontein.
+                Focus on tests, assignments, and campus life — we take care of the washing, drying, and folding. Residence and hostel batch runs with weekly residence pickup across Bloemfontein.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20monthly%20package`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20student%20res%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"

@@ -101,65 +101,67 @@ const SERVICES: ServiceItem[] = [
     href: "/services/collection-delivery",
   },
   {
-    id: "packages",
-    slug: "monthly-packages",
-    title: "Monthly Packages",
-    tagline: "Predictable, hassle-free laundry plans.",
-    description: "Save up to 25% with subscription laundry bundles for students, busy professionals, and families. Weekly pickups included.",
-    priceStartingAt: "Discounted bundle rates",
+    id: "hostels",
+    slug: "school-hostels",
+    title: "School Hostels & Student Living",
+    tagline: "Dedicated bulk laundry for school boarding houses & student communes.",
+    description: "Reliable bulk laundry collections for school boarding hostels, university residences, and student accommodation across Bloemfontein. Tagged laundry bags, uniform pressing, sports kits, and bulk bedding.",
+    priceStartingAt: "Tailored hostel & student rates",
     features: [
-      "Fixed monthly kg allowance",
-      "Free priority collection & delivery",
-      "Rollover unused kilograms",
-      "Dedicated laundry bag included",
-      "No long-term contracts",
+      "Weekly scheduled batch collections",
+      "Individually tagged student laundry bags",
+      "School uniform washing & crisp steam pressing",
+      "Sports team kits and mud stain removal",
+      "Consolidated school billing or parent EFT",
     ],
     icon: "/icons/calendar.svg",
-    image: "/img/packages.jpg",
-    href: "/services/monthly-packages",
+    image: "/img/hostel.jpg",
+    href: "/services/school-hostels",
   },
 ];
 
 const PRICING_PLANS: PricingPlan[] = [
   {
-    id: "student-single",
-    name: "Student / Single",
-    weightLimit: "20 kg / month",
-    pricePerMonth: "R 599 / mo",
-    description: "Ideal for students and single professionals who want weekend laundry taken off their plate.",
-    features: [
-      "Up to 20 kg wash, dry & fold",
-      "2 collections & deliveries per month",
-      "Same-day turnaround priority",
-      "Free branded laundry bag",
-    ],
-  },
-  {
-    id: "couple",
-    name: "Couple / Duo",
-    weightLimit: "40 kg / month",
-    pricePerMonth: "R 999 / mo",
+    id: "school-hostel",
+    name: "School Boarding Hostel",
+    weightLimit: "Per learner / term batches",
+    pricePerMonth: "Custom hostel rates",
     popular: true,
-    description: "The most popular plan for two adults with regular work and active lifestyle loads.",
+    description: "Turnkey weekly laundry solution for primary and high school boarding houses across Bloemfontein.",
     features: [
-      "Up to 40 kg wash, dry & fold",
-      "4 collections (weekly) per month",
-      "Light steam pressing included for 10 items",
-      "Priority customer WhatsApp channel",
+      "Dedicated weekly batch collection & delivery",
+      "Individual tagged student bags (no mixed loads)",
+      "Uniform washing & precision steam pressing",
+      "Sports kits & heavy mud stain pre-treatment",
+      "Consolidated term invoice or parent billing",
     ],
   },
   {
-    id: "family",
-    name: "Family Plus",
-    weightLimit: "75 kg / month",
-    pricePerMonth: "R 1,699 / mo",
-    description: "Full household coverage for school uniforms, everyday clothes, and sports kits.",
+    id: "student-res",
+    name: "University Res & Communes",
+    weightLimit: "Doorstep res pickup",
+    pricePerMonth: "Affordable student rates",
+    description: "Designed for UFS Kovsies and CUT students, residence houses, and shared student communes.",
     features: [
-      "Up to 75 kg wash, dry & fold",
-      "Weekly scheduled doorstep pickup",
-      "Includes 2 large duvets / blankets per month",
-      "Free stain pre-treatment",
-      "Rollover up to 10 kg unused allowance",
+      "Pickups at residence gate or commune address",
+      "Wash, dry & fold within 24–48 hours",
+      "Bedding, duvet inners & blankets handled",
+      "Discounted rates for group & roommate bookings",
+      "Direct WhatsApp booking & status updates",
+    ],
+  },
+  {
+    id: "sports-camps",
+    name: "Sports Academies & Camps",
+    weightLimit: "Tournament & tour batches",
+    pricePerMonth: "Per tournament / fixture",
+    description: "Rapid turnaround service for visiting school sports tours, clinics, and holiday training camps.",
+    features: [
+      "High-capacity overnight / daily turnaround",
+      "Heavy-duty grass & Free State red mud wash",
+      "Full match day jerseys, bibs & tracksuits",
+      "Returned sorted, packed & ready for next game",
+      "Express collection from sports pavilions",
     ],
   },
 ];
@@ -184,7 +186,9 @@ export async function getServices(): Promise<ServiceItem[]> {
 }
 
 export async function getServiceBySlug(slug: string): Promise<ServiceItem | null> {
-  const service = SERVICES.find((s) => s.slug === slug);
+  const service = SERVICES.find(
+    (s) => s.slug === slug || (slug === "monthly-packages" && s.slug === "school-hostels")
+  );
   return Promise.resolve(service ?? null);
 }
 

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     template: "%s | Laundro-Hub Bloemfontein",
   },
   description:
-    "Professional washing, drying, steam ironing, bedding and doorstep collection & delivery in Langenhovenpark, Bloemfontein. Fast turnaround and flexible monthly packages.",
+    "Professional washing, drying, steam ironing, bedding, school hostel & student laundry, and doorstep collection & delivery in Langenhovenpark, Bloemfontein.",
   keywords: [
     "laundry Bloemfontein",
     "laundromat Langenhovenpark",

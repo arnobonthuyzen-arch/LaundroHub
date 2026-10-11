@@ -305,18 +305,18 @@ export default async function WhatWeOfferPage() {
         </div>
       </section>
 
-      {/* Monthly Packages & Subscriptions */}
+      {/* School Hostels & Student Living */}
       <section className="py-16 sm:py-20 bg-brand-ground">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-teal">
-              Save Up to 25%
+              Hostels &amp; Student Living
             </span>
             <h2 className="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">
-              Monthly Laundry Packages
+              School Hostels &amp; Student Accommodation
             </h2>
             <p className="mt-3 text-base text-brand-body">
-              Ideal for students, couples, and busy families who want predictable monthly pricing and priority weekly collection.
+              Dedicated bulk laundry runs for school boarding hostels, university residences, and student communes across Bloemfontein.
             </p>
           </div>
 
@@ -370,7 +370,7 @@ export default async function WhatWeOfferPage() {
                         : "bg-brand-purple text-white hover:bg-brand-deep"
                     }`}
                   >
-                    <span>Sign up for {plan.name}</span>
+                    <span>Inquire about {plan.name}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
