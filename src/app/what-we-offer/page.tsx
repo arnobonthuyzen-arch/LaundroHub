@@ -327,58 +327,102 @@ export default async function WhatWeOfferPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {plans.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative flex flex-col justify-between rounded-3xl p-8 border transition-all ${
+                className={`relative flex flex-col justify-between rounded-3xl p-7 sm:p-8 transition-all h-full ${
                   plan.popular
-                    ? "bg-white border-brand-purple ring-2 ring-brand-purple/20 shadow-elevated"
-                    : "bg-white border-brand-line shadow-sm"
+                    ? "bg-brand-deep text-white shadow-elevated border-2 border-brand-mint ring-4 ring-brand-purple/10"
+                    : "bg-white text-brand-ink border border-brand-line shadow-sm hover:shadow-md hover:border-brand-purple/30"
                 }`}
               >
-                {plan.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-purple px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
-                    Most Popular
-                  </span>
-                )}
                 <div>
-                  <h3 className="font-display text-2xl font-bold text-brand-deep">
+                  {/* Category Badge & Weight Tag Row */}
+                  <div className="flex items-center justify-between gap-2 min-h-[1.75rem] mb-3">
+                    <span
+                      className={`inline-flex items-center rounded-full px-3 py-0.5 text-[11px] font-extrabold uppercase tracking-wider ${
+                        plan.popular
+                          ? "bg-brand-mint text-brand-deep"
+                          : "bg-brand-lav text-brand-purple"
+                      }`}
+                    >
+                      {plan.popular ? "★ Most Popular" : "Bulk Batch Care"}
+                    </span>
+                    <span
+                      className={`text-[11px] font-bold uppercase tracking-wider ${
+                        plan.popular ? "text-brand-mint/90" : "text-brand-teal"
+                      }`}
+                    >
+                      {plan.weightLimit}
+                    </span>
+                  </div>
+
+                  {/* Plan Name */}
+                  <h3
+                    className={`font-display text-xl sm:text-2xl font-bold min-h-[3.5rem] flex items-center leading-snug ${
+                      plan.popular ? "text-white" : "text-brand-deep"
+                    }`}
+                  >
                     {plan.name}
                   </h3>
-                  <div className="mt-4 flex items-baseline gap-2">
-                    <span className="text-3xl sm:text-4xl font-extrabold text-brand-deep">
+
+                  {/* Rate / Price Display */}
+                  <div className="mt-3 min-h-[3.75rem] flex items-center">
+                    <span
+                      className={`text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight ${
+                        plan.popular ? "text-brand-mint" : "text-brand-deep"
+                      }`}
+                    >
                       {plan.pricePerMonth}
                     </span>
                   </div>
-                  <span className="inline-block mt-1 text-xs font-semibold uppercase tracking-wider text-brand-teal">
-                    {plan.weightLimit}
-                  </span>
-                  <p className="mt-4 text-sm leading-relaxed text-brand-body">
+
+                  {/* Description */}
+                  <p
+                    className={`mt-3 text-sm leading-relaxed min-h-[4.5rem] flex items-start ${
+                      plan.popular ? "text-brand-lav/80" : "text-brand-body"
+                    }`}
+                  >
                     {plan.description}
                   </p>
 
-                  <ul className="mt-6 space-y-3 border-t border-brand-line/60 pt-6">
+                  {/* Divider */}
+                  <div
+                    className={`my-6 border-t ${
+                      plan.popular ? "border-white/15" : "border-brand-line/60"
+                    }`}
+                  />
+
+                  {/* Feature Checklist */}
+                  <ul className="space-y-3.5">
                     {plan.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-body">
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-teal mt-0.5" />
-                        <span>{feat}</span>
+                      <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm leading-snug">
+                        <CheckCircle2
+                          className={`h-4 w-4 shrink-0 mt-0.5 ${
+                            plan.popular ? "text-brand-mint" : "text-brand-teal"
+                          }`}
+                        />
+                        <span className={plan.popular ? "text-white/90" : "text-brand-body"}>
+                          {feat}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
+                {/* Bottom CTA Button */}
                 <div className="mt-8 pt-4">
                   <Link
                     href="/contact"
-                    className={`flex w-full items-center justify-center gap-2 rounded-xl py-3 text-xs font-bold transition-all ${
+                    className={`flex w-full h-12 items-center justify-center gap-2 rounded-xl text-sm font-bold transition-all shadow-sm ${
                       plan.popular
-                        ? "bg-brand-mint text-brand-deep hover:bg-brand-mint/90 shadow-sm"
-                        : "bg-brand-purple text-white hover:bg-brand-deep"
+                        ? "bg-brand-mint text-brand-deep hover:bg-brand-mint/90 hover:scale-[1.01]"
+                        : "bg-brand-purple text-white hover:bg-brand-deep hover:scale-[1.01]"
                     }`}
                   >
                     <span>Inquire about {plan.name}</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
               </div>
