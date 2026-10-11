@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import type { ActionState } from "@/lib/types";
 import { sendPickupOrderEmail } from "@/lib/mail";
+import { getLogisticsFee, type LogisticsOptionType } from "@/lib/data";
 
 export const pickupRequestSchema = z.object({
   name: z.string().trim().min(2, "Please enter your full name (at least 2 characters)"),
@@ -18,6 +19,7 @@ export const pickupRequestSchema = z.object({
   }),
   services: z.string().min(1, "Please choose at least one laundry service"),
   estimatedBags: z.string().min(1, "Please select your estimated laundry volume"),
+  logisticsOption: z.enum(["both", "pickup", "dropoff"]).default("both"),
   detergentPreference: z.enum(["standard", "hypoallergenic", "extra-softener"]).default("standard"),
   packagingPreference: z.enum(["folded", "hangers", "mixed"]).default("folded"),
   speed: z.enum(["standard", "express"]).default("standard"),
@@ -34,6 +36,8 @@ export interface PickupSuccessData {
   pickupDate: string;
   timeSlot: string;
   speed: string;
+  logisticsOption: string;
+  deliveryFee: number;
   whatsappConfirmationUrl: string;
 }
 
@@ -52,6 +56,7 @@ export async function submitPickupRequest(
     timeSlot: formData.get("timeSlot"),
     services: formData.get("services"),
     estimatedBags: formData.get("estimatedBags"),
+    logisticsOption: formData.get("logisticsOption") || "both",
     detergentPreference: formData.get("detergentPreference") || "standard",
     packagingPreference: formData.get("packagingPreference") || "folded",
     speed: formData.get("speed") || "standard",
@@ -82,12 +87,22 @@ export async function submitPickupRequest(
     express: "Express Same-Day Turnaround",
   };
 
+  const logisticsNames: Record<string, string> = {
+    both: "Both Collection & Delivery (Round-Trip)",
+    pickup: "Pickup Only (Collection from my door)",
+    dropoff: "Delivery Only (Drop-off to my door)",
+  };
+
+  const deliveryFee = getLogisticsFee(data.suburb, data.logisticsOption);
+
   // Pre-formatted WhatsApp message for instant 1-tap confirmation
   const waText = encodeURIComponent(
-    `Hello Laundro-Hub! I just scheduled a doorstep pickup on My Wash.\n\n` +
+    `Hello Laundro-Hub! I just scheduled a collection request on My Wash.\n\n` +
     `*Ref:* ${referenceNumber}\n` +
     `*Name:* ${data.name}\n` +
     `*Suburb:* ${data.suburb}\n` +
+    `*Option:* ${logisticsNames[data.logisticsOption] || data.logisticsOption}\n` +
+    `*Transport Fee:* R${deliveryFee}\n` +
     `*Address:* ${data.address}${data.accessCode ? ` (Gate: ${data.accessCode})` : ""}\n` +
     `*Date:* ${data.pickupDate}\n` +
     `*Time Window:* ${timeSlotNames[data.timeSlot] || data.timeSlot}\n` +
@@ -104,6 +119,8 @@ export async function submitPickupRequest(
       ...data,
       timeSlot: timeSlotNames[data.timeSlot] || data.timeSlot,
       speed: speedNames[data.speed] || data.speed,
+      logisticsOption: logisticsNames[data.logisticsOption] || data.logisticsOption,
+      deliveryFee: `R${deliveryFee}`,
     },
     referenceNumber
   );
@@ -113,6 +130,7 @@ export async function submitPickupRequest(
     timestamp: new Date().toISOString(),
     referenceNumber,
     data,
+    deliveryFee,
   });
 
   revalidatePath("/my-wash");
@@ -127,8 +145,10 @@ export async function submitPickupRequest(
       pickupDate: data.pickupDate,
       timeSlot: timeSlotNames[data.timeSlot] || data.timeSlot,
       speed: speedNames[data.speed] || data.speed,
+      logisticsOption: logisticsNames[data.logisticsOption] || data.logisticsOption,
+      deliveryFee,
       whatsappConfirmationUrl,
     },
-    message: `Pickup scheduled successfully! Reference #${referenceNumber}. Our driver will contact ${data.phone} prior to arrival in ${data.suburb}.`,
+    message: `Scheduled successfully! Reference #${referenceNumber}. Our driver will contact ${data.phone} prior to arrival in ${data.suburb}. (Transport Fee: R${deliveryFee})`,
   };
 }

@@ -277,8 +277,20 @@ export default async function WhatWeOfferPage() {
                   Laundro-Hub Express: Collected &amp; Delivered in 1–2 Days
                 </h3>
                 <p className="text-base text-brand-lav/90 leading-relaxed max-w-xl">
-                  Don&apos;t have time to drop off your laundry at The Towers? Our express van collects your bags directly from your home, school hostel, Airbnb, or business anywhere in Mangaung and returns them clean and folded within 1–2 business days.
+                  Don&apos;t have time to drop off your laundry at The Towers? Our express van collects your bags directly from your home, school hostel, Airbnb, or business across Bloemfontein and returns them clean and folded within 1–2 business days.
                 </p>
+
+                {/* Rates Callout Badges */}
+                <div className="flex flex-wrap gap-2.5 pt-1">
+                  <div className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 px-3 py-1.5 text-xs">
+                    <span className="text-brand-mint font-bold">Langenhovenpark: </span>
+                    <span className="text-white">R35 Pickup &middot; R35 Drop-off (R70 Both)</span>
+                  </div>
+                  <div className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 px-3 py-1.5 text-xs">
+                    <span className="text-brand-mint font-bold">Greater Bloemfontein: </span>
+                    <span className="text-white">R65 Pickup &middot; R65 Drop-off (R130 Both)</span>
+                  </div>
+                </div>
 
                 <div className="flex flex-wrap items-center gap-3 pt-2">
                   <Link

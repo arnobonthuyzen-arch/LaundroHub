@@ -15,7 +15,7 @@ import {
   Home,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
-import { BUSINESS_INFO, getSuburbs } from "@/lib/data";
+import { BUSINESS_INFO, getSuburbs, COLLECTION_DELIVERY_PRICING } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Laundro-Hub Express | 1–2 Day Collection & Delivery in Bloemfontein",
@@ -169,6 +169,165 @@ export default async function ExpressPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Transparent Collection & Delivery Rates Section */}
+      <section className="py-16 sm:py-20 bg-white border-t border-brand-line">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-tealbg px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-teal-dark border border-brand-teal/20">
+              <Truck className="h-3.5 w-3.5 text-brand-teal" />
+              Simple, Upfront Pricing
+            </span>
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">
+              Collection &amp; Delivery Rates
+            </h2>
+            <p className="mt-3 text-base text-brand-body leading-relaxed">
+              Transparent, flat-rate transport options across Bloemfontein. Choose one-way collection, one-way drop-off, or full round-trip service.
+            </p>
+          </div>
+
+          {/* Pricing Cards Comparison */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Langenhovenpark Card */}
+            <div className="rounded-3xl border-2 border-brand-teal/40 bg-brand-ground/40 p-8 shadow-sm flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-4 right-4 rounded-full bg-brand-teal px-3 py-1 text-[11px] font-bold text-white uppercase tracking-wider">
+                Store Hub Area
+              </div>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-teal">
+                  Local Neighborhood
+                </span>
+                <h3 className="text-2xl font-display font-extrabold text-brand-deep mt-1">
+                  Langenhovenpark
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-muted mt-1.5">
+                  Direct vicinity of The Towers Shopping Centre
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-brand-line">
+                    <span className="text-sm font-semibold text-brand-deep">Pickup Only (Collection)</span>
+                    <span className="font-mono text-lg font-extrabold text-brand-teal">R35</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-white border border-brand-line">
+                    <span className="text-sm font-semibold text-brand-deep">Drop-off Only (Delivery)</span>
+                    <span className="font-mono text-lg font-extrabold text-brand-teal">R35</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-brand-tealbg border border-brand-teal/30">
+                    <div>
+                      <span className="text-sm font-bold text-brand-deep">Both (Round-Trip)</span>
+                      <p className="text-[11px] text-brand-muted">Collection + Delivery back</p>
+                    </div>
+                    <span className="font-mono text-xl font-extrabold text-brand-teal-dark">R70</span>
+                  </div>
+                </div>
+
+                <ul className="mt-6 space-y-2 text-xs text-brand-body">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
+                    <span>Fastest dispatch directly from our store hub</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
+                    <span>Flexible morning, midday, and afternoon windows</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="pt-8">
+                <Link
+                  href="/my-wash"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.01]"
+                >
+                  <span>Book Langenhovenpark Pickup</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Everywhere Else in Bloemfontein */}
+            <div className="rounded-3xl border border-brand-line bg-white p-8 shadow-sm flex flex-col justify-between relative">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-purple">
+                  Greater Metro
+                </span>
+                <h3 className="text-2xl font-display font-extrabold text-brand-deep mt-1">
+                  Everywhere Else in Bloem
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-muted mt-1.5">
+                  Universitas, Woodland Hills, Brandwag, Dan Pienaar, etc.
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-brand-ground/60 border border-brand-line">
+                    <span className="text-sm font-semibold text-brand-deep">Pickup Only (Collection)</span>
+                    <span className="font-mono text-lg font-extrabold text-brand-purple">R65</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-brand-ground/60 border border-brand-line">
+                    <span className="text-sm font-semibold text-brand-deep">Drop-off Only (Delivery)</span>
+                    <span className="font-mono text-lg font-extrabold text-brand-purple">R65</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3.5 rounded-xl bg-brand-lav border border-brand-purple/20">
+                    <div>
+                      <span className="text-sm font-bold text-brand-deep">Both (Round-Trip)</span>
+                      <p className="text-[11px] text-brand-muted">Collection + Delivery back</p>
+                    </div>
+                    <span className="font-mono text-xl font-extrabold text-brand-purple">R130</span>
+                  </div>
+                </div>
+
+                <ul className="mt-6 space-y-2 text-xs text-brand-body">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-purple shrink-0" />
+                    <span>Daily scheduled routes across all major suburbs</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-purple shrink-0" />
+                    <span>Secure estate &amp; security boom gate access support</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="pt-8">
+                <Link
+                  href="/my-wash"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-purple px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.01]"
+                >
+                  <span>Book Bloemfontein Pickup</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* 3 Flexible Ways Explainer */}
+          <div className="mt-12 rounded-2xl border border-brand-line bg-brand-ground p-6 max-w-4xl mx-auto">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-brand-deep mb-3 text-center sm:text-left">
+              Choose the Option That Fits Your Routine:
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+              <div className="rounded-xl bg-white p-3.5 border border-brand-line">
+                <p className="font-bold text-brand-deep mb-1">1. Collection Only</p>
+                <p className="text-brand-muted leading-relaxed">
+                  Too busy to drop off? Our van fetches from your door. Once washed, pick up your bags at The Towers when convenient.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-3.5 border border-brand-line">
+                <p className="font-bold text-brand-deep mb-1">2. Delivery Only</p>
+                <p className="text-brand-muted leading-relaxed">
+                  Drop off your laundry on your morning commute; our driver delivers crisp, clean clothes directly to your door.
+                </p>
+              </div>
+              <div className="rounded-xl bg-white p-3.5 border border-brand-line">
+                <p className="font-bold text-brand-deep mb-1">3. Both (Round-Trip)</p>
+                <p className="text-brand-muted leading-relaxed">
+                  100% hands-free. Van collects your dirty clothes and returns them fresh and folded without you leaving home.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

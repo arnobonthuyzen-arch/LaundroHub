@@ -88,13 +88,13 @@ const SERVICES: ServiceItem[] = [
     title: "Drop-Off & Collection",
     tagline: "Laundro-Hub Express van to your doorstep.",
     description: "Busy schedule? We collect your bags from your home, office, or guesthouse and return them fresh, clean, and neatly bundled.",
-    priceStartingAt: "Free on qualifying orders",
+    priceStartingAt: "From R35 per trip",
     features: [
-      "Regular scheduled route pickups",
-      "Langenhovenpark & Woodland Hills daily",
-      "WhatsApp status updates",
-      "Contactless handoff option",
-      "Flexible collection times",
+      "R35 Pickup / R35 Drop-off in Langenhovenpark",
+      "R65 Pickup / R65 Drop-off Greater Bloemfontein",
+      "Choose collection only, delivery only, or both",
+      "WhatsApp driver tracking & status updates",
+      "Flexible morning, midday & afternoon windows",
     ],
     icon: "/icons/truck.svg",
     image: "/img/collection.jpg",
@@ -198,4 +198,39 @@ export async function getPricingPlans(): Promise<PricingPlan[]> {
 
 export async function getSuburbs(): Promise<string[]> {
   return Promise.resolve(SUBURBS);
+}
+
+export type LogisticsOptionType = "both" | "pickup" | "dropoff";
+
+export interface LogisticsRate {
+  pickup: number;
+  dropoff: number;
+  both: number;
+  areaLabel: string;
+}
+
+export const COLLECTION_DELIVERY_PRICING: Record<"langenhovenpark" | "otherBloemfontein", LogisticsRate> = {
+  langenhovenpark: {
+    areaLabel: "Langenhovenpark",
+    pickup: 35,
+    dropoff: 35,
+    both: 70,
+  },
+  otherBloemfontein: {
+    areaLabel: "Everywhere else in Bloemfontein",
+    pickup: 65,
+    dropoff: 65,
+    both: 130,
+  },
+};
+
+export function getLogisticsFee(suburb: string, option: LogisticsOptionType): number {
+  const isLhp = suburb.toLowerCase().includes("langenhoven");
+  const rates = isLhp
+    ? COLLECTION_DELIVERY_PRICING.langenhovenpark
+    : COLLECTION_DELIVERY_PRICING.otherBloemfontein;
+
+  if (option === "both") return rates.both;
+  if (option === "pickup") return rates.pickup;
+  return rates.dropoff;
 }

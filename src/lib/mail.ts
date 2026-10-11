@@ -128,6 +128,8 @@ export async function sendPickupOrderEmail(
     services: string;
     estimatedBags: string;
     speed: string;
+    logisticsOption?: string;
+    deliveryFee?: string;
     notes?: string;
   },
   referenceNumber: string
@@ -173,6 +175,10 @@ export async function sendPickupOrderEmail(
             <tr style="border-bottom: 1px solid #f3f4f6;">
               <td style="padding: 10px 12px; font-weight: 700; color: #4b5563;">Address</td>
               <td style="padding: 10px 12px; color: #111827;">${data.address}${data.accessCode ? ` (Gate/Access Code: ${data.accessCode})` : ""}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f3f4f6;">
+              <td style="padding: 10px 12px; font-weight: 700; color: #4b5563;">Option</td>
+              <td style="padding: 10px 12px; color: #111827; font-weight: 700;">${data.logisticsOption || "Collection & Delivery"} (Fee: ${data.deliveryFee || "R0"})</td>
             </tr>
             <tr style="border-bottom: 1px solid #f3f4f6;">
               <td style="padding: 10px 12px; font-weight: 700; color: #4b5563;">Pickup Date & Time</td>

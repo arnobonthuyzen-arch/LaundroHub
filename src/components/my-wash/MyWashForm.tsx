@@ -19,7 +19,7 @@ import {
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { submitPickupRequest, type PickupSuccessData } from "@/actions/pickup";
 import type { ActionState } from "@/lib/types";
-import { BUSINESS_INFO } from "@/lib/data";
+import { BUSINESS_INFO, getLogisticsFee, type LogisticsOptionType, COLLECTION_DELIVERY_PRICING } from "@/lib/data";
 
 interface MyWashFormProps {
   suburbs: string[];
@@ -107,6 +107,10 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
   const [selectedSuburb, setSelectedSuburb] = useState<string>(
     suburbs[0] ?? "Langenhovenpark"
   );
+  const [logisticsOption, setLogisticsOption] = useState<LogisticsOptionType>("both");
+
+  const isLhp = selectedSuburb.toLowerCase().includes("langenhoven");
+  const currentFee = getLogisticsFee(selectedSuburb, logisticsOption);
 
   // Tomorrow as default date
   const tomorrow = new Date();
@@ -155,6 +159,20 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
           <div className="flex justify-between">
             <span className="text-brand-muted">Suburb:</span>
             <span className="font-semibold text-brand-deep">{confirmation.suburb}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-brand-muted">Option:</span>
+            <span className="font-semibold text-brand-deep">
+              {confirmation.logisticsOption === "both"
+                ? "Collection & Delivery"
+                : confirmation.logisticsOption === "pickup"
+                ? "Collection Only (Pickup)"
+                : "Delivery Only (Drop-off)"}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-brand-muted">Transport Rate:</span>
+            <span className="font-bold text-brand-teal">R{confirmation.deliveryFee}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-brand-muted">Pickup Date:</span>
@@ -216,6 +234,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
           {/* Hidden inputs to sync component states with standard FormData */}
           <input type="hidden" name="services" value={selectedServices.join(", ")} />
           <input type="hidden" name="estimatedBags" value={selectedVolume} />
+          <input type="hidden" name="logisticsOption" value={logisticsOption} />
           <input type="hidden" name="detergentPreference" value={detergent} />
           <input type="hidden" name="packagingPreference" value={packaging} />
           <input type="hidden" name="speed" value={speed} />
@@ -439,8 +458,87 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </h3>
             </div>
             <p className="text-xs sm:text-sm text-brand-muted mb-4 ml-8.5">
-              Where and when our express van should collect:
+              Choose your collection and delivery preferences:
             </p>
+
+            {/* Collection & Delivery Options Selector */}
+            <div className="mb-6 rounded-2xl border border-brand-line bg-brand-ground/40 p-4 sm:p-5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-brand-muted">
+                    Transport Service Option *
+                  </label>
+                  <p className="text-xs text-brand-body mt-0.5">
+                    Choose one-way collection, one-way drop-off, or full round-trip delivery
+                  </p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 self-start sm:self-auto rounded-full bg-brand-tealbg px-3 py-1 text-xs font-bold text-brand-teal-dark border border-brand-teal/20">
+                  <Truck className="h-3.5 w-3.5 text-brand-teal" />
+                  <span>
+                    {isLhp ? "Langenhovenpark Rate: R35/leg" : "Bloemfontein Rate: R65/leg"}
+                  </span>
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                {[
+                  {
+                    id: "both" as const,
+                    title: "Both (Round-Trip)",
+                    subtitle: "Van collects from your door and delivers back clean & folded",
+                    rateTag: isLhp ? "R70 Total" : "R130 Total",
+                    breakdown: isLhp ? "R35 pickup + R35 delivery" : "R65 pickup + R65 delivery",
+                    popular: true,
+                  },
+                  {
+                    id: "pickup" as const,
+                    title: "Collection Only",
+                    subtitle: "Van collects from your address; you pick up at The Towers store",
+                    rateTag: isLhp ? "R35" : "R65",
+                    breakdown: isLhp ? "R35 collection fee" : "R65 collection fee",
+                    popular: false,
+                  },
+                  {
+                    id: "dropoff" as const,
+                    title: "Delivery Only",
+                    subtitle: "You drop off at The Towers; our van delivers clean laundry to your door",
+                    rateTag: isLhp ? "R35" : "R65",
+                    breakdown: isLhp ? "R35 delivery fee" : "R65 delivery fee",
+                    popular: false,
+                  },
+                ].map((opt) => (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => setLogisticsOption(opt.id)}
+                    className={`rounded-xl border p-4 text-left transition-all relative flex flex-col justify-between ${
+                      logisticsOption === opt.id
+                        ? "border-brand-teal bg-white shadow-md ring-2 ring-brand-teal/30"
+                        : "border-brand-line bg-white/70 hover:bg-white hover:border-brand-teal/40"
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-1 mb-1.5">
+                        <span className="text-sm font-bold text-brand-deep">{opt.title}</span>
+                        {opt.popular && (
+                          <span className="rounded bg-brand-teal text-white text-[10px] font-bold px-1.5 py-0.5">
+                            Best Value
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-brand-body leading-relaxed mb-3">
+                        {opt.subtitle}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-brand-line/60 flex items-center justify-between">
+                      <span className="text-xs font-bold text-brand-deep">{opt.rateTag}</span>
+                      <span className="text-[11px] text-brand-muted">{opt.breakdown}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
               {/* Suburb */}
@@ -462,6 +560,11 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                   ))}
                   <option value="Other Bloemfontein Suburb">Other Bloemfontein Area</option>
                 </select>
+                <p className="mt-1 text-[11px] text-brand-muted">
+                  {isLhp
+                    ? "✓ Local rate applies: R35 per leg (The Towers hub)"
+                    : "✓ Standard Bloemfontein rate: R65 per leg"}
+                </p>
                 {errors?.suburb && (
                   <p className="mt-1.5 text-xs font-medium text-red-600">{errors.suburb[0]}</p>
                 )}
@@ -470,7 +573,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               {/* Date */}
               <div>
                 <label htmlFor="pickupDate" className="block text-sm font-semibold text-brand-deep mb-1.5">
-                  Collection Date *
+                  {logisticsOption === "dropoff" ? "Scheduled Delivery Date *" : "Collection Date *"}
                 </label>
                 <input
                   id="pickupDate"
@@ -692,6 +795,27 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </div>
 
               <div className="flex justify-between py-1.5 border-t border-brand-line/60">
+                <span className="text-brand-muted">Transport:</span>
+                <span className="font-bold text-brand-deep text-right">
+                  {logisticsOption === "both"
+                    ? "Collection & Delivery"
+                    : logisticsOption === "pickup"
+                    ? "Collection Only"
+                    : "Delivery Only"}
+                </span>
+              </div>
+
+              <div className="flex justify-between py-1.5 border-t border-brand-line/60">
+                <span className="text-brand-muted">Transport Rate:</span>
+                <span className="font-bold text-brand-teal">
+                  R{currentFee}
+                  <span className="text-[10px] font-normal text-brand-muted ml-1">
+                    ({isLhp ? "LHP" : "Bloem"})
+                  </span>
+                </span>
+              </div>
+
+              <div className="flex justify-between py-1.5 border-t border-brand-line/60">
                 <span className="text-brand-muted">Pickup Window:</span>
                 <span className="font-bold text-brand-deep">
                   {timeSlot === "morning"
@@ -749,7 +873,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
-                <span><strong className="text-brand-deep">Free Delivery on Qualifying Loads:</strong> Enjoy free collection within service suburbs for loads over 10 kg.</span>
+                <span><strong className="text-brand-deep">Flat-Rate Transport:</strong> R35 per leg in Langenhovenpark (R70 round-trip); R65 per leg across Bloemfontein (R130 round-trip).</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
