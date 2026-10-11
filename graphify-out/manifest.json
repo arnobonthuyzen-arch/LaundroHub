@@ -36,9 +36,9 @@
     "semantic_hash": ""
   },
   "src/app/about/page.tsx": {
-    "mtime": 1791741339.7129302,
-    "seen": 1791741409.710846,
-    "ast_hash": "a6cd2f1b26eaf0c57b892af3fb8bc9ec",
+    "mtime": 1791753452.9034457,
+    "seen": 1791753505.740242,
+    "ast_hash": "52436640282555efa69061f21b00cb2f",
     "semantic_hash": ""
   },
   "src/app/contact/loading.tsx": {
@@ -204,9 +204,9 @@
     "semantic_hash": ""
   },
   "about.html": {
-    "mtime": 1791743090.7767467,
-    "seen": 1791745652.4064891,
-    "ast_hash": "d33b2b91ec5db17be00f133855d78c42",
+    "mtime": 1791753464.544361,
+    "seen": 1791753505.740298,
+    "ast_hash": "d2f4c4e1b5cbc3c34a0ed1263676834c",
     "semantic_hash": ""
   },
   "bedding-linen.html": {
