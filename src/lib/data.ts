@@ -61,7 +61,7 @@ const SERVICES: ServiceItem[] = [
       "Fast 24-hour turnaround",
     ],
     icon: "/icons/iron.svg",
-    image: "/img/ironing.jpg",
+    image: "/img/steam-pressing.jpg",
     href: "/services/ironing",
   },
   {

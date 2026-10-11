@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "src/lib/data.ts": {
-    "mtime": 1791751573.4513812,
-    "seen": 1791751722.0754519,
-    "ast_hash": "ffc140e6f17b0568da1c49c5e4ebc765",
+    "mtime": 1791753279.5422063,
+    "seen": 1791753334.256268,
+    "ast_hash": "1f2f45e5f559fc542aace1c553ef7388",
     "semantic_hash": ""
   },
   "src/lib/types.ts": {
@@ -894,9 +894,9 @@
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
-    "mtime": 1791752671.5319812,
-    "seen": 1791752991.815091,
-    "ast_hash": "f62d4876f5a8013b6cb33ca0a9bf6b55",
+    "mtime": 1791753252.9598198,
+    "seen": 1791753334.2562518,
+    "ast_hash": "f4a7f886c8d6111bb40283a85398a25d",
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {
@@ -1035,6 +1035,12 @@
     "mtime": 1791748638.7960045,
     "seen": 1791748867.75713,
     "ast_hash": "c33f4488a99fc6f0451c8ba0f8392624",
+    "semantic_hash": ""
+  },
+  "public/img/steam-pressing.jpg": {
+    "mtime": 1791753161.6166968,
+    "seen": 1791753334.256408,
+    "ast_hash": "5f5250b76ed3d1f38bf59f4871e0d067",
     "semantic_hash": ""
   }
 }

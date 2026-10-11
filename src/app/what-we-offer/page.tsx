@@ -57,7 +57,7 @@ export default async function WhatWeOfferPage() {
       description:
         "Skip the weekend iron board. Our commercial steam stations press out every crease on business shirts, school blazers, trousers, and delicate fabrics. Returned hung on hangers or crisply folded to your preference.",
       price: "From R 18 / item",
-      image: "/img/ironing.jpg",
+      image: "/img/steam-pressing.jpg",
       icon: Sparkles,
       highlights: [
         "Commercial steam stations with adjustable pressure",
