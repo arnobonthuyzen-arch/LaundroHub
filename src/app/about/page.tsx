@@ -86,6 +86,60 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Our Fleet & Dedicated Team Section */}
+        <div className="mt-20">
+          <div className="rounded-3xl border border-brand-line bg-white p-8 sm:p-12 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-brand-line shadow-elevated">
+                  <Image
+                    src="/img/van.jpg"
+                    alt="Laundro-Hub Express branded collection van in Bloemfontein"
+                    fill
+                    className="object-cover object-[center_38%]"
+                    sizes="(max-width: 1024px) 100vw, 500px"
+                  />
+                  <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-white/95 backdrop-blur-md p-3 border border-brand-line/80 shadow-md">
+                    <span className="block text-xs font-bold text-brand-deep">Express Collection Fleet</span>
+                    <span className="text-[11px] text-brand-teal font-medium">Daily doorstep runs across Bloemfontein</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 space-y-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-purple">
+                  Our Fleet &amp; People
+                </span>
+                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">
+                  Our own vehicles, drivers, and a team of 15+ who care.
+                </h2>
+                <p className="text-sm sm:text-base text-brand-body leading-relaxed">
+                  Behind every fresh, neatly folded order is our dedicated Bloemfontein operation — our own branded Express vans on the road daily, backed by experienced washers, ironers, drivers, and friendly counter staff at The Towers.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
+                    <span className="text-xs font-medium text-brand-deep">Branded Express collection vans on the road daily</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
+                    <span className="text-xs font-medium text-brand-deep">Doorstep service for homes, schools &amp; guesthouses</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
+                    <span className="text-xs font-medium text-brand-deep">15+ trained laundry specialists handling each load</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
+                    <span className="text-xs font-medium text-brand-deep">Hands-on, experienced management on site</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Storefront at The Towers Showcase */}
         <div className="mt-20">
           <div className="text-center max-w-2xl mx-auto mb-10">
