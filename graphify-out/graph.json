@@ -772,16 +772,16 @@
       "source_location": "L6"
     },
     {
-      "id": "src_components_towersmap_createtowersicon",
-      "label": "createTowersIcon()",
+      "id": "src_components_towersmap_towersmap",
+      "label": "TowersMap()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "app/page.tsx",
       "file_type": "code",
-      "norm_label": "createtowersicon()",
+      "norm_label": "towersmap()",
       "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L16"
+      "source_location": "L7"
     },
     {
       "id": "src_components_towersmapwrapper_towersmapwrapper",
@@ -793,7 +793,7 @@
       "file_type": "code",
       "norm_label": "towersmapwrapper()",
       "source_file": "src/components/TowersMapWrapper.tsx",
-      "source_location": "L22"
+      "source_location": "L5"
     },
     {
       "id": "src_app_airbnb_page",
@@ -2578,17 +2578,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_components_towersmapwrapper_towersmap",
-      "label": "TowersMap",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "app/page.tsx",
-      "file_type": "code",
-      "norm_label": "towersmap",
-      "source_file": "src/components/TowersMapWrapper.tsx",
-      "source_location": "L7"
-    },
-    {
       "id": "server",
       "label": "server.js",
       "_origin": "ast",
@@ -2942,19 +2931,6 @@
       "context": "call",
       "source_file": "src/lib/mail.ts",
       "source_location": "L136",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_towersmapwrapper_towersmap",
-      "target": "src_components_towersmap",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "deferred": true,
-      "source_file": "src/components/TowersMapWrapper.tsx",
-      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -4087,18 +4063,6 @@
     },
     {
       "source": "src_components_towersmap",
-      "target": "src_components_icons_whatsappicon_whatsappicon",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_towersmap",
       "target": "src_lib_data_business_info",
       "relation": "imports",
       "_origin": "ast",
@@ -4106,7 +4070,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L9",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_towersmapwrapper",
+      "target": "src_components_towersmap_towersmap",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -4811,18 +4787,6 @@
     },
     {
       "source": "src_components_towersmap",
-      "target": "src_components_icons_whatsappicon",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_towersmap",
       "target": "src_lib_data",
       "relation": "imports_from",
       "_origin": "ast",
@@ -4830,7 +4794,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L9",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_towersmapwrapper",
+      "target": "src_components_towersmap",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TowersMapWrapper.tsx",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -6180,13 +6156,13 @@
     },
     {
       "source": "src_components_towersmap",
-      "target": "src_components_towersmap_createtowersicon",
+      "target": "src_components_towersmap_towersmap",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L16",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -6197,18 +6173,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/TowersMapWrapper.tsx",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "src_components_towersmapwrapper",
-      "target": "src_components_towersmapwrapper_towersmap",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/TowersMapWrapper.tsx",
-      "source_location": "L7",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -6617,15 +6582,6 @@
       "source_file": "postcss.config.mjs"
     },
     {
-      "source": "src_components_towersmapwrapper",
-      "target": "src_components_towersmap",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/TowersMapWrapper.tsx"
-    },
-    {
       "source": "assets_js_main_rationale_29",
       "target": "assets_js_main",
       "relation": "rationale_for",
@@ -6686,5 +6642,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "234f2d032f3a07a364a0a716c299a4d473c81cf2"
+  "built_at_commit": "2f08b614ffdcc977373942c2a3d7db7ad903e48b"
 }

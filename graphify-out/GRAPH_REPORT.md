@@ -1,16 +1,16 @@
 # Graph Report - laundro-hub-website  (2026-10-11)
 
 ## Corpus Check
-- 51 files · ~409,674 words
+- 51 files · ~409,235 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 241 nodes · 342 edges · 26 communities (11 shown, 4 thin omitted)
+- 240 nodes · 339 edges · 26 communities (11 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `234f2d03`
+- Built from commit: `2f08b614`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,7 +33,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `BUSINESS_INFO` - 22 edges
-2. `WhatsAppIcon()` - 20 edges
+2. `WhatsAppIcon()` - 19 edges
 3. `compilerOptions` - 16 edges
 4. `getServices()` - 9 edges
 5. `getSuburbs()` - 9 edges
@@ -85,8 +85,8 @@ Cohesion: 0.13
 Nodes (17): metadata, HomePage(), generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata (+9 more)
 
 ### Community 7 - "app/page.tsx"
-Cohesion: 0.21
-Nodes (7): metadata, BubbleConfig, BUBBLES, HeroBubbles(), HeroVideoPlayer(), TowersMap, TowersMapWrapper()
+Cohesion: 0.23
+Nodes (7): metadata, BubbleConfig, BUBBLES, HeroBubbles(), HeroVideoPlayer(), TowersMap(), TowersMapWrapper()
 
 ### Community 8 - "server.js"
 Cohesion: 0.33
@@ -106,18 +106,18 @@ Nodes (3): NavDropdown(), SECTOR_ITEMS, SectorMenuItem
 
 ## Knowledge Gaps
 - **102 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+97 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 143 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 142 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `contact/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
   _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `contact/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
   _102 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**

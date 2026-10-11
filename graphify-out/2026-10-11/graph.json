@@ -781,7 +781,7 @@
       "file_type": "code",
       "norm_label": "createtowersicon()",
       "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L14"
+      "source_location": "L16"
     },
     {
       "id": "src_components_towersmapwrapper_towersmapwrapper",
@@ -6186,7 +6186,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/TowersMap.tsx",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -6686,5 +6686,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "673e8dfd22869cd9a539903da3a6336f1b0ba59d"
+  "built_at_commit": "234f2d032f3a07a364a0a716c299a4d473c81cf2"
 }
