@@ -152,10 +152,9 @@
         <span class="dot"></span>
         <span>Laundro-Hub Care</span>
       </div>
-      <video id="hero-loop-video-static" poster="assets/videos/loop-wash-poster.jpg" autoplay loop muted playsinline webkit-playsinline preload="auto">
+      <video id="hero-loop-video-static" src="assets/videos/loop-wash.mp4" autoplay loop muted playsinline webkit-playsinline x5-playsinline preload="auto">
         <source src="assets/videos/loop-wash.webm" type="video/webm">
         <source src="assets/videos/loop-wash.mp4" type="video/mp4">
-        <source src="videos/loop-wash.webm" type="video/webm">
         <source src="videos/loop-wash.mp4" type="video/mp4">
         <source src="public/videos/loop-wash.mp4" type="video/mp4">
       </video>
@@ -166,8 +165,20 @@
             v.muted = true;
             v.defaultMuted = true;
             v.playsInline = true;
-            var p = v.play();
-            if (p && p.catch) { p.catch(function(){}); }
+            v.setAttribute('muted', '');
+            v.setAttribute('playsinline', '');
+            v.setAttribute('webkit-playsinline', '');
+            var play = function() {
+              var p = v.play();
+              if (p && p.catch) { p.catch(function(){}); }
+            };
+            play();
+            v.addEventListener('loadedmetadata', play);
+            v.addEventListener('loadeddata', play);
+            v.addEventListener('canplay', play);
+            ['touchstart', 'touchend', 'click', 'scroll'].forEach(function(e) {
+              window.addEventListener(e, play, { once: true, passive: true });
+            });
           }
         })();
       </script>

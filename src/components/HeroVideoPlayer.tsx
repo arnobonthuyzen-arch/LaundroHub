@@ -4,111 +4,63 @@ import { useRef, useEffect } from "react";
 import { Sparkles } from "lucide-react";
 
 export function HeroVideoPlayer() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const whiteOverlayRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const video = videoRef.current;
-    const overlay = whiteOverlayRef.current;
-    if (!video || !overlay) return;
+    if (!video) return;
 
-    // Enforce mute properties for Safari and Chrome autoplay policies
-    video.defaultMuted = true;
+    // Guarantee all DOM properties required for mobile & desktop autoplay
     video.muted = true;
+    video.defaultMuted = true;
     video.playsInline = true;
-    video.loop = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.setAttribute("x5-playsinline", "");
 
-    const tryPlay = () => {
+    const playVideo = () => {
+      if (!video) return;
       const playPromise = video.play();
-      if (playPromise && playPromise.catch) {
+      if (playPromise && typeof playPromise.catch === "function") {
         playPromise.catch(() => {
-          // If browser power-saving or gesture policy intercepts, kickstart on first user gesture
-          const resumeOnInteraction = () => {
-            video.play().catch(() => {});
-          };
-          window.addEventListener("click", resumeOnInteraction, { once: true, passive: true });
-          window.addEventListener("touchstart", resumeOnInteraction, { once: true, passive: true });
-          window.addEventListener("scroll", resumeOnInteraction, { once: true, passive: true });
+          // Autoplay was blocked pending gesture; fallback listeners will handle it
         });
       }
     };
 
-    tryPlay();
+    // Attempt playback immediately
+    playVideo();
 
-    // High-performance animation frame loop for silky smooth white dissolve transition
-    let animId: number | null = null;
-    let isFadingIn = false;
-    let isVisible = true;
+    // Re-trigger as soon as media chunks load
+    video.addEventListener("loadedmetadata", playVideo);
+    video.addEventListener("loadeddata", playVideo);
+    video.addEventListener("canplay", playVideo);
 
-    const checkTime = () => {
-      if (!isVisible) return;
-
-      if (video.duration && !video.paused) {
-        const currentTime = video.currentTime;
-        const duration = video.duration;
-        const timeUntilEnd = duration - currentTime;
-
-        // In the final 0.85s of the video, fade to pure white
-        if (timeUntilEnd <= 0.85 && timeUntilEnd > 0) {
-          if (!isFadingIn) {
-            isFadingIn = true;
-            overlay.style.transition = "opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1)";
-            overlay.style.opacity = "1";
-          }
-        } 
-        // When video loops back to start (first 0.75s), fade out from white
-        else if (currentTime < 0.75) {
-          if (isFadingIn) {
-            isFadingIn = false;
-            setTimeout(() => {
-              if (overlay) {
-                overlay.style.transition = "opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1)";
-                overlay.style.opacity = "0";
-              }
-            }, 80);
-          }
-        } else {
-          // Mid-play state: ensure overlay is fully invisible
-          if (overlay.style.opacity !== "0" && !isFadingIn) {
-            overlay.style.opacity = "0";
-          }
-        }
-      }
-      animId = requestAnimationFrame(checkTime);
+    // Fallback: If device is in Low Power Mode / battery saver, resume on first user interaction
+    const triggerOnGesture = () => {
+      playVideo();
     };
 
-    animId = requestAnimationFrame(checkTime);
+    window.addEventListener("touchstart", triggerOnGesture, { once: true, passive: true });
+    window.addEventListener("touchend", triggerOnGesture, { once: true, passive: true });
+    window.addEventListener("click", triggerOnGesture, { once: true, passive: true });
+    window.addEventListener("scroll", triggerOnGesture, { once: true, passive: true });
 
-    // Pause video and cancel animation loop ONLY when scrolled deep down out of viewport
-    let observer: IntersectionObserver | null = null;
-    if (typeof IntersectionObserver !== "undefined") {
-      observer = new IntersectionObserver(
-        (entries) => {
-          const entry = entries[0];
-          if (entry && entry.isIntersecting) {
-            isVisible = true;
-            video.play().catch(() => {});
-            if (!animId) {
-              animId = requestAnimationFrame(checkTime);
-            }
-          } else if (entry && !entry.isIntersecting && window.scrollY > 300) {
-            // Guard against pausing at the top of the page on initial load
-            isVisible = false;
-            video.pause();
-            if (animId) {
-              cancelAnimationFrame(animId);
-              animId = null;
-            }
-          }
-        },
-        { threshold: 0.05 }
-      );
-      observer.observe(video);
-    }
+    const handleVisibility = () => {
+      if (!document.hidden) playVideo();
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
 
     return () => {
-      if (animId) cancelAnimationFrame(animId);
-      if (observer) observer.disconnect();
+      video.removeEventListener("loadedmetadata", playVideo);
+      video.removeEventListener("loadeddata", playVideo);
+      video.removeEventListener("canplay", playVideo);
+      window.removeEventListener("touchstart", triggerOnGesture);
+      window.removeEventListener("touchend", triggerOnGesture);
+      window.removeEventListener("click", triggerOnGesture);
+      window.removeEventListener("scroll", triggerOnGesture);
+      document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
 
@@ -120,8 +72,16 @@ export function HeroVideoPlayer() {
       {/* Main Looping Video */}
       <video
         id="hero-loop-video"
-        ref={videoRef}
-        poster="/videos/loop-wash-poster.jpg"
+        ref={(el) => {
+          videoRef.current = el;
+          if (el) {
+            el.muted = true;
+            el.defaultMuted = true;
+            el.playsInline = true;
+            el.play().catch(() => {});
+          }
+        }}
+        src="/videos/loop-wash.mp4"
         muted
         autoPlay
         playsInline
@@ -136,15 +96,8 @@ export function HeroVideoPlayer() {
       {/* Instant playback bootstrap script running during initial HTML parsing */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(){var v=document.getElementById('hero-loop-video');if(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;var p=v.play();if(p&&p.catch){p.catch(function(){});}}})();`,
+          __html: `(function(){var v=document.getElementById('hero-loop-video');if(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');var p=v.play();if(p&&p.catch){p.catch(function(){});}}})();`,
         }}
-      />
-
-      {/* Elegant White Dissolve Overlay */}
-      <div
-        ref={whiteOverlayRef}
-        className="pointer-events-none absolute inset-0 bg-white z-20 opacity-0 will-change-[opacity]"
-        aria-hidden="true"
       />
 
       {/* Subtle Vignette Protection */}
