@@ -29,7 +29,7 @@ interface SectorMenuItem {
 const SECTOR_ITEMS: SectorMenuItem[] = [
   {
     title: "Students & Residences",
-    subtitle: "Monthly kg bundles & res runs (UFS/CUT)",
+    subtitle: "Monthly kg bundles & res scheduled runs",
     href: "/students",
     icon: GraduationCap,
     colorClass: "bg-brand-lav text-brand-purple",

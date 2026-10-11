@@ -119,7 +119,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm text-brand-lav/80">
               <li>
                 <Link href="/students" className="hover:text-white transition-colors">
-                  Students &amp; Residences (UFS/CUT)
+                  Students &amp; Residences
                 </Link>
               </li>
               <li>

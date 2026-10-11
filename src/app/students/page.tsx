@@ -19,7 +19,7 @@ import { BUSINESS_INFO, getPricingPlans } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Student Laundry & Residence Packages | Laundro-Hub Bloemfontein",
   description:
-    "Affordable student & residence laundry plans for UFS Kovsies, CUT, college students, and residences. Scheduled doorstep pickup, individual bag washing, and fresh folding.",
+    "Affordable student & residence laundry plans for university, college students, and residences. Scheduled doorstep pickup, individual bag washing, and fresh folding.",
 };
 
 export default async function StudentsPage() {
@@ -50,9 +50,9 @@ export default async function StudentsPage() {
   ];
 
   const residenceOptions = [
-    "UFS (Kovsies) on-campus & off-campus residences",
-    "CUT (Central University of Technology) student housing",
-    "Private student communes in Universitas, Brandwag & Willows",
+    "University on-campus & off-campus residences",
+    "Student housing and private communes",
+    "Private student accommodations in Universitas, Brandwag & Willows",
     "School boarding hostels and sports residences",
   ];
 
@@ -68,7 +68,7 @@ export default async function StudentsPage() {
             <div className="lg:col-span-7 space-y-4">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-purple/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple">
                 <GraduationCap className="h-4 w-4 text-brand-teal" />
-                UFS Kovsies &bull; CUT &bull; Student Residences
+                Universities &bull; Colleges &bull; Student Residences
               </span>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-deep tracking-tight">
                 Student Laundry Made <span className="text-brand-purple">Effortless.</span>

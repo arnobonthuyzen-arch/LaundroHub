@@ -218,7 +218,7 @@ export default async function HomePage() {
               Boarding school &amp; hostel laundry made simple.
             </h2>
             <p className="mt-4 text-base text-brand-body">
-              Scheduled weekly batch runs for school boarding hostels, sports derbies &amp; tournament kits, UFS/CUT residences, and student communes in Bloemfontein. Tagged bags, uniform pressing, and zero mix-ups.
+              Scheduled weekly batch runs for school boarding hostels, sports derbies &amp; tournament kits, university residences, and student communes in Bloemfontein. Tagged bags, uniform pressing, and zero mix-ups.
             </p>
           </div>
 
@@ -339,7 +339,7 @@ export default async function HomePage() {
               </h2>
             </div>
             <p className="text-sm text-brand-muted max-w-md">
-              From UFS &amp; CUT student residences to high-turnover Airbnb units, boutique guesthouses, and school rugby kits.
+              From university student residences to high-turnover Airbnb units, boutique guesthouses, and school rugby kits.
             </p>
           </div>
 
@@ -356,7 +356,7 @@ export default async function HomePage() {
                   Students &amp; Residences
                 </h3>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  Batch laundry runs, UFS &amp; CUT residence pickups, and hassle-free wash &amp; fold.
+                  Batch laundry runs, university residence pickups, and hassle-free wash &amp; fold.
                 </p>
               </div>
               <span className="mt-6 inline-flex items-center text-xs font-bold text-brand-purple group-hover:translate-x-1 transition-transform">

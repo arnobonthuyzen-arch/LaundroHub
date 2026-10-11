@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1791750355.6547134,
-    "seen": 1791750615.591232,
-    "ast_hash": "5476bc84247e39681c0bd2dbdd0d693b",
+    "mtime": 1791751635.4544368,
+    "seen": 1791751722.075422,
+    "ast_hash": "90380d112514efc6695010160f2d8ee6",
     "semantic_hash": ""
   },
   "src/app/robots.ts": {
@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/components/Footer.tsx": {
-    "mtime": 1791750159.2235124,
-    "seen": 1791750615.591241,
-    "ast_hash": "ca6198b90eac22cb7108e750d175c90e",
+    "mtime": 1791751555.4177806,
+    "seen": 1791751722.0754392,
+    "ast_hash": "f8475787a8fd66fef75501075af50610",
     "semantic_hash": ""
   },
   "src/components/Header.tsx": {
@@ -156,9 +156,9 @@
     "semantic_hash": ""
   },
   "src/components/NavDropdown.tsx": {
-    "mtime": 1791750108.5927515,
-    "seen": 1791750615.591244,
-    "ast_hash": "474fa18c1a2b6e4d86c33edc2623a75f",
+    "mtime": 1791751564.32713,
+    "seen": 1791751722.075445,
+    "ast_hash": "e727beba7cd4e86f3e2a527af1167f98",
     "semantic_hash": ""
   },
   "src/components/icons/WhatsAppIcon.tsx": {
@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "src/lib/data.ts": {
-    "mtime": 1791751157.9037464,
-    "seen": 1791751297.6391559,
-    "ast_hash": "b5d890a56492da9e0be3d021133f121a",
+    "mtime": 1791751573.4513812,
+    "seen": 1791751722.0754519,
+    "ast_hash": "ffc140e6f17b0568da1c49c5e4ebc765",
     "semantic_hash": ""
   },
   "src/lib/types.ts": {
@@ -888,15 +888,15 @@
     "semantic_hash": ""
   },
   "src/app/students/page.tsx": {
-    "mtime": 1791743316.1647818,
-    "seen": 1791745652.406477,
-    "ast_hash": "393a05df3190981cf3e1fe53242a561b",
+    "mtime": 1791751596.931484,
+    "seen": 1791751722.075435,
+    "ast_hash": "aba6cd39ac6c2a781a0ffb1700c2f40e",
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
-    "mtime": 1791751137.4693017,
-    "seen": 1791751297.639147,
-    "ast_hash": "1be523888f8afc4bcd01b76b43f88014",
+    "mtime": 1791751657.0301914,
+    "seen": 1791751722.075436,
+    "ast_hash": "8c015d1c12e6aa0c8c3b10408d8390cc",
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {

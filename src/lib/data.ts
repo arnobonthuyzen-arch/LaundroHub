@@ -155,7 +155,7 @@ const PRICING_PLANS: PricingPlan[] = [
     name: "University Res & Communes",
     weightLimit: "Doorstep res pickup",
     pricePerMonth: "Affordable student rates",
-    description: "Designed for UFS Kovsies and CUT students, residence houses, and shared student communes.",
+    description: "Designed for university and college students, residence houses, and shared student communes.",
     features: [
       "Pickups at residence gate or commune address",
       "Wash, dry & fold within 24–48 hours",

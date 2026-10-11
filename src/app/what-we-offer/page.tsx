@@ -471,7 +471,7 @@ export default async function WhatWeOfferPage() {
                   Students &amp; Residences
                 </h4>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  Budget monthly kg bundles, UFS &amp; CUT res collections, and hassle-free laundry bags.
+                  Budget monthly kg bundles, university residence collections, and hassle-free laundry bags.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center text-xs font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
