@@ -4,6 +4,8 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import type { ActionState } from "@/lib/types";
 
+import { sendContactInquiryEmail } from "@/lib/mail";
+
 export const contactFormSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters"),
   phone: z.string().trim().min(8, "Please enter a valid phone number (at least 8 digits)"),
@@ -42,7 +44,9 @@ export async function submitContactForm(
 
   const { data } = validationResult;
 
-  // In production, dispatch notification via email / SMS webhook / CRM API
+  // Dispatch notification email to info@laundro-hub.co.za
+  await sendContactInquiryEmail(data);
+
   console.info("[Contact Us Inquiry Received]", {
     timestamp: new Date().toISOString(),
     lead: data,

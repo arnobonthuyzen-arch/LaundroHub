@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import type { ActionState } from "@/lib/types";
+import { sendPickupOrderEmail } from "@/lib/mail";
 
 export const pickupRequestSchema = z.object({
   name: z.string().trim().min(2, "Please enter your full name (at least 2 characters)"),
@@ -96,6 +97,16 @@ export async function submitPickupRequest(
   );
 
   const whatsappConfirmationUrl = `https://api.whatsapp.com/send?phone=27648308785&text=${waText}`;
+
+  // Dispatch notification email to info@laundro-hub.co.za
+  await sendPickupOrderEmail(
+    {
+      ...data,
+      timeSlot: timeSlotNames[data.timeSlot] || data.timeSlot,
+      speed: speedNames[data.speed] || data.speed,
+    },
+    referenceNumber
+  );
 
   // Log dispatch order
   console.info("[My Wash - Pickup Request Logged]", {

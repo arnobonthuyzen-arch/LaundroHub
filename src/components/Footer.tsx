@@ -35,7 +35,7 @@ export function Footer() {
             <p className="text-sm text-brand-lav/80 leading-relaxed">
               &ldquo;{BUSINESS_INFO.tagline}&rdquo; Premium laundry, dry cleaning, steam ironing, and express collection across Bloemfontein.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col gap-2.5">
               <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
@@ -44,6 +44,13 @@ export function Footer() {
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />
                 WhatsApp us on {BUSINESS_INFO.phone}
+              </a>
+              <a
+                href={`mailto:${BUSINESS_INFO.email}`}
+                className="inline-flex items-center gap-2 text-xs font-semibold text-brand-lav/80 hover:text-white transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5 text-brand-mint shrink-0" />
+                <span>{BUSINESS_INFO.email}</span>
               </a>
             </div>
           </div>

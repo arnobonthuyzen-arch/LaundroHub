@@ -40,7 +40,7 @@ export default async function ContactPage() {
       <div className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Quick Contact Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <a
               href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
@@ -68,6 +68,20 @@ export default async function ContactPage() {
                 <p className="text-xs uppercase font-semibold tracking-wider text-brand-muted">Call us</p>
                 <p className="text-base font-bold">{BUSINESS_INFO.phone}</p>
                 <p className="text-xs text-brand-muted">Speak to our shop team</p>
+              </div>
+            </a>
+
+            <a
+              href={`mailto:${BUSINESS_INFO.email}`}
+              className="flex items-center gap-4 rounded-2xl border border-brand-line bg-white p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lav text-brand-purple">
+                <Mail className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-xs uppercase font-semibold tracking-wider text-brand-muted">Email</p>
+                <p className="text-base font-bold text-brand-purple truncate max-w-[170px]">{BUSINESS_INFO.email}</p>
+                <p className="text-xs text-brand-muted">Quotes &amp; accounts</p>
               </div>
             </a>
 

@@ -1,12 +1,12 @@
 {
-  "0": "BUSINESS_INFO",
+  "0": "data.ts",
   "1": "MyWashForm.tsx",
   "2": "compilerOptions",
   "3": "devDependencies",
   "4": "dependencies",
-  "5": "data.ts",
+  "5": "[slug]/page.tsx",
   "6": "services/page.tsx",
-  "7": "app/page.tsx",
+  "7": "HeroBubbles.tsx",
   "8": "server.js",
   "9": "Laundro-Hub website",
   "10": "postcss.config.mjs",
@@ -24,5 +24,5 @@
   "23": "utils.ts",
   "24": "tailwind.config.ts",
   "25": "my-wash/loading.tsx",
-  "26": "NavDropdown.tsx"
+  "26": "layout.tsx"
 }
