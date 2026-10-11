@@ -207,7 +207,7 @@ export default function RetirementVillagesPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="rounded-3xl bg-brand-deep p-8 sm:p-12 text-white shadow-elevated relative overflow-hidden">
             <div className="relative z-10 space-y-4">
-              <h3 className="font-display text-3xl font-extrabold">
+              <h3 className="font-display text-3xl font-extrabold text-white">
                 Arrange a Care Package or Facility Plan
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">

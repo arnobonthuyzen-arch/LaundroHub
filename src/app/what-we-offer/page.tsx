@@ -270,7 +270,7 @@ export default async function WhatWeOfferPage() {
                   <Truck className="h-3.5 w-3.5" />
                   Express Doorstep Van
                 </span>
-                <h3 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight">
+                <h3 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                   Laundro-Hub Express: Collected &amp; Delivered in 1–2 Days
                 </h3>
                 <p className="text-base text-brand-lav/90 leading-relaxed max-w-xl">
