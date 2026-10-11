@@ -86,31 +86,129 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Business accounts callout */}
-        <div className="mt-20 rounded-2xl bg-brand-deep text-white p-8 sm:p-12">
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-mint">
-              Commercial &amp; Bulk
+        {/* Storefront at The Towers Showcase */}
+        <div className="mt-20">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-teal">
+              Physical Location
             </span>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-white">
-              Guesthouses, Clinics &amp; Corporate Accounts
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-brand-deep">
+              Visit Us at The Towers Shopping Centre
             </h2>
-            <p className="mt-3 text-sm text-brand-lav/80 leading-relaxed">
-              We offer dedicated monthly invoicing, daily collection routes, and rapid batch turnarounds for Bloemfontein hospitality and corporate clients.
+            <p className="mt-3 text-sm sm:text-base text-brand-body leading-relaxed">
+              Located conveniently in Langenhovenpark, Bloemfontein (opposite the car wash). Drop in 7 days a week or arrange a doorstep collection.
             </p>
-            <div className="mt-6">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-teal/90 transition-all"
-              >
-                Inquire About a Business Account
-              </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="group overflow-hidden rounded-2xl border border-brand-line bg-white shadow-card transition-all hover:shadow-elevated">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-ground">
+                <Image
+                  src="/img/storefront-window1.jpg"
+                  alt="Laundro-Hub storefront at The Towers Shopping Centre"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-lg font-bold text-brand-deep">
+                  The Towers Storefront
+                </h3>
+                <p className="mt-1 text-xs text-brand-body leading-relaxed">
+                  Full wash, dry, and iron services available 7 days a week with friendly walk-in counter service.
+                </p>
+              </div>
+            </div>
+
+            <div className="group overflow-hidden rounded-2xl border border-brand-line bg-white shadow-card transition-all hover:shadow-elevated">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-ground">
+                <Image
+                  src="/img/store-sign.jpg"
+                  alt="Laundro-Hub circular illuminated sign"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-lg font-bold text-brand-deep">
+                  Illuminated Lightbox Sign
+                </h3>
+                <p className="mt-1 text-xs text-brand-body leading-relaxed">
+                  Easily spot our purple Laundro-Hub emblem right on the main entrance facade opposite the car wash.
+                </p>
+              </div>
+            </div>
+
+            <div className="group overflow-hidden rounded-2xl border border-brand-line bg-white shadow-card transition-all hover:shadow-elevated">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-brand-ground">
+                <Image
+                  src="/img/dropoff-point.jpg"
+                  alt="Laundro-Hub office and drop off collection point"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-lg font-bold text-brand-deep">
+                  Office &amp; Drop-Off Point
+                </h3>
+                <p className="mt-1 text-xs text-brand-body leading-relaxed">
+                  Quick, dedicated drop-off and collection counter. In and out in 2 minutes with secure bagging.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Business accounts callout */}
+        <div className="mt-20 rounded-3xl bg-brand-deep text-white p-8 sm:p-12 overflow-hidden relative shadow-elevated">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7">
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-mint">
+                Commercial &amp; Bulk
+              </span>
+              <h2 className="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-white">
+                Guesthouses, Schools &amp; Corporate Accounts
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-brand-lav/80 leading-relaxed">
+                Dedicated daily collection routes and monthly invoicing for Bloemfontein Airbnbs, hostels, guesthouses, clinics, and hotels.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 text-sm font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"
+                >
+                  Inquire About a Business Account
+                </Link>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20inquire%20about%20a%20commercial%20account`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-all"
+                >
+                  WhatsApp Business Chat
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+                <Image
+                  src="/img/storefront-window2.jpg"
+                  alt="Laundro-Hub pick up and delivery service for schools, hostels, Airbnbs and guesthouses"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                />
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
   );
 }
 

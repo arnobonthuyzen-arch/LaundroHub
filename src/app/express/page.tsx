@@ -271,6 +271,49 @@ export default async function ExpressPage() {
         </div>
       </section>
 
+      {/* Walk-in Drop Off Option */}
+      <section className="py-16 bg-white border-t border-brand-line">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-brand-line bg-brand-ground p-8 sm:p-12 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-teal">
+                  Walk-In Counter Alternative
+                </span>
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
+                  Prefer to drop off at The Towers?
+                </h3>
+                <p className="text-sm sm:text-base text-brand-body leading-relaxed">
+                  Passing through Langenhovenpark? You can also bring your laundry directly to our dedicated office drop-off counter at The Towers Shopping Centre (opposite the car wash). In and out in 2 minutes!
+                </p>
+                <div className="pt-2 flex flex-wrap gap-3">
+                  <a
+                    href="https://maps.google.com/?q=The+Towers+Shopping+Centre+Langenhovenpark+Bloemfontein"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-2.5 text-xs font-bold text-white hover:bg-brand-deep transition-all shadow-sm"
+                  >
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span>Get Directions to The Towers</span>
+                  </a>
+                </div>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-brand-line shadow-card">
+                  <Image
+                    src="/img/dropoff-point.jpg"
+                    alt="Laundro-Hub office and drop off collection point at The Towers"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 420px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Express CTA */}
       <section className="py-16 bg-white border-t border-brand-line">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">

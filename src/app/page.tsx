@@ -512,14 +512,28 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-line shadow-card">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-brand-line shadow-elevated group">
               <Image
-                src="/img/laundry-interior.jpg"
-                alt="Laundro-Hub store interior"
+                src="/img/storefront-window1.jpg"
+                alt="Laundro-Hub storefront at The Towers Shopping Centre"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
+              <div className="absolute top-4 right-4 flex items-center gap-3 rounded-2xl bg-white/95 backdrop-blur-md p-2.5 pr-4 border border-brand-line/80 shadow-md">
+                <div className="relative h-12 w-12 rounded-xl overflow-hidden border border-brand-line shrink-0">
+                  <Image
+                    src="/img/store-sign.jpg"
+                    alt="Laundro-Hub store sign"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="text-left">
+                  <span className="block text-xs font-bold text-brand-deep leading-tight">The Towers Store</span>
+                  <span className="text-[11px] text-brand-teal font-medium">Opposite car wash</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

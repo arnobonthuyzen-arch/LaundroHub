@@ -457,7 +457,7 @@
       "file_type": "code",
       "norm_label": "contactpage()",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "src_app_express_page_expresspage",
@@ -1286,7 +1286,7 @@
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L8"
+      "source_location": "L9"
     },
     {
       "id": "src_app_express_page",
@@ -2650,7 +2650,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -3202,7 +3202,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -3214,7 +3214,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -3226,7 +3226,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -3238,7 +3238,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -4032,7 +4032,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -4044,7 +4044,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -4056,7 +4056,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -5194,7 +5194,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -5205,7 +5205,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -6367,5 +6367,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "98cc42c1656260a8b98f03292256497b6987ccd7"
+  "built_at_commit": "f45211da302715b5d19856a54ed3a2de298cc012"
 }

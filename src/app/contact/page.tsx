@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, Truck, Sparkles, ArrowRight } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
@@ -161,7 +162,20 @@ export default async function ContactPage() {
               </div>
 
               {/* Visit Store Card */}
-              <div className="rounded-2xl border border-brand-line bg-white p-6 shadow-sm">
+              <div className="rounded-2xl border border-brand-line bg-white p-6 shadow-sm overflow-hidden">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-brand-line mb-4">
+                  <Image
+                    src="/img/storefront-window1.jpg"
+                    alt="Laundro-Hub storefront at The Towers"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 380px"
+                  />
+                  <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 rounded-lg bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[11px] font-bold text-brand-deep shadow-xs border border-brand-line/60">
+                    <span className="h-2 w-2 rounded-full bg-brand-mint" />
+                    Open 7 Days
+                  </div>
+                </div>
                 <div className="flex items-center gap-2 text-brand-teal font-bold text-xs uppercase tracking-wider mb-2">
                   <MapPin className="h-4 w-4" />
                   <span>Visit our store</span>
