@@ -43,15 +43,31 @@ export function Footer() {
                 className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-4 py-2.5 text-sm font-semibold text-white hover:bg-brand-teal/90 transition-colors"
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                WhatsApp us on {BUSINESS_INFO.phone}
+                WhatsApp: {BUSINESS_INFO.phone}
               </a>
-              <a
-                href={`mailto:${BUSINESS_INFO.email}`}
-                className="inline-flex items-center gap-2 text-xs font-semibold text-brand-lav/80 hover:text-white transition-colors"
-              >
-                <Mail className="h-3.5 w-3.5 text-brand-mint shrink-0" />
-                <span>{BUSINESS_INFO.email}</span>
-              </a>
+              <div className="flex flex-col gap-1.5 text-xs text-brand-lav/80 pt-1">
+                <a
+                  href={`tel:${BUSINESS_INFO.phoneRaw}`}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Phone className="h-3.5 w-3.5 text-brand-mint shrink-0" />
+                  <span>Shop: {BUSINESS_INFO.phone}</span>
+                </a>
+                <a
+                  href={`tel:${BUSINESS_INFO.officePhoneRaw}`}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Phone className="h-3.5 w-3.5 text-brand-mint shrink-0" />
+                  <span>Office: {BUSINESS_INFO.officePhone} (Maritza)</span>
+                </a>
+                <a
+                  href={`mailto:${BUSINESS_INFO.email}`}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Mail className="h-3.5 w-3.5 text-brand-mint shrink-0" />
+                  <span>{BUSINESS_INFO.email}</span>
+                </a>
+              </div>
             </div>
           </div>
 

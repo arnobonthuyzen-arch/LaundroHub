@@ -24,9 +24,19 @@ export function Header() {
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
               className="flex items-center gap-1.5 font-semibold text-white hover:text-brand-mint transition-colors"
+              title="Shop & Dispatch Phone"
             >
               <Phone className="h-3 w-3 text-brand-mint" />
-              {BUSINESS_INFO.phone}
+              <span>{BUSINESS_INFO.phone}</span>
+            </a>
+            <span className="text-white/40">&middot;</span>
+            <a
+              href={`tel:${BUSINESS_INFO.officePhoneRaw}`}
+              className="flex items-center gap-1.5 font-semibold text-white hover:text-brand-mint transition-colors"
+              title="Maritza Office Phone"
+            >
+              <Phone className="h-3 w-3 text-brand-mint" />
+              <span>Office: {BUSINESS_INFO.officePhone}</span>
             </a>
           </div>
         </div>
@@ -120,6 +130,7 @@ export function Header() {
           <MobileNav
             whatsappUrl={BUSINESS_INFO.whatsappUrl}
             phone={BUSINESS_INFO.phone}
+            officePhone={BUSINESS_INFO.officePhone}
           />
         </div>
       </div>

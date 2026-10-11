@@ -22,9 +22,10 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 interface MobileNavProps {
   whatsappUrl: string;
   phone: string;
+  officePhone?: string;
 }
 
-export function MobileNav({ whatsappUrl, phone }: MobileNavProps) {
+export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [sectorsOpen, setSectorsOpen] = useState(true);
   const pathname = usePathname();
@@ -239,12 +240,21 @@ export function MobileNav({ whatsappUrl, phone }: MobileNavProps) {
                 <span>WhatsApp us</span>
               </a>
               <a
-                href={`tel:${phone}`}
+                href={`tel:${phone.replace(/\s+/g, '')}`}
                 className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-2.5 text-sm font-bold text-brand-deep hover:bg-brand-lav transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                Call {phone}
+                Shop: {phone}
               </a>
+              {officePhone && (
+                <a
+                  href={`tel:${officePhone.replace(/\s+/g, '')}`}
+                  className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-2.5 text-sm font-bold text-brand-deep hover:bg-brand-lav transition-colors"
+                >
+                  <Phone className="h-4 w-4" />
+                  Office: {officePhone} (Maritza)
+                </a>
+              )}
             </div>
           </div>
         </div>

@@ -421,6 +421,8 @@ svg.icon { flex-shrink: 0; display: block; }
 .footer-logo strong { font-family: var(--display); font-weight: 800; font-size: 24px; letter-spacing: -.02em; }
 .footer-tagline { font-size: 16px; font-style: italic; color: #D9CBEF; }
 .footer-phone { font-family: var(--display); font-weight: 700; font-size: 26px; letter-spacing: -.02em; color: #fff !important; }
+.footer-phone-sub { font-size: 15px; font-weight: 600; color: rgba(255, 255, 255, 0.9) !important; text-decoration: none; display: block; margin-top: -2px; margin-bottom: 4px; }
+.footer-phone-sub:hover { color: var(--mint) !important; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.14); font-size: 14px; color: rgba(255,255,255,.66); }
 
 /* ---------- About ---------- */

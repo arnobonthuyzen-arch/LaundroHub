@@ -40,62 +40,76 @@ export default async function ContactPage() {
       <div className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Quick Contact Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             <a
               href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 rounded-2xl border border-brand-line bg-brand-teal p-5 text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-brand-teal p-4 sm:p-5 text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.01]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20">
-                <WhatsAppIcon className="h-6 w-6 shrink-0" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 shrink-0">
+                <WhatsAppIcon className="h-5 w-5 shrink-0" />
               </div>
               <div>
-                <p className="text-xs uppercase font-semibold tracking-wider text-white/80">WhatsApp</p>
-                <p className="text-base font-bold">{BUSINESS_INFO.phone}</p>
-                <p className="text-xs text-white/80">Quickest response for quotes</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-white/80">WhatsApp</p>
+                <p className="text-sm sm:text-base font-bold">{BUSINESS_INFO.phone}</p>
+                <p className="text-[11px] text-white/80">Quickest quote chat</p>
               </div>
             </a>
 
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center gap-4 rounded-2xl border border-brand-line bg-white p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lav text-brand-purple">
-                <Phone className="h-6 w-6" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
+                <Phone className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs uppercase font-semibold tracking-wider text-brand-muted">Call us</p>
-                <p className="text-base font-bold">{BUSINESS_INFO.phone}</p>
-                <p className="text-xs text-brand-muted">Speak to our shop team</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Shop &amp; Counter</p>
+                <p className="text-sm sm:text-base font-bold">{BUSINESS_INFO.phone}</p>
+                <p className="text-[11px] text-brand-muted">The Towers store</p>
+              </div>
+            </a>
+
+            <a
+              href={`tel:${BUSINESS_INFO.officePhoneRaw}`}
+              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
+                <Phone className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Office (Maritza)</p>
+                <p className="text-sm sm:text-base font-bold text-brand-purple">{BUSINESS_INFO.officePhone}</p>
+                <p className="text-[11px] text-brand-muted">Direct office line</p>
               </div>
             </a>
 
             <a
               href={`mailto:${BUSINESS_INFO.email}`}
-              className="flex items-center gap-4 rounded-2xl border border-brand-line bg-white p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lav text-brand-purple">
-                <Mail className="h-6 w-6" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
+                <Mail className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs uppercase font-semibold tracking-wider text-brand-muted">Email</p>
-                <p className="text-base font-bold text-brand-purple truncate max-w-[170px]">{BUSINESS_INFO.email}</p>
-                <p className="text-xs text-brand-muted">Quotes &amp; accounts</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Email</p>
+                <p className="text-sm sm:text-base font-bold text-brand-purple truncate max-w-[150px]">{BUSINESS_INFO.email}</p>
+                <p className="text-[11px] text-brand-muted">Quotes &amp; accounts</p>
               </div>
             </a>
 
             <Link
               href="/my-wash"
-              className="flex items-center gap-4 rounded-2xl border border-brand-purple/20 bg-brand-purple p-5 text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3.5 rounded-2xl border border-brand-purple/20 bg-brand-purple p-4 sm:p-5 text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.01]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 text-brand-mint">
-                <Truck className="h-6 w-6" />
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-brand-mint shrink-0">
+                <Truck className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs uppercase font-semibold tracking-wider text-brand-mint">Doorstep Van</p>
-                <p className="text-base font-bold">Book a Pickup</p>
-                <p className="text-xs text-white/80">Schedule on My Wash →</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-mint">Doorstep Van</p>
+                <p className="text-sm sm:text-base font-bold">Book a Pickup</p>
+                <p className="text-[11px] text-white/80">My Wash collection →</p>
               </div>
             </Link>
           </div>
