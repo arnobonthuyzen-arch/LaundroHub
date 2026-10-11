@@ -39,6 +39,12 @@
     font-family: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
     color: var(--deep);
   }
+  button, .btn {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 }
 
 /* ==========================================================================
