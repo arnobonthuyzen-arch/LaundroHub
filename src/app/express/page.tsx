@@ -263,7 +263,7 @@ export default async function ExpressPage() {
                   src="/img/van.jpg"
                   alt="Laundro-Hub delivery van"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_32%]"
                 />
               </div>
             </div>

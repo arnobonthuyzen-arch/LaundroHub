@@ -288,7 +288,7 @@ svg.icon { flex-shrink: 0; display: block; }
 .perk__icon { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); display: flex; align-items: center; justify-content: center; color: var(--mint); flex-shrink: 0; }
 .perk strong { display: block; font-size: 15px; } .perk span { font-size: 13px; color: rgba(255,255,255,.7); }
 .van-card { position: relative; height: 420px; border-radius: var(--radius-lg); overflow: hidden; background: #fff; }
-.van-card img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.van-card img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
 .van-card .btn { position: absolute; left: 20px; bottom: 20px; box-shadow: 0 12px 28px rgba(0,0,0,.25); }
 .steps-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
 .step { display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 20px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); min-height: 168px; }

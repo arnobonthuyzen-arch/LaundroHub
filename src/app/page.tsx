@@ -401,46 +401,74 @@ export default async function HomePage() {
       {/* Collection & Delivery Suburb Coverage */}
       <section className="py-20 bg-brand-ground">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-brand-deep text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-            <div className="relative z-10 max-w-3xl">
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-mint">
-                Laundro-Hub Express
-              </span>
-              <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-                We pick up &amp; deliver across Bloemfontein.
-              </h2>
-              <p className="mt-4 text-base sm:text-lg text-brand-lav/90 leading-relaxed">
-                Daily scheduled routes through Langenhovenpark, Woodland Hills, Universitas, Brandwag and beyond. Free collection on qualifying orders.
-              </p>
+          <div className="rounded-3xl bg-brand-deep text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-7 relative z-10">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand-mint">
+                  New · Laundro-Hub Express
+                </span>
+                <h2 className="mt-2 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                  We collect. We clean.<br />
+                  <span className="text-brand-mint">We deliver.</span>
+                </h2>
+                <p className="mt-4 text-base sm:text-lg text-brand-lav/90 leading-relaxed">
+                  Your home, your office or anywhere in the Mangaung area — we fetch your laundry and bring it back fresh within a day or two, depending on volume and collection time.
+                </p>
 
-              <div className="mt-8 flex flex-wrap gap-2">
-                {suburbs.map((suburb) => (
-                  <span
-                    key={suburb}
-                    className="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 text-xs font-medium text-brand-mint border border-white/15"
+                {/* Suburb Coverage Tags */}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {suburbs.map((suburb) => (
+                    <span
+                      key={suburb}
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 text-xs font-medium text-brand-mint border border-white/15"
+                    >
+                      <MapPin className="h-3 w-3" />
+                      {suburb}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <a
+                    href={BUSINESS_INFO.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                   >
-                    <MapPin className="h-3 w-3" />
-                    {suburb}
-                  </span>
-                ))}
+                    <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                    Book Collection on WhatsApp
+                  </a>
+                  <Link
+                    href="/my-wash"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/20 transition-all"
+                  >
+                    Book on My Wash &rarr;
+                  </Link>
+                </div>
               </div>
 
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href={BUSINESS_INFO.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-brand-teal/90 transition-all"
-                >
-                  <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  Book Collection on WhatsApp
-                </a>
-                <Link
-                  href="/my-wash"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/20 transition-all"
-                >
-                  Book on My Wash &rarr;
-                </Link>
+              {/* Branded Delivery Van Photo Card */}
+              <div className="lg:col-span-5 relative">
+                <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full rounded-2xl overflow-hidden bg-white shadow-elevated border-4 border-white/20 group">
+                  <Image
+                    src="/img/van.jpg"
+                    alt="Laundro-Hub branded delivery van"
+                    fill
+                    className="object-cover object-[center_32%] transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                  <div className="absolute left-4 bottom-4 z-10">
+                    <a
+                      href={BUSINESS_INFO.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-4 py-2.5 text-xs font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all"
+                    >
+                      <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                      <span>Book a collection</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
