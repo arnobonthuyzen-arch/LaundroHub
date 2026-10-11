@@ -697,7 +697,7 @@
       "file_type": "code",
       "norm_label": "whatweofferpage()",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L25"
+      "source_location": "L32"
     },
     {
       "id": "src_lib_data_getpricingplans",
@@ -2443,7 +2443,7 @@
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L19"
+      "source_location": "L26"
     },
     {
       "id": "src_lib_data",
@@ -2905,7 +2905,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L26",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -2917,7 +2917,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L26",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -3854,7 +3854,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L16",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -3866,7 +3866,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L17",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -3878,7 +3878,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L17",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -3890,7 +3890,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L17",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -4612,7 +4612,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L16",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4624,7 +4624,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L17",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -5933,7 +5933,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L19",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -5944,7 +5944,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L25",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -6686,5 +6686,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e77deb851939f412a2a2b0743b933cbdedd63f16"
+  "built_at_commit": "673e8dfd22869cd9a539903da3a6336f1b0ba59d"
 }

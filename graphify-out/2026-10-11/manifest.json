@@ -894,9 +894,9 @@
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
-    "mtime": 1791742101.5616996,
-    "seen": 1791745652.4064782,
-    "ast_hash": "bce0d87db08675c964b71acff9cac044",
+    "mtime": 1791747119.0662076,
+    "seen": 1791747154.304063,
+    "ast_hash": "042a09c5880b088813865c119b02561d",
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {
