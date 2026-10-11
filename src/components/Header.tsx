@@ -19,7 +19,7 @@ export function Header() {
           <div className="flex items-center gap-6 text-brand-lav/90">
             <span className="flex items-center gap-1.5">
               <Clock className="h-3 w-3 text-brand-mint" />
-              Mon–Fri 07:00–17:30 &middot; Sat 08:00–14:00
+              Mon–Fri 07:00–18:00 &middot; Sat–Sun 09:00–13:00
             </span>
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}

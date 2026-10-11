@@ -21,9 +21,9 @@ export const BUSINESS_INFO = {
     googleMapsUrl: "https://maps.google.com/?q=The+Towers+Shopping+Centre+Langenhovenpark+Bloemfontein",
   },
   hours: [
-    { days: "Monday – Friday", times: "07:00 – 17:30" },
-    { days: "Saturday", times: "08:00 – 14:00" },
-    { days: "Sunday & Public Holidays", times: "Closed" },
+    { days: "Monday – Friday", times: "07:00 – 18:00" },
+    { days: "Saturday", times: "09:00 – 13:00" },
+    { days: "Sunday", times: "09:00 – 13:00" },
   ],
 };
 
