@@ -137,6 +137,20 @@ const PRICING_PLANS: PricingPlan[] = [
     ],
   },
   {
+    id: "school-sports",
+    name: "School Sports & Tournaments",
+    weightLimit: "Per tournament / fixture",
+    pricePerMonth: "Custom tournament rates",
+    description: "Rapid turnaround service for school sports derbies, visiting tournament teams, and training clinics.",
+    features: [
+      "High-capacity overnight / daily tournament turnaround",
+      "Heavy-duty grass & Free State red mud wash",
+      "Full match day jerseys, bibs & tracksuits",
+      "Returned sorted, packed & ready for next game",
+      "Express collection from sports pavilions & fields",
+    ],
+  },
+  {
     id: "student-res",
     name: "University Res & Communes",
     weightLimit: "Doorstep res pickup",
@@ -148,20 +162,6 @@ const PRICING_PLANS: PricingPlan[] = [
       "Bedding, duvet inners & blankets handled",
       "Discounted rates for group & roommate bookings",
       "Direct WhatsApp booking & status updates",
-    ],
-  },
-  {
-    id: "sports-camps",
-    name: "Sports Academies & Camps",
-    weightLimit: "Tournament & tour batches",
-    pricePerMonth: "Per tournament / fixture",
-    description: "Rapid turnaround service for visiting school sports tours, clinics, and holiday training camps.",
-    features: [
-      "High-capacity overnight / daily turnaround",
-      "Heavy-duty grass & Free State red mud wash",
-      "Full match day jerseys, bibs & tracksuits",
-      "Returned sorted, packed & ready for next game",
-      "Express collection from sports pavilions",
     ],
   },
 ];

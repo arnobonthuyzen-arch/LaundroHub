@@ -134,12 +134,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/schools" className="hover:text-white transition-colors">
-                  Schools &amp; Boarding Hostels
-                </Link>
-              </li>
-              <li>
-                <Link href="/sport-events" className="hover:text-white transition-colors">
-                  Sport Events &amp; Tournaments
+                  Schools, Sports &amp; Hostels
                 </Link>
               </li>
               <li>

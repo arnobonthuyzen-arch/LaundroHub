@@ -33,9 +33,9 @@ const ACCOUNT_CATEGORIES = [
   },
   {
     id: "Hostel / Residence / Res-based",
-    title: "Hostel & Residence-based",
-    question: "Is it hostel or res-based?",
-    desc: "University student residences, school boarding hostels, sports clubs, or camp accommodation.",
+    title: "School Hostels, Sports & Res",
+    question: "Is it school, sports kit or hostel-based?",
+    desc: "School boarding hostels, team sports kits, tournament derbies, and university student residences.",
     icon: GraduationCap,
   },
   {
@@ -58,13 +58,6 @@ const ACCOUNT_CATEGORIES = [
     question: "Is it a retirement village or frail care?",
     desc: "Senior resident personal clothing, delicate woollens, frail care bedding, and weekly van runs.",
     icon: Heart,
-  },
-  {
-    id: "Sport Events & Tournaments",
-    title: "Sport Events & Tournaments",
-    question: "Is it a sports event or team tournament?",
-    desc: "Overnight match kit washing, mud/grass stain treatment, squad bundles, and hotel delivery.",
-    icon: Trophy,
   },
   {
     id: "Business-to-Business (B2B)",

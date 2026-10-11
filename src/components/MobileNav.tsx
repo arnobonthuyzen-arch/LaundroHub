@@ -157,15 +157,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                       className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
                     >
                       <Trophy className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                      Schools &amp; Hostels
-                    </Link>
-                    <Link
-                      href="/sport-events"
-                      onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
-                    >
-                      <Medal className="h-3.5 w-3.5 text-brand-purple shrink-0" />
-                      Sport Events &amp; Tournaments
+                      Schools, Sports &amp; Hostels
                     </Link>
                     <Link
                       href="/healthcare"

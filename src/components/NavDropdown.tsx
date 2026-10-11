@@ -53,18 +53,11 @@ const SECTOR_ITEMS: SectorMenuItem[] = [
   },
   {
     title: "Schools & Hostels",
-    subtitle: "Team sports kits, blazer pressing & bags",
+    subtitle: "Sports kits, tournaments, blazers & hostels",
     href: "/schools",
     icon: Trophy,
     colorClass: "bg-brand-tealbg text-brand-teal",
-  },
-  {
-    title: "Sport Events & Teams",
-    subtitle: "Overnight match kit runs & mud removal",
-    href: "/sport-events",
-    icon: Medal,
-    colorClass: "bg-brand-tealbg text-brand-teal",
-    badge: "Match Day",
+    badge: "Sports & Res",
   },
   {
     title: "Healthcare Sector",
@@ -103,7 +96,6 @@ export function NavDropdown() {
     pathname.startsWith("/airbnb") ||
     pathname.startsWith("/hospitality") ||
     pathname.startsWith("/schools") ||
-    pathname.startsWith("/sport-events") ||
     pathname.startsWith("/healthcare") ||
     pathname.startsWith("/retirement-villages") ||
     pathname.startsWith("/express");

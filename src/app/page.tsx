@@ -218,7 +218,7 @@ export default async function HomePage() {
               Boarding school &amp; hostel laundry made simple.
             </h2>
             <p className="mt-4 text-base text-brand-body">
-              Scheduled weekly batch runs for school boarding hostels, UFS/CUT residences, and student communes in Bloemfontein. Tagged bags, uniform pressing, and zero mix-ups.
+              Scheduled weekly batch runs for school boarding hostels, sports derbies &amp; tournament kits, UFS/CUT residences, and student communes in Bloemfontein. Tagged bags, uniform pressing, and zero mix-ups.
             </p>
           </div>
 

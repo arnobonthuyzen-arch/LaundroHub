@@ -25,6 +25,16 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 86400,
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/sport-events",
+        destination: "/schools",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

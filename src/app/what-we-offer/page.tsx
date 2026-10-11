@@ -446,7 +446,7 @@ export default async function WhatWeOfferPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link
               href="/students"
               className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
@@ -516,34 +516,14 @@ export default async function WhatWeOfferPage() {
                   <School className="h-6 w-6 transition-transform group-hover:scale-110" />
                 </div>
                 <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
-                  Schools &amp; Hostels
+                  Schools, Sports &amp; Hostels
                 </h4>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  Rugged team sports kits (rugby, hockey), school blazers, and weekly boarding house collections.
+                  Rugged team sports kits (rugby, hockey), tournament derbies, school blazers, and weekly boarding house collections.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center text-xs font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
                 Explore School Plans &rarr;
-              </span>
-            </Link>
-
-            <Link
-              href="/sport-events"
-              className="group rounded-2xl border border-brand-line bg-brand-ground p-6 hover:bg-brand-lav/40 hover:border-brand-purple/30 transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-lav text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300 mb-4 shadow-xs">
-                  <Trophy className="h-6 w-6 transition-transform group-hover:scale-110" />
-                </div>
-                <h4 className="font-display text-lg font-bold text-brand-deep group-hover:text-brand-purple transition-colors">
-                  Sport Events &amp; Tournaments
-                </h4>
-                <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  Overnight match kit turnarounds, deep red mud removal, squad sorting, and hotel delivery.
-                </p>
-              </div>
-              <span className="mt-4 inline-flex items-center text-xs font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
-                Explore Sports Logistics &rarr;
               </span>
             </Link>
 
