@@ -200,9 +200,6 @@ export default async function WhatWeOfferPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
-                      <div className="absolute bottom-4 left-4 rounded-xl bg-brand-deep/85 backdrop-blur-md px-3.5 py-1.5 text-xs font-bold text-brand-mint">
-                        {service.price}
-                      </div>
                     </div>
                   </div>
 
