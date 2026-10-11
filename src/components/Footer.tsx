@@ -100,7 +100,7 @@ export function Footer() {
               <li>
                 <Link href="/my-wash" className="hover:text-brand-mint text-brand-mint font-semibold transition-colors flex items-center gap-1.5">
                   <Truck className="h-3.5 w-3.5" />
-                  <span>My Wash (Book Pickup)</span>
+                  <span>My Wash (WhatsApp Pickup)</span>
                 </Link>
               </li>
               <li>

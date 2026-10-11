@@ -67,17 +67,17 @@ function SubmitPickupButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-brand-teal px-8 py-4 text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+      className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-brand-teal px-8 py-4 text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
     >
       {pending ? (
         <>
           <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-          <span>Booking Express Van...</span>
+          <span>Opening WhatsApp Dispatch...</span>
         </>
       ) : (
         <>
-          <Truck className="h-5 w-5" />
-          <span>Confirm Doorstep Pickup Request</span>
+          <WhatsAppIcon className="h-5 w-5 shrink-0" />
+          <span>Book Pickup via WhatsApp (064 830 8785)</span>
         </>
       )}
     </button>
@@ -143,11 +143,11 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
         </div>
 
         <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-brand-deep">
-          Pickup Scheduled!
+          Pickup Ready for WhatsApp Dispatch!
         </h2>
 
         <p className="mt-3 text-base sm:text-lg text-brand-body max-w-lg mx-auto leading-relaxed">
-          Thank you, <span className="font-bold text-brand-deep">{confirmation.name}</span>! Our Bloemfontein collection driver has received your booking.
+          Thank you, <span className="font-bold text-brand-deep">{confirmation.name}</span>! Your collection details are set. Tap below to send your booking to our WhatsApp dispatch desk for instant confirmation.
         </p>
 
         {/* Scheduled summary card */}
@@ -194,10 +194,10 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
             href={confirmation.whatsappConfirmationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-md hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-7 py-4 text-base font-bold text-white shadow-md hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
           >
             <WhatsAppIcon className="h-5 w-5 shrink-0" />
-            <span>Notify Dispatch on WhatsApp (1-Tap)</span>
+            <span>Send to Dispatch on WhatsApp (1-Tap)</span>
           </a>
 
           <button
@@ -224,6 +224,35 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
       {/* Form Interactive Area */}
       <div className="lg:col-span-8 rounded-3xl border border-brand-line bg-white p-6 sm:p-10 shadow-sm">
+        {/* Live WhatsApp Notice */}
+        <div className="mb-8 rounded-2xl border border-brand-teal/30 bg-brand-tealbg/70 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-teal text-white shrink-0 shadow-sm">
+              <WhatsAppIcon className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h4 className="text-sm font-bold text-brand-deep">WhatsApp Booking Channel</h4>
+                <span className="rounded-full bg-brand-teal text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wide">
+                  Live Dispatch
+                </span>
+              </div>
+              <p className="text-xs text-brand-body mt-0.5 leading-relaxed max-w-xl">
+                My Wash doorstep collection is currently coordinated directly via WhatsApp for instant driver dispatch and live scheduling. Complete your details below to send your request straight to WhatsApp!
+              </p>
+            </div>
+          </div>
+          <a
+            href={BUSINESS_INFO.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal hover:bg-brand-teal-dark text-white text-xs font-bold px-4 py-2.5 transition-all shadow-sm shrink-0 whitespace-nowrap self-start sm:self-center"
+          >
+            <WhatsAppIcon className="h-4 w-4" />
+            <span>1-Tap WhatsApp Booking</span>
+          </a>
+        </div>
+
         <form action={formAction} className="space-y-10">
           {generalError && (
             <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-700">
@@ -746,8 +775,11 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
           </div>
 
           {/* Submit Button */}
-          <div className="pt-2">
+          <div className="pt-2 text-center">
             <SubmitPickupButton />
+            <p className="mt-2.5 text-xs text-brand-muted">
+              Submitting opens WhatsApp with your pre-filled collection request for immediate driver coordination.
+            </p>
           </div>
         </form>
       </div>
@@ -838,10 +870,10 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
             <div className="mt-5 rounded-2xl bg-brand-tealbg/70 p-4 border border-brand-teal/20 text-xs text-brand-body leading-relaxed space-y-2">
               <div className="flex items-center gap-1.5 font-bold text-brand-teal-dark">
                 <ShieldCheck className="h-4 w-4 shrink-0" />
-                <span>Zero Pre-Payment Required</span>
+                <span>Zero Pre-Payment &bull; WhatsApp Dispatched</span>
               </div>
               <p>
-                Your laundry is weighed upon arrival at our Langenhovenpark hub. An itemised digital invoice is WhatsApped to you with exact weights before washing begins.
+                Your pickup is coordinated directly via WhatsApp with our driver. Laundry is weighed at our Langenhovenpark hub and an itemised invoice is WhatsApped to you before washing begins.
               </p>
             </div>
 

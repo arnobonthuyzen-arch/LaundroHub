@@ -197,7 +197,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                 }`}
               >
                 <Truck className="h-4 w-4 text-brand-teal" />
-                <span>My Wash (Book Pickup)</span>
+                <span>My Wash (WhatsApp Pickup)</span>
               </Link>
 
               <Link

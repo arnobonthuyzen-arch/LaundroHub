@@ -52,6 +52,10 @@ const FAQS = [
     a: "We collect across greater Bloemfontein, including Langenhovenpark, Woodland Hills Wildlife Estate, Universitas, Brandwag, Westdene, Dan Pienaar, Pentagon Park, Bayswater, Waverley, and Fichardtpark.",
   },
   {
+    q: "How does the My Wash booking process work right now?",
+    a: "My Wash is currently managed directly through our WhatsApp dispatch desk (064 830 8785) for instant driver coordination. Full website self-service checkout will be added in an upcoming update. You can configure your preferences with our scheduler below and tap to send your request straight to WhatsApp!",
+  },
+  {
     q: "How can I pay for my wash?",
     a: "We accept Speedpoint Card Tap upon return delivery, instant EFT, SnapScan / Zapper, or cash.",
   },
@@ -77,7 +81,7 @@ export default async function MyWashPage() {
               My <span className="text-brand-purple">Wash.</span>
             </h1>
             <p className="mt-4 text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-              Book your laundry collection in under 60 seconds. Our express van collects from your door in Bloemfontein, washes with care, and returns your clothes crisp, fresh, and neatly folded.
+              Book your laundry collection via WhatsApp in under 60 seconds. Our express van collects from your door in Bloemfontein, washes with care, and returns your clothes crisp, fresh, and neatly folded.
             </p>
 
             {/* Quick feature pills */}
