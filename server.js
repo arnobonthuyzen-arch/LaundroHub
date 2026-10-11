@@ -15,6 +15,8 @@ app
   .then(() => {
     const server = createServer(async (req, res) => {
       try {
+        res.setHeader("X-Render-Engine", "Next.js SSR");
+        res.setHeader("X-SSR", "1");
         const parsedUrl = parse(req.url, true);
         await handle(req, res, parsedUrl);
       } catch (err) {

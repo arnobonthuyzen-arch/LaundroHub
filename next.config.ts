@@ -49,6 +49,14 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: [
           {
+            key: "X-Render-Engine",
+            value: "Next.js SSR",
+          },
+          {
+            key: "X-SSR",
+            value: "1",
+          },
+          {
             key: "X-Content-Type-Options",
             value: "nosniff",
           },
