@@ -72,6 +72,7 @@ export function HeroVideoPlayer() {
       {/* Main Looping Video */}
       <video
         id="hero-loop-video"
+        suppressHydrationWarning
         ref={(el) => {
           videoRef.current = el;
           if (el) {
@@ -97,7 +98,7 @@ export function HeroVideoPlayer() {
       {/* Instant playback bootstrap script running during initial HTML parsing */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `(function(){var v=document.getElementById('hero-loop-video');if(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('muted','');v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');var p=v.play();if(p&&p.catch){p.catch(function(){});}}})();`,
+          __html: `(function(){var v=document.getElementById('hero-loop-video');if(v){v.muted=true;v.defaultMuted=true;v.playsInline=true;var p=v.play();if(p&&p.catch){p.catch(function(){});}}})();`,
         }}
       />
 

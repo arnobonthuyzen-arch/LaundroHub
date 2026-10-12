@@ -1,10 +1,10 @@
 {
   "0": "BUSINESS_INFO",
-  "1": "data.ts",
+  "1": "MyWashForm.tsx",
   "2": "compilerOptions",
   "3": "devDependencies",
   "4": "dependencies",
-  "5": "[slug]/page.tsx",
+  "5": "data.ts",
   "6": "services/page.tsx",
   "7": "app/page.tsx",
   "8": "server.js",
@@ -25,6 +25,5 @@
   "23": "utils.ts",
   "24": "tailwind.config.ts",
   "25": "my-wash/loading.tsx",
-  "26": "NavDropdown.tsx",
-  "27": "ContactForm.tsx"
+  "26": "NavDropdown.tsx"
 }

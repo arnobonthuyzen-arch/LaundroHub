@@ -1,16 +1,16 @@
-# Graph Report - laundro-hub-website  (2026-10-11)
+# Graph Report - laundro-hub-website  (2026-10-12)
 
 ## Corpus Check
-- 51 files · ~409,959 words
+- 52 files · ~445,048 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 243 nodes · 347 edges · 29 communities (13 shown, 4 thin omitted)
+- 245 nodes · 354 edges · 28 communities (12 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d41b14f4`
+- Built from commit: `05dfe252`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,11 +31,10 @@
 - tailwind.config.ts
 - NavDropdown.tsx
 - ContactForm.tsx
-- layout.tsx
 
 ## God Nodes (most connected - your core abstractions)
-1. `BUSINESS_INFO` - 21 edges
-2. `WhatsAppIcon()` - 18 edges
+1. `BUSINESS_INFO` - 22 edges
+2. `WhatsAppIcon()` - 19 edges
 3. `compilerOptions` - 16 edges
 4. `getServices()` - 9 edges
 5. `getSuburbs()` - 9 edges
@@ -60,11 +59,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (29 total, 4 thin omitted)
+## Communities (28 total, 4 thin omitted)
 
 ### Community 0 - "BUSINESS_INFO"
-Cohesion: 0.12
-Nodes (14): metadata, metadata, metadata, metadata, metadata, metadata, StudentsPage(), metadata (+6 more)
+Cohesion: 0.10
+Nodes (18): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+10 more)
 
 ### Community 1 - "data.ts"
 Cohesion: 0.13
@@ -83,8 +82,8 @@ Cohesion: 0.09
 Nodes (23): clsx, leaflet, lucide-react, next, nodemailer, dependencies, clsx, leaflet (+15 more)
 
 ### Community 5 - "[slug]/page.tsx"
-Cohesion: 0.33
-Nodes (7): generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), getServiceBySlug(), getServices()
+Cohesion: 0.18
+Nodes (12): generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage(), metadata (+4 more)
 
 ### Community 7 - "app/page.tsx"
 Cohesion: 0.23
@@ -110,10 +109,6 @@ Nodes (3): NavDropdown(), SECTOR_ITEMS, SectorMenuItem
 Cohesion: 0.17
 Nodes (12): ContactFormData, contactFormSchema, submitContactForm(), ContactPage(), metadata, ACCOUNT_CATEGORIES, ContactForm(), initialState (+4 more)
 
-### Community 28 - "layout.tsx"
-Cohesion: 0.20
-Nodes (8): bricolage, caveat, figtree, jsonLd, metadata, viewport, Footer(), Header()
-
 ## Knowledge Gaps
 - **102 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+97 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 143 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
@@ -122,17 +117,17 @@ Nodes (8): bricolage, caveat, figtree, jsonLd, metadata, viewport, Footer(), Hea
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `data.ts`, `[slug]/page.tsx`, `app/page.tsx`, `my-wash/page.tsx`, `ContactForm.tsx`, `layout.tsx`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `data.ts`, `[slug]/page.tsx`, `app/page.tsx`, `my-wash/page.tsx`, `ContactForm.tsx`?**
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
+- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `data.ts`, `[slug]/page.tsx`, `app/page.tsx`, `my-wash/page.tsx`, `ContactForm.tsx`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
   _102 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**
-  _Cohesion score 0.11954022988505747 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
 - **Should `data.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.12615384615384614 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
-- **Should `devDependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._

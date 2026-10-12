@@ -222,6 +222,18 @@
       "source_location": "L25"
     },
     {
+      "id": "src_app_layout_rootlayout",
+      "label": "RootLayout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "rootlayout()",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L114"
+    },
+    {
       "id": "src_app_retirement_villages_page_retirementvillagespage",
       "label": "RetirementVillagesPage()",
       "_callable": true,
@@ -246,28 +258,28 @@
       "source_location": "L25"
     },
     {
-      "id": "src_app_students_page_studentspage",
-      "label": "StudentsPage()",
+      "id": "src_components_footer_footer",
+      "label": "Footer()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "studentspage()",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L25"
+      "norm_label": "footer()",
+      "source_file": "src/components/Footer.tsx",
+      "source_location": "L7"
     },
     {
-      "id": "src_app_what_we_offer_page_whatweofferpage",
-      "label": "WhatWeOfferPage()",
+      "id": "src_components_header_header",
+      "label": "Header()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "BUSINESS_INFO",
       "file_type": "code",
-      "norm_label": "whatweofferpage()",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32"
+      "norm_label": "header()",
+      "source_file": "src/components/Header.tsx",
+      "source_location": "L9"
     },
     {
       "id": "src_components_icons_whatsappicon_whatsappicon",
@@ -282,6 +294,18 @@
       "source_location": "L7"
     },
     {
+      "id": "src_components_mobilebottombar_mobilebottombar",
+      "label": "MobileBottomBar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "mobilebottombar()",
+      "source_file": "src/components/MobileBottomBar.tsx",
+      "source_location": "L6"
+    },
+    {
       "id": "src_components_mobilenav_mobilenav",
       "label": "MobileNav()",
       "_callable": true,
@@ -292,18 +316,6 @@
       "norm_label": "mobilenav()",
       "source_file": "src/components/MobileNav.tsx",
       "source_location": "L28"
-    },
-    {
-      "id": "src_lib_data_getpricingplans",
-      "label": "getPricingPlans()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "getpricingplans()",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L195"
     },
     {
       "id": "src_actions_pickup_submitpickuprequest",
@@ -666,42 +678,6 @@
       "source_location": "L118"
     },
     {
-      "id": "src_app_layout_rootlayout",
-      "label": "RootLayout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "rootlayout()",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L113"
-    },
-    {
-      "id": "src_components_footer_footer",
-      "label": "Footer()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "footer()",
-      "source_file": "src/components/Footer.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_components_header_header",
-      "label": "Header()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "header()",
-      "source_file": "src/components/Header.tsx",
-      "source_location": "L9"
-    },
-    {
       "id": "src_app_services_slug_page_generatemetadata",
       "label": "generateMetadata()",
       "_callable": true,
@@ -748,6 +724,42 @@
       "norm_label": "sitemap()",
       "source_file": "src/app/sitemap.ts",
       "source_location": "L4"
+    },
+    {
+      "id": "src_app_students_page_studentspage",
+      "label": "StudentsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "studentspage()",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_app_what_we_offer_page_whatweofferpage",
+      "label": "WhatWeOfferPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "whatweofferpage()",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L32"
+    },
+    {
+      "id": "src_lib_data_getpricingplans",
+      "label": "getPricingPlans()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "getpricingplans()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L195"
     },
     {
       "id": "src_lib_data_getservicebyslug",
@@ -900,6 +912,83 @@
       "source_location": "L19"
     },
     {
+      "id": "src_app_layout",
+      "label": "layout.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "layout.tsx",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_layout_bricolage",
+      "label": "bricolage",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "bricolage",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_layout_caveat",
+      "label": "caveat",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "caveat",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_app_layout_figtree",
+      "label": "figtree",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "figtree",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_app_layout_jsonld",
+      "label": "jsonLd",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "jsonld",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L81"
+    },
+    {
+      "id": "src_app_layout_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_app_layout_viewport",
+      "label": "viewport",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "viewport",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L27"
+    },
+    {
       "id": "src_app_retirement_villages_page",
       "label": "retirement-villages/page.tsx",
       "_origin": "ast",
@@ -944,50 +1033,6 @@
       "source_location": "L19"
     },
     {
-      "id": "src_app_students_page",
-      "label": "students/page.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "students/page.tsx",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_students_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_app_what_we_offer_page",
-      "label": "what-we-offer/page.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "what-we-offer/page.tsx",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_what_we_offer_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L26"
-    },
-    {
       "id": "src_components_footer",
       "label": "Footer.tsx",
       "_origin": "ast",
@@ -1018,6 +1063,17 @@
       "file_type": "code",
       "norm_label": "whatsappicon.tsx",
       "source_file": "src/components/icons/WhatsAppIcon.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_components_mobilebottombar",
+      "label": "MobileBottomBar.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "mobilebottombar.tsx",
+      "source_file": "src/components/MobileBottomBar.tsx",
       "source_location": "L1"
     },
     {
@@ -1890,83 +1946,6 @@
       "source_location": "L4"
     },
     {
-      "id": "src_app_layout",
-      "label": "layout.tsx",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "layout.tsx",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_layout_bricolage",
-      "label": "bricolage",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "bricolage",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_layout_caveat",
-      "label": "caveat",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "caveat",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_app_layout_figtree",
-      "label": "figtree",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "figtree",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_app_layout_jsonld",
-      "label": "jsonLd",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "jsonld",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_app_layout_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "src_app_layout_viewport",
-      "label": "viewport",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": "layout.tsx",
-      "file_type": "code",
-      "norm_label": "viewport",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L26"
-    },
-    {
       "id": "package",
       "label": "package.json",
       "_origin": "ast",
@@ -2526,6 +2505,50 @@
       "norm_label": "sitemap.ts",
       "source_file": "src/app/sitemap.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_app_students_page",
+      "label": "students/page.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "students/page.tsx",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_students_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_app_what_we_offer_page",
+      "label": "what-we-offer/page.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "what-we-offer/page.tsx",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_what_we_offer_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "[slug]/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L26"
     },
     {
       "id": "src_app_services_page",
@@ -3597,7 +3620,7 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_lib_data_business_info",
+      "target": "src_components_mobilebottombar_mobilebottombar",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3605,6 +3628,18 @@
       "context": "import",
       "source_file": "src/app/layout.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -4064,6 +4099,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_mobilebottombar",
+      "target": "src_components_icons_whatsappicon_whatsappicon",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/MobileBottomBar.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_mobilebottombar",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/MobileBottomBar.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_components_mobilenav",
       "target": "src_components_icons_whatsappicon_whatsappicon",
       "relation": "imports",
@@ -4463,7 +4522,7 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_lib_data",
+      "target": "src_components_mobilebottombar",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4471,6 +4530,18 @@
       "context": "import",
       "source_file": "src/app/layout.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -4820,6 +4891,30 @@
       "context": "import",
       "source_file": "src/components/Header.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_mobilebottombar",
+      "target": "src_components_icons_whatsappicon",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/MobileBottomBar.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_mobilebottombar",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/MobileBottomBar.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -5644,7 +5739,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L113",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -5655,7 +5750,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -5666,7 +5761,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -5677,7 +5772,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -5688,18 +5783,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_bricolage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -5710,7 +5794,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L80",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_bricolage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -6129,6 +6224,17 @@
       "confidence_score": 1.0,
       "source_file": "src/components/icons/WhatsAppIcon.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_mobilebottombar",
+      "target": "src_components_mobilebottombar_mobilebottombar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/MobileBottomBar.tsx",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -6773,5 +6879,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d41b14f484b5c529be007139aead24e58dd8a6cd"
+  "built_at_commit": "05dfe25200817491b08742644d32803aa01a6ad9"
 }

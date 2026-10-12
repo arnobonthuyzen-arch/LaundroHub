@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "src/components/HeroVideoPlayer.tsx": {
-    "mtime": 1791767196.8909044,
-    "seen": 1791767702.7263591,
-    "ast_hash": "41264b5fd6d5903f5108ae039dda43bd",
+    "mtime": 1791795813.5826526,
+    "seen": 1791795848.238278,
+    "ast_hash": "730b47e576d2fbd2e1942ebf78442878",
     "semantic_hash": ""
   },
   "src/components/MobileNav.tsx": {
@@ -1032,9 +1032,9 @@
     "semantic_hash": ""
   },
   "src/components/TowersMapWrapper.tsx": {
-    "mtime": 1791748638.7960045,
-    "seen": 1791748867.75713,
-    "ast_hash": "c33f4488a99fc6f0451c8ba0f8392624",
+    "mtime": 1791795823.8593123,
+    "seen": 1791795848.238282,
+    "ast_hash": "2fafade45d79100de89e717213e363eb",
     "semantic_hash": ""
   },
   "public/img/steam-pressing.jpg": {

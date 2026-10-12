@@ -1,26 +1,26 @@
 # Graph Report - laundro-hub-website  (2026-10-12)
 
 ## Corpus Check
-- 52 files · ~445,048 words
+- 52 files · ~445,347 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 245 nodes · 354 edges · 28 communities (12 shown, 4 thin omitted)
+- 246 nodes · 355 edges · 27 communities (11 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `05dfe252`
+- Built from commit: `b7a30164`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - BUSINESS_INFO
-- data.ts
+- MyWashForm.tsx
 - compilerOptions
 - devDependencies
 - dependencies
-- [slug]/page.tsx
+- data.ts
 - app/page.tsx
 - server.js
 - Laundro-Hub website
@@ -30,7 +30,6 @@
 - next.config.ts
 - tailwind.config.ts
 - NavDropdown.tsx
-- ContactForm.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `BUSINESS_INFO` - 22 edges
@@ -49,25 +48,25 @@
   src/app/contact/page.tsx → src/lib/data.ts
 - `ContactForm()` --indirect_call--> `submitContactForm()`  [INFERRED]
   src/components/ContactForm.tsx → src/actions/contact.ts
-- `submitPickupRequest()` --calls--> `sendPickupOrderEmail()`  [EXTRACTED]
-  src/actions/pickup.ts → src/lib/mail.ts
 - `MyWashForm()` --indirect_call--> `submitPickupRequest()`  [INFERRED]
   src/components/my-wash/MyWashForm.tsx → src/actions/pickup.ts
 - `ExpressPage()` --calls--> `getSuburbs()`  [EXTRACTED]
   src/app/express/page.tsx → src/lib/data.ts
+- `MyWashPage()` --calls--> `getSuburbs()`  [EXTRACTED]
+  src/app/my-wash/page.tsx → src/lib/data.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (28 total, 4 thin omitted)
+## Communities (27 total, 4 thin omitted)
 
 ### Community 0 - "BUSINESS_INFO"
 Cohesion: 0.10
 Nodes (18): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+10 more)
 
-### Community 1 - "data.ts"
-Cohesion: 0.13
-Nodes (19): PickupRequestData, pickupRequestSchema, PickupSuccessData, submitPickupRequest(), metadata, AVAILABLE_SERVICES, INITIAL_STATE, MyWashForm() (+11 more)
+### Community 1 - "MyWashForm.tsx"
+Cohesion: 0.10
+Nodes (26): ContactFormData, contactFormSchema, submitContactForm(), PickupRequestData, pickupRequestSchema, PickupSuccessData, submitPickupRequest(), ContactPage() (+18 more)
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.07
@@ -81,13 +80,13 @@ Nodes (25): autoprefixer, devDependencies, autoprefixer, postcss, tailwindcss, @
 Cohesion: 0.09
 Nodes (23): clsx, leaflet, lucide-react, next, nodemailer, dependencies, clsx, leaflet (+15 more)
 
-### Community 5 - "[slug]/page.tsx"
-Cohesion: 0.18
-Nodes (12): generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage(), metadata (+4 more)
+### Community 5 - "data.ts"
+Cohesion: 0.13
+Nodes (17): metadata, generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage() (+9 more)
 
 ### Community 7 - "app/page.tsx"
-Cohesion: 0.23
-Nodes (7): metadata, BubbleConfig, BUBBLES, HeroBubbles(), HeroVideoPlayer(), TowersMap(), TowersMapWrapper()
+Cohesion: 0.21
+Nodes (7): metadata, BubbleConfig, BUBBLES, HeroBubbles(), HeroVideoPlayer(), TowersMap, TowersMapWrapper()
 
 ### Community 8 - "server.js"
 Cohesion: 0.33
@@ -105,29 +104,25 @@ Nodes (9): ExpressPage(), metadata, FAQS, HOW_IT_WORKS_STEPS, metadata, MyWashPa
 Cohesion: 0.33
 Nodes (3): NavDropdown(), SECTOR_ITEMS, SectorMenuItem
 
-### Community 27 - "ContactForm.tsx"
-Cohesion: 0.17
-Nodes (12): ContactFormData, contactFormSchema, submitContactForm(), ContactPage(), metadata, ACCOUNT_CATEGORIES, ContactForm(), initialState (+4 more)
-
 ## Knowledge Gaps
 - **102 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+97 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 143 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 144 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `data.ts`, `[slug]/page.tsx`, `app/page.tsx`, `my-wash/page.tsx`, `ContactForm.tsx`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `data.ts`, `[slug]/page.tsx`, `app/page.tsx`, `my-wash/page.tsx`, `ContactForm.tsx`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
   _102 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**
   _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
-- **Should `data.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.12615384615384614 - nodes in this community are weakly interconnected._
+- **Should `MyWashForm.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._
