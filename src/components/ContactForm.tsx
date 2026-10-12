@@ -86,7 +86,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-purple px-8 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-brand-deep hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
+      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-brand-purple px-8 py-3.5 text-base font-bold text-white shadow-md transition-all hover:bg-brand-deep active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
     >
       {pending ? (
         <>
@@ -255,7 +255,7 @@ export function ContactForm() {
               required
               autoComplete="name"
               placeholder="e.g. Johan van der Merwe"
-              className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+              className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
             />
             {errors?.name && (
               <p className="mt-1.5 text-xs font-medium text-red-600">{errors.name[0]}</p>
@@ -275,7 +275,7 @@ export function ContactForm() {
               required
               autoComplete="tel"
               placeholder="064 830 8785"
-              className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+              className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
             />
             {errors?.phone && (
               <p className="mt-1.5 text-xs font-medium text-red-600">{errors.phone[0]}</p>
@@ -295,7 +295,7 @@ export function ContactForm() {
             inputMode="email"
             autoComplete="email"
             placeholder="johan@company.co.za"
-            className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+            className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
           />
           {errors?.email && (
             <p className="mt-1.5 text-xs font-medium text-red-600">{errors.email[0]}</p>
@@ -362,7 +362,7 @@ export function ContactForm() {
             name="message"
             rows={4}
             placeholder="Tell us about collection frequency, billing preferences (monthly invoicing vs card), specific fabric requirements, or hostel/business location."
-            className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+            className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
           />
           {errors?.message && (
             <p className="mt-1.5 text-xs font-medium text-red-600">{errors.message[0]}</p>

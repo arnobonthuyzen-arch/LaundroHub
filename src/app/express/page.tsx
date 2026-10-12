@@ -487,7 +487,7 @@ export default async function ExpressPage() {
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <Link
                   href="/my-wash"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-mint px-6 py-3 text-xs font-bold text-brand-deep hover:bg-white transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-mint px-6 py-3 min-h-[44px] text-xs font-bold text-brand-deep hover:bg-white active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <Truck className="h-4 w-4" />
                   <span>Schedule on My Wash</span>
@@ -496,7 +496,7 @@ export default async function ExpressPage() {
                   href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white/20 px-6 py-3 text-xs font-bold text-white hover:bg-white/30 transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
                   <span>WhatsApp Us</span>

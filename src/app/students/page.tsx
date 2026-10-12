@@ -253,14 +253,14 @@ export default async function StudentsPage() {
                   href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 text-xs font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
                   <span>WhatsApp Student Desk</span>
                 </a>
                 <Link
                   href="/my-wash"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white/20 px-6 py-3 text-xs font-bold text-white hover:bg-white/30 transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all"
                 >
                   <span>Book Express Van (My Wash)</span>
                 </Link>

@@ -84,21 +84,21 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-brand-teal/90 transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 min-h-[44px] text-sm font-bold text-white shadow hover:bg-brand-teal-dark active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
                   Book via WhatsApp
                 </a>
                 <Link
                   href="/my-wash"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-brand-deep transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-6 py-3.5 min-h-[44px] text-sm font-bold text-white shadow hover:bg-brand-deep active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   Book Pickup (My Wash)
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-brand-line bg-white px-5 py-3.5 text-sm font-semibold text-brand-body hover:bg-brand-lav transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl border border-brand-line bg-white px-5 py-3.5 min-h-[44px] text-sm font-semibold text-brand-body hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   Contact Us
                 </Link>

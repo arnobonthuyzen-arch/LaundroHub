@@ -78,14 +78,14 @@ export default async function HomePage() {
                   href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-brand-teal px-5 py-3.5 sm:px-6 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02] text-center"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-brand-teal px-5 py-3.5 sm:px-6 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.98] transition-all hover:scale-[1.02] text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint focus-visible:ring-offset-2 focus-visible:ring-offset-brand-deep"
                 >
                   <WhatsAppIcon className="h-5 w-5 shrink-0" />
                   <span>WhatsApp us on {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/my-wash"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 border border-white/20 px-5 py-3.5 sm:px-6 sm:py-3.5 text-sm sm:text-base font-semibold text-white hover:bg-white/20 transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 border border-white/30 px-5 py-3.5 sm:px-6 sm:py-3.5 text-sm sm:text-base font-semibold text-white hover:bg-white/20 active:scale-[0.98] transition-all text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-deep"
                 >
                   <span>Book a collection (My Wash)</span>
                   <ArrowRight className="h-4 w-4 text-brand-mint shrink-0" />
@@ -462,14 +462,14 @@ export default async function HomePage() {
                     href={BUSINESS_INFO.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
+                    className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 min-h-[44px] text-sm font-bold text-white shadow hover:bg-brand-teal-dark active:scale-[0.98] transition-all hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint focus-visible:ring-offset-2 focus-visible:ring-offset-brand-deep"
                   >
                     <WhatsAppIcon className="h-4 w-4 shrink-0" />
                     Book Collection on WhatsApp
                   </a>
                   <Link
                     href="/my-wash"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/20 transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 min-h-[44px] text-sm font-semibold text-white hover:bg-white/20 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-deep"
                   >
                     Book on My Wash &rarr;
                   </Link>
@@ -491,7 +491,7 @@ export default async function HomePage() {
                       href={BUSINESS_INFO.whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-4 py-2.5 text-xs font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all"
+                      className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-4 py-2.5 min-h-[44px] text-xs font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                     >
                       <WhatsAppIcon className="h-4 w-4 shrink-0" />
                       <span>Book a collection</span>
@@ -545,7 +545,7 @@ export default async function HomePage() {
                   href={BUSINESS_INFO.address.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-3 min-h-[44px] text-sm font-bold text-white shadow-sm hover:bg-brand-deep active:scale-[0.98] transition-all hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   <MapPin className="h-4 w-4 text-brand-mint" />
                   <span>Get Google Maps Directions</span>
@@ -554,7 +554,7 @@ export default async function HomePage() {
                   href={`https://api.whatsapp.com/send?phone=27648308785&text=Hello%20Laundro-Hub,%20I%20have%20a%20question%20about%20visiting%20your%20Towers%20store`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 min-h-[44px] text-sm font-bold text-white shadow-sm hover:bg-brand-teal-dark active:scale-[0.98] transition-all hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
                 >
                   <WhatsAppIcon className="h-4 w-4" />
                   <span>WhatsApp The Counter</span>
@@ -582,7 +582,7 @@ export default async function HomePage() {
                   </div>
                   <div className="text-left">
                     <span className="block text-xs font-bold text-brand-deep leading-tight">The Towers Store</span>
-                    <span className="text-[11px] text-brand-teal font-bold">Opposite car wash</span>
+                    <span className="text-[11px] text-brand-teal-dark font-extrabold">Opposite car wash</span>
                   </div>
                 </div>
 

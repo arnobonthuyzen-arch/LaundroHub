@@ -67,7 +67,7 @@ function SubmitPickupButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+      className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
     >
       {pending ? (
         <>
@@ -666,7 +666,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                   type="text"
                   required
                   placeholder="e.g. 14 Paul Kruger Avenue, Unit 12"
-                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
                 />
                 {errors?.address && (
                   <p className="mt-1.5 text-xs font-medium text-red-600">{errors.address[0]}</p>
@@ -682,7 +682,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                   name="accessCode"
                   type="text"
                   placeholder="e.g. #4829 or Guardhouse"
-                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
                 />
               </div>
             </div>
@@ -715,7 +715,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                   required
                   autoComplete="name"
                   placeholder="e.g. Thabo Maseko"
-                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
                 />
                 {errors?.name && (
                   <p className="mt-1.5 text-xs font-medium text-red-600">{errors.name[0]}</p>
@@ -735,7 +735,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                   required
                   autoComplete="tel"
                   placeholder="064 830 8785"
-                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+                  className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
                 />
                 {errors?.phone && (
                   <p className="mt-1.5 text-xs font-medium text-red-600">{errors.phone[0]}</p>
@@ -755,7 +755,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 inputMode="email"
                 autoComplete="email"
                 placeholder="thabo@example.com"
-                className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+                className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
               />
             </div>
 
@@ -769,7 +769,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 name="notes"
                 rows={3}
                 placeholder="e.g. 'Leave laundry bag on front porch if not home', 'Stain treatment on white shirts', or 'Call on arrival'."
-                className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
+                className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
               />
             </div>
           </div>

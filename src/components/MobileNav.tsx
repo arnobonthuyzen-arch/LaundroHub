@@ -196,7 +196,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                     : "bg-brand-lav/70 text-brand-purple hover:bg-brand-lav"
                 }`}
               >
-                <Truck className="h-4 w-4 text-brand-teal" />
+                <Truck className={`h-4 w-4 ${pathname === "/my-wash" ? "text-brand-mint" : "text-brand-teal"}`} />
                 <span>My Wash (WhatsApp Pickup)</span>
               </Link>
 
@@ -226,14 +226,14 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 py-3 min-h-[48px] text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 active:scale-[0.99] transition-all"
+                className="flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 py-3 min-h-[48px] text-sm font-bold text-white shadow-sm hover:bg-brand-teal-dark active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />
                 <span>WhatsApp us</span>
               </a>
               <a
                 href={`tel:${phone.replace(/\s+/g, '')}`}
-                className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.99] transition-all"
+                className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
               >
                 <Phone className="h-4 w-4" />
                 <span>Shop: {phone}</span>
@@ -241,7 +241,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
               {officePhone && (
                 <a
                   href={`tel:${officePhone.replace(/\s+/g, '')}`}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.99] transition-all"
+                  className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   <Phone className="h-4 w-4" />
                   <span>Office: {officePhone} (Maritza)</span>

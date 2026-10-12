@@ -235,7 +235,7 @@ export default async function WhatWeOfferPage() {
                     <div className="pt-2 flex flex-wrap items-center gap-3">
                       <Link
                         href="/my-wash"
-                        className="inline-flex items-center gap-1.5 rounded-xl bg-brand-purple px-5 py-2.5 text-xs font-bold text-white hover:bg-brand-deep transition-all"
+                        className="inline-flex items-center gap-1.5 rounded-xl bg-brand-purple px-5 py-2.5 min-h-[44px] text-xs font-bold text-white hover:bg-brand-deep active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                       >
                         <Truck className="h-3.5 w-3.5 text-brand-mint" />
                         <span>Book Collection (My Wash)</span>
@@ -244,7 +244,7 @@ export default async function WhatWeOfferPage() {
                         href={BUSINESS_INFO.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-xl border border-brand-line bg-white px-5 py-2.5 text-xs font-bold text-brand-deep hover:bg-brand-lav transition-all"
+                        className="inline-flex items-center gap-1.5 rounded-xl border border-brand-line bg-white px-5 py-2.5 min-h-[44px] text-xs font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
                       >
                         <WhatsAppIcon className="h-3.5 w-3.5" />
                         <span>Instant WhatsApp Inquiry</span>
@@ -292,14 +292,14 @@ export default async function WhatWeOfferPage() {
                 <div className="flex flex-wrap items-center gap-3 pt-2">
                   <Link
                     href="/express"
-                    className="inline-flex items-center gap-2 rounded-xl bg-brand-mint px-6 py-3 text-xs font-bold text-brand-deep hover:bg-white transition-all shadow-sm"
+                    className="inline-flex items-center gap-2 rounded-xl bg-brand-mint px-6 py-3 min-h-[44px] text-xs font-bold text-brand-deep hover:bg-white active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                   >
                     <span>Learn About Express Logistics</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                   <Link
                     href="/my-wash"
-                    className="inline-flex items-center gap-2 rounded-xl bg-white/15 px-6 py-3 text-xs font-bold text-white hover:bg-white/25 transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   >
                     <span>Schedule Pickup Online</span>
                   </Link>

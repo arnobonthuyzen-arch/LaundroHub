@@ -222,7 +222,7 @@ export default async function MyWashPage() {
               <div className="flex items-center gap-3 shrink-0">
                 <Link
                   href="/contact"
-                  className="rounded-xl border border-brand-line bg-brand-lav px-4 py-2.5 text-xs font-bold text-brand-deep hover:bg-brand-lav/80 transition-all"
+                  className="inline-flex items-center justify-center rounded-xl border border-brand-line bg-brand-lav px-4 py-2.5 min-h-[44px] text-xs font-bold text-brand-deep hover:bg-brand-lav/80 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   Contact Us
                 </Link>
@@ -230,7 +230,7 @@ export default async function MyWashPage() {
                   href={BUSINESS_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-brand-teal px-4 py-2.5 text-xs font-bold text-white hover:bg-brand-teal/90 transition-all"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-brand-teal px-4 py-2.5 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
                 >
                   <WhatsAppIcon className="h-3.5 w-3.5" />
                   <span>WhatsApp us</span>

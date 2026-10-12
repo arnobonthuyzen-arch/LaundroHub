@@ -15,6 +15,7 @@ const config: Config = {
           purple: "#4A1677",
           plum: "#3E1266",
           teal: "#0B6E71",
+          "teal-dark": "#075053",
           mint: "#8FE0DC",
           lav: "#F1EBF8",
           tealbg: "#E0F2F1",

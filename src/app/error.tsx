@@ -40,14 +40,14 @@ export default function GlobalError({
         <button
           type="button"
           onClick={() => reset()}
-          className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all"
+          className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-5 py-2.5 min-h-[44px] text-sm font-bold text-white shadow-sm hover:bg-brand-deep active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2 cursor-pointer"
         >
           <RotateCcw className="h-4 w-4" />
           Try again
         </button>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 rounded-xl border border-brand-line bg-white px-5 py-2.5 text-sm font-semibold text-brand-body hover:bg-brand-lav transition-all"
+          className="inline-flex items-center gap-2 rounded-xl border border-brand-line bg-white px-5 py-2.5 min-h-[44px] text-sm font-semibold text-brand-body hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
         >
           <Home className="h-4 w-4" />
           Back to Home

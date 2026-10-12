@@ -24,7 +24,7 @@ export default function TowersMap() {
           <div>
             <div className="flex items-center gap-1.5">
               <span className="text-xs font-extrabold text-brand-deep tracking-tight">The Towers Shopping Centre</span>
-              <span className="rounded-full bg-brand-teal/15 px-2 py-0.5 text-[9px] font-bold text-brand-teal uppercase tracking-wider">
+              <span className="rounded-full bg-brand-teal px-2 py-0.5 text-[9px] font-extrabold text-white uppercase tracking-wider">
                 Opposite Car Wash
               </span>
             </div>
@@ -38,7 +38,7 @@ export default function TowersMap() {
             href={BUSINESS_INFO.address.googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-xl bg-brand-teal hover:bg-brand-teal/90 text-white px-3.5 py-2 text-xs font-bold shadow-md transition-all hover:scale-[1.02]"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-brand-teal hover:bg-brand-teal-dark active:scale-[0.98] text-white px-3.5 py-2 min-h-[44px] text-xs font-bold shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
             title="Open turn-by-turn directions in Google Maps app"
           >
             <Navigation className="h-3.5 w-3.5" />

@@ -52,9 +52,9 @@ export default async function ContactPage() {
                 <WhatsAppIcon className="h-5 w-5 shrink-0" />
               </div>
               <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-white/80">WhatsApp</p>
-                <p className="text-sm sm:text-base font-bold">{BUSINESS_INFO.phone}</p>
-                <p className="text-[11px] text-white/80">Quickest quote chat</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-white/95">WhatsApp</p>
+                <p className="text-sm sm:text-base font-bold text-white">{BUSINESS_INFO.phone}</p>
+                <p className="text-[11px] text-white/95">Quickest quote chat</p>
               </div>
             </a>
 

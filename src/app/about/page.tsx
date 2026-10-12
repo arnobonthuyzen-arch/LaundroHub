@@ -157,7 +157,7 @@ export default function AboutPage() {
               <div className="mt-6 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 text-sm font-bold text-white hover:bg-brand-teal/90 transition-all shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-5 py-3 min-h-[44px] text-sm font-bold text-white hover:bg-brand-teal/90 active:scale-[0.98] transition-all shadow-sm"
                 >
                   Inquire About a Business Account
                 </Link>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                   href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20inquire%20about%20a%20commercial%20account`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-5 py-3 text-sm font-bold text-white hover:bg-white/20 transition-all"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-3 min-h-[44px] text-sm font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all"
                 >
                   WhatsApp Business Chat
                 </a>
