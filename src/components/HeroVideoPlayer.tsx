@@ -82,11 +82,12 @@ export function HeroVideoPlayer() {
           }
         }}
         src="/videos/loop-wash.mp4"
+        poster="/videos/loop-wash-poster.jpg"
         muted
         autoPlay
         playsInline
         loop
-        preload="auto"
+        preload="metadata"
         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
       >
         <source src="/videos/loop-wash.webm" type="video/webm" />

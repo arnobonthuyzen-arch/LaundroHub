@@ -126,62 +126,62 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                 </button>
 
                 {sectorsOpen && (
-                  <div className="ml-2 mt-1 space-y-0.5 border-l-2 border-brand-line pl-3 py-1">
+                  <div className="ml-2 mt-1 space-y-1 border-l-2 border-brand-line pl-3 py-1">
                     <Link
                       href="/students"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <GraduationCap className="h-3.5 w-3.5 text-brand-purple shrink-0" />
-                      Students &amp; Accommodation
+                      <GraduationCap className="h-4 w-4 text-brand-purple shrink-0" />
+                      <span>Students &amp; Accommodation</span>
                     </Link>
                     <Link
                       href="/airbnb"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <Sparkles className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                      Airbnb &amp; Short-Stay
+                      <Sparkles className="h-4 w-4 text-brand-teal shrink-0" />
+                      <span>Airbnb &amp; Short-Stay</span>
                     </Link>
                     <Link
                       href="/hospitality"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <Building2 className="h-3.5 w-3.5 text-brand-purple shrink-0" />
-                      Hospitality &amp; Guesthouses
+                      <Building2 className="h-4 w-4 text-brand-purple shrink-0" />
+                      <span>Hospitality &amp; Guesthouses</span>
                     </Link>
                     <Link
                       href="/schools"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <Trophy className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                      Schools, Sports &amp; Hostels
+                      <Trophy className="h-4 w-4 text-brand-teal shrink-0" />
+                      <span>Schools, Sports &amp; Hostels</span>
                     </Link>
                     <Link
                       href="/healthcare"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <HeartPulse className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                      Healthcare Sector
+                      <HeartPulse className="h-4 w-4 text-brand-teal shrink-0" />
+                      <span>Healthcare Sector</span>
                     </Link>
                     <Link
                       href="/retirement-villages"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <Heart className="h-3.5 w-3.5 text-brand-purple shrink-0" />
-                      Retirement Villages
+                      <Heart className="h-4 w-4 text-brand-purple shrink-0" />
+                      <span>Retirement Villages</span>
                     </Link>
                     <Link
                       href="/express"
                       onClick={close}
-                      className="flex items-center gap-2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav/70 transition-colors"
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 min-h-[44px] text-xs font-semibold text-brand-body hover:text-brand-purple hover:bg-brand-lav active:bg-brand-lav/90 transition-colors"
                     >
-                      <Truck className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                      Laundro-Hub Express (1–2 Days)
+                      <Truck className="h-4 w-4 text-brand-teal shrink-0" />
+                      <span>Laundro-Hub Express (1–2 Days)</span>
                     </Link>
                   </div>
                 )}
@@ -226,25 +226,25 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-colors"
+                className="flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 py-3 min-h-[48px] text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 active:scale-[0.99] transition-all"
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />
                 <span>WhatsApp us</span>
               </a>
               <a
                 href={`tel:${phone.replace(/\s+/g, '')}`}
-                className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-2.5 text-sm font-bold text-brand-deep hover:bg-brand-lav transition-colors"
+                className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.99] transition-all"
               >
                 <Phone className="h-4 w-4" />
-                Shop: {phone}
+                <span>Shop: {phone}</span>
               </a>
               {officePhone && (
                 <a
                   href={`tel:${officePhone.replace(/\s+/g, '')}`}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-2.5 text-sm font-bold text-brand-deep hover:bg-brand-lav transition-colors"
+                  className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.99] transition-all"
                 >
                   <Phone className="h-4 w-4" />
-                  Office: {officePhone} (Maritza)
+                  <span>Office: {officePhone} (Maritza)</span>
                 </a>
               )}
             </div>

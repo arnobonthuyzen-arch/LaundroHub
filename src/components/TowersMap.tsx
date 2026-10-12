@@ -6,13 +6,14 @@ import { BUSINESS_INFO } from "@/lib/data";
 
 export default function TowersMap() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isInteractive, setIsInteractive] = useState(false);
 
   // Standard roadmap ('t=m') - fast vector tiles, no heavy satellite imagery
   const embedSrc =
     "https://maps.google.com/maps?q=The+Towers+Shopping+Centre,+Langenhovenpark,+Bloemfontein&t=m&z=16&ie=UTF8&iwloc=&output=embed";
 
   return (
-    <div className="relative w-full h-[480px] sm:h-[520px] rounded-3xl overflow-hidden border-2 border-brand-purple/20 shadow-elevated bg-slate-100">
+    <div className="relative w-full h-[420px] sm:h-[520px] rounded-3xl overflow-hidden border-2 border-brand-purple/20 shadow-elevated bg-slate-100">
       {/* Top Floating Control Bar */}
       <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap items-center justify-between gap-2.5 pointer-events-none">
         {/* Location Identity Pill */}
@@ -55,11 +56,28 @@ export default function TowersMap() {
         </div>
       )}
 
+      {/* Mobile Scroll Guard: requires tap to activate pan/zoom so page scrolling is not trapped */}
+      {!isInteractive && (
+        <button
+          type="button"
+          onClick={() => setIsInteractive(true)}
+          className="sm:hidden absolute inset-0 z-[4] flex items-center justify-center bg-brand-deep/5 backdrop-blur-[1px] transition-all"
+          aria-label="Tap to interact with map"
+        >
+          <span className="rounded-full bg-brand-deep/90 text-white px-4 py-2 text-xs font-bold shadow-lg border border-white/20 flex items-center gap-2">
+            <Navigation className="h-3.5 w-3.5 text-brand-mint" />
+            <span>Tap to pan or zoom map</span>
+          </span>
+        </button>
+      )}
+
       {/* Google Maps Fast Roadmap Frame */}
       <iframe
         title="Google Map of The Towers Shopping Centre, Langenhovenpark"
         src={embedSrc}
-        className="w-full h-full border-0"
+        className={`w-full h-full border-0 ${
+          isInteractive ? "pointer-events-auto" : "pointer-events-none sm:pointer-events-auto"
+        }`}
         onLoad={() => setIsLoading(false)}
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"

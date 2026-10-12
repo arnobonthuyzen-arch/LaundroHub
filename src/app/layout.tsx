@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Figtree, Caveat } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { BUSINESS_INFO } from "@/lib/data";
 import "./globals.css";
 
@@ -136,8 +137,9 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-16 lg:pb-0">{children}</main>
         <Footer />
+        <MobileBottomBar />
       </body>
     </html>
   );

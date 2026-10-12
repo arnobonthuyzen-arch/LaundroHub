@@ -67,7 +67,7 @@ function SubmitPickupButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full inline-flex items-center justify-center gap-2.5 rounded-xl bg-brand-teal px-8 py-4 text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
+      className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-4 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white shadow-card hover:bg-brand-teal-dark active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
     >
       {pending ? (
         <>
@@ -771,6 +771,35 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 placeholder="e.g. 'Leave laundry bag on front porch if not home', 'Stain treatment on white shirts', or 'Call on arrival'."
                 className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
               />
+            </div>
+          </div>
+
+          {/* Mobile-Only Live Rate & Selection Preview (surfaces the summary before submit) */}
+          <div className="lg:hidden rounded-2xl bg-brand-lav/70 border border-brand-line p-4 text-xs space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="font-bold text-brand-deep">Transport Fee:</span>
+              <span className="font-extrabold text-sm text-brand-teal">
+                R{currentFee}
+                <span className="text-[10px] font-normal text-brand-muted ml-1">
+                  ({isLhp ? "Langenhovenpark" : "Greater Bloem"})
+                </span>
+              </span>
+            </div>
+            <div className="flex items-center justify-between text-brand-body pt-1.5 border-t border-brand-line/60">
+              <span className="text-brand-muted">Pickup Window:</span>
+              <span className="font-semibold text-brand-deep">
+                {timeSlot === "morning"
+                  ? "Morning (08:00–11:00)"
+                  : timeSlot === "midday"
+                  ? "Midday (11:00–14:00)"
+                  : "Afternoon (14:00–17:30)"}
+              </span>
+            </div>
+            <div className="flex items-center justify-between text-brand-body pt-1.5 border-t border-brand-line/60">
+              <span className="text-brand-muted">Services:</span>
+              <span className="font-semibold text-brand-deep truncate max-w-[180px]">
+                {selectedServices.join(", ") || "None"}
+              </span>
             </div>
           </div>
 

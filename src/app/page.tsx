@@ -116,7 +116,7 @@ export default async function HomePage() {
               <HeroVideoPlayer />
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-4 sm:left-4 z-30 rounded-2xl bg-white p-4 shadow-elevated text-brand-deep border border-brand-line flex items-center gap-3">
+              <div className="absolute -bottom-6 left-0 sm:left-4 z-30 max-w-[calc(100%-1rem)] rounded-2xl bg-white p-3.5 sm:p-4 shadow-elevated text-brand-deep border border-brand-line flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lav text-brand-purple">
                   <Scale className="h-6 w-6" />
                 </div>
