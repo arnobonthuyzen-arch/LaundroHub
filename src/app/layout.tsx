@@ -107,7 +107,9 @@ const jsonLd = {
       closes: "13:00",
     },
   ],
-  priceRange: "R50 - R2000",
+  priceRange: "R35 - R2000",
+  currenciesAccepted: "ZAR",
+  paymentAccepted: "EFT, Credit Card, Debit Card",
   image: "https://laundro-hub.co.za/img/logo.png",
 };
 

@@ -1,4 +1,4 @@
-import type { PricingPlan, ServiceItem } from "./types";
+import type { PricingPlan, ServiceItem, PriceListItem, PricingPolicy } from "./types";
 
 export const BUSINESS_INFO = {
   name: "Laundro-Hub",
@@ -11,6 +11,11 @@ export const BUSINESS_INFO = {
   whatsappUrl: "https://api.whatsapp.com/send?phone=27648308785&text=Hello%20Laundro-Hub,%20I'd%20like%20to%20inquire%20about%20your%20laundry%20services",
   officeWhatsappUrl: "https://api.whatsapp.com/send?phone=27609820494&text=Hello%20Laundro-Hub,%20I'd%20like%20to%20inquire%20about%20your%20laundry%20services",
   email: "info@laundro-hub.co.za",
+  vatStatus: "Laundro Hub is not VAT registered (all prices are net, no VAT added).",
+  isVatRegistered: false,
+  minimumOrder: "No minimum order amount applies.",
+  paymentMethods: "EFT or Card payments only (Strictly NO CASH).",
+  paymentPolicy: "Card Speedpoint tap or instant EFT only. For security reasons, strictly NO CASH is handled on premises or by drivers.",
   address: {
     name: "The Towers Shopping Centre",
     street: "Opposite the car wash — old Panarottis location",
@@ -27,6 +32,184 @@ export const BUSINESS_INFO = {
   ],
 };
 
+export const PRICING_POLICY: PricingPolicy = {
+  effectiveDate: "1 September 2026",
+  vatStatus: "Laundro Hub is not VAT registered (all prices are net, no VAT added).",
+  isVatRegistered: false,
+  minimumOrder: "No minimum order amount applies.",
+  paymentMethods: ["Card (Speedpoint Tap / Insert)", "Instant EFT"],
+  strictlyNoCash: true,
+  paymentPolicyNotice: "EFT or Card payments only — Strictly NO CASH accepted.",
+};
+
+export const OFFICIAL_PRICE_LIST: PriceListItem[] = [
+  // Everyday Laundry & Ironing
+  {
+    id: "wash-dry-iron",
+    name: "Wash / Dry / Iron",
+    price: 43,
+    unit: "per kg",
+    formattedPrice: "R43 / kg",
+    category: "everyday",
+    badge: "Full Care",
+    note: "Washed, tumble dried, and professionally steam ironed",
+  },
+  {
+    id: "wash-dry-fold",
+    name: "Wash / Dry / Fold",
+    price: 40,
+    unit: "per kg",
+    formattedPrice: "R40 / kg",
+    category: "everyday",
+    badge: "Most Popular",
+    note: "Washed, tumble dried, and crisply folded into bundles",
+  },
+  {
+    id: "iron-only",
+    name: "Iron ONLY",
+    price: 40,
+    unit: "per kg",
+    formattedPrice: "R40 / kg",
+    category: "everyday",
+    note: "Professional steam pressing for shirts, trousers & garments",
+  },
+  {
+    id: "dry-fold",
+    name: "Dry / Fold",
+    price: 38,
+    unit: "per kg",
+    formattedPrice: "R38 / kg",
+    category: "everyday",
+    note: "Tumble dry and neat folding",
+  },
+  {
+    id: "hand-wash",
+    name: "Hand-Wash (on request)",
+    price: 42,
+    unit: "per kg",
+    formattedPrice: "R42 / kg",
+    category: "everyday",
+    badge: "Gentle Care",
+    note: "Delicate fabrics, woollens, and fine garments",
+  },
+  {
+    id: "tumble-dry-only",
+    name: "Tumble Dry ONLY",
+    price: 38,
+    unit: "per kg",
+    formattedPrice: "R38 / kg",
+    category: "everyday",
+    note: "High-capacity moisture-controlled drying",
+  },
+  {
+    id: "wash-only",
+    name: "Wash ONLY",
+    price: 36,
+    unit: "per kg",
+    formattedPrice: "R36 / kg",
+    category: "everyday",
+    note: "Commercial wash cycle with premium detergent",
+  },
+
+  // Bedding & Linen
+  {
+    id: "duvet-queen-king-flat",
+    name: "Duvet (Queen & King)",
+    price: 150,
+    unit: "each",
+    formattedPrice: "R150 each",
+    category: "bedding",
+    badge: "Flat Rate",
+    note: "Dedicated high-capacity industrial drum wash & deep thermal dry",
+  },
+  {
+    id: "duvets-quilts-bedspreads",
+    name: "Duvets / Quilts / Bedspreads",
+    price: 100,
+    unit: "per kg",
+    formattedPrice: "R100 / kg",
+    category: "bedding",
+    note: "Single / 3/4 duvets, quilted bedspreads & comforters",
+  },
+  {
+    id: "blankets-queen-king",
+    name: "Blankets (Queen & King)",
+    price: 95,
+    unit: "per kg",
+    formattedPrice: "R95 / kg",
+    category: "bedding",
+    note: "Heavy large winter blankets & thick throws",
+  },
+  {
+    id: "blankets-single-double",
+    name: "Blankets (Single & Double)",
+    price: 75,
+    unit: "per kg",
+    formattedPrice: "R75 / kg",
+    category: "bedding",
+    note: "Standard size winter blankets & fleece throws",
+  },
+  {
+    id: "linen-sheets",
+    name: "Linen – Sheets / Fitted sheets / Flats",
+    price: 60,
+    unit: "per kg",
+    formattedPrice: "R60 / kg",
+    category: "bedding",
+    note: "Fitted sheets, flat sheets, pillowcases & hospitality linen",
+  },
+  {
+    id: "cushions-pillows",
+    name: "Cushions / Pillows",
+    price: 43,
+    unit: "per kg",
+    formattedPrice: "R43 / kg",
+    category: "bedding",
+    note: "Bed pillows, scatter cushions & cushion inners",
+  },
+
+  // Speciality & Footwear
+  {
+    id: "tekkies-sneakers",
+    name: '"Tekkies" / Sneakers',
+    price: 60,
+    unit: "per pair",
+    formattedPrice: "R60 / pair",
+    category: "speciality",
+    badge: "Footwear Revive",
+    note: "Careful hand scrub, deodorisation & safe air-dry finish",
+  },
+  {
+    id: "curtains-washable",
+    name: "Curtains (if washable)",
+    price: 120,
+    unit: "per kg",
+    formattedPrice: "R120 / kg",
+    category: "speciality",
+    note: "Subject to fabric care label inspection",
+  },
+
+  // Transport & Delivery
+  {
+    id: "transport-lhp",
+    name: "Langenhovenpark Express Van",
+    price: 35,
+    unit: "per trip",
+    formattedPrice: "R35 / trip",
+    category: "transport",
+    note: "R35 pickup, R35 drop-off (R70 round-trip). No minimum order required.",
+  },
+  {
+    id: "transport-bloem",
+    name: "Greater Bloemfontein Express Van",
+    price: 65,
+    unit: "per trip",
+    formattedPrice: "R65 / trip",
+    category: "transport",
+    note: "R65 pickup, R65 drop-off (R130 round-trip). No minimum order required.",
+  },
+];
+
 const SERVICES: ServiceItem[] = [
   {
     id: "wash-dry",
@@ -34,7 +217,7 @@ const SERVICES: ServiceItem[] = [
     title: "Washing & Drying",
     tagline: "Everyday wash, tumble dry and neat fold.",
     description: "Drop off your daily clothes, gym gear, and casual wear. Washed with premium detergents and fabric softeners, gently dried and folded crisp.",
-    priceStartingAt: "Per kg pricing",
+    priceStartingAt: "From R40 / kg",
     features: [
       "Colour-sorted cycles",
       "Hypoallergenic detergents available",
@@ -52,7 +235,7 @@ const SERVICES: ServiceItem[] = [
     title: "Ironing & Pressing",
     tagline: "Steam pressing and crisp hanger finishes.",
     description: "Professional steam ironing for office shirts, trousers, dresses, and school uniforms. Wrinkle-free perfection ready for the wardrobe.",
-    priceStartingAt: "Per garment / per kg",
+    priceStartingAt: "From R40 / kg",
     features: [
       "Industrial steam irons",
       "Hanger or flat-fold delivery",
@@ -70,7 +253,7 @@ const SERVICES: ServiceItem[] = [
     title: "Bedding & Linen",
     tagline: "Duvets, blankets, sheets and heavy curtains.",
     description: "Commercial-grade capacity for large duvets, heavy winter blankets, hospitality sheets, and pillow covers. Deep sanitised freshness.",
-    priceStartingAt: "Flat fee per item size",
+    priceStartingAt: "From R60 / kg (Duvets R150 each)",
     features: [
       "King, Queen, Double & Single duvets",
       "Feather and down specialised washing",
@@ -194,6 +377,14 @@ export async function getServiceBySlug(slug: string): Promise<ServiceItem | null
 
 export async function getPricingPlans(): Promise<PricingPlan[]> {
   return Promise.resolve(PRICING_PLANS);
+}
+
+export async function getOfficialPriceList(): Promise<PriceListItem[]> {
+  return Promise.resolve(OFFICIAL_PRICE_LIST);
+}
+
+export async function getPricingPolicy(): Promise<PricingPolicy> {
+  return Promise.resolve(PRICING_POLICY);
 }
 
 export async function getSuburbs(): Promise<string[]> {

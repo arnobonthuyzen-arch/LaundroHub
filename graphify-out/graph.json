@@ -79,7 +79,7 @@
       "file_type": "code",
       "norm_label": "logisticsoptiontype",
       "source_file": "src/lib/data.ts",
-      "source_location": "L203"
+      "source_location": "L394"
     },
     {
       "id": "src_lib_types_actionstate",
@@ -93,45 +93,6 @@
       "norm_label": "actionstate",
       "source_file": "src/lib/types.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_lib_types_pricingplan",
-      "label": "PricingPlan",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "pricingplan",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_lib_types_serviceitem",
-      "label": "ServiceItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "serviceitem",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_lib_types_suburbcoverage",
-      "label": "SuburbCoverage",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "suburbcoverage",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L36"
     },
     {
       "id": "src_components_navdropdown_sectormenuitem",
@@ -170,7 +131,72 @@
       "file_type": "code",
       "norm_label": "logisticsrate",
       "source_file": "src/lib/data.ts",
-      "source_location": "L205"
+      "source_location": "L396"
+    },
+    {
+      "id": "src_lib_types_pricelistitem",
+      "label": "PriceListItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "pricelistitem",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_lib_types_pricingplan",
+      "label": "PricingPlan",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "pricingplan",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_lib_types_pricingpolicy",
+      "label": "PricingPolicy",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "pricingpolicy",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L52"
+    },
+    {
+      "id": "src_lib_types_serviceitem",
+      "label": "ServiceItem",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "serviceitem",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_lib_types_suburbcoverage",
+      "label": "SuburbCoverage",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "suburbcoverage",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L36"
     },
     {
       "id": "src_components_herobubbles_bubbleconfig",
@@ -231,7 +257,7 @@
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L114"
+      "source_location": "L116"
     },
     {
       "id": "src_app_retirement_villages_page_retirementvillagespage",
@@ -342,18 +368,6 @@
       "source_location": "L44"
     },
     {
-      "id": "src_app_contact_page_contactpage",
-      "label": "ContactPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contactpage()",
-      "source_file": "src/app/contact/page.tsx",
-      "source_location": "L15"
-    },
-    {
       "id": "src_components_contactform_contactform",
       "label": "ContactForm()",
       "_callable": true,
@@ -411,7 +425,7 @@
       "file_type": "code",
       "norm_label": "getlogisticsfee()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L227"
+      "source_location": "L418"
     },
     {
       "id": "src_lib_mail_createtransporter",
@@ -450,6 +464,18 @@
       "source_location": "L118"
     },
     {
+      "id": "src_app_contact_page_contactpage",
+      "label": "ContactPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "my-wash/page.tsx",
+      "file_type": "code",
+      "norm_label": "contactpage()",
+      "source_file": "src/app/contact/page.tsx",
+      "source_location": "L15"
+    },
+    {
       "id": "src_app_express_page_expresspage",
       "label": "ExpressPage()",
       "_callable": true,
@@ -471,7 +497,7 @@
       "file_type": "code",
       "norm_label": "mywashpage()",
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L64"
+      "source_location": "L72"
     },
     {
       "id": "src_app_page_homepage",
@@ -495,7 +521,7 @@
       "file_type": "code",
       "norm_label": "getsuburbs()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L199"
+      "source_location": "L390"
     },
     {
       "id": "src_app_sport_events_page_sporteventspage",
@@ -747,7 +773,19 @@
       "file_type": "code",
       "norm_label": "whatweofferpage()",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32"
+      "source_location": "L43"
+    },
+    {
+      "id": "src_lib_data_getofficialpricelist",
+      "label": "getOfficialPriceList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "getofficialpricelist()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L382"
     },
     {
       "id": "src_lib_data_getpricingplans",
@@ -759,7 +797,19 @@
       "file_type": "code",
       "norm_label": "getpricingplans()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L195"
+      "source_location": "L378"
+    },
+    {
+      "id": "src_lib_data_getpricingpolicy",
+      "label": "getPricingPolicy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "getpricingpolicy()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L386"
     },
     {
       "id": "src_lib_data_getservicebyslug",
@@ -771,7 +821,7 @@
       "file_type": "code",
       "norm_label": "getservicebyslug()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L188"
+      "source_location": "L371"
     },
     {
       "id": "src_lib_data_getservices",
@@ -783,7 +833,7 @@
       "file_type": "code",
       "norm_label": "getservices()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L183"
+      "source_location": "L366"
     },
     {
       "id": "src_app_services_page_servicespage",
@@ -1033,6 +1083,28 @@
       "source_location": "L19"
     },
     {
+      "id": "src_app_students_page",
+      "label": "students/page.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "students/page.tsx",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_students_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L19"
+    },
+    {
       "id": "src_components_footer",
       "label": "Footer.tsx",
       "_origin": "ast",
@@ -1143,28 +1215,6 @@
       "source_location": "L9"
     },
     {
-      "id": "src_app_contact_page",
-      "label": "contact/page.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "contact/page.tsx",
-      "source_file": "src/app/contact/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_contact_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/contact/page.tsx",
-      "source_location": "L9"
-    },
-    {
       "id": "src_components_contactform",
       "label": "ContactForm.tsx",
       "_origin": "ast",
@@ -1253,17 +1303,6 @@
       "source_location": "L4"
     },
     {
-      "id": "src_lib_types",
-      "label": "types.ts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "MyWashForm.tsx",
-      "file_type": "code",
-      "norm_label": "types.ts",
-      "source_file": "src/lib/types.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "postcss_load_config",
       "label": "postcss-load-config",
       "_origin": "ast",
@@ -1295,6 +1334,28 @@
       "norm_label": "config",
       "source_file": "postcss.config.mjs",
       "source_location": "L2"
+    },
+    {
+      "id": "src_app_contact_page",
+      "label": "contact/page.tsx",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "my-wash/page.tsx",
+      "file_type": "code",
+      "norm_label": "contact/page.tsx",
+      "source_file": "src/app/contact/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_contact_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "my-wash/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/contact/page.tsx",
+      "source_location": "L9"
     },
     {
       "id": "src_app_express_page",
@@ -1371,7 +1432,7 @@
       "file_type": "code",
       "norm_label": "collection_delivery_pricing",
       "source_file": "src/lib/data.ts",
-      "source_location": "L212"
+      "source_location": "L403"
     },
     {
       "id": "assets_js_main",
@@ -2463,28 +2524,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_students_page",
-      "label": "students/page.tsx",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "students/page.tsx",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_students_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L19"
-    },
-    {
       "id": "src_app_what_we_offer_page",
       "label": "what-we-offer/page.tsx",
       "_origin": "ast",
@@ -2504,7 +2543,7 @@
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L26"
+      "source_location": "L37"
     },
     {
       "id": "src_lib_data",
@@ -2518,6 +2557,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_lib_data_official_price_list",
+      "label": "OFFICIAL_PRICE_LIST",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "official_price_list",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L45"
+    },
+    {
       "id": "src_lib_data_pricing_plans",
       "label": "PRICING_PLANS",
       "_origin": "ast",
@@ -2526,7 +2576,18 @@
       "file_type": "code",
       "norm_label": "pricing_plans",
       "source_file": "src/lib/data.ts",
-      "source_location": "L123"
+      "source_location": "L306"
+    },
+    {
+      "id": "src_lib_data_pricing_policy",
+      "label": "PRICING_POLICY",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "pricing_policy",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L35"
     },
     {
       "id": "src_lib_data_services",
@@ -2537,7 +2598,7 @@
       "file_type": "code",
       "norm_label": "services",
       "source_file": "src/lib/data.ts",
-      "source_location": "L30"
+      "source_location": "L213"
     },
     {
       "id": "src_lib_data_suburbs",
@@ -2548,7 +2609,18 @@
       "file_type": "code",
       "norm_label": "suburbs",
       "source_file": "src/lib/data.ts",
-      "source_location": "L169"
+      "source_location": "L352"
+    },
+    {
+      "id": "src_lib_types",
+      "label": "types.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "types.ts",
+      "source_file": "src/lib/types.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_app_services_page",
@@ -2870,7 +2942,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L65",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -2971,18 +3043,6 @@
     },
     {
       "source": "src_app_what_we_offer_page_whatweofferpage",
-      "target": "src_lib_data_getpricingplans",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_what_we_offer_page_whatweofferpage",
       "target": "src_lib_data_getservices",
       "relation": "calls",
       "_origin": "ast",
@@ -2990,7 +3050,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L33",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page_whatweofferpage",
+      "target": "src_lib_data_getpricingplans",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page_whatweofferpage",
+      "target": "src_lib_data_getofficialpricelist",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page_whatweofferpage",
+      "target": "src_lib_data_getpricingpolicy",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -3963,7 +4059,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L23",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -3975,7 +4071,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L24",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page",
+      "target": "src_lib_data_getofficialpricelist",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -3987,7 +4095,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L24",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page",
+      "target": "src_lib_data_getpricingpolicy",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -3999,7 +4119,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -4268,7 +4388,31 @@
     },
     {
       "source": "src_lib_data",
+      "target": "src_lib_types_pricelistitem",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
       "target": "src_lib_types_pricingplan",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_types_pricingpolicy",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4769,7 +4913,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L23",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -4781,7 +4925,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -5739,7 +5883,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L114",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -5860,7 +6004,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L64",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -6091,7 +6235,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L26",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -6102,7 +6246,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -6382,112 +6526,13 @@
     },
     {
       "source": "src_lib_data",
-      "target": "src_lib_data_pricing_plans",
+      "target": "src_lib_data_services",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L123",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_suburbs",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_getservices",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_getservicebyslug",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L188",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_getpricingplans",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L195",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_getsuburbs",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L199",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_logisticsoptiontype",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L203",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_logisticsrate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L205",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_collection_delivery_pricing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L212",
-      "weight": 1.0
-    },
-    {
-      "source": "src_lib_data",
-      "target": "src_lib_data_getlogisticsfee",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/lib/data.ts",
-      "source_location": "L227",
+      "source_location": "L213",
       "weight": 1.0
     },
     {
@@ -6503,13 +6548,156 @@
     },
     {
       "source": "src_lib_data",
-      "target": "src_lib_data_services",
+      "target": "src_lib_data_pricing_plans",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L30",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_pricing_policy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_suburbs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L352",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getservices",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L366",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getservicebyslug",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L371",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getpricingplans",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L378",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getofficialpricelist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L382",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getpricingpolicy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L386",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getsuburbs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L390",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_logisticsoptiontype",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L394",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_logisticsrate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L396",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_collection_delivery_pricing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L403",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_getlogisticsfee",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L418",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_data",
+      "target": "src_lib_data_official_price_list",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/data.ts",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -6598,6 +6786,28 @@
       "confidence_score": 1.0,
       "source_file": "src/lib/types.ts",
       "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_types",
+      "target": "src_lib_types_pricelistitem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/types.ts",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_types",
+      "target": "src_lib_types_pricingpolicy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/types.ts",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -6899,5 +7109,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b7a3016477bd11bf13bb82c47f987c7bc80f051c"
+  "built_at_commit": "0dd232a8d2671b8ca24c8f032db292e359f15ccc"
 }

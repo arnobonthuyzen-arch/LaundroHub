@@ -44,6 +44,18 @@ const FAQS = [
     a: "No advance payment is needed! When our driver collects your laundry, it is weighed either on our calibrated portable scale or upon arrival at our Langenhovenpark hub. An itemised digital quote is sent to your WhatsApp for approval before washing begins.",
   },
   {
+    q: "Is there a minimum order amount?",
+    a: "No. Laundro-Hub has no minimum order amount — whether you have 1 kg of clothes or multiple duvets, we gladly wash and deliver with equal care.",
+  },
+  {
+    q: "How can I pay for my wash?",
+    a: "We accept Speedpoint Card Tap upon return delivery or instant EFT. For customer, driver, and staff security, we operate on a strictly NO CASH policy.",
+  },
+  {
+    q: "Do prices include VAT?",
+    a: "Laundro-Hub is not VAT registered. All prices quoted on our price list and digital invoices are net amounts — no VAT is added.",
+  },
+  {
     q: "Do you ever wash my clothes with other people's clothes?",
     a: "Never. We enforce a strict Individual Drum Policy. Every customer's order is washed, dried, and folded separately in sanitized commercial machines.",
   },
@@ -54,10 +66,6 @@ const FAQS = [
   {
     q: "How does the My Wash booking process work right now?",
     a: "My Wash is currently managed directly through our WhatsApp dispatch desk (064 830 8785) for instant driver coordination. Full website self-service checkout will be added in an upcoming update. You can configure your preferences with our scheduler below and tap to send your request straight to WhatsApp!",
-  },
-  {
-    q: "How can I pay for my wash?",
-    a: "We accept Speedpoint Card Tap upon return delivery, instant EFT, SnapScan / Zapper, or cash.",
   },
 ];
 
@@ -164,7 +172,7 @@ export default async function MyWashPage() {
                   Daily Express Routes Across Bloemfontein
                 </h3>
                 <p className="mt-2 text-sm text-brand-body leading-relaxed">
-                  Our vans run morning, midday, and late afternoon schedules. Free doorstep pickup and drop-off is available for orders over 10 kg across all covered suburbs.
+                  Our vans run morning, midday, and late afternoon schedules. Express doorstep pickup and delivery is available across all covered suburbs (R35 per leg in Langenhovenpark, R65 per leg in Greater Bloemfontein). No minimum order applies!
                 </p>
               </div>
 

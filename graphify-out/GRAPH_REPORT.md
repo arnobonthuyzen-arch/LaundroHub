@@ -1,16 +1,16 @@
-# Graph Report - laundro-hub-website  (2026-10-12)
+# Graph Report - laundro-hub-website  (2026-10-19)
 
 ## Corpus Check
-- 52 files · ~445,347 words
+- 52 files · ~447,422 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 246 nodes · 355 edges · 27 communities (11 shown, 4 thin omitted)
+- 252 nodes · 367 edges · 27 communities (11 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b7a30164`
+- Built from commit: `0dd232a8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,15 +41,15 @@
 7. `Laundro-Hub website` - 6 edges
 8. `scripts` - 5 edges
 9. `submitPickupRequest()` - 5 edges
-10. `getLogisticsFee()` - 5 edges
+10. `WhatWeOfferPage()` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `ContactPage()` --calls--> `getSuburbs()`  [EXTRACTED]
-  src/app/contact/page.tsx → src/lib/data.ts
 - `ContactForm()` --indirect_call--> `submitContactForm()`  [INFERRED]
   src/components/ContactForm.tsx → src/actions/contact.ts
 - `MyWashForm()` --indirect_call--> `submitPickupRequest()`  [INFERRED]
   src/components/my-wash/MyWashForm.tsx → src/actions/pickup.ts
+- `ContactPage()` --calls--> `getSuburbs()`  [EXTRACTED]
+  src/app/contact/page.tsx → src/lib/data.ts
 - `ExpressPage()` --calls--> `getSuburbs()`  [EXTRACTED]
   src/app/express/page.tsx → src/lib/data.ts
 - `MyWashPage()` --calls--> `getSuburbs()`  [EXTRACTED]
@@ -61,12 +61,12 @@
 ## Communities (27 total, 4 thin omitted)
 
 ### Community 0 - "BUSINESS_INFO"
-Cohesion: 0.10
-Nodes (18): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+10 more)
+Cohesion: 0.09
+Nodes (19): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+11 more)
 
 ### Community 1 - "MyWashForm.tsx"
-Cohesion: 0.10
-Nodes (26): ContactFormData, contactFormSchema, submitContactForm(), PickupRequestData, pickupRequestSchema, PickupSuccessData, submitPickupRequest(), ContactPage() (+18 more)
+Cohesion: 0.12
+Nodes (21): ContactFormData, contactFormSchema, submitContactForm(), PickupRequestData, pickupRequestSchema, PickupSuccessData, submitPickupRequest(), ACCOUNT_CATEGORIES (+13 more)
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.07
@@ -81,8 +81,8 @@ Cohesion: 0.09
 Nodes (23): clsx, leaflet, lucide-react, next, nodemailer, dependencies, clsx, leaflet (+15 more)
 
 ### Community 5 - "data.ts"
-Cohesion: 0.13
-Nodes (17): metadata, generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage() (+9 more)
+Cohesion: 0.10
+Nodes (25): metadata, generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), StudentsPage(), metadata (+17 more)
 
 ### Community 7 - "app/page.tsx"
 Cohesion: 0.21
@@ -97,32 +97,32 @@ Cohesion: 0.29
 Nodes (6): Before going live: things to fill in, Contact details used, Laundro-Hub website, Pages, Run it, Structure
 
 ### Community 11 - "my-wash/page.tsx"
-Cohesion: 0.22
-Nodes (9): ExpressPage(), metadata, FAQS, HOW_IT_WORKS_STEPS, metadata, MyWashPage(), HomePage(), COLLECTION_DELIVERY_PRICING (+1 more)
+Cohesion: 0.18
+Nodes (11): ContactPage(), metadata, ExpressPage(), metadata, FAQS, HOW_IT_WORKS_STEPS, metadata, MyWashPage() (+3 more)
 
 ### Community 26 - "NavDropdown.tsx"
 Cohesion: 0.33
 Nodes (3): NavDropdown(), SECTOR_ITEMS, SectorMenuItem
 
 ## Knowledge Gaps
-- **102 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+97 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 144 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **104 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+99 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 146 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
-  _102 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _104 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**
-  _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09309309309309309 - nodes in this community are weakly interconnected._
 - **Should `MyWashForm.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.0957983193277311 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11904761904761904 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

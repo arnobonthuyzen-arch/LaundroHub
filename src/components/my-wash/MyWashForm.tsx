@@ -29,28 +29,28 @@ const AVAILABLE_SERVICES = [
   {
     id: "Wash, Dry & Fold",
     label: "Wash, Dry & Fold",
-    description: "Everyday clothes, activewear, bundled crisp",
+    description: "Everyday clothes, activewear, bundled crisp (R40/kg)",
     icon: Shirt,
     recommended: true,
   },
   {
     id: "Steam Ironing & Pressing",
     label: "Steam Ironing & Pressing",
-    description: "Work shirts, trousers, wrinkle-free garments",
+    description: "Work shirts, trousers, wrinkle-free garments (R40/kg)",
     icon: Sparkles,
     recommended: false,
   },
   {
     id: "Bedding, Duvets & Blankets",
     label: "Bedding, Duvets & Blankets",
-    description: "Heavy winter blankets, quilts, down duvets",
+    description: "Blankets from R75/kg, Queen & King duvets R150 each",
     icon: Layers,
     recommended: false,
   },
   {
     id: "Delicates & Gentle Handwash",
     label: "Delicates & Gentle Handwash",
-    description: "Wool, silk, embellished fabrics, gentle cycles",
+    description: "Wool, silk, delicate fabrics on request (R42/kg)",
     icon: HeartHandshake,
     recommended: false,
   },
@@ -939,6 +939,10 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
                 <span><strong className="text-brand-deep">Real-Time WhatsApp Tracking:</strong> Live status updates from pickup to drop-off.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
+                <span><strong className="text-brand-deep">Card &amp; EFT (Strictly No Cash):</strong> Secure cashless payment on delivery. No minimum order amount applies!</span>
               </li>
             </ul>
           </div>

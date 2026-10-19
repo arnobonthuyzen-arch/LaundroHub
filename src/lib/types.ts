@@ -37,3 +37,24 @@ export interface SuburbCoverage {
   suburb: string;
   freeCollectionMin?: string;
 }
+
+export interface PriceListItem {
+  id: string;
+  name: string;
+  price: number;
+  unit: "per kg" | "per pair" | "each" | "per trip";
+  formattedPrice: string;
+  category: "everyday" | "bedding" | "speciality" | "transport";
+  note?: string;
+  badge?: string;
+}
+
+export interface PricingPolicy {
+  effectiveDate: string;
+  vatStatus: string;
+  isVatRegistered: boolean;
+  minimumOrder: string;
+  paymentMethods: string[];
+  strictlyNoCash: boolean;
+  paymentPolicyNotice: string;
+}

@@ -19,18 +19,34 @@ import {
   Trophy,
   Stethoscope,
   HeartHandshake,
+  CreditCard,
+  Ban,
+  Receipt,
+  Footprints,
+  Tag,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
-import { BUSINESS_INFO, getServices, getPricingPlans } from "@/lib/data";
+import {
+  BUSINESS_INFO,
+  getServices,
+  getPricingPlans,
+  getOfficialPriceList,
+  getPricingPolicy,
+} from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "What We Offer | Complete Laundry & Ironing Services",
+  title: "What We Offer & Official Price List | Laundro-Hub Bloemfontein",
   description:
-    "Explore our complete range of laundry services in Bloemfontein: Washing & Drying, Steam Ironing & Pressing, Bulky Bedding & Linen, and Laundro-Hub Express 1–2 day collection & delivery.",
+    "Official price list & services for Laundro-Hub in Bloemfontein. Wash, dry & fold from R40/kg, steam pressing from R40/kg, duvets from R150 each. No minimum order, strictly no cash (Card & EFT only), and no VAT.",
 };
 
 export default async function WhatWeOfferPage() {
-  const [services, plans] = await Promise.all([getServices(), getPricingPlans()]);
+  const [services, plans, priceList, pricingPolicy] = await Promise.all([
+    getServices(),
+    getPricingPlans(),
+    getOfficialPriceList(),
+    getPricingPolicy(),
+  ]);
 
   const coreOfferings = [
     {
@@ -39,7 +55,8 @@ export default async function WhatWeOfferPage() {
       tagline: "Everyday wash, gentle dry & crisp fold",
       description:
         "Your weekly clothes washed in commercial-grade, sanitary drums with premium detergents and fabric softeners. We separate whites, colors, and delicates, dry them at fabric-safe temperatures, and fold them neatly into ready-to-pack bundles.",
-      price: "From R 38 / kg",
+      price: "Wash/Dry/Fold: R40 / kg (Wash Only: R36 / kg)",
+      badge: "From R40 / kg",
       image: "/img/washing.jpg",
       icon: Shirt,
       highlights: [
@@ -56,7 +73,8 @@ export default async function WhatWeOfferPage() {
       tagline: "Professional crisp steam pressing for shirts, trousers & uniforms",
       description:
         "Skip the weekend iron board. Our commercial steam stations press out every crease on business shirts, school blazers, trousers, and delicate fabrics. Returned hung on hangers or crisply folded to your preference.",
-      price: "From R 18 / item",
+      price: "Iron ONLY: R40 / kg (Wash/Dry/Iron: R43 / kg)",
+      badge: "From R40 / kg",
       image: "/img/steam-pressing.jpg",
       icon: Sparkles,
       highlights: [
@@ -73,12 +91,13 @@ export default async function WhatWeOfferPage() {
       tagline: "Heavy duvets, blankets, pillows & hospitality linen",
       description:
         "Domestic home washers can't thoroughly wash or rinse heavy feather duvets and thick winter blankets. Our large-volume commercial extractors provide deep sanitisation, thorough rinsing, and complete thermal drying to eliminate dust mites and allergens.",
-      price: "From R 140 / duvet",
+      price: "Queen & King Duvets: R150 each • Linen: R60 / kg",
+      badge: "Duvets R150 each",
       image: "/img/bedding.jpg",
       icon: Layers,
       highlights: [
-        "King, Queen, Double & Single size duvets & comforters",
-        "Feather, down, microfiber, and thick winter wool blankets",
+        "King & Queen duvets washed in commercial drums (R150 each flat rate)",
+        "Feather, down, microfiber, and thick winter wool blankets (from R75/kg)",
         "Sanitary high-temperature wash cycle for thorough hygiene",
         "Deep moisture extraction so fillings remain soft and lofty",
         "Returned shrink-wrapped or protected in clean poly-bags",
@@ -210,10 +229,16 @@ export default async function WhatWeOfferPage() {
                         <Icon className="h-5 w-5" />
                       </div>
                       <div>
-                        <h3 className="font-display text-2xl sm:text-3xl font-bold text-brand-deep">
-                          {service.title}
-                        </h3>
-                        <p className="text-xs text-brand-teal font-semibold tracking-wide">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-display text-2xl sm:text-3xl font-bold text-brand-deep">
+                            {service.title}
+                          </h3>
+                          <span className="inline-flex items-center gap-1 rounded-full bg-brand-tealbg px-2.5 py-0.5 text-xs font-bold text-brand-teal-dark border border-brand-teal/20">
+                            <Tag className="h-3 w-3" />
+                            <span>{service.badge}</span>
+                          </span>
+                        </div>
+                        <p className="text-xs text-brand-teal font-semibold tracking-wide mt-0.5">
                           {service.tagline}
                         </p>
                       </div>
@@ -254,6 +279,334 @@ export default async function WhatWeOfferPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Official Tariff / Price List Section */}
+      <section id="pricing" className="py-16 sm:py-24 bg-white border-y border-brand-line scroll-mt-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-tealbg border border-brand-teal/20 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-teal-dark mb-3">
+              <Receipt className="h-3.5 w-3.5 text-brand-teal" />
+              <span>Official Tariff &bull; Effective {pricingPolicy.effectiveDate}</span>
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-deep tracking-tight">
+              Transparent, Simple <span className="text-brand-purple">Pricing.</span>
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-brand-body leading-relaxed">
+              Weighed accurately before washing begins. Zero hidden surcharges, no surprises.
+            </p>
+          </div>
+
+          {/* Business & Payment Policy Badges */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-12">
+            {/* VAT Card */}
+            <div className="rounded-2xl border border-brand-line bg-brand-ground/60 p-5 sm:p-6 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-brand-teal font-bold text-sm mb-2">
+                  <Receipt className="h-4.5 w-4.5 shrink-0" />
+                  <span className="uppercase tracking-wider text-xs font-extrabold">VAT Status</span>
+                </div>
+                <h3 className="font-display text-lg font-bold text-brand-deep">
+                  Net Prices (No VAT Added)
+                </h3>
+                <p className="mt-2 text-xs text-brand-body leading-relaxed">
+                  {pricingPolicy.vatStatus} The price you see is the final price you pay.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-brand-line/60">
+                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-teal">
+                  <CheckCircle2 className="h-3.5 w-3.5" />
+                  All Prices Net &bull; 0% VAT Added
+                </span>
+              </div>
+            </div>
+
+            {/* Minimum Order Card */}
+            <div className="rounded-2xl border border-brand-line bg-brand-ground/60 p-5 sm:p-6 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-brand-purple font-bold text-sm mb-2">
+                  <Scale className="h-4.5 w-4.5 shrink-0" />
+                  <span className="uppercase tracking-wider text-xs font-extrabold">Minimum Order</span>
+                </div>
+                <h3 className="font-display text-lg font-bold text-brand-deep">
+                  No Minimum Order Amount
+                </h3>
+                <p className="mt-2 text-xs text-brand-body leading-relaxed">
+                  {pricingPolicy.minimumOrder} Bring in as little as 1 kg or a single duvet — every load is handled with identical care.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-brand-line/60">
+                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-purple">
+                  <CheckCircle2 className="h-3.5 w-3.5" />
+                  Zero Minimum kg or Value
+                </span>
+              </div>
+            </div>
+
+            {/* Payment Methods Card (Strictly No Cash) */}
+            <div className="rounded-2xl border-2 border-brand-purple/20 bg-brand-lav/40 p-5 sm:p-6 shadow-sm flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-brand-deep font-bold text-sm mb-2">
+                  <CreditCard className="h-4.5 w-4.5 shrink-0 text-brand-purple" />
+                  <span className="uppercase tracking-wider text-xs text-brand-purple font-extrabold">Payment Policy</span>
+                </div>
+                <h3 className="font-display text-lg font-bold text-brand-deep flex items-center gap-2 flex-wrap">
+                  <span>EFT or Card Only</span>
+                  <span className="rounded-md bg-red-100 text-red-700 text-[10px] font-extrabold px-2 py-0.5 uppercase tracking-wide border border-red-200">
+                    Strictly NO CASH
+                  </span>
+                </h3>
+                <p className="mt-2 text-xs text-brand-body leading-relaxed">
+                  We accept Speedpoint Card Tap upon return/collection and instant EFT. For customer, driver, and store security, cash is strictly not handled.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-brand-line/60">
+                <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-deep">
+                  <ShieldCheck className="h-3.5 w-3.5 text-brand-teal" />
+                  Speedpoint Card Tap &bull; Instant EFT
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Pricing Tables Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Table 1: Everyday Laundry & Ironing */}
+            <div className="rounded-3xl border border-brand-line bg-white shadow-sm overflow-hidden">
+              <div className="bg-brand-lav/50 p-5 border-b border-brand-line flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-purple text-white shadow-xs">
+                    <Shirt className="h-4.5 w-4.5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-base sm:text-lg font-bold text-brand-deep">
+                      Everyday Laundry &amp; Ironing
+                    </h3>
+                    <p className="text-[11px] text-brand-muted">Individual machine cycles &bull; Weighed per kg</p>
+                  </div>
+                </div>
+                <span className="text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                  Per kg
+                </span>
+              </div>
+
+              <div className="divide-y divide-brand-line">
+                {priceList
+                  .filter((item) => item.category === "everyday")
+                  .map((item) => (
+                    <div
+                      key={item.id}
+                      className="p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-brand-ground/40 transition-colors"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-bold text-sm sm:text-base text-brand-deep">
+                            {item.name}
+                          </span>
+                          {item.badge && (
+                            <span className="rounded-full bg-brand-teal text-white text-[10px] font-bold px-2 py-0.5">
+                              {item.badge}
+                            </span>
+                          )}
+                        </div>
+                        {item.note && (
+                          <p className="text-xs text-brand-muted mt-0.5">{item.note}</p>
+                        )}
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
+                          {item.formattedPrice}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            {/* Table 2: Bedding, Blankets & Linen */}
+            <div className="rounded-3xl border border-brand-line bg-white shadow-sm overflow-hidden">
+              <div className="bg-brand-tealbg/60 p-5 border-b border-brand-line flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-teal text-white shadow-xs">
+                    <Layers className="h-4.5 w-4.5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-base sm:text-lg font-bold text-brand-deep">
+                      Bedding, Blankets &amp; Linen
+                    </h3>
+                    <p className="text-[11px] text-brand-muted">Commercial drums &bull; Deep thermal moisture dry</p>
+                  </div>
+                </div>
+                <span className="text-[11px] font-bold text-brand-teal uppercase tracking-wider">
+                  Bulk Care
+                </span>
+              </div>
+
+              <div className="divide-y divide-brand-line">
+                {priceList
+                  .filter((item) => item.category === "bedding")
+                  .map((item) => (
+                    <div
+                      key={item.id}
+                      className="p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-brand-ground/40 transition-colors"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-bold text-sm sm:text-base text-brand-deep">
+                            {item.name}
+                          </span>
+                          {item.badge && (
+                            <span className="rounded-full bg-brand-purple text-white text-[10px] font-bold px-2 py-0.5">
+                              {item.badge}
+                            </span>
+                          )}
+                        </div>
+                        {item.note && (
+                          <p className="text-xs text-brand-muted mt-0.5">{item.note}</p>
+                        )}
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
+                          {item.formattedPrice}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row: Speciality Footwear/Curtains & Express Logistics */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mt-8">
+            {/* Table 3: Footwear & Speciality */}
+            <div className="rounded-3xl border border-brand-line bg-white shadow-sm overflow-hidden">
+              <div className="bg-brand-lav/50 p-5 border-b border-brand-line flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-purple text-white shadow-xs">
+                    <Footprints className="h-4.5 w-4.5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-base sm:text-lg font-bold text-brand-deep">
+                      Footwear &amp; Speciality Care
+                    </h3>
+                    <p className="text-[11px] text-brand-muted">Hand scrubbed &bull; Sanitised &bull; Safe air drying</p>
+                  </div>
+                </div>
+                <span className="text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                  Speciality
+                </span>
+              </div>
+
+              <div className="divide-y divide-brand-line">
+                {priceList
+                  .filter((item) => item.category === "speciality")
+                  .map((item) => (
+                    <div
+                      key={item.id}
+                      className="p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-brand-ground/40 transition-colors"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-bold text-sm sm:text-base text-brand-deep">
+                            {item.name}
+                          </span>
+                          {item.badge && (
+                            <span className="rounded-full bg-brand-teal text-white text-[10px] font-bold px-2 py-0.5">
+                              {item.badge}
+                            </span>
+                          )}
+                        </div>
+                        {item.note && (
+                          <p className="text-xs text-brand-muted mt-0.5">{item.note}</p>
+                        )}
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
+                          {item.formattedPrice}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+
+            {/* Table 4: Express Van Logistics */}
+            <div className="rounded-3xl border border-brand-line bg-white shadow-sm overflow-hidden">
+              <div className="bg-brand-tealbg/60 p-5 border-b border-brand-line flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-teal text-white shadow-xs">
+                    <Truck className="h-4.5 w-4.5" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-base sm:text-lg font-bold text-brand-deep">
+                      Express Van Collection &amp; Delivery
+                    </h3>
+                    <p className="text-[11px] text-brand-muted">Doorstep collection &amp; return across Bloemfontein</p>
+                  </div>
+                </div>
+                <span className="text-[11px] font-bold text-brand-teal uppercase tracking-wider">
+                  Logistics
+                </span>
+              </div>
+
+              <div className="divide-y divide-brand-line">
+                {priceList
+                  .filter((item) => item.category === "transport")
+                  .map((item) => (
+                    <div
+                      key={item.id}
+                      className="p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-brand-ground/40 transition-colors"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <span className="font-bold text-sm sm:text-base text-brand-deep block">
+                          {item.name}
+                        </span>
+                        {item.note && (
+                          <p className="text-xs text-brand-muted mt-0.5">{item.note}</p>
+                        )}
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
+                          {item.formattedPrice}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Price List Bottom Action Callout */}
+          <div className="mt-12 rounded-3xl bg-brand-deep p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-elevated">
+            <div className="max-w-xl text-center sm:text-left">
+              <h3 className="font-display text-xl sm:text-2xl font-bold">
+                Ready to have your laundry taken care of?
+              </h3>
+              <p className="mt-1 text-xs sm:text-sm text-brand-lav/80 leading-relaxed">
+                Drop off at The Towers Shopping Centre in Langenhovenpark or schedule our express van for doorstep collection.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <Link
+                href="/my-wash"
+                className="inline-flex items-center gap-2 rounded-xl bg-brand-mint px-5 py-3 text-xs font-bold text-brand-deep hover:bg-white active:scale-[0.98] transition-all shadow-sm"
+              >
+                <Truck className="h-3.5 w-3.5" />
+                <span>Book Pickup (My Wash)</span>
+              </Link>
+              <a
+                href={BUSINESS_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all"
+              >
+                <WhatsAppIcon className="h-3.5 w-3.5" />
+                <span>WhatsApp Quote</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
