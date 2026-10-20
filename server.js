@@ -3,11 +3,12 @@ const { parse } = require("url");
 const next = require("next");
 
 const dev = process.env.NODE_ENV !== "production";
-const hostname = process.env.HOSTNAME || "localhost";
-const port = parseInt(process.env.PORT, 10) || 3000;
+// In Plesk Phusion Passenger, process.env.PORT is a named pipe/socket or string ('passenger').
+// Do NOT parseInt() it, otherwise it becomes NaN and falls back to TCP 3000!
+const port = process.env.PORT || 3000;
 
 // Initialize Next.js app in production mode with built-in compression & SSR support
-const app = next({ dev, hostname, port });
+const app = next({ dev, dir: __dirname });
 const handle = app.getRequestHandler();
 
 app
@@ -36,7 +37,7 @@ app
     server.listen(port, (err) => {
       if (err) throw err;
       console.log(
-        `> Laundro-Hub SSR server listening on port ${port} [mode: ${
+        `> Laundro-Hub SSR server listening on ${port} [mode: ${
           dev ? "development" : "production"
         }]`
       );
