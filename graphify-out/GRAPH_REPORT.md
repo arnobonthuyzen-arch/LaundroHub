@@ -1,7 +1,7 @@
 # Graph Report - laundro-hub-website  (2026-10-20)
 
 ## Corpus Check
-- 52 files · ~448,753 words
+- 52 files · ~448,764 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `860bb1bb`
+- Built from commit: `3fc40128`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

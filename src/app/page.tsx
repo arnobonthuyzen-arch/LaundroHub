@@ -310,14 +310,14 @@ export default async function HomePage() {
                 <div className="mt-8 pt-4">
                   <Link
                     href="/contact"
-                    className={`flex w-full h-12 items-center justify-center gap-2 rounded-xl text-sm font-bold transition-all shadow-sm ${
+                    className={`flex w-full min-h-[3rem] h-auto py-3 px-4 items-center justify-center gap-2 rounded-xl text-sm font-bold text-center leading-snug transition-all shadow-sm ${
                       plan.popular
                         ? "bg-brand-mint text-brand-deep hover:bg-brand-mint/90 hover:scale-[1.01]"
                         : "bg-brand-purple text-white hover:bg-brand-deep hover:scale-[1.01]"
                     }`}
                   >
-                    <span>Inquire about {plan.name}</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <span>Inquire: {plan.name}</span>
+                    <ArrowRight className="h-4 w-4 shrink-0" />
                   </Link>
                 </div>
               </div>
