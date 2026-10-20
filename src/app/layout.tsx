@@ -84,8 +84,12 @@ const jsonLd = {
   name: BUSINESS_INFO.name,
   description: BUSINESS_INFO.tagline,
   url: "https://laundro-hub.co.za",
-  telephone: BUSINESS_INFO.phone,
+  telephone: `${BUSINESS_INFO.phone}, ${BUSINESS_INFO.secondaryPhone}`,
   email: BUSINESS_INFO.email,
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Entire Bloemfontein area",
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: `${BUSINESS_INFO.address.name}, ${BUSINESS_INFO.address.street}`,
@@ -109,7 +113,7 @@ const jsonLd = {
   ],
   priceRange: "R35 - R2000",
   currenciesAccepted: "ZAR",
-  paymentAccepted: "EFT, Credit Card, Debit Card",
+  paymentAccepted: "EFT, Credit Card, Debit Card (Strictly No Cash; No Open Monthly Accounts)",
   image: "https://laundro-hub.co.za/img/logo.png",
 };
 
@@ -139,7 +143,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <Header />
-        <main className="flex-1 pb-16 lg:pb-0">{children}</main>
+        <main className="flex-1 pb-24 lg:pb-0">{children}</main>
         <Footer />
         <MobileBottomBar />
       </body>

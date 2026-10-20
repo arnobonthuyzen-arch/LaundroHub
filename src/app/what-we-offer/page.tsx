@@ -121,7 +121,7 @@ export default async function WhatWeOfferPage() {
               What We <span className="text-brand-purple">Offer.</span>
             </h1>
             <p className="mt-4 text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-              From everyday wash &amp; fold to professional steam ironing and bulky duvets. Drop off at The Towers Shopping Centre in Langenhovenpark or enjoy Laundro-Hub Express 1–2 day doorstep collection.
+              From everyday wash &amp; fold to professional steam ironing and bulky duvets. Drop off at our 2 convenient locations — <strong className="text-brand-deep">The Towers (Langenhovenpark)</strong> or <strong className="text-brand-deep">Bains Lodge (opp. security)</strong> — or enjoy express doorstep collection across the entire Bloemfontein area.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
@@ -132,7 +132,7 @@ export default async function WhatWeOfferPage() {
                 className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                <span>WhatsApp Quote on {BUSINESS_INFO.phone}</span>
+                <span>WhatsApp Quote: {BUSINESS_INFO.phone} / {BUSINESS_INFO.secondaryPhone}</span>
               </a>
               <Link
                 href="/my-wash"
@@ -346,12 +346,12 @@ export default async function WhatWeOfferPage() {
               </div>
             </div>
 
-            {/* Payment Methods Card (Strictly No Cash) */}
+            {/* Payment Methods Card (Strictly No Cash & No Open Accounts) */}
             <div className="rounded-2xl border-2 border-brand-purple/20 bg-brand-lav/40 p-5 sm:p-6 shadow-sm flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2 text-brand-deep font-bold text-sm mb-2">
                   <CreditCard className="h-4.5 w-4.5 shrink-0 text-brand-purple" />
-                  <span className="uppercase tracking-wider text-xs text-brand-purple font-extrabold">Payment Policy</span>
+                  <span className="uppercase tracking-wider text-xs text-brand-purple font-extrabold">Payment &amp; Billing Policy</span>
                 </div>
                 <h3 className="font-display text-lg font-bold text-brand-deep flex items-center gap-2 flex-wrap">
                   <span>EFT or Card Only</span>
@@ -360,13 +360,13 @@ export default async function WhatWeOfferPage() {
                   </span>
                 </h3>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  We accept Speedpoint Card Tap upon return/collection and instant EFT. For customer, driver, and store security, cash is strictly not handled.
+                  We accept Speedpoint Card Tap upon collection/delivery and instant EFT. Strictly EFT or card payment; no open monthly accounts.
                 </p>
               </div>
               <div className="mt-4 pt-3 border-t border-brand-line/60">
                 <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-deep">
                   <ShieldCheck className="h-3.5 w-3.5 text-brand-teal" />
-                  Speedpoint Card Tap &bull; Instant EFT
+                  Speedpoint Card Tap &bull; Instant EFT &bull; No Open Accounts
                 </span>
               </div>
             </div>
@@ -544,7 +544,7 @@ export default async function WhatWeOfferPage() {
                     <h3 className="font-display text-base sm:text-lg font-bold text-brand-deep">
                       Express Van Collection &amp; Delivery
                     </h3>
-                    <p className="text-[11px] text-brand-muted">Doorstep collection &amp; return across Bloemfontein</p>
+                    <p className="text-[11px] text-brand-muted">Dynamic driver scheduling &bull; Entire Bloemfontein area</p>
                   </div>
                 </div>
                 <span className="text-[11px] font-bold text-brand-teal uppercase tracking-wider">
@@ -586,7 +586,7 @@ export default async function WhatWeOfferPage() {
                 Ready to have your laundry taken care of?
               </h3>
               <p className="mt-1 text-xs sm:text-sm text-brand-lav/80 leading-relaxed">
-                Drop off at The Towers Shopping Centre in Langenhovenpark or schedule our express van for doorstep collection.
+                Drop off at The Towers (Langenhovenpark) or Bains Lodge (opp. security), or schedule our driver dynamically for doorstep collection across the entire Bloemfontein area.
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
@@ -604,7 +604,7 @@ export default async function WhatWeOfferPage() {
                 className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all"
               >
                 <WhatsAppIcon className="h-3.5 w-3.5" />
-                <span>WhatsApp Quote</span>
+                <span>WhatsApp {BUSINESS_INFO.phone}</span>
               </a>
             </div>
           </div>
@@ -627,7 +627,7 @@ export default async function WhatWeOfferPage() {
                   Laundro-Hub Express: Collected &amp; Delivered in 1–2 Days
                 </h3>
                 <p className="text-base text-brand-lav/90 leading-relaxed max-w-xl">
-                  Don&apos;t have time to drop off your laundry at The Towers? Our express van collects your bags directly from your home, school hostel, Airbnb, or business across Bloemfontein and returns them clean and folded within 1–2 business days.
+                  Don&apos;t have time to drop off your laundry at The Towers or Bains Lodge? Our driver collects your bags dynamically throughout the day upon request from your home, school hostel, Airbnb, guesthouse, or business across the entire Bloemfontein area and returns them clean and folded within 1–2 business days.
                 </p>
 
                 {/* Rates Callout Badges */}
@@ -685,7 +685,7 @@ export default async function WhatWeOfferPage() {
               School Hostels &amp; Student Accommodation
             </h2>
             <p className="mt-3 text-base text-brand-body">
-              Dedicated bulk laundry runs for school boarding hostels, university residences, and student communes across Bloemfontein.
+              Dedicated monthly packages available for students and schools, alongside standard walk-in rates (Packages update starting January 2027). Serving secondary school boarding hostels, university residences, and student accommodation across Bloemfontein.
             </p>
           </div>
 
@@ -861,11 +861,11 @@ export default async function WhatWeOfferPage() {
                   Hotels &amp; Guesthouses
                 </h4>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  Commercial batch laundry, crisp table linen, chef aprons, and reliable scheduled van delivery.
+                  Quoted on request (RFQ basis) tailored to specific linen volumes and frequency. Crisp bedding, fluffy towels, and dynamic driver collections.
                 </p>
               </div>
               <span className="mt-4 inline-flex items-center text-xs font-bold text-brand-purple group-hover:translate-x-1 transition-transform">
-                Explore Hospitality &rarr;
+                Request Guesthouse RFQ &rarr;
               </span>
             </Link>
 

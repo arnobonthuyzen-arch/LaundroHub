@@ -51,14 +51,14 @@ export function Footer() {
                   className="inline-flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Phone className="h-3.5 w-3.5 text-brand-mint shrink-0" />
-                  <span>Shop: {BUSINESS_INFO.phone}</span>
+                  <span>Central: {BUSINESS_INFO.phone}</span>
                 </a>
                 <a
-                  href={`tel:${BUSINESS_INFO.officePhoneRaw}`}
+                  href={`tel:${BUSINESS_INFO.phoneSecondaryRaw}`}
                   className="inline-flex items-center gap-2 hover:text-white transition-colors"
                 >
                   <Phone className="h-3.5 w-3.5 text-brand-mint shrink-0" />
-                  <span>Office: {BUSINESS_INFO.officePhone} (Maritza)</span>
+                  <span>Central: {BUSINESS_INFO.phoneSecondary}</span>
                 </a>
                 <a
                   href={`mailto:${BUSINESS_INFO.email}`}
@@ -155,40 +155,60 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Hours */}
+          {/* Drop-Off Points & Hours */}
           <div className="flex flex-col gap-3">
             <h3 className="text-sm font-bold uppercase tracking-wider text-brand-mint font-sans">
-              Store &amp; Hours
+              2 Drop-Off Points &amp; Hours
             </h3>
-            <div className="flex flex-col gap-2.5 text-sm text-brand-lav/80">
-              <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-brand-mint flex-shrink-0 mt-1" />
-                <div>
-                  <p className="font-semibold text-white">{BUSINESS_INFO.address.name}</p>
-                  <p className="text-xs text-brand-lav/70">{BUSINESS_INFO.address.street}</p>
-                  <p className="text-xs text-brand-lav/70">
-                    {BUSINESS_INFO.address.suburb}, {BUSINESS_INFO.address.city}
-                  </p>
+            <div className="flex flex-col gap-3 text-xs text-brand-lav/80">
+              {/* Point 1: The Towers */}
+              <div className="rounded-xl bg-white/5 p-3 border border-white/10 space-y-1.5">
+                <div className="flex items-center gap-1.5 font-bold text-white">
+                  <MapPin className="h-3.5 w-3.5 text-brand-mint shrink-0" />
+                  <span>The Towers (Langenhovenpark)</span>
+                </div>
+                <p className="text-[11px] text-brand-lav/70">
+                  Opposite car wash (old Panarottis), Bloemfontein
+                </p>
+                <div className="pt-1 border-t border-white/10 space-y-0.5 text-[11px]">
+                  <div className="flex justify-between">
+                    <span>Mon–Fri:</span>
+                    <span className="font-mono text-white/90">07:00–18:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sat–Sun:</span>
+                    <span className="font-mono text-white/90">09:00–13:00</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-white/10 space-y-1">
-                {BUSINESS_INFO.hours.map((h) => (
-                  <div key={h.days} className="flex justify-between text-xs text-brand-lav/70">
-                    <span>{h.days}</span>
-                    <span className="font-mono text-white/90">{h.times}</span>
+              {/* Point 2: Bains Lodge */}
+              <div className="rounded-xl bg-white/5 p-3 border border-white/10 space-y-1.5">
+                <div className="flex items-center gap-1.5 font-bold text-white">
+                  <MapPin className="h-3.5 w-3.5 text-brand-mint shrink-0" />
+                  <span>Bains Lodge Drop-Off Point</span>
+                </div>
+                <p className="text-[11px] text-brand-lav/70">
+                  Main entrance, directly opposite security
+                </p>
+                <div className="pt-1 border-t border-white/10 space-y-0.5 text-[11px]">
+                  <div className="flex justify-between">
+                    <span>Mon–Fri:</span>
+                    <span className="font-mono text-white/90">07:00–17:30</span>
                   </div>
-                ))}
+                  <div className="flex justify-between">
+                    <span>Sat &amp; Public Hol:</span>
+                    <span className="font-mono text-white/90">09:00–14:00</span>
+                  </div>
+                  <div className="flex justify-between text-brand-mint/80">
+                    <span>Sundays:</span>
+                    <span>Closed</span>
+                  </div>
+                </div>
               </div>
 
-              <div className="pt-2">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-mint hover:underline"
-                >
-                  <span>Directions &amp; Contact Us</span>
-                  <ArrowRight className="h-3 w-3" />
-                </Link>
+              <div className="pt-1 text-[11px] text-brand-mint font-semibold">
+                <span>&bull; Strictly EFT / Card &bull; No Open Accounts</span>
               </div>
             </div>
           </div>

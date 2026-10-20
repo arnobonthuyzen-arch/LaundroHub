@@ -77,7 +77,8 @@ function SubmitPickupButton() {
       ) : (
         <>
           <WhatsAppIcon className="h-5 w-5 shrink-0" />
-          <span>Book Pickup via WhatsApp (064 830 8785)</span>
+          <span className="hidden sm:inline">Book Pickup via WhatsApp (060 963 3688 / 064 830 8785)</span>
+          <span className="sm:hidden">Book Pickup via WhatsApp</span>
         </>
       )}
     </button>
@@ -101,8 +102,8 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
     "folded"
   );
   const [speed, setSpeed] = useState<"standard" | "express">("standard");
-  const [timeSlot, setTimeSlot] = useState<"morning" | "midday" | "afternoon">(
-    "morning"
+  const [timeSlot, setTimeSlot] = useState<"dynamic" | "morning" | "midday" | "afternoon">(
+    "dynamic"
   );
   const [selectedSuburb, setSelectedSuburb] = useState<string>(
     suburbs[0] ?? "Langenhovenpark"
@@ -232,13 +233,13 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h4 className="text-sm font-bold text-brand-deep">WhatsApp Booking Channel</h4>
+                <h4 className="text-sm font-bold text-brand-deep">WhatsApp &amp; Phone Booking Desk</h4>
                 <span className="rounded-full bg-brand-teal text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wide">
-                  Live Dispatch
+                  Central: 060 963 3688
                 </span>
               </div>
               <p className="text-xs text-brand-body mt-0.5 leading-relaxed max-w-xl">
-                My Wash doorstep collection is currently coordinated directly via WhatsApp for instant driver dispatch and live scheduling. Complete your details below to send your request straight to WhatsApp!
+                Simple direct phone call or WhatsApp to arrange collection and return (060 963 3688 / 064 830 8785). No fixed time slots — pick-ups are scheduled dynamically with the driver throughout the day across Bloemfontein. Strictly EFT or card payment; no open accounts.
               </p>
             </div>
           </div>
@@ -249,7 +250,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-teal hover:bg-brand-teal-dark text-white text-xs font-bold px-4 py-2.5 transition-all shadow-sm shrink-0 whitespace-nowrap self-start sm:self-center"
           >
             <WhatsAppIcon className="h-4 w-4" />
-            <span>1-Tap WhatsApp Booking</span>
+            <span>WhatsApp Dispatch</span>
           </a>
         </div>
 
@@ -620,16 +621,51 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </div>
             </div>
 
-            {/* Time Slot Selection */}
+            {/* Dynamic Scheduling & Driver Window */}
             <div className="mb-6">
-              <label className="block text-xs font-semibold uppercase tracking-wider text-brand-muted mb-2">
-                Preferred Time Slot *
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-brand-muted">
+                  Scheduling &bull; Dynamic Driver Dispatch *
+                </label>
+                <span className="text-[11px] font-bold text-brand-teal">
+                  No Fixed Delivery Time Slots
+                </span>
+              </div>
+
+              {/* Dynamic Dispatch Notice Banner */}
+              <div className="rounded-2xl border border-brand-teal/20 bg-brand-tealbg/50 p-3.5 mb-3 flex items-start gap-2.5">
+                <Clock className="h-4 w-4 text-brand-teal shrink-0 mt-0.5" />
+                <p className="text-xs text-brand-body leading-relaxed">
+                  <strong className="text-brand-deep">Dynamic Daily Scheduling:</strong> Laundro-Hub operates on flexible daily dispatch rather than fixed delivery time slots. Pick-ups are scheduled dynamically with the driver throughout the day upon request. Select your general window below:
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
                 {[
-                  { id: "morning", title: "Morning", time: "08:00 – 11:00" },
-                  { id: "midday", title: "Midday", time: "11:00 – 14:00" },
-                  { id: "afternoon", title: "Afternoon", time: "14:00 – 17:30" },
+                  {
+                    id: "dynamic",
+                    title: "Anytime Today",
+                    desc: "Driver coordinates first available route",
+                    flexible: true,
+                  },
+                  {
+                    id: "morning",
+                    title: "Morning Preferred",
+                    desc: "Coordinate morning collection with driver",
+                    flexible: false,
+                  },
+                  {
+                    id: "midday",
+                    title: "Midday Preferred",
+                    desc: "Coordinate midday collection with driver",
+                    flexible: false,
+                  },
+                  {
+                    id: "afternoon",
+                    title: "Afternoon Preferred",
+                    desc: "Coordinate afternoon collection with driver",
+                    flexible: false,
+                  },
                 ].map((slot) => (
                   <button
                     key={slot.id}
@@ -637,15 +673,19 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                     onClick={() => setTimeSlot(slot.id as typeof timeSlot)}
                     className={`rounded-xl border p-3 text-left transition-all ${
                       timeSlot === slot.id
-                        ? "border-brand-teal bg-brand-tealbg text-brand-deep ring-1 ring-brand-teal"
-                        : "border-brand-line bg-white hover:border-brand-purple/30 text-brand-body"
+                        ? "border-brand-teal bg-white shadow-sm ring-2 ring-brand-teal/30"
+                        : "border-brand-line bg-white/70 hover:border-brand-purple/30 text-brand-body"
                     }`}
                   >
-                    <div className="flex items-center gap-1.5 text-xs font-bold">
-                      <Clock className="h-3.5 w-3.5 text-brand-teal" />
-                      <span>{slot.title}</span>
+                    <div className="flex items-center justify-between gap-1 mb-1">
+                      <span className="text-xs font-bold text-brand-deep">{slot.title}</span>
+                      {slot.flexible && (
+                        <span className="rounded bg-brand-teal text-white text-[9px] font-bold px-1.5 py-0.5">
+                          Flexible
+                        </span>
+                      )}
                     </div>
-                    <p className="text-[11px] text-brand-muted mt-0.5">{slot.time}</p>
+                    <p className="text-[11px] text-brand-muted leading-tight">{slot.desc}</p>
                   </button>
                 ))}
               </div>
@@ -786,18 +826,20 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </span>
             </div>
             <div className="flex items-center justify-between text-brand-body pt-1.5 border-t border-brand-line/60">
-              <span className="text-brand-muted">Pickup Window:</span>
+              <span className="text-brand-muted">Scheduling:</span>
               <span className="font-semibold text-brand-deep">
-                {timeSlot === "morning"
-                  ? "Morning (08:00–11:00)"
+                {timeSlot === "dynamic"
+                  ? "Dynamic (Throughout Day)"
+                  : timeSlot === "morning"
+                  ? "Morning Preferred"
                   : timeSlot === "midday"
-                  ? "Midday (11:00–14:00)"
-                  : "Afternoon (14:00–17:30)"}
+                  ? "Midday Preferred"
+                  : "Afternoon Preferred"}
               </span>
             </div>
             <div className="flex items-center justify-between text-brand-body pt-1.5 border-t border-brand-line/60">
               <span className="text-brand-muted">Services:</span>
-              <span className="font-semibold text-brand-deep truncate max-w-[180px]">
+              <span className="font-semibold text-brand-deep truncate max-w-[140px] sm:max-w-[200px]">
                 {selectedServices.join(", ") || "None"}
               </span>
             </div>
@@ -877,13 +919,15 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </div>
 
               <div className="flex justify-between py-1.5 border-t border-brand-line/60">
-                <span className="text-brand-muted">Pickup Window:</span>
-                <span className="font-bold text-brand-deep">
-                  {timeSlot === "morning"
-                    ? "08:00 – 11:00"
+                <span className="text-brand-muted">Scheduling:</span>
+                <span className="font-bold text-brand-deep text-right">
+                  {timeSlot === "dynamic"
+                    ? "Dynamic (Upon Request)"
+                    : timeSlot === "morning"
+                    ? "Morning Preferred"
                     : timeSlot === "midday"
-                    ? "11:00 – 14:00"
-                    : "14:00 – 17:30"}
+                    ? "Midday Preferred"
+                    : "Afternoon Preferred"}
                 </span>
               </div>
 
@@ -902,13 +946,13 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 <span>Zero Pre-Payment &bull; WhatsApp Dispatched</span>
               </div>
               <p>
-                Your pickup is coordinated directly via WhatsApp with our driver. Laundry is weighed at our Langenhovenpark hub and an itemised invoice is WhatsApped to you before washing begins.
+                Your pickup is coordinated directly via WhatsApp with our driver. Laundry is weighed at our hub and an itemised invoice is WhatsApped to you before washing begins.
               </p>
             </div>
 
             {/* Quick WhatsApp Question */}
             <div className="mt-4 pt-4 border-t border-brand-line flex items-center justify-between text-xs">
-              <span className="text-brand-muted">Prefer to book by voice/chat?</span>
+              <span className="text-brand-muted">Prefer direct call or WhatsApp?</span>
               <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
@@ -916,12 +960,12 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 className="inline-flex items-center gap-1 font-bold text-brand-teal hover:underline"
               >
                 <WhatsAppIcon className="h-3.5 w-3.5 shrink-0" />
-                WhatsApp us
+                060 963 3688
               </a>
             </div>
           </div>
 
-          {/* 3 Promises Badge */}
+          {/* 4 Promises Badge */}
           <div className="rounded-2xl border border-brand-line/80 bg-brand-ground p-4 shadow-sm space-y-2.5">
             <div className="flex items-center gap-2 text-brand-purple text-xs font-bold uppercase tracking-wider">
               <ShieldCheck className="h-4 w-4 text-brand-teal" />
@@ -934,15 +978,15 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
-                <span><strong className="text-brand-deep">Flat-Rate Transport:</strong> R35 per leg in Langenhovenpark (R70 round-trip); R65 per leg across Bloemfontein (R130 round-trip).</span>
+                <span><strong className="text-brand-deep">Dynamic Daily Scheduling:</strong> No fixed delivery time slots; scheduled dynamically throughout the day upon request.</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
-                <span><strong className="text-brand-deep">Real-Time WhatsApp Tracking:</strong> Live status updates from pickup to drop-off.</span>
+                <span><strong className="text-brand-deep">2 Drop-Off Points:</strong> The Towers (Langenhovenpark) &amp; Bains Lodge Drop-Off Point (opp security).</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
-                <span><strong className="text-brand-deep">Card &amp; EFT (Strictly No Cash):</strong> Secure cashless payment on delivery. No minimum order amount applies!</span>
+                <span><strong className="text-brand-deep">Card &amp; EFT (Strictly No Cash):</strong> Secure cashless payment. Zero minimum order applies; no open monthly accounts.</span>
               </li>
             </ul>
           </div>

@@ -78,13 +78,13 @@ export default function HealthcarePage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20healthcare/clinic%20laundry%20services`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20healthcare/clinic%20laundry%20services`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Healthcare Desk</span>
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"
@@ -210,23 +210,23 @@ export default function HealthcarePage() {
                 Schedule a Consultation for Your Practice
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                Contact our commercial desk to discuss scheduled collection days, chemical certifications, and itemised monthly invoicing.
+                Contact our commercial desk to discuss scheduled collection days, chemical certifications, and itemised manifests with strictly EFT or card billing (no open monthly accounts).
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20are%20a%20medical/health%20practice%20inquiring%20about%20laundry%20rates`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20we%20are%20a%20medical/health%20practice%20inquiring%20about%20laundry%20rates`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Healthcare Desk</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all"
                 >
-                  <span>Request Corporate Invoicing</span>
+                  <span>Request Healthcare Quote</span>
                 </Link>
               </div>
             </div>

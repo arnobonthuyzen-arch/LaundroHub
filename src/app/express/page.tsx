@@ -101,13 +101,13 @@ export default async function ExpressPage() {
                   <span>Book Pickup Online (My Wash)</span>
                 </Link>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-all"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp 064 830 8785</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
               </div>
             </div>
@@ -493,7 +493,7 @@ export default async function ExpressPage() {
                   <span>Schedule on My Wash</span>
                 </Link>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"

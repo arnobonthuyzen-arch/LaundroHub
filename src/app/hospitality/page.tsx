@@ -52,7 +52,7 @@ export default function HospitalityPage() {
     "Industrial rotary steam pressing for crisp, flat presentation",
     "Moisture-controlled drying to preserve thread counts and fabric longevity",
     "Individual batch processing — your linen is never mixed with other clients",
-    "Itemised commercial delivery manifests and monthly B2B billing",
+    "Itemised manifests with strictly EFT or card billing (no open monthly accounts)",
   ];
 
   return (
@@ -73,25 +73,25 @@ export default function HospitalityPage() {
                 Commercial Laundry for <span className="text-brand-purple">Hospitality.</span>
               </h1>
               <p className="text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-                Reliable linen management for Bloemfontein&apos;s leading guesthouses, B&amp;Bs, and dining establishments. Impeccable hygiene, steam-pressed bedding, and scheduled doorstep delivery.
+                Guest houses and lodges are quoted on request (RFQ basis) tailored to specific linen volumes and frequency. Impeccable hygiene, steam-pressed bedding, and dynamic driver collections across the entire Bloemfontein area.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20commercial%20laundry%20rates%20for%20a%20guesthouse/hotel`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20a%20guesthouse%20RFQ%20commercial%20quote`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Commercial Desk</span>
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all"
                 >
                   <Receipt className="h-4 w-4 text-brand-mint" />
-                  <span>Request Corporate Quote</span>
+                  <span>Request Guesthouse RFQ</span>
                 </Link>
               </div>
             </div>
@@ -210,17 +210,17 @@ export default function HospitalityPage() {
                 Schedule a Site Visit or Quote Consultation
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                We can assess your current volume, provide test washes, and prepare a custom tier proposal tailored to your monthly linen cycles.
+                We can assess your volume and prepare an RFQ quote tailored to your linen cycles. Dynamic driver collections across Bloemfontein, or drop off at The Towers or Bains Lodge. Strictly EFT or card payment.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20are%20a%20guesthouse/hotel%20and%20want%20a%20commercial%20quote`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20we%20are%20a%20guesthouse/hotel%20and%20want%20a%20commercial%20quote`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>Chat on WhatsApp</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"

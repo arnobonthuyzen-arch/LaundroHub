@@ -78,13 +78,13 @@ export default function AirbnbPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20an%20Airbnb%20host%20in%20Bloemfontein%20interested%20in%20your%20turnover%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20an%20Airbnb%20host%20in%20Bloemfontein%20interested%20in%20your%20turnover%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Host Partner Line</span>
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"
@@ -262,17 +262,17 @@ export default function AirbnbPage() {
                 Partner with Bloemfontein&apos;s Trusted Airbnb Laundry
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                Join local Superhosts who trust Laundro-Hub for immaculate guest turnarounds. Flexible invoicing, volume discounts, and reliable van collections.
+                Join local Superhosts who trust Laundro-Hub for immaculate guest turnarounds. Strictly EFT or card payment (no open monthly accounts), dynamic driver collections throughout the day across Bloemfontein, and 2 drop-off points (The Towers &amp; Bains Lodge).
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I%20host%20an%20Airbnb%20and%20want%20to%20set%20up%20a%20turnover%20account`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I%20host%20an%20Airbnb%20and%20want%20to%20set%20up%20a%20turnover%20account`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>Chat on WhatsApp</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"

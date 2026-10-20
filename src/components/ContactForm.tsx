@@ -361,7 +361,7 @@ export function ContactForm() {
             id="message"
             name="message"
             rows={4}
-            placeholder="Tell us about collection frequency, billing preferences (monthly invoicing vs card), specific fabric requirements, or hostel/business location."
+            placeholder="Tell us about collection frequency, specific fabric requirements, or hostel/business location. Note: Billing is strictly EFT or card payment (no open monthly accounts)."
             className="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-base sm:text-sm text-brand-ink placeholder:text-brand-muted/70 outline-none transition-all focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20"
           />
           {errors?.message && (

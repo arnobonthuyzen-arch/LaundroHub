@@ -52,7 +52,7 @@ export default function RetirementVillagesPage() {
     "Individual drum washing — strictly separated per resident",
     "Crisp steam pressing for Sunday best, collared shirts, and dresses",
     "Full sanitisation for waterproof bedding and mattress covers",
-    "Consolidated monthly invoicing for village management or family accounts",
+    "Consolidated billing manifests for village management or family card/EFT payments",
     "Reliable 1–2 day return schedule so residents are never without essentials",
   ];
 
@@ -79,13 +79,13 @@ export default function RetirementVillagesPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20laundry%20services%20for%20a%20retirement%20village/resident`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20laundry%20services%20for%20a%20retirement%20village/resident`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Senior Care Desk</span>
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"
@@ -215,13 +215,13 @@ export default function RetirementVillagesPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20interested%20in%20laundry%20services%20for%20a%20retirement%20village`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20interested%20in%20laundry%20services%20for%20a%20retirement%20village`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Senior Desk</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"

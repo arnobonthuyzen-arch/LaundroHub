@@ -14,29 +14,25 @@ export function Header() {
         <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-brand-lav/80">
             <MapPin className="h-3.5 w-3.5 text-brand-mint" />
-            <span>The Towers Shopping Centre, Langenhovenpark, Bloemfontein</span>
+            <span>2 Drop-Off Points: The Towers (Langenhovenpark) &amp; Bains Lodge | Entire Bloemfontein</span>
           </div>
-          <div className="flex items-center gap-6 text-brand-lav/90">
-            <span className="flex items-center gap-1.5">
-              <Clock className="h-3 w-3 text-brand-mint" />
-              Mon–Fri 07:00–18:00 &middot; Sat–Sun 09:00–13:00
-            </span>
+          <div className="flex items-center gap-4 text-brand-lav/90">
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
               className="flex items-center gap-1.5 font-semibold text-white hover:text-brand-mint transition-colors"
-              title="Shop & Dispatch Phone"
+              title="Central Contact Number"
             >
               <Phone className="h-3 w-3 text-brand-mint" />
               <span>{BUSINESS_INFO.phone}</span>
             </a>
             <span className="text-white/40">&middot;</span>
             <a
-              href={`tel:${BUSINESS_INFO.officePhoneRaw}`}
+              href={`tel:${BUSINESS_INFO.phoneSecondaryRaw}`}
               className="flex items-center gap-1.5 font-semibold text-white hover:text-brand-mint transition-colors"
-              title="Maritza Office Phone"
+              title="Secondary Contact Number"
             >
               <Phone className="h-3 w-3 text-brand-mint" />
-              <span>Office: {BUSINESS_INFO.officePhone}</span>
+              <span>{BUSINESS_INFO.phoneSecondary}</span>
             </a>
           </div>
         </div>
@@ -48,10 +44,10 @@ export function Header() {
           {/* Brand Logo & Name */}
           <Link
             href="/"
-            className="flex items-center gap-3.5 flex-shrink-0 group py-1"
+            className="flex items-center gap-2.5 sm:gap-3.5 flex-shrink-0 group py-1"
             aria-label="Laundro-Hub home"
           >
-            <div className="relative h-12 w-12 flex-shrink-0 transition-transform group-hover:scale-105">
+            <div className="relative h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 transition-transform group-hover:scale-105">
               <Image
                 src="/img/logo.png"
                 alt="Laundro-Hub logo"
@@ -62,10 +58,10 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col justify-center leading-none">
-              <span className="font-display text-2xl font-extrabold tracking-tight text-brand-plum whitespace-nowrap leading-tight">
+              <span className="font-display text-xl sm:text-2xl font-extrabold tracking-tight text-brand-plum whitespace-nowrap leading-tight">
                 Laundro&#8209;Hub
               </span>
-              <span className="text-[11px] font-bold text-brand-teal tracking-[0.18em] uppercase whitespace-nowrap mt-0.5">
+              <span className="text-[10px] sm:text-[11px] font-bold text-brand-teal tracking-[0.16em] sm:tracking-[0.18em] uppercase whitespace-nowrap mt-0.5">
                 Bloemfontein
               </span>
             </div>
@@ -130,7 +126,7 @@ export function Header() {
           <MobileNav
             whatsappUrl={BUSINESS_INFO.whatsappUrl}
             phone={BUSINESS_INFO.phone}
-            officePhone={BUSINESS_INFO.officePhone}
+            secondaryPhone={BUSINESS_INFO.phoneSecondary}
           />
         </div>
       </div>

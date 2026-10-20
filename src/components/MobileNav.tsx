@@ -22,10 +22,11 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 interface MobileNavProps {
   whatsappUrl: string;
   phone: string;
+  secondaryPhone?: string;
   officePhone?: string;
 }
 
-export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
+export function MobileNav({ whatsappUrl, phone, secondaryPhone, officePhone }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [sectorsOpen, setSectorsOpen] = useState(true);
   const pathname = usePathname();
@@ -71,12 +72,14 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
         className="flex h-11 w-11 items-center justify-center rounded-2xl border border-brand-line/80 bg-white text-brand-deep shadow-sm hover:bg-brand-lav transition-all"
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={isOpen}
+        aria-controls="mobile-nav-drawer"
       >
         {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
 
       {isOpen && (
         <div
+          id="mobile-nav-drawer"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
@@ -84,14 +87,14 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
           onClick={close}
         >
           <div
-            className="flex flex-col bg-brand-ground p-6 shadow-elevated border-b border-brand-line max-w-sm ml-auto h-[calc(100dvh-76px)] overflow-y-auto"
+            className="flex flex-col bg-brand-ground p-6 shadow-elevated border-b border-brand-line max-w-sm ml-auto h-[calc(100dvh-76px)] overflow-y-auto pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-right duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="flex flex-col gap-1.5">
               <Link
                 href="/"
                 onClick={close}
-                className={`rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
+                className={`min-h-[44px] flex items-center rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
                   pathname === "/" ? "bg-brand-lav text-brand-purple" : "text-brand-body hover:bg-brand-lav"
                 }`}
               >
@@ -101,7 +104,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
               <Link
                 href="/what-we-offer"
                 onClick={close}
-                className={`rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
+                className={`min-h-[44px] flex items-center rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
                   pathname === "/what-we-offer"
                     ? "bg-brand-lav text-brand-purple"
                     : "text-brand-body hover:bg-brand-lav"
@@ -115,7 +118,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                 <button
                   type="button"
                   onClick={() => setSectorsOpen((prev) => !prev)}
-                  className="flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-sm font-bold text-brand-body hover:bg-brand-lav transition-colors"
+                  className="min-h-[44px] flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-sm font-bold text-brand-body hover:bg-brand-lav transition-colors"
                 >
                   <span>Who We Serve</span>
                   <ChevronDown
@@ -190,7 +193,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
               <Link
                 href="/my-wash"
                 onClick={close}
-                className={`flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
+                className={`min-h-[44px] flex items-center gap-2.5 rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
                   pathname === "/my-wash"
                     ? "bg-brand-purple text-white"
                     : "bg-brand-lav/70 text-brand-purple hover:bg-brand-lav"
@@ -203,7 +206,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
               <Link
                 href="/about"
                 onClick={close}
-                className={`rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
+                className={`min-h-[44px] flex items-center rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
                   pathname === "/about" ? "bg-brand-lav text-brand-purple" : "text-brand-body hover:bg-brand-lav"
                 }`}
               >
@@ -213,7 +216,7 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
               <Link
                 href="/contact"
                 onClick={close}
-                className={`rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
+                className={`min-h-[44px] flex items-center rounded-xl px-4 py-2.5 text-sm font-bold transition-colors ${
                   pathname === "/contact" ? "bg-brand-lav text-brand-purple" : "text-brand-body hover:bg-brand-lav"
                 }`}
               >
@@ -236,15 +239,15 @@ export function MobileNav({ whatsappUrl, phone, officePhone }: MobileNavProps) {
                 className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
               >
                 <Phone className="h-4 w-4" />
-                <span>Shop: {phone}</span>
+                <span>Call Central: {phone}</span>
               </a>
-              {officePhone && (
+              {secondaryPhone && (
                 <a
-                  href={`tel:${officePhone.replace(/\s+/g, '')}`}
+                  href={`tel:${secondaryPhone.replace(/\s+/g, '')}`}
                   className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-4 py-3 min-h-[48px] text-sm font-bold text-brand-deep hover:bg-brand-lav active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>Office: {officePhone} (Maritza)</span>
+                  <span>Call: {secondaryPhone}</span>
                 </a>
               )}
             </div>

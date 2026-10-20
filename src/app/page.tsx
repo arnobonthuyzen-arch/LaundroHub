@@ -64,7 +64,7 @@ export default async function HomePage() {
                 </span>
               </div>
 
-              <h1 className="font-display text-[2.15rem] leading-[1.12] sm:text-5xl lg:text-7xl font-extrabold tracking-tight sm:leading-[1.04] text-white">
+              <h1 className="font-display text-[1.85rem] sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.12] sm:leading-[1.04] text-white">
                 We care for the clothes{" "}
                 <span className="text-brand-mint whitespace-nowrap">you wear.</span>
               </h1>
@@ -112,11 +112,11 @@ export default async function HomePage() {
             </div>
 
             {/* Hero Looping Video Showcase */}
-            <div className="lg:col-span-5 relative">
+            <div className="lg:col-span-5 relative pb-8 sm:pb-0">
               <HeroVideoPlayer />
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 left-0 sm:left-4 z-30 max-w-[calc(100%-1rem)] rounded-2xl bg-white p-3.5 sm:p-4 shadow-elevated text-brand-deep border border-brand-line flex items-center gap-3">
+              <div className="absolute -bottom-4 sm:-bottom-6 left-0 sm:left-4 z-30 max-w-[calc(100%-1rem)] rounded-2xl bg-white p-3 sm:p-4 shadow-elevated text-brand-deep border border-brand-line flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lav text-brand-purple">
                   <Scale className="h-6 w-6" />
                 </div>
@@ -551,7 +551,7 @@ export default async function HomePage() {
                   <span>Get Google Maps Directions</span>
                 </a>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hello%20Laundro-Hub,%20I%20have%20a%20question%20about%20visiting%20your%20Towers%20store`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hello%20Laundro-Hub,%20I%20have%20a%20question%20about%20visiting%20your%20Towers%20store`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 min-h-[44px] text-sm font-bold text-white shadow-sm hover:bg-brand-teal-dark active:scale-[0.98] transition-all hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
@@ -559,6 +559,14 @@ export default async function HomePage() {
                   <WhatsAppIcon className="h-4 w-4" />
                   <span>WhatsApp The Counter</span>
                 </a>
+              </div>
+
+              {/* Second Drop-off Point Mention */}
+              <div className="rounded-xl border border-brand-line/80 bg-brand-lav/40 p-3.5 text-xs text-brand-body space-y-1">
+                <span className="font-bold text-brand-deep block">Secondary Drop-Off Point: Bains Lodge</span>
+                <p className="text-brand-muted">
+                  Main entrance, directly opposite security &bull; Mon–Fri 07:00–17:30, Sat 09:00–14:00 (Sun Closed).
+                </p>
               </div>
             </div>
 

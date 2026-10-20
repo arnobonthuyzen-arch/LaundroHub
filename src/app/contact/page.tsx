@@ -7,9 +7,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { BUSINESS_INFO, getSuburbs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Laundro-Hub Bloemfontein",
+  title: "Contact Us & Drop-Off Points | Laundro-Hub Bloemfontein",
   description:
-    "Get in touch with Laundro-Hub Bloemfontein. Inquiries, upfront quotes, commercial accounts, hostel/residence laundry, B2B contracts, and restaurant/hotel service. WhatsApp 064 830 8785.",
+    "Get in touch with Laundro-Hub Bloemfontein. 2 drop-off points: The Towers (Langenhovenpark) & Bains Lodge. Central numbers: 060 963 3688 / 064 830 8785. Dynamic driver collection across entire Bloemfontein.",
 };
 
 export default async function ContactPage() {
@@ -25,13 +25,13 @@ export default async function ContactPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-purple/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple mb-3">
-              Contact Us &amp; Inquiries
+              Contact Us &bull; 2 Drop-Off Points &bull; Bloemfontein
             </span>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-deep tracking-tight">
               Contact <span className="text-brand-purple">Us.</span>
             </h1>
             <p className="mt-4 text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-              Have a question, need a quote, or want to set up a commercial, hostel, B2B, or hospitality laundry account? Reach out to our team or send us a message below.
+              Direct phone call or WhatsApp to arrange collection and return, drop off at our 2 convenient locations, or request a guesthouse or school package quote.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default async function ContactPage() {
               <div>
                 <p className="text-[11px] uppercase font-semibold tracking-wider text-white/95">WhatsApp</p>
                 <p className="text-sm sm:text-base font-bold text-white">{BUSINESS_INFO.phone}</p>
-                <p className="text-[11px] text-white/95">Quickest quote chat</p>
+                <p className="text-[11px] text-white/95">Instant booking chat</p>
               </div>
             </a>
 
@@ -66,23 +66,23 @@ export default async function ContactPage() {
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Shop &amp; Counter</p>
-                <p className="text-sm sm:text-base font-bold">{BUSINESS_INFO.phone}</p>
-                <p className="text-[11px] text-brand-muted">The Towers store</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Dispatch &amp; Bookings</p>
+                <p className="text-sm sm:text-base font-bold text-brand-deep">{BUSINESS_INFO.phone}</p>
+                <p className="text-[11px] text-brand-muted">Direct call to driver</p>
               </div>
             </a>
 
             <a
-              href={`tel:${BUSINESS_INFO.officePhoneRaw}`}
+              href={`tel:${BUSINESS_INFO.secondaryPhoneRaw}`}
               className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Office (Maritza)</p>
-                <p className="text-sm sm:text-base font-bold text-brand-purple">{BUSINESS_INFO.officePhone}</p>
-                <p className="text-[11px] text-brand-muted">Direct office line</p>
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Central Line</p>
+                <p className="text-sm sm:text-base font-bold text-brand-purple">{BUSINESS_INFO.secondaryPhone}</p>
+                <p className="text-[11px] text-brand-muted">Call or WhatsApp</p>
               </div>
             </a>
 
@@ -95,8 +95,8 @@ export default async function ContactPage() {
               </div>
               <div>
                 <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Email</p>
-                <p className="text-sm sm:text-base font-bold text-brand-purple truncate max-w-[150px]">{BUSINESS_INFO.email}</p>
-                <p className="text-[11px] text-brand-muted">Quotes &amp; accounts</p>
+                <p className="text-sm sm:text-base font-bold text-brand-purple truncate max-w-[160px] sm:max-w-none">{BUSINESS_INFO.email}</p>
+                <p className="text-[11px] text-brand-muted">RFQ &amp; inquiries</p>
               </div>
             </a>
 
@@ -161,57 +161,80 @@ export default async function ContactPage() {
                 </div>
               </div>
 
-              {/* Visit Store Card */}
-              <div className="rounded-2xl border border-brand-line bg-white p-6 shadow-sm overflow-hidden">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-brand-line mb-4">
-                  <Image
-                    src="/img/storefront-window1.jpg"
-                    alt="Laundro-Hub storefront at The Towers"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 380px"
-                  />
-                  <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 rounded-lg bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[11px] font-bold text-brand-deep shadow-xs border border-brand-line/60">
-                    <span className="h-2 w-2 rounded-full bg-brand-mint" />
-                    Open 7 Days
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-brand-teal font-bold text-xs uppercase tracking-wider mb-2">
+              {/* 2 Physical Drop-Off Locations */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-brand-teal font-bold text-xs uppercase tracking-wider">
                   <MapPin className="h-4 w-4" />
-                  <span>Visit our store</span>
-                </div>
-                <h3 className="font-display text-xl font-bold text-brand-deep">
-                  {BUSINESS_INFO.address.name}
-                </h3>
-                <p className="mt-1 text-sm text-brand-body">
-                  {BUSINESS_INFO.address.street}
-                  <br />
-                  {BUSINESS_INFO.address.suburb}, {BUSINESS_INFO.address.city}
-                </p>
-
-                <div className="mt-4 space-y-2 border-t border-brand-line pt-4">
-                  <div className="flex items-center gap-2 text-xs text-brand-deep font-semibold">
-                    <Clock className="h-4 w-4 text-brand-purple" />
-                    <span>Opening Hours</span>
-                  </div>
-                  {BUSINESS_INFO.hours.map((h) => (
-                    <div key={h.days} className="flex justify-between text-xs text-brand-body">
-                      <span>{h.days}</span>
-                      <span className="font-mono text-brand-muted">{h.times}</span>
-                    </div>
-                  ))}
+                  <span>2 Physical Drop-Off Points in Bloemfontein</span>
                 </div>
 
-                <div className="mt-6">
-                  <a
-                    href={BUSINESS_INFO.address.googleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full rounded-xl bg-brand-purple py-2.5 text-xs font-bold text-white hover:bg-brand-deep transition-all"
+                {BUSINESS_INFO.locations.map((loc) => (
+                  <div
+                    key={loc.id}
+                    className="rounded-2xl border border-brand-line bg-white p-5 sm:p-6 shadow-sm overflow-hidden"
                   >
-                    <MapPin className="h-3.5 w-3.5" />
-                    Get Google Maps Directions
-                  </a>
+                    {loc.isMainHub && (
+                      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl border border-brand-line mb-4">
+                        <Image
+                          src="/img/storefront-window1.jpg"
+                          alt="Laundro-Hub storefront at The Towers"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 380px"
+                        />
+                        <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 rounded-lg bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[11px] font-bold text-brand-deep shadow-xs border border-brand-line/60">
+                          <span className="h-2 w-2 rounded-full bg-brand-mint" />
+                          Open 7 Days
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between gap-2">
+                      <h3 className="font-display text-lg font-bold text-brand-deep">
+                        {loc.name}
+                      </h3>
+                      <span className="rounded-full bg-brand-lav px-2.5 py-0.5 text-[10px] font-bold text-brand-purple">
+                        {loc.badge}
+                      </span>
+                    </div>
+
+                    <p className="mt-1 text-xs text-brand-body leading-relaxed">
+                      {loc.street}
+                      <br />
+                      {loc.suburb}, {loc.city}
+                    </p>
+
+                    <div className="mt-3.5 space-y-1.5 border-t border-brand-line/70 pt-3">
+                      <div className="flex items-center gap-1.5 text-xs text-brand-deep font-semibold mb-1">
+                        <Clock className="h-3.5 w-3.5 text-brand-purple" />
+                        <span>Operating Hours</span>
+                      </div>
+                      {loc.hours.map((h) => (
+                        <div key={h.days} className="flex justify-between text-xs text-brand-body">
+                          <span>{h.days}</span>
+                          <span className="font-mono text-brand-muted text-[11px]">{h.times}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-4">
+                      <a
+                        href={loc.googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-1.5 w-full rounded-xl bg-brand-purple/10 hover:bg-brand-purple hover:text-white py-2 text-xs font-bold text-brand-purple transition-all"
+                      >
+                        <MapPin className="h-3.5 w-3.5" />
+                        Directions to {loc.name.split(" ")[0]}
+                      </a>
+                    </div>
+                  </div>
+                ))}
+
+                {/* Billing Policy Callout */}
+                <div className="rounded-2xl border border-brand-purple/20 bg-brand-lav/40 p-4 text-xs text-brand-body leading-relaxed">
+                  <p className="font-bold text-brand-deep mb-0.5">Billing &amp; Payment Policy</p>
+                  <p>Strictly EFT or card payment; no open monthly accounts. Strictly NO CASH accepted at either drop-off point or by drivers.</p>
                 </div>
               </div>
 

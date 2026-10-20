@@ -73,25 +73,25 @@ export default function SchoolsPage() {
                 Pristine Kits for <span className="text-brand-purple">Schools &amp; Teams.</span>
               </h1>
               <p className="text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-                From muddy rugby jerseys and weekend tournament kits to weekly boarding hostel bags and sharp Monday blazers. Handled with pride in Bloemfontein.
+                Dedicated monthly packages available for students and schools, alongside standard walk-in rates (Packages update starting January 2027). From muddy rugby jerseys to weekly boarding hostel bags and sharp Monday blazers. Handled with pride in Bloemfontein.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20are%20a%20school/team%20interested%20in%20sports%20kit%20or%20hostel%20laundry`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20we%20are%20a%20school/team%20interested%20in%20sports%20kit%20or%20hostel%20laundry`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Schools Desk</span>
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-purple px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-brand-deep transition-all"
                 >
                   <GraduationCap className="h-4 w-4 text-brand-mint" />
-                  <span>Request School Rate Card</span>
+                  <span>Request School Package Info</span>
                 </Link>
               </div>
             </div>
@@ -201,8 +201,74 @@ export default function SchoolsPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Hostel Dedicated Packages & Boarding Care */}
       <section className="py-16 bg-brand-ground border-t border-brand-line">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-brand-line bg-white p-8 sm:p-12 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-8 space-y-4">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-lav px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-purple">
+                  <GraduationCap className="h-4 w-4 text-brand-teal" />
+                  Secondary School Hostels &amp; Boarding Houses
+                </span>
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
+                  Dedicated Monthly Packages for Hostels &amp; Students
+                </h3>
+                <p className="text-sm sm:text-base text-brand-body leading-relaxed">
+                  Alongside standard walk-in rates, we offer dedicated monthly packages tailored for students and boarding schools across Bloemfontein. (Please note: monthly packages update starting January 2027).
+                </p>
+                <div className="rounded-2xl border border-brand-teal/20 bg-brand-tealbg/50 p-4 text-xs sm:text-sm text-brand-deep space-y-2">
+                  <p className="font-bold">
+                    Trusted by Parents &amp; Boarding Houses:
+                  </p>
+                  <p className="text-xs text-brand-body">
+                    Currently serving students from premier Bloemfontein boarding hostels including Grey College Secondary, Jim Fouché Secondary, and Eunice Secondary hostels (pending final client approval to publish names).
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-brand-deep font-semibold">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
+                    <span>Entire Bloemfontein Service Area</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
+                    <span>Dynamic Driver Dispatch (Upon Request)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
+                    <span>2 Drop-Offs: The Towers &amp; Bains Lodge</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
+                    <span>Strictly EFT / Card &bull; No Open Accounts</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-4 flex flex-col gap-3 justify-center">
+                <a
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20hostel%20monthly%20packages%20and%20rates`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm"
+                >
+                  <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
+                </a>
+                <a
+                  href={`tel:${BUSINESS_INFO.secondaryPhoneRaw}`}
+                  className="flex items-center justify-center gap-2 rounded-xl border border-brand-line bg-white px-6 py-3.5 text-xs font-bold text-brand-deep hover:bg-brand-lav transition-all"
+                >
+                  <span>Central Line: {BUSINESS_INFO.secondaryPhone}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-white border-t border-brand-line">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="rounded-3xl bg-brand-deep p-8 sm:p-12 text-white shadow-elevated relative overflow-hidden">
             <div className="relative z-10 space-y-4">
@@ -214,13 +280,13 @@ export default function SchoolsPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20contacting%20you%20on%20behalf%20of%20a%20school/sports%20team`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20contacting%20you%20on%20behalf%20of%20a%20school/sports%20team`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>Chat on WhatsApp</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/contact"

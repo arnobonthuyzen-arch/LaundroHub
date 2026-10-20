@@ -58,8 +58,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               Home
             </Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-brand-purple transition-colors">
-              Services
+            <Link href="/what-we-offer" className="hover:text-brand-purple transition-colors">
+              What We Offer
             </Link>
             <span>/</span>
             <span className="font-semibold text-brand-deep">{service.title}</span>

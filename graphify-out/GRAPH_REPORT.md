@@ -1,16 +1,16 @@
-# Graph Report - laundro-hub-website  (2026-10-19)
+# Graph Report - laundro-hub-website  (2026-10-20)
 
 ## Corpus Check
-- 52 files · ~447,422 words
+- 52 files · ~448,753 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 252 nodes · 367 edges · 27 communities (11 shown, 4 thin omitted)
+- 253 nodes · 369 edges · 27 communities (11 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0dd232a8`
+- Built from commit: `860bb1bb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -61,8 +61,8 @@
 ## Communities (27 total, 4 thin omitted)
 
 ### Community 0 - "BUSINESS_INFO"
-Cohesion: 0.09
-Nodes (19): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+11 more)
+Cohesion: 0.10
+Nodes (18): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+10 more)
 
 ### Community 1 - "MyWashForm.tsx"
 Cohesion: 0.12
@@ -81,8 +81,8 @@ Cohesion: 0.09
 Nodes (23): clsx, leaflet, lucide-react, next, nodemailer, dependencies, clsx, leaflet (+15 more)
 
 ### Community 5 - "data.ts"
-Cohesion: 0.10
-Nodes (25): metadata, generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), StudentsPage(), metadata (+17 more)
+Cohesion: 0.09
+Nodes (27): metadata, generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage() (+19 more)
 
 ### Community 7 - "app/page.tsx"
 Cohesion: 0.21
@@ -121,7 +121,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
   _104 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**
-  _Cohesion score 0.09309309309309309 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
 - **Should `MyWashForm.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.11904761904761904 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**

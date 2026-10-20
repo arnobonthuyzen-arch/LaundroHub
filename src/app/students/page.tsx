@@ -74,18 +74,18 @@ export default async function StudentsPage() {
                 Student Laundry Made <span className="text-brand-purple">Effortless.</span>
               </h1>
               <p className="text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-                Focus on tests, assignments, and campus life — we take care of the washing, drying, and folding. Residence and hostel batch runs with weekly residence pickup across Bloemfontein.
+                Dedicated monthly packages available for students and schools, alongside standard walk-in rates (Packages update starting January 2027). Drop off at The Towers or Bains Lodge, or schedule dynamic driver collection across Bloemfontein.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20student%20res%20laundry%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20student%20res%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Student Desk</span>
+                  <span>WhatsApp: {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/my-wash"
@@ -117,14 +117,19 @@ export default async function StudentsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl border border-brand-purple/20 bg-gradient-to-r from-brand-lav/70 via-white to-brand-tealbg/40 p-8 sm:p-10 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-2 max-w-2xl">
-              <span className="inline-block rounded-full bg-brand-purple px-3 py-1 text-[11px] font-bold text-white uppercase tracking-wider">
-                Official Student Bundle
-              </span>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="inline-block rounded-full bg-brand-purple px-3 py-1 text-[11px] font-bold text-white uppercase tracking-wider">
+                  Official Student Bundle
+                </span>
+                <span className="inline-block rounded-full bg-brand-tealbg text-brand-teal-dark border border-brand-teal/20 px-2.5 py-0.5 text-[11px] font-bold">
+                  Packages Update Jan 2027 &bull; Walk-Ins Welcome
+                </span>
+              </div>
               <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
                 {studentPlan.name} Plan &mdash; {studentPlan.pricePerMonth}
               </h3>
               <p className="text-sm sm:text-base text-brand-body leading-relaxed">
-                Includes <strong className="text-brand-deep">{studentPlan.weightLimit}</strong> wash, dry &amp; fold each month. Comes with scheduled collections, free branded bag, and quick turnaround.
+                Includes <strong className="text-brand-deep">{studentPlan.weightLimit}</strong> wash, dry &amp; fold each month. Standard walk-in rates also available at R40/kg anytime. Billing strictly EFT or card (no open monthly accounts).
               </p>
             </div>
 
@@ -246,17 +251,17 @@ export default async function StudentsPage() {
                 Get Your Laundry Sorted Today
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                WhatsApp our team or sign up online. Drop off at The Towers Shopping Centre in Langenhovenpark or book your res pickup.
+                WhatsApp our team or sign up online. Drop off at The Towers (Langenhovenpark) or Bains Lodge (opp. security), or schedule our driver dynamically across Bloemfontein. Strictly EFT or card payment.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"
                 >
                   <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                  <span>WhatsApp Student Desk</span>
+                  <span>WhatsApp {BUSINESS_INFO.phone}</span>
                 </a>
                 <Link
                   href="/my-wash"

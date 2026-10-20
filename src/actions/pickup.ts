@@ -14,9 +14,7 @@ export const pickupRequestSchema = z.object({
   address: z.string().trim().min(5, "Please enter your street address and unit/house number"),
   accessCode: z.string().trim().optional().or(z.literal("")),
   pickupDate: z.string().min(1, "Please choose your preferred collection date"),
-  timeSlot: z.enum(["morning", "midday", "afternoon"], {
-    errorMap: () => ({ message: "Please choose a pickup time window" }),
-  }),
+  timeSlot: z.enum(["dynamic", "morning", "midday", "afternoon"]).default("dynamic"),
   services: z.string().min(1, "Please choose at least one laundry service"),
   estimatedBags: z.string().min(1, "Please select your estimated laundry volume"),
   logisticsOption: z.enum(["both", "pickup", "dropoff"]).default("both"),
@@ -77,9 +75,10 @@ export async function submitPickupRequest(
   const referenceNumber = `LH-WASH-${Math.floor(1000 + Math.random() * 9000)}`;
 
   const timeSlotNames: Record<string, string> = {
-    morning: "Morning (08:00 – 11:00)",
-    midday: "Midday (11:00 – 14:00)",
-    afternoon: "Afternoon (14:00 – 17:30)",
+    dynamic: "Dynamic Driver Scheduling Throughout Day (Upon Request)",
+    morning: "Morning Preferred (Scheduled dynamically with driver)",
+    midday: "Midday Preferred (Scheduled dynamically with driver)",
+    afternoon: "Afternoon Preferred (Scheduled dynamically with driver)",
   };
 
   const speedNames: Record<string, string> = {
@@ -105,13 +104,13 @@ export async function submitPickupRequest(
     `*Transport Fee:* R${deliveryFee}\n` +
     `*Address:* ${data.address}${data.accessCode ? ` (Gate: ${data.accessCode})` : ""}\n` +
     `*Date:* ${data.pickupDate}\n` +
-    `*Time Window:* ${timeSlotNames[data.timeSlot] || data.timeSlot}\n` +
+    `*Scheduling:* ${timeSlotNames[data.timeSlot] || data.timeSlot}\n` +
     `*Services:* ${data.services}\n` +
     `*Volume:* ${data.estimatedBags}\n` +
     `*Speed:* ${speedNames[data.speed] || data.speed}`
   );
 
-  const whatsappConfirmationUrl = `https://api.whatsapp.com/send?phone=27648308785&text=${waText}`;
+  const whatsappConfirmationUrl = `https://api.whatsapp.com/send?phone=27609633688&text=${waText}`;
 
   // Dispatch notification email to info@laundro-hub.co.za
   await sendPickupOrderEmail(

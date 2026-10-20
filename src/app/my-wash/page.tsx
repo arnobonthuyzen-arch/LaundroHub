@@ -40,32 +40,36 @@ const HOW_IT_WORKS_STEPS = [
 
 const FAQS = [
   {
-    q: "How does billing and weighing work?",
-    a: "No advance payment is needed! When our driver collects your laundry, it is weighed either on our calibrated portable scale or upon arrival at our Langenhovenpark hub. An itemised digital quote is sent to your WhatsApp for approval before washing begins.",
+    q: "How does the booking process work?",
+    a: "Booking is simple and direct: send a WhatsApp message or place a quick phone call to our central numbers (060 963 3688 / 064 830 8785) to arrange collection and return. You can also configure your preferences with the interactive form below and tap to dispatch via WhatsApp in one tap!",
   },
   {
-    q: "Is there a minimum order amount?",
-    a: "No. Laundro-Hub has no minimum order amount — whether you have 1 kg of clothes or multiple duvets, we gladly wash and deliver with equal care.",
+    q: "What are your delivery time slots?",
+    a: "We have no fixed delivery time slots! Pick-ups and returns are scheduled dynamically with our driver throughout the day upon request, offering you maximum convenience and flexibility.",
+  },
+  {
+    q: "What is your service area?",
+    a: "We service the entire Bloemfontein area, including Langenhovenpark, Bains Lodge / Bainsvlei, Woodland Hills Wildlife Estate, Universitas, Brandwag, Westdene, Dan Pienaar, Pentagon Park, Bayswater, Waverley, and Fichardtpark.",
   },
   {
     q: "How can I pay for my wash?",
-    a: "We accept Speedpoint Card Tap upon return delivery or instant EFT. For customer, driver, and staff security, we operate on a strictly NO CASH policy.",
+    a: "Our billing policy is strictly EFT or card payment (Speedpoint tap upon delivery/collection). For security, strictly NO CASH is handled on premises or by drivers, and we do not run open monthly accounts.",
+  },
+  {
+    q: "Is there a minimum order amount?",
+    a: "No. Laundro-Hub has no minimum order amount — whether you have 1 kg of clothes, a single pair of sneakers, or 30 kg of blankets, every load is welcomed and washed with care.",
   },
   {
     q: "Do prices include VAT?",
-    a: "Laundro-Hub is not VAT registered. All prices quoted on our price list and digital invoices are net amounts — no VAT is added.",
+    a: "Laundro-Hub is not VAT registered. All prices quoted on our price list and digital invoices are net amounts — zero VAT added.",
+  },
+  {
+    q: "Do you have physical drop-off locations?",
+    a: "Yes! We operate two convenient drop-off points: our main store at The Towers Shopping Centre (opposite car wash, Langenhovenpark) and our Bains Lodge Drop-Off Point (main entrance, directly opposite security, Bains Lodge).",
   },
   {
     q: "Do you ever wash my clothes with other people's clothes?",
     a: "Never. We enforce a strict Individual Drum Policy. Every customer's order is washed, dried, and folded separately in sanitized commercial machines.",
-  },
-  {
-    q: "What suburbs do you collect from?",
-    a: "We collect across greater Bloemfontein, including Langenhovenpark, Woodland Hills Wildlife Estate, Universitas, Brandwag, Westdene, Dan Pienaar, Pentagon Park, Bayswater, Waverley, and Fichardtpark.",
-  },
-  {
-    q: "How does the My Wash booking process work right now?",
-    a: "My Wash is currently managed directly through our WhatsApp dispatch desk (064 830 8785) for instant driver coordination. Full website self-service checkout will be added in an upcoming update. You can configure your preferences with our scheduler below and tap to send your request straight to WhatsApp!",
   },
 ];
 
