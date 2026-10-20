@@ -82,17 +82,16 @@ export function HeroVideoPlayer() {
             el.play().catch(() => {});
           }
         }}
-        src="/videos/loop-wash.mp4"
         poster="/videos/loop-wash-poster.jpg"
         muted
         autoPlay
         playsInline
         loop
-        preload="metadata"
+        preload="auto"
         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
       >
-        <source src="/videos/loop-wash.webm" type="video/webm" />
         <source src="/videos/loop-wash.mp4" type="video/mp4" />
+        <source src="/videos/loop-wash.webm" type="video/webm" />
       </video>
 
       {/* Instant playback bootstrap script running during initial HTML parsing */}

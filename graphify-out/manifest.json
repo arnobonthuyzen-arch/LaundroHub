@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "src/components/HeroVideoPlayer.tsx": {
-    "mtime": 1791795813.5826526,
-    "seen": 1791795848.238278,
-    "ast_hash": "730b47e576d2fbd2e1942ebf78442878",
+    "mtime": 1792485965.7878945,
+    "seen": 1792485999.672682,
+    "ast_hash": "cf0cd9bf4ab3b63c63e504d355535279",
     "semantic_hash": ""
   },
   "src/components/MobileNav.tsx": {
@@ -1059,6 +1059,180 @@
     "mtime": 1791767454.5103369,
     "seen": 1791767702.726361,
     "ast_hash": "55afa57eecdbbb4e6c45544aa32965b3",
+    "semantic_hash": ""
+  },
+  "img/bedding.jpg": {
+    "mtime": 1792485910.1757681,
+    "seen": 1792485999.6727319,
+    "ast_hash": "ef38dc413f63b37fe124f98357942ac3",
+    "semantic_hash": ""
+  },
+  "img/collection.jpg": {
+    "mtime": 1792485910.172076,
+    "seen": 1792485999.6727319,
+    "ast_hash": "33e345937336693e8c122cae3de58340",
+    "semantic_hash": ""
+  },
+  "img/dropoff-point.jpg": {
+    "mtime": 1792485910.170313,
+    "seen": 1792485999.6727328,
+    "ast_hash": "bc3b78230b55d791f5b47db8afc58650",
+    "semantic_hash": ""
+  },
+  "img/express-delivery.jpg": {
+    "mtime": 1792485910.1712039,
+    "seen": 1792485999.6727328,
+    "ast_hash": "3b6008c9af38597c88d9df79abed36f7",
+    "semantic_hash": ""
+  },
+  "img/fabric-bg.jpg": {
+    "mtime": 1792485910.1666996,
+    "seen": 1792485999.672734,
+    "ast_hash": "da3e6570108bc3aabaac7092ec658921",
+    "semantic_hash": ""
+  },
+  "img/folding.jpg": {
+    "mtime": 1792485910.1603718,
+    "seen": 1792485999.672734,
+    "ast_hash": "0756e81dd978da2c92b5b0a6c79808c7",
+    "semantic_hash": ""
+  },
+  "img/guesthouse.jpg": {
+    "mtime": 1792485910.1775146,
+    "seen": 1792485999.672735,
+    "ast_hash": "3295c2cc479992b1a03bd1df23fc70a0",
+    "semantic_hash": ""
+  },
+  "img/hero-towels.jpg": {
+    "mtime": 1792485910.163077,
+    "seen": 1792485999.672735,
+    "ast_hash": "81d0273b1cb29b912af97353b6a0c1bd",
+    "semantic_hash": ""
+  },
+  "img/hostel.jpg": {
+    "mtime": 1792485910.1731954,
+    "seen": 1792485999.672736,
+    "ast_hash": "7b5040ccee2c3119bac69b5641941d20",
+    "semantic_hash": ""
+  },
+  "img/ironing.jpg": {
+    "mtime": 1792485910.1614406,
+    "seen": 1792485999.672736,
+    "ast_hash": "5c2defa17cb12e4532393f5c1776ac66",
+    "semantic_hash": ""
+  },
+  "img/laundry-interior.jpg": {
+    "mtime": 1792485910.1769698,
+    "seen": 1792485999.6727371,
+    "ast_hash": "99e0bd01f9c3f3ea6f6a95fb072fa9b1",
+    "semantic_hash": ""
+  },
+  "img/logo.png": {
+    "mtime": 1792485910.1676946,
+    "seen": 1792485999.6727371,
+    "ast_hash": "b8ef06fb6a0c54730c8af2a568869b30",
+    "semantic_hash": ""
+  },
+  "img/packages.jpg": {
+    "mtime": 1792485910.1658027,
+    "seen": 1792485999.672738,
+    "ast_hash": "60597eeb3336211f8e0a9352e8532a19",
+    "semantic_hash": ""
+  },
+  "img/ribbon-bundles.jpg": {
+    "mtime": 1792485910.1763525,
+    "seen": 1792485999.672738,
+    "ast_hash": "037f01b510990fc03e1ee9990d960a85",
+    "semantic_hash": ""
+  },
+  "img/steam-pressing.jpg": {
+    "mtime": 1792485910.1684945,
+    "seen": 1792485999.672739,
+    "ast_hash": "5f5250b76ed3d1f38bf59f4871e0d067",
+    "semantic_hash": ""
+  },
+  "img/store-sign.jpg": {
+    "mtime": 1792485910.1585321,
+    "seen": 1792485999.672739,
+    "ast_hash": "70f8f73749d59b711d818d7f792e52e3",
+    "semantic_hash": ""
+  },
+  "img/storefront-window1.jpg": {
+    "mtime": 1792485910.1596928,
+    "seen": 1792485999.672739,
+    "ast_hash": "c50997d2d35d2df211630171e726adf2",
+    "semantic_hash": ""
+  },
+  "img/storefront-window2.jpg": {
+    "mtime": 1792485910.1577368,
+    "seen": 1792485999.67274,
+    "ast_hash": "0f49ad5efd68112a02549b7cdd79eb7c",
+    "semantic_hash": ""
+  },
+  "img/student.jpg": {
+    "mtime": 1792485910.1635473,
+    "seen": 1792485999.67274,
+    "ast_hash": "03659ac5bbd9b040fb8a0bb30ecb1e06",
+    "semantic_hash": ""
+  },
+  "img/uniforms.jpg": {
+    "mtime": 1792485910.1693609,
+    "seen": 1792485999.6727412,
+    "ast_hash": "ccd2650a36f100f67862f6d6d5afc7b4",
+    "semantic_hash": ""
+  },
+  "img/van.jpg": {
+    "mtime": 1792485910.1643364,
+    "seen": 1792485999.6727412,
+    "ast_hash": "58c686815a6b017c943993b8084a13b5",
+    "semantic_hash": ""
+  },
+  "img/washing.jpg": {
+    "mtime": 1792485910.1626232,
+    "seen": 1792485999.672742,
+    "ast_hash": "4b7fa4e167a270e0f73f921ca95ec7d8",
+    "semantic_hash": ""
+  },
+  "img/weighing.jpg": {
+    "mtime": 1792485910.1747375,
+    "seen": 1792485999.672742,
+    "ast_hash": "6f89d5355483e46a1844578217a00e7c",
+    "semantic_hash": ""
+  },
+  "videos/frame1.jpg": {
+    "mtime": 1792485910.1497161,
+    "seen": 1792485999.672777,
+    "ast_hash": "2a0cf1069f603045d316e8179f7dab5c",
+    "semantic_hash": ""
+  },
+  "videos/frame5.jpg": {
+    "mtime": 1792485910.148725,
+    "seen": 1792485999.672778,
+    "ast_hash": "b2a80d88ebe830a7aadc96f1b1f1956a",
+    "semantic_hash": ""
+  },
+  "videos/frame9.jpg": {
+    "mtime": 1792485910.1474016,
+    "seen": 1792485999.672778,
+    "ast_hash": "56b2ac6593f3a00e036677845ef6d139",
+    "semantic_hash": ""
+  },
+  "videos/loop-wash-poster.jpg": {
+    "mtime": 1792485910.1480193,
+    "seen": 1792485999.672779,
+    "ast_hash": "2a0cf1069f603045d316e8179f7dab5c",
+    "semantic_hash": ""
+  },
+  "videos/loop-wash.mp4": {
+    "mtime": 1792485910.1526904,
+    "seen": 1792485999.6727831,
+    "ast_hash": "79156de450ebbde3eb9d03f0cb02ca20",
+    "semantic_hash": ""
+  },
+  "videos/loop-wash.webm": {
+    "mtime": 1792485910.1465995,
+    "seen": 1792485999.6727831,
+    "ast_hash": "024f09046245fae0f6a18dd8801a7085",
     "semantic_hash": ""
   }
 }
