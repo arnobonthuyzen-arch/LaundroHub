@@ -203,60 +203,6 @@
     "ast_hash": "44648880fa3be33f1f3d4cfcb27fbc7b",
     "semantic_hash": ""
   },
-  "about.html": {
-    "mtime": 1791753464.544361,
-    "seen": 1791753505.740298,
-    "ast_hash": "d2f4c4e1b5cbc3c34a0ed1263676834c",
-    "semantic_hash": ""
-  },
-  "bedding-linen.html": {
-    "mtime": 1791742934.2946138,
-    "seen": 1791745652.40649,
-    "ast_hash": "9242af35d13f32f7e5e40538fd789f15",
-    "semantic_hash": ""
-  },
-  "collection-delivery.html": {
-    "mtime": 1791753758.1777701,
-    "seen": 1791753839.479638,
-    "ast_hash": "3259cf2c11c2e9397a773a29f0215f9b",
-    "semantic_hash": ""
-  },
-  "contact.html": {
-    "mtime": 1791743178.0444431,
-    "seen": 1791745652.4064908,
-    "ast_hash": "8ce5decafef731f825ec8abec0908c91",
-    "semantic_hash": ""
-  },
-  "index.html": {
-    "mtime": 1791742583.5155349,
-    "seen": 1791745652.406492,
-    "ast_hash": "67c891bd4a6a89eb53bbbd55e84ad3d9",
-    "semantic_hash": ""
-  },
-  "ironing.html": {
-    "mtime": 1791742845.5044587,
-    "seen": 1791745652.406493,
-    "ast_hash": "2c716e373e39e2257c32c62cc1b7c037",
-    "semantic_hash": ""
-  },
-  "monthly-packages.html": {
-    "mtime": 1791742261.4043067,
-    "seen": 1791745652.406493,
-    "ast_hash": "0c7734eb008496da6533815a6c6a64e1",
-    "semantic_hash": ""
-  },
-  "services.html": {
-    "mtime": 1791753787.0934496,
-    "seen": 1791753839.479645,
-    "ast_hash": "715e1e82b53f18e0ad4469a16dcadfa1",
-    "semantic_hash": ""
-  },
-  "washing-drying.html": {
-    "mtime": 1791742727.7507384,
-    "seen": 1791745652.406497,
-    "ast_hash": "1f2bf981bac53171e247d3a0bd14bc68",
-    "semantic_hash": ""
-  },
   "assets/icons/basket.svg": {
     "mtime": 1790436653.0,
     "seen": 1790463989.725408,
@@ -1019,12 +965,6 @@
     "ast_hash": "0f49ad5efd68112a02549b7cdd79eb7c",
     "semantic_hash": ""
   },
-  "school-hostels.html": {
-    "mtime": 1791742253.3755054,
-    "seen": 1791745652.406494,
-    "ast_hash": "f1355dc7dc2ff6991ba004b596024feb",
-    "semantic_hash": ""
-  },
   "src/components/TowersMap.tsx": {
     "mtime": 1791769176.1933365,
     "seen": 1791769543.7412841,
@@ -1233,6 +1173,66 @@
     "mtime": 1792485910.1465995,
     "seen": 1792485999.6727831,
     "ast_hash": "024f09046245fae0f6a18dd8801a7085",
+    "semantic_hash": ""
+  },
+  "legacy-html/about.html": {
+    "mtime": 1791753464.544361,
+    "seen": 1792691827.025645,
+    "ast_hash": "d2f4c4e1b5cbc3c34a0ed1263676834c",
+    "semantic_hash": ""
+  },
+  "legacy-html/bedding-linen.html": {
+    "mtime": 1791742934.2946138,
+    "seen": 1792691827.025645,
+    "ast_hash": "9242af35d13f32f7e5e40538fd789f15",
+    "semantic_hash": ""
+  },
+  "legacy-html/collection-delivery.html": {
+    "mtime": 1791753758.1777701,
+    "seen": 1792691827.025646,
+    "ast_hash": "3259cf2c11c2e9397a773a29f0215f9b",
+    "semantic_hash": ""
+  },
+  "legacy-html/contact.html": {
+    "mtime": 1791743178.0444431,
+    "seen": 1792691827.025646,
+    "ast_hash": "8ce5decafef731f825ec8abec0908c91",
+    "semantic_hash": ""
+  },
+  "legacy-html/index.html": {
+    "mtime": 1791742583.5155349,
+    "seen": 1792691827.0256472,
+    "ast_hash": "67c891bd4a6a89eb53bbbd55e84ad3d9",
+    "semantic_hash": ""
+  },
+  "legacy-html/ironing.html": {
+    "mtime": 1791742845.5044587,
+    "seen": 1792691827.0256472,
+    "ast_hash": "2c716e373e39e2257c32c62cc1b7c037",
+    "semantic_hash": ""
+  },
+  "legacy-html/monthly-packages.html": {
+    "mtime": 1791742261.4043067,
+    "seen": 1792691827.025648,
+    "ast_hash": "0c7734eb008496da6533815a6c6a64e1",
+    "semantic_hash": ""
+  },
+  "legacy-html/school-hostels.html": {
+    "mtime": 1791742253.3755054,
+    "seen": 1792691827.025648,
+    "ast_hash": "f1355dc7dc2ff6991ba004b596024feb",
+    "semantic_hash": ""
+  },
+  "legacy-html/services.html": {
+    "mtime": 1791753787.0934496,
+    "seen": 1792691827.0256488,
+    "ast_hash": "715e1e82b53f18e0ad4469a16dcadfa1",
+    "semantic_hash": ""
+  },
+  "legacy-html/washing-drying.html": {
+    "mtime": 1791742727.7507384,
+    "seen": 1792691827.0256488,
+    "ast_hash": "1f2bf981bac53171e247d3a0bd14bc68",
     "semantic_hash": ""
   }
 }
