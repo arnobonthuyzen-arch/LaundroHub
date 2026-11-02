@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792485458.8410397,
-    "seen": 1792485504.9310799,
-    "ast_hash": "2aa14a1ba8c78bcd887297a8a8890e92",
+    "mtime": 1793618910.8066413,
+    "seen": 1793620022.4687629,
+    "ast_hash": "e24f1a78f291858e1f438fd54e92722d",
     "semantic_hash": ""
   },
   "src/app/robots.ts": {
@@ -168,15 +168,15 @@
     "semantic_hash": ""
   },
   "src/lib/data.ts": {
-    "mtime": 1792478843.9374466,
-    "seen": 1792483040.155632,
-    "ast_hash": "44223b91ecadebf5591ff00bdfae155c",
+    "mtime": 1793615635.8022902,
+    "seen": 1793620022.468797,
+    "ast_hash": "ef562386eb2065326793575a0525c894",
     "semantic_hash": ""
   },
   "src/lib/types.ts": {
-    "mtime": 1792425962.125222,
-    "seen": 1792483040.155634,
-    "ast_hash": "2edb26b4e58dcd95c80b688dde4ce4d7",
+    "mtime": 1793615475.4574096,
+    "seen": 1793620022.4687989,
+    "ast_hash": "fa6451b743258a9d7006985421e38f20",
     "semantic_hash": ""
   },
   "src/lib/utils.ts": {
@@ -840,9 +840,9 @@
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
-    "mtime": 1792485471.4023867,
-    "seen": 1792485504.9311,
-    "ast_hash": "38adbf86dcf42e3cbc4eff9b8eacab21",
+    "mtime": 1793618540.9780319,
+    "seen": 1793620022.468778,
+    "ast_hash": "06f53c8293d8a4107f9afb44c5fbe836",
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {
@@ -1233,6 +1233,18 @@
     "mtime": 1791742727.7507384,
     "seen": 1792691827.0256488,
     "ast_hash": "1f2bf981bac53171e247d3a0bd14bc68",
+    "semantic_hash": ""
+  },
+  "img/price-list-september-2026.png": {
+    "mtime": 1793615244.9783292,
+    "seen": 1793620022.4689121,
+    "ast_hash": "ff251b45f1afc43ea79daaa9dc635d7a",
+    "semantic_hash": ""
+  },
+  "public/img/price-list-september-2026.png": {
+    "mtime": 1793615244.9749916,
+    "seen": 1793620022.468979,
+    "ast_hash": "ff251b45f1afc43ea79daaa9dc635d7a",
     "semantic_hash": ""
   }
 }

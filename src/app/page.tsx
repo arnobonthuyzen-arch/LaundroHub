@@ -14,6 +14,7 @@ import {
   GraduationCap,
   Building2,
   Trophy,
+  Receipt,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { getServices, getPricingPlans, getSuburbs, BUSINESS_INFO } from "@/lib/data";
@@ -203,6 +204,31 @@ export default async function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Quick Price List Callout Banner */}
+          <div className="mt-12 rounded-3xl bg-gradient-to-r from-brand-deep to-brand-plum p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-elevated">
+            <div className="space-y-1.5 text-center md:text-left">
+              <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-mint/20 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-brand-mint">
+                <Receipt className="h-3.5 w-3.5" />
+                <span>Official Tariff &bull; Effective from 1 September 2026</span>
+              </div>
+              <h3 className="font-display text-xl sm:text-2xl font-bold">
+                Wash/Dry/Fold from R40/kg &bull; Ironing R40/kg &bull; Duvets R150
+              </h3>
+              <p className="text-xs sm:text-sm text-brand-lav/80">
+                Transparent kg rates &bull; Sneakers R60/pair &bull; Doorstep collection from R35 &bull; Strictly EFT or Card (No cash, no open accounts)
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <Link
+                href="/what-we-offer#pricing"
+                className="inline-flex items-center gap-2 rounded-xl bg-brand-mint text-brand-deep hover:bg-white px-5 py-3 text-xs font-bold transition-all shadow-sm"
+              >
+                <span>View Full Official Price List</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

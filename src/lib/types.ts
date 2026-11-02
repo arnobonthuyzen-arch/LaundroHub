@@ -43,6 +43,8 @@ export interface PriceListItem {
   name: string;
   price: number;
   unit: "per kg" | "per pair" | "each" | "per trip";
+  flyerUnit?: string;
+  order?: number;
   formattedPrice: string;
   category: "everyday" | "bedding" | "speciality" | "transport";
   note?: string;

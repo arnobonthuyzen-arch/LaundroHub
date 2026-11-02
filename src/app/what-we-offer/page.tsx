@@ -24,6 +24,9 @@ import {
   Receipt,
   Footprints,
   Tag,
+  Download,
+  ExternalLink,
+  Eye,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import {
@@ -372,6 +375,180 @@ export default async function WhatWeOfferPage() {
             </div>
           </div>
 
+          {/* Master Official Price List Section (Exact Flyer Replica) */}
+          <div className="mb-14 rounded-3xl border-2 border-brand-purple/20 bg-white shadow-elevated overflow-hidden">
+            <div className="bg-gradient-to-r from-brand-deep via-brand-purple to-brand-plum px-6 sm:px-8 py-6 text-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-mint/20 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-brand-mint mb-1.5">
+                  <Receipt className="h-3.5 w-3.5" />
+                  Official Tariff &bull; Effective from 1 September 2026
+                </span>
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+                  Master Price List
+                </h3>
+                <p className="text-xs sm:text-sm text-brand-lav/80 mt-0.5 italic">
+                  “We care for the clothes you wear!”
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <a
+                  href="/img/price-list-september-2026.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-brand-mint text-brand-deep hover:bg-white px-4 py-2.5 text-xs font-bold transition-all shadow-sm"
+                >
+                  <Eye className="h-3.5 w-3.5" />
+                  <span>View Official Flyer</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+              {/* Left Column: Official Printed Flyer Preview Card */}
+              <div className="lg:col-span-5 bg-gradient-to-b from-brand-ground to-brand-lav/30 p-6 sm:p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-brand-line">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-brand-teal">
+                      Official Printed Tariff
+                    </span>
+                    <span className="text-[11px] font-bold rounded-full bg-brand-tealbg text-brand-teal px-2.5 py-0.5 border border-brand-teal/20">
+                      In-Store &amp; Dispatch
+                    </span>
+                  </div>
+
+                  <a
+                    href="/img/price-list-september-2026.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block relative aspect-[1/1.4] w-full max-w-sm mx-auto overflow-hidden rounded-2xl border-2 border-brand-line shadow-card hover:shadow-elevated transition-all"
+                  >
+                    <Image
+                      src="/img/price-list-september-2026.png"
+                      alt="Laundro-Hub Official Price List Effective 1 September 2026"
+                      fill
+                      className="object-contain p-1 group-hover:scale-[1.02] transition-transform duration-300"
+                      sizes="(max-width: 1024px) 100vw, 400px"
+                    />
+                    <div className="absolute inset-0 bg-brand-deep/0 group-hover:bg-brand-deep/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <span className="rounded-xl bg-white/95 backdrop-blur-sm text-brand-deep text-xs font-bold px-3.5 py-2 shadow-md flex items-center gap-1.5">
+                        <Eye className="h-3.5 w-3.5 text-brand-purple" />
+                        Click to expand flyer
+                      </span>
+                    </div>
+                  </a>
+
+                  <p className="mt-4 text-center text-xs text-brand-muted">
+                    Click the flyer above to view or download the full-resolution copy.
+                  </p>
+                </div>
+
+                {/* 4 Flyer Value Badges */}
+                <div className="mt-6 pt-6 border-t border-brand-line/70 grid grid-cols-2 gap-2.5 text-[11px]">
+                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
+                    <span>Quality You Can Trust</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
+                    <span>Professional Laundry Care</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
+                    <span>Fresh, Clean &amp; Well-Cared</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
+                    <span>7 Days Collection &amp; Delivery</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Exact Flyer Table Representation */}
+              <div className="lg:col-span-7 flex flex-col justify-between">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="bg-brand-purple text-white uppercase text-xs tracking-wider">
+                        <th className="py-3.5 px-4 sm:px-6 font-extrabold">Service</th>
+                        <th className="py-3.5 px-3 text-center font-extrabold text-[11px]">Rate Unit</th>
+                        <th className="py-3.5 px-4 sm:px-6 text-right font-extrabold">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
+                      {priceList
+                        .filter((item) => (item.order ?? 99) <= 15)
+                        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                        .map((item, idx) => (
+                          <tr
+                            key={item.id}
+                            className={`transition-colors hover:bg-brand-tealbg/50 ${
+                              idx % 2 === 0 ? "bg-white" : "bg-[#f4faf9]"
+                            }`}
+                          >
+                            <td className="py-3.5 px-4 sm:px-6">
+                              <span className="font-bold text-brand-deep">
+                                {item.name}
+                              </span>
+                              {item.badge && (
+                                <span className="ml-2 inline-block rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-extrabold px-2 py-0.5">
+                                  {item.badge}
+                                </span>
+                              )}
+                            </td>
+                            <td className="py-3.5 px-3 text-center whitespace-nowrap">
+                              <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                                {item.flyerUnit || item.unit}
+                              </span>
+                            </td>
+                            <td className="py-3.5 px-4 sm:px-6 text-right whitespace-nowrap">
+                              <span className="font-display text-base sm:text-lg font-extrabold text-brand-purple">
+                                {item.formattedPrice}
+                              </span>
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Transport Van Rates Bar */}
+                <div className="p-4 sm:p-5 bg-brand-tealbg/40 border-t border-brand-line">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-brand-teal flex items-center gap-1.5">
+                      <Truck className="h-3.5 w-3.5" />
+                      Express Collection &amp; Delivery Van Rates
+                    </span>
+                    <span className="text-[11px] text-brand-muted font-semibold">
+                      No Minimum Order
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-brand-line">
+                      <span className="font-medium text-brand-body">Langenhovenpark Hub</span>
+                      <span className="font-display font-extrabold text-brand-deep">R35 / trip</span>
+                    </div>
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-brand-line">
+                      <span className="font-medium text-brand-body">Greater Bloemfontein</span>
+                      <span className="font-display font-extrabold text-brand-deep">R65 / trip</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Categorised Deep-Dive Tabs / Cards Header */}
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-brand-deep">
+              Explore by Category
+            </h3>
+            <p className="text-xs sm:text-sm text-brand-muted mt-1">
+              Detailed breakdown of care methods, individual machine cycles, and turnaround times:
+            </p>
+          </div>
+
           {/* Pricing Tables Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Table 1: Everyday Laundry & Ironing */}
@@ -418,7 +595,7 @@ export default async function WhatWeOfferPage() {
                       </div>
                       <div className="text-right shrink-0">
                         <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
-                          {item.formattedPrice}
+                          {item.formattedPrice} {item.unit !== "each" && item.unit !== "per pair" && item.unit !== "per trip" ? "/ kg" : ""}
                         </span>
                       </div>
                     </div>
@@ -470,7 +647,7 @@ export default async function WhatWeOfferPage() {
                       </div>
                       <div className="text-right shrink-0">
                         <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
-                          {item.formattedPrice}
+                          {item.formattedPrice} {item.unit === "per kg" ? "/ kg" : ""}
                         </span>
                       </div>
                     </div>
@@ -525,7 +702,7 @@ export default async function WhatWeOfferPage() {
                       </div>
                       <div className="text-right shrink-0">
                         <span className="font-display text-lg sm:text-xl font-extrabold text-brand-deep">
-                          {item.formattedPrice}
+                          {item.formattedPrice} {item.unit === "per kg" ? "/ kg" : item.unit === "per pair" ? "/ pair" : ""}
                         </span>
                       </div>
                     </div>
