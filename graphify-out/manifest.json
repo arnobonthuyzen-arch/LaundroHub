@@ -60,9 +60,9 @@
     "semantic_hash": ""
   },
   "src/app/layout.tsx": {
-    "mtime": 1792479383.036371,
-    "seen": 1792483040.155587,
-    "ast_hash": "6b98f2a4653ccb1c62e19ec46f2f24c8",
+    "mtime": 1794564912.0993834,
+    "seen": 1794565116.489085,
+    "ast_hash": "d0ba0cf60755f8c5eb0a31195cac3433",
     "semantic_hash": ""
   },
   "src/app/loading.tsx": {
@@ -1245,6 +1245,54 @@
     "mtime": 1793615244.9749916,
     "seen": 1793620022.468979,
     "ast_hash": "ff251b45f1afc43ea79daaa9dc635d7a",
+    "semantic_hash": ""
+  },
+  "googlebb31593bc2baad5e.html": {
+    "mtime": 1794564644.0305598,
+    "seen": 1794565116.489161,
+    "ast_hash": "90acb826295dec4f0bed18d34660ca0c",
+    "semantic_hash": ""
+  },
+  "public/googlebb31593bc2baad5e.html": {
+    "mtime": 1794564641.569376,
+    "seen": 1794565116.489183,
+    "ast_hash": "90acb826295dec4f0bed18d34660ca0c",
+    "semantic_hash": ""
+  },
+  "apple-touch-icon.png": {
+    "mtime": 1794564861.7372322,
+    "seen": 1794565116.489185,
+    "ast_hash": "e53b42d5eebe426e91d570f2878b1919",
+    "semantic_hash": ""
+  },
+  "favicon-16x16.png": {
+    "mtime": 1794564909.639407,
+    "seen": 1794565116.489284,
+    "ast_hash": "c4c6976574ad41c24e9af4514569813d",
+    "semantic_hash": ""
+  },
+  "favicon-32x32.png": {
+    "mtime": 1794564909.6312685,
+    "seen": 1794565116.489286,
+    "ast_hash": "63e8f0ba33fa4c48a6e917ed25e78c7a",
+    "semantic_hash": ""
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1794564861.7325401,
+    "seen": 1794565116.489331,
+    "ast_hash": "e53b42d5eebe426e91d570f2878b1919",
+    "semantic_hash": ""
+  },
+  "public/favicon-16x16.png": {
+    "mtime": 1794564861.738985,
+    "seen": 1794565116.489333,
+    "ast_hash": "c4c6976574ad41c24e9af4514569813d",
+    "semantic_hash": ""
+  },
+  "public/favicon-32x32.png": {
+    "mtime": 1794564861.7382574,
+    "seen": 1794565116.489334,
+    "ast_hash": "63e8f0ba33fa4c48a6e917ed25e78c7a",
     "semantic_hash": ""
   }
 }

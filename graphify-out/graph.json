@@ -270,7 +270,7 @@
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L120"
+      "source_location": "L125"
     },
     {
       "id": "src_app_retirement_villages_page_retirementvillagespage",
@@ -1027,7 +1027,7 @@
       "file_type": "code",
       "norm_label": "jsonld",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L81"
+      "source_location": "L86"
     },
     {
       "id": "src_app_layout_metadata",
@@ -5908,7 +5908,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L120",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -5963,7 +5963,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L81",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -7145,5 +7145,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9484f450c5d6874332c5efc4b6f14bc34a1224c5"
+  "built_at_commit": "529ea4963315a64e7b79e758f20a8ff0c550b7f9"
 }
