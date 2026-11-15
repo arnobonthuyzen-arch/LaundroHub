@@ -173,11 +173,15 @@ export function Footer() {
                 <div className="pt-1 border-t border-white/10 space-y-0.5 text-[11px]">
                   <div className="flex justify-between">
                     <span>Mon–Fri:</span>
-                    <span className="font-mono text-white/90">07:00–18:00</span>
+                    <span className="font-mono text-white/90">07:00–17:30</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sat–Sun:</span>
                     <span className="font-mono text-white/90">09:00–13:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Public Holidays:</span>
+                    <span className="font-mono text-white/90">09:00–14:00</span>
                   </div>
                 </div>
               </div>

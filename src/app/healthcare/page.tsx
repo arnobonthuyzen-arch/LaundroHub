@@ -17,9 +17,19 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Healthcare & Clinic Laundry Services | Laundro-Hub Bloemfontein",
+  title: "Healthcare & Clinic Laundry Bloemfontein",
   description:
-    "Compliant medical and clinic laundry in Bloemfontein. High-temperature sanitisation for medical scrubs, doctor coats, patient gowns, and clinical examination linen.",
+    "Compliant clinic and healthcare laundry in Bloemfontein. High-temperature sanitisation for medical scrubs, doctor coats, and examination linen.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/healthcare",
+  },
+  openGraph: {
+    title: "Healthcare & Clinic Laundry Bloemfontein | Laundro-Hub",
+    description:
+      "Hygienic high-temperature laundry for clinics, medical practices, and healthcare facilities in Bloemfontein.",
+    url: "https://laundro-hub.co.za/healthcare",
+    images: [{ url: "/img/washing.jpg", alt: "Healthcare and clinic laundry in Bloemfontein" }],
+  },
 };
 
 export default function HealthcarePage() {
@@ -78,7 +88,7 @@ export default function HealthcarePage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20healthcare/clinic%20laundry%20services`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20healthcare/clinic%20laundry%20services`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -214,7 +224,7 @@ export default function HealthcarePage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20we%20are%20a%20medical/health%20practice%20inquiring%20about%20laundry%20rates`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20are%20a%20medical/health%20practice%20inquiring%20about%20laundry%20rates`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"

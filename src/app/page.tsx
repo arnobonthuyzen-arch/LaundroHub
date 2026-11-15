@@ -23,9 +23,21 @@ import { HeroVideoPlayer } from "@/components/HeroVideoPlayer";
 import TowersMapWrapper from "@/components/TowersMapWrapper";
 
 export const metadata: Metadata = {
-  title: "Laundro-Hub | Premium Laundry, Ironing & Collection in Bloemfontein",
+  title: {
+    absolute: "Laundro-Hub | Laundry & Ironing in Bloemfontein",
+  },
   description:
-    "We care for the clothes you wear. Professional washing, gentle drying, steam ironing, bedding and doorstep pickup in Langenhovenpark and throughout Bloemfontein.",
+    "Professional washing, gentle drying, steam ironing, duvet cleaning, and doorstep pickup in Langenhovenpark and across Bloemfontein.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za",
+  },
+  openGraph: {
+    title: "Laundro-Hub | Laundry & Ironing in Bloemfontein",
+    description:
+      "We care for the clothes you wear. Fast turnaround, pristine folding, and doorstep collection across Bloemfontein.",
+    url: "https://laundro-hub.co.za",
+    images: [{ url: "/img/fabric-bg.jpg", alt: "Laundro-Hub Bloemfontein" }],
+  },
 };
 
 export default async function HomePage() {
@@ -214,7 +226,7 @@ export default async function HomePage() {
                 <span>Official Tariff &bull; Effective from 1 September 2026</span>
               </div>
               <h3 className="font-display text-xl sm:text-2xl font-bold">
-                Wash/Dry/Fold from R40/kg &bull; Ironing R40/kg &bull; Duvets R150
+                Wash, Dry &amp; Fold R40/kg &bull; Ironing R42/kg &bull; Duvets from R120
               </h3>
               <p className="text-xs sm:text-sm text-brand-lav/80">
                 Transparent kg rates &bull; Sneakers R60/pair &bull; Doorstep collection from R35 &bull; Strictly EFT or Card (No cash, no open accounts)
@@ -577,7 +589,7 @@ export default async function HomePage() {
                   <span>Get Google Maps Directions</span>
                 </a>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hello%20Laundro-Hub,%20I%20have%20a%20question%20about%20visiting%20your%20Towers%20store`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hello%20Laundro-Hub,%20I%20have%20a%20question%20about%20visiting%20your%20Towers%20store`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-5 py-3 min-h-[44px] text-sm font-bold text-white shadow-sm hover:bg-brand-teal-dark active:scale-[0.98] transition-all hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
@@ -591,7 +603,7 @@ export default async function HomePage() {
               <div className="rounded-xl border border-brand-line/80 bg-brand-lav/40 p-3.5 text-xs text-brand-body space-y-1">
                 <span className="font-bold text-brand-deep block">Secondary Drop-Off Point: Bains Lodge</span>
                 <p className="text-brand-muted">
-                  Main entrance, directly opposite security &bull; Mon–Fri 07:00–17:30, Sat 09:00–14:00 (Sun Closed).
+                  Main entrance, directly opposite security &bull; Mon–Fri 07:00–17:30, Sat &amp; Public Holidays 09:00–14:00 (Sun Closed).
                 </p>
               </div>
             </div>

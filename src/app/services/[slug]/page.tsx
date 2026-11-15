@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ArrowRight, ArrowLeft, Sparkles, Shield, Clock } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { JsonLd } from "@/components/JsonLd";
 import { getServices, getServiceBySlug, BUSINESS_INFO } from "@/lib/data";
 
 interface ServicePageProps {
@@ -26,12 +27,16 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   }
 
   return {
-    title: `${service.title} | Laundro-Hub Bloemfontein`,
-    description: service.description,
+    title: `${service.title} Bloemfontein`,
+    description: service.description.slice(0, 152),
+    alternates: {
+      canonical: `https://laundro-hub.co.za/services/${service.slug}`,
+    },
     openGraph: {
-      title: `${service.title} - Laundro-Hub Bloemfontein`,
-      description: service.description,
-      images: [{ url: service.image }],
+      title: `${service.title} Bloemfontein | Laundro-Hub`,
+      description: service.description.slice(0, 152),
+      url: `https://laundro-hub.co.za/services/${service.slug}`,
+      images: [{ url: service.image, alt: service.title }],
     },
   };
 }
@@ -44,8 +49,27 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     notFound();
   }
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `https://laundro-hub.co.za/services/${service.slug}#service`,
+    name: `${service.title} in Bloemfontein`,
+    serviceType: service.title,
+    description: service.description,
+    url: `https://laundro-hub.co.za/services/${service.slug}`,
+    image: `https://laundro-hub.co.za${service.image}`,
+    provider: {
+      "@id": "https://laundro-hub.co.za/#organization",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Bloemfontein",
+    },
+  };
+
   return (
     <div className="flex flex-col">
+      <JsonLd id={`service-${service.slug}-jsonld`} data={serviceJsonLd} />
       {/* Hero Header with brand purple gradient */}
       <section className="relative overflow-hidden hero-purple-gradient border-b border-brand-line/70 py-12 sm:py-16">
         <div className="absolute -top-24 -left-20 h-80 w-80 rounded-full bg-brand-purple/15 blur-3xl pointer-events-none" />

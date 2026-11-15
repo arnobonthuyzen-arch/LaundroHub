@@ -17,9 +17,19 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Commercial Laundry for Guesthouses, B&Bs & Hotels | Laundro-Hub Bloemfontein",
+  title: "Guesthouse, B&B & Hotel Laundry Bloemfontein",
   description:
-    "Commercial laundry solutions for Bloemfontein guesthouses, boutique hotels, and dining rooms. High-capacity linen sanitisation, steam pressing, and scheduled van routes.",
+    "Commercial laundry for Bloemfontein guesthouses, B&Bs, and hotels. High-capacity linen sanitisation, steam pressing, and scheduled van routes.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/hospitality",
+  },
+  openGraph: {
+    title: "Guesthouse, B&B & Hotel Laundry Bloemfontein | Laundro-Hub",
+    description:
+      "Commercial linen, towel, and dining room laundry for guesthouses, B&Bs, and boutique hotels in Bloemfontein.",
+    url: "https://laundro-hub.co.za/hospitality",
+    images: [{ url: "/img/bedding.jpg", alt: "Commercial hospitality laundry in Bloemfontein" }],
+  },
 };
 
 export default function HospitalityPage() {
@@ -78,7 +88,7 @@ export default function HospitalityPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20a%20guesthouse%20RFQ%20commercial%20quote`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20a%20guesthouse%20RFQ%20commercial%20quote`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -214,7 +224,7 @@ export default function HospitalityPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20we%20are%20a%20guesthouse/hotel%20and%20want%20a%20commercial%20quote`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20are%20a%20guesthouse/hotel%20and%20want%20a%20commercial%20quote`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"

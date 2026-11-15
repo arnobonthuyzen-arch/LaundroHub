@@ -79,7 +79,7 @@
       "file_type": "code",
       "norm_label": "logisticsoptiontype",
       "source_file": "src/lib/data.ts",
-      "source_location": "L486"
+      "source_location": "L488"
     },
     {
       "id": "src_lib_types_actionstate",
@@ -108,6 +108,32 @@
       "source_location": "L20"
     },
     {
+      "id": "src_components_jsonld_jsonldprops",
+      "label": "JsonLdProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "jsonldprops",
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_components_jsonld_jsonldvalue",
+      "label": "JsonLdValue",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "jsonldvalue",
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L3"
+    },
+    {
       "id": "src_app_services_slug_page_servicepageprops",
       "label": "ServicePageProps",
       "_callable": true,
@@ -118,7 +144,7 @@
       "file_type": "code",
       "norm_label": "servicepageprops",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "src_lib_data_logisticsrate",
@@ -131,7 +157,7 @@
       "file_type": "code",
       "norm_label": "logisticsrate",
       "source_file": "src/lib/data.ts",
-      "source_location": "L488"
+      "source_location": "L490"
     },
     {
       "id": "src_lib_types_pricelistitem",
@@ -225,18 +251,6 @@
       "source_location": "L5"
     },
     {
-      "id": "src_app_airbnb_page_airbnbpage",
-      "label": "AirbnbPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "airbnbpage()",
-      "source_file": "src/app/airbnb/page.tsx",
-      "source_location": "L25"
-    },
-    {
       "id": "src_app_healthcare_page_healthcarepage",
       "label": "HealthcarePage()",
       "_callable": true,
@@ -246,7 +260,7 @@
       "file_type": "code",
       "norm_label": "healthcarepage()",
       "source_file": "src/app/healthcare/page.tsx",
-      "source_location": "L25"
+      "source_location": "L35"
     },
     {
       "id": "src_app_hospitality_page_hospitalitypage",
@@ -258,7 +272,7 @@
       "file_type": "code",
       "norm_label": "hospitalitypage()",
       "source_file": "src/app/hospitality/page.tsx",
-      "source_location": "L25"
+      "source_location": "L35"
     },
     {
       "id": "src_app_layout_rootlayout",
@@ -270,7 +284,7 @@
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L125"
+      "source_location": "L144"
     },
     {
       "id": "src_app_retirement_villages_page_retirementvillagespage",
@@ -282,7 +296,7 @@
       "file_type": "code",
       "norm_label": "retirementvillagespage()",
       "source_file": "src/app/retirement-villages/page.tsx",
-      "source_location": "L26"
+      "source_location": "L36"
     },
     {
       "id": "src_app_schools_page_schoolspage",
@@ -294,7 +308,7 @@
       "file_type": "code",
       "norm_label": "schoolspage()",
       "source_file": "src/app/schools/page.tsx",
-      "source_location": "L25"
+      "source_location": "L35"
     },
     {
       "id": "src_components_footer_footer",
@@ -438,7 +452,7 @@
       "file_type": "code",
       "norm_label": "getlogisticsfee()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L510"
+      "source_location": "L512"
     },
     {
       "id": "src_lib_mail_createtransporter",
@@ -486,7 +500,7 @@
       "file_type": "code",
       "norm_label": "contactpage()",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L15"
+      "source_location": "L25"
     },
     {
       "id": "src_app_express_page_expresspage",
@@ -498,7 +512,7 @@
       "file_type": "code",
       "norm_label": "expresspage()",
       "source_file": "src/app/express/page.tsx",
-      "source_location": "L26"
+      "source_location": "L36"
     },
     {
       "id": "src_app_my_wash_page_mywashpage",
@@ -510,7 +524,7 @@
       "file_type": "code",
       "norm_label": "mywashpage()",
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L76"
+      "source_location": "L86"
     },
     {
       "id": "src_app_page_homepage",
@@ -522,7 +536,7 @@
       "file_type": "code",
       "norm_label": "homepage()",
       "source_file": "src/app/page.tsx",
-      "source_location": "L31"
+      "source_location": "L43"
     },
     {
       "id": "src_lib_data_getsuburbs",
@@ -534,7 +548,7 @@
       "file_type": "code",
       "norm_label": "getsuburbs()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L482"
+      "source_location": "L484"
     },
     {
       "id": "src_app_sport_events_page_sporteventspage",
@@ -618,7 +632,7 @@
       "file_type": "code",
       "norm_label": "robots()",
       "source_file": "src/app/robots.ts",
-      "source_location": "L3"
+      "source_location": "L14"
     },
     {
       "id": "src_app_services_loading_servicesloading",
@@ -705,6 +719,90 @@
       "source_location": "L144"
     },
     {
+      "id": "src_app_airbnb_page_airbnbpage",
+      "label": "AirbnbPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "airbnbpage()",
+      "source_file": "src/app/airbnb/page.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_app_students_page_studentspage",
+      "label": "StudentsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "studentspage()",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L36"
+    },
+    {
+      "id": "src_app_what_we_offer_page_whatweofferpage",
+      "label": "WhatWeOfferPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "whatweofferpage()",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L57"
+    },
+    {
+      "id": "src_components_jsonld_jsonld",
+      "label": "JsonLd()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "jsonld()",
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_lib_data_getofficialpricelist",
+      "label": "getOfficialPriceList()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "getofficialpricelist()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L476"
+    },
+    {
+      "id": "src_lib_data_getpricingplans",
+      "label": "getPricingPlans()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "getpricingplans()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L472"
+    },
+    {
+      "id": "src_lib_data_getpricingpolicy",
+      "label": "getPricingPolicy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "getpricingpolicy()",
+      "source_file": "src/lib/data.ts",
+      "source_location": "L480"
+    },
+    {
       "id": "src_app_about_page_aboutpage",
       "label": "AboutPage()",
       "_callable": true,
@@ -714,7 +812,19 @@
       "file_type": "code",
       "norm_label": "aboutpage()",
       "source_file": "src/app/about/page.tsx",
-      "source_location": "L13"
+      "source_location": "L23"
+    },
+    {
+      "id": "src_app_llms_txt_route_get",
+      "label": "GET()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "get()",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L5"
     },
     {
       "id": "src_app_services_slug_page_generatemetadata",
@@ -726,7 +836,7 @@
       "file_type": "code",
       "norm_label": "generatemetadata()",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "src_app_services_slug_page_generatestaticparams",
@@ -738,7 +848,7 @@
       "file_type": "code",
       "norm_label": "generatestaticparams()",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "src_app_services_slug_page_servicedetailpage",
@@ -750,7 +860,7 @@
       "file_type": "code",
       "norm_label": "servicedetailpage()",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L39"
+      "source_location": "L44"
     },
     {
       "id": "src_app_sitemap_sitemap",
@@ -762,67 +872,7 @@
       "file_type": "code",
       "norm_label": "sitemap()",
       "source_file": "src/app/sitemap.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_app_students_page_studentspage",
-      "label": "StudentsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "studentspage()",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_app_what_we_offer_page_whatweofferpage",
-      "label": "WhatWeOfferPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "whatweofferpage()",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_lib_data_getofficialpricelist",
-      "label": "getOfficialPriceList()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "getofficialpricelist()",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L474"
-    },
-    {
-      "id": "src_lib_data_getpricingplans",
-      "label": "getPricingPlans()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "getpricingplans()",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L470"
-    },
-    {
-      "id": "src_lib_data_getpricingpolicy",
-      "label": "getPricingPolicy()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "getpricingpolicy()",
-      "source_file": "src/lib/data.ts",
-      "source_location": "L478"
+      "source_location": "L6"
     },
     {
       "id": "src_lib_data_getservicebyslug",
@@ -834,7 +884,7 @@
       "file_type": "code",
       "norm_label": "getservicebyslug()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L463"
+      "source_location": "L465"
     },
     {
       "id": "src_lib_data_getservices",
@@ -846,7 +896,7 @@
       "file_type": "code",
       "norm_label": "getservices()",
       "source_file": "src/lib/data.ts",
-      "source_location": "L458"
+      "source_location": "L460"
     },
     {
       "id": "src_app_services_page_servicespage",
@@ -907,28 +957,6 @@
       "norm_label": "towersmapwrapper()",
       "source_file": "src/components/TowersMapWrapper.tsx",
       "source_location": "L17"
-    },
-    {
-      "id": "src_app_airbnb_page",
-      "label": "airbnb/page.tsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "airbnb/page.tsx",
-      "source_file": "src/app/airbnb/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_airbnb_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/airbnb/page.tsx",
-      "source_location": "L19"
     },
     {
       "id": "src_app_healthcare_page",
@@ -994,7 +1022,7 @@
       "file_type": "code",
       "norm_label": "bricolage",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "src_app_layout_caveat",
@@ -1005,7 +1033,7 @@
       "file_type": "code",
       "norm_label": "caveat",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "src_app_layout_figtree",
@@ -1016,18 +1044,7 @@
       "file_type": "code",
       "norm_label": "figtree",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_app_layout_jsonld",
-      "label": "jsonLd",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "BUSINESS_INFO",
-      "file_type": "code",
-      "norm_label": "jsonld",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L86"
+      "source_location": "L16"
     },
     {
       "id": "src_app_layout_metadata",
@@ -1038,7 +1055,18 @@
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L33"
+      "source_location": "L34"
+    },
+    {
+      "id": "src_app_layout_sitejsonld",
+      "label": "siteJsonLd",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "BUSINESS_INFO",
+      "file_type": "code",
+      "norm_label": "sitejsonld",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L87"
     },
     {
       "id": "src_app_layout_viewport",
@@ -1049,7 +1077,7 @@
       "file_type": "code",
       "norm_label": "viewport",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L27"
+      "source_location": "L28"
     },
     {
       "id": "src_app_retirement_villages_page",
@@ -1390,7 +1418,7 @@
       "file_type": "code",
       "norm_label": "faqs",
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L41"
+      "source_location": "L51"
     },
     {
       "id": "src_app_my_wash_page_how_it_works_steps",
@@ -1401,7 +1429,7 @@
       "file_type": "code",
       "norm_label": "how_it_works_steps",
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L14"
+      "source_location": "L24"
     },
     {
       "id": "src_app_my_wash_page_metadata",
@@ -1423,7 +1451,7 @@
       "file_type": "code",
       "norm_label": "collection_delivery_pricing",
       "source_file": "src/lib/data.ts",
-      "source_location": "L495"
+      "source_location": "L497"
     },
     {
       "id": "assets_js_main",
@@ -1844,6 +1872,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_app_robots_ai_and_search_bots",
+      "label": "AI_AND_SEARCH_BOTS",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "robots.ts",
+      "file_type": "code",
+      "norm_label": "ai_and_search_bots",
+      "source_file": "src/app/robots.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "src_app_services_loading",
       "label": "services/loading.tsx",
       "_origin": "ast",
@@ -1930,6 +1969,83 @@
       "norm_label": "sector_items",
       "source_file": "src/components/NavDropdown.tsx",
       "source_location": "L29"
+    },
+    {
+      "id": "src_app_airbnb_page",
+      "label": "airbnb/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "airbnb/page.tsx",
+      "source_file": "src/app/airbnb/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_airbnb_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/airbnb/page.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_app_students_page",
+      "label": "students/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "students/page.tsx",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_students_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_app_what_we_offer_page",
+      "label": "what-we-offer/page.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "what-we-offer/page.tsx",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_what_we_offer_page_metadata",
+      "label": "metadata",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "metadata",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_components_jsonld",
+      "label": "JsonLd.tsx",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "what-we-offer/page.tsx",
+      "file_type": "code",
+      "norm_label": "jsonld.tsx",
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L1"
     },
     {
       "id": "package",
@@ -2493,6 +2609,28 @@
       "source_location": "L7"
     },
     {
+      "id": "src_app_llms_txt_route",
+      "label": "route.ts",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "route.ts",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_llms_txt_route_dynamic",
+      "label": "dynamic",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "data.ts",
+      "file_type": "code",
+      "norm_label": "dynamic",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "src_app_services_slug_page",
       "label": "[slug]/page.tsx",
       "_origin": "ast",
@@ -2515,48 +2653,15 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_students_page",
-      "label": "students/page.tsx",
+      "id": "src_app_sitemap_content_updated_at",
+      "label": "CONTENT_UPDATED_AT",
       "_origin": "ast",
       "community": 5,
       "community_name": "data.ts",
       "file_type": "code",
-      "norm_label": "students/page.tsx",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_students_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/students/page.tsx",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_app_what_we_offer_page",
-      "label": "what-we-offer/page.tsx",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "what-we-offer/page.tsx",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_what_we_offer_page_metadata",
-      "label": "metadata",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "data.ts",
-      "file_type": "code",
-      "norm_label": "metadata",
-      "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L40"
+      "norm_label": "content_updated_at",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L4"
     },
     {
       "id": "src_lib_data",
@@ -2578,7 +2683,7 @@
       "file_type": "code",
       "norm_label": "official_price_list",
       "source_file": "src/lib/data.ts",
-      "source_location": "L89"
+      "source_location": "L91"
     },
     {
       "id": "src_lib_data_pricing_plans",
@@ -2589,7 +2694,7 @@
       "file_type": "code",
       "norm_label": "pricing_plans",
       "source_file": "src/lib/data.ts",
-      "source_location": "L396"
+      "source_location": "L398"
     },
     {
       "id": "src_lib_data_pricing_policy",
@@ -2600,7 +2705,7 @@
       "file_type": "code",
       "norm_label": "pricing_policy",
       "source_file": "src/lib/data.ts",
-      "source_location": "L75"
+      "source_location": "L77"
     },
     {
       "id": "src_lib_data_services",
@@ -2611,7 +2716,7 @@
       "file_type": "code",
       "norm_label": "services",
       "source_file": "src/lib/data.ts",
-      "source_location": "L303"
+      "source_location": "L305"
     },
     {
       "id": "src_lib_data_suburbs",
@@ -2622,7 +2727,7 @@
       "file_type": "code",
       "norm_label": "suburbs",
       "source_file": "src/lib/data.ts",
-      "source_location": "L444"
+      "source_location": "L446"
     },
     {
       "id": "src_lib_types",
@@ -2931,7 +3036,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L16",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -2943,7 +3048,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/express/page.tsx",
-      "source_location": "L27",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route_get",
+      "target": "src_lib_data_getservices",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -2955,7 +3072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L77",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -2967,7 +3084,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/page.tsx",
-      "source_location": "L33",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -2979,7 +3096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/page.tsx",
-      "source_location": "L34",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -2991,7 +3108,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/page.tsx",
-      "source_location": "L35",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -3003,7 +3120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -3015,7 +3132,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -3027,7 +3144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L41",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -3039,7 +3156,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/sitemap.ts",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -3051,7 +3168,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/students/page.tsx",
-      "source_location": "L26",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -3063,7 +3180,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L48",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -3075,7 +3192,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L49",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -3087,7 +3204,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L50",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -3099,7 +3216,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L51",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -3573,7 +3690,7 @@
     },
     {
       "source": "src_app_airbnb_page",
-      "target": "src_lib_data_business_info",
+      "target": "src_components_jsonld_jsonld",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3581,6 +3698,18 @@
       "context": "import",
       "source_file": "src/app/airbnb/page.tsx",
       "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_airbnb_page",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/airbnb/page.tsx",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -3765,7 +3894,7 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_lib_data_business_info",
+      "target": "src_components_jsonld_jsonld",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3773,6 +3902,66 @@
       "context": "import",
       "source_file": "src/app/layout.tsx",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_lib_data_getservices",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_lib_data_official_price_list",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_lib_data_pricing_policy",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -3981,7 +4170,7 @@
     },
     {
       "source": "src_app_services_slug_page",
-      "target": "src_lib_data_business_info",
+      "target": "src_components_jsonld_jsonld",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3989,6 +4178,18 @@
       "context": "import",
       "source_file": "src/app/services/[slug]/page.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_services_slug_page",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/services/[slug]/page.tsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -4000,7 +4201,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -4012,7 +4213,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -4041,7 +4242,7 @@
     },
     {
       "source": "src_app_students_page",
-      "target": "src_lib_data_business_info",
+      "target": "src_components_jsonld_jsonld",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4053,6 +4254,18 @@
     },
     {
       "source": "src_app_students_page",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_students_page",
       "target": "src_lib_data_getpricingplans",
       "relation": "imports",
       "_origin": "ast",
@@ -4060,7 +4273,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/students/page.tsx",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4077,7 +4290,7 @@
     },
     {
       "source": "src_app_what_we_offer_page",
-      "target": "src_lib_data_business_info",
+      "target": "src_components_jsonld_jsonld",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4085,6 +4298,18 @@
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
       "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page",
+      "target": "src_lib_data_business_info",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4096,7 +4321,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4108,7 +4333,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4120,7 +4345,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4132,7 +4357,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4559,7 +4784,7 @@
     },
     {
       "source": "src_app_airbnb_page",
-      "target": "src_lib_data",
+      "target": "src_components_jsonld",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4567,6 +4792,18 @@
       "context": "import",
       "source_file": "src/app/airbnb/page.tsx",
       "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_airbnb_page",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/airbnb/page.tsx",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4715,7 +4952,7 @@
     },
     {
       "source": "src_app_layout",
-      "target": "src_lib_data",
+      "target": "src_components_jsonld",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4723,6 +4960,30 @@
       "context": "import",
       "source_file": "src/app/layout.tsx",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -4883,7 +5144,7 @@
     },
     {
       "source": "src_app_services_slug_page",
-      "target": "src_lib_data",
+      "target": "src_components_jsonld",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4891,6 +5152,18 @@
       "context": "import",
       "source_file": "src/app/services/[slug]/page.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_services_slug_page",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/services/[slug]/page.tsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -4919,7 +5192,7 @@
     },
     {
       "source": "src_app_students_page",
-      "target": "src_lib_data",
+      "target": "src_components_jsonld",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4927,6 +5200,18 @@
       "context": "import",
       "source_file": "src/app/students/page.tsx",
       "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_students_page",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/students/page.tsx",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4943,7 +5228,7 @@
     },
     {
       "source": "src_app_what_we_offer_page",
-      "target": "src_lib_data",
+      "target": "src_components_jsonld",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4951,6 +5236,18 @@
       "context": "import",
       "source_file": "src/app/what-we-offer/page.tsx",
       "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_what_we_offer_page",
+      "target": "src_lib_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/what-we-offer/page.tsx",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -5754,7 +6051,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/about/page.tsx",
-      "source_location": "L13",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -5776,7 +6073,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/airbnb/page.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -5787,7 +6084,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/airbnb/page.tsx",
-      "source_location": "L25",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -5809,7 +6106,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/contact/page.tsx",
-      "source_location": "L15",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -5853,7 +6150,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/express/page.tsx",
-      "source_location": "L26",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -5875,7 +6172,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/healthcare/page.tsx",
-      "source_location": "L25",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -5897,73 +6194,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/hospitality/page.tsx",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_rootlayout",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_figtree",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_caveat",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_viewport",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_metadata",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L33",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_layout",
-      "target": "src_app_layout_jsonld",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L86",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -5974,7 +6205,95 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/layout.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_rootlayout",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_figtree",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_caveat",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_viewport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_metadata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_layout",
+      "target": "src_app_layout_sitejsonld",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_app_llms_txt_route_dynamic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_llms_txt_route",
+      "target": "src_app_llms_txt_route_get",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/llms.txt/route.ts",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -6007,7 +6326,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L14",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -6018,18 +6337,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "src_app_my_wash_page",
-      "target": "src_app_my_wash_page_mywashpage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/my-wash/page.tsx",
-      "source_location": "L76",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -6041,6 +6349,17 @@
       "confidence_score": 1.0,
       "source_file": "src/app/my-wash/page.tsx",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_my_wash_page",
+      "target": "src_app_my_wash_page_mywashpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/my-wash/page.tsx",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -6073,7 +6392,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/page.tsx",
-      "source_location": "L31",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -6095,12 +6414,23 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/retirement-villages/page.tsx",
-      "source_location": "L26",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
       "source": "src_app_robots",
       "target": "src_app_robots_robots",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/robots.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_robots",
+      "target": "src_app_robots_ai_and_search_bots",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6128,7 +6458,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/schools/page.tsx",
-      "source_location": "L25",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -6166,13 +6496,24 @@
     },
     {
       "source": "src_app_services_slug_page",
+      "target": "src_app_services_slug_page_servicepageprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/services/[slug]/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_services_slug_page",
       "target": "src_app_services_slug_page_generatestaticparams",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -6183,7 +6524,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -6194,18 +6535,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L39",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
-      "source": "src_app_services_slug_page",
-      "target": "src_app_services_slug_page_servicepageprops",
+      "source": "src_app_sitemap",
+      "target": "src_app_sitemap_content_updated_at",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/app/services/[slug]/page.tsx",
-      "source_location": "L9",
+      "source_file": "src/app/sitemap.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6216,7 +6557,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/sitemap.ts",
-      "source_location": "L4",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -6238,7 +6579,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/students/page.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -6249,7 +6590,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/students/page.tsx",
-      "source_location": "L25",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -6260,7 +6601,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -6271,7 +6612,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/what-we-offer/page.tsx",
-      "source_location": "L46",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -6393,6 +6734,39 @@
       "confidence_score": 1.0,
       "source_file": "src/components/icons/WhatsAppIcon.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_jsonld",
+      "target": "src_components_jsonld_jsonld",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_jsonld",
+      "target": "src_components_jsonld_jsonldvalue",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_jsonld",
+      "target": "src_components_jsonld_jsonldprops",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/JsonLd.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -6568,7 +6942,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L303",
+      "source_location": "L305",
       "weight": 1.0
     },
     {
@@ -6579,7 +6953,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L396",
+      "source_location": "L398",
       "weight": 1.0
     },
     {
@@ -6590,7 +6964,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L444",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -6601,7 +6975,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L458",
+      "source_location": "L460",
       "weight": 1.0
     },
     {
@@ -6612,7 +6986,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L463",
+      "source_location": "L465",
       "weight": 1.0
     },
     {
@@ -6623,7 +6997,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L470",
+      "source_location": "L472",
       "weight": 1.0
     },
     {
@@ -6634,7 +7008,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L474",
+      "source_location": "L476",
       "weight": 1.0
     },
     {
@@ -6645,7 +7019,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L478",
+      "source_location": "L480",
       "weight": 1.0
     },
     {
@@ -6656,7 +7030,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L482",
+      "source_location": "L484",
       "weight": 1.0
     },
     {
@@ -6667,7 +7041,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L486",
+      "source_location": "L488",
       "weight": 1.0
     },
     {
@@ -6678,7 +7052,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L488",
+      "source_location": "L490",
       "weight": 1.0
     },
     {
@@ -6689,7 +7063,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L495",
+      "source_location": "L497",
       "weight": 1.0
     },
     {
@@ -6700,7 +7074,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L510",
+      "source_location": "L512",
       "weight": 1.0
     },
     {
@@ -6711,7 +7085,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L75",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -6722,7 +7096,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/lib/data.ts",
-      "source_location": "L89",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -7145,5 +7519,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "529ea4963315a64e7b79e758f20a8ff0c550b7f9"
+  "built_at_commit": "aac6579ac552cc8f76959eb3eae4a52a81fa884c"
 }

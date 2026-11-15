@@ -29,6 +29,7 @@ import {
   Eye,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { JsonLd } from "@/components/JsonLd";
 import {
   BUSINESS_INFO,
   getServices,
@@ -38,9 +39,19 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "What We Offer & Official Price List | Laundro-Hub Bloemfontein",
+  title: "Laundry Prices & Services Bloemfontein",
   description:
-    "Official price list & services for Laundro-Hub in Bloemfontein. Wash, dry & fold from R40/kg, steam pressing from R40/kg, duvets from R150 each. No minimum order, strictly no cash (Card & EFT only), and no VAT.",
+    "Official Laundro-Hub price list in Bloemfontein: wash, dry & fold R40/kg, ironing R42/kg, duvets R120–R130. Prices include VAT.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/what-we-offer",
+  },
+  openGraph: {
+    title: "Laundry Prices & Services Bloemfontein | Laundro-Hub",
+    description:
+      "Transparent per-kg laundry and ironing prices in Bloemfontein. No minimum order, strictly Card & EFT.",
+    url: "https://laundro-hub.co.za/what-we-offer",
+    images: [{ url: "/img/washing.jpg", alt: "Laundro-Hub Bloemfontein laundry services" }],
+  },
 };
 
 export default async function WhatWeOfferPage() {
@@ -58,7 +69,7 @@ export default async function WhatWeOfferPage() {
       tagline: "Everyday wash, gentle dry & crisp fold",
       description:
         "Your weekly clothes washed in commercial-grade, sanitary drums with premium detergents and fabric softeners. We separate whites, colors, and delicates, dry them at fabric-safe temperatures, and fold them neatly into ready-to-pack bundles.",
-      price: "Wash/Dry/Fold: R40 / kg (Wash Only: R36 / kg)",
+      price: "Wash, Dry & Fold: R40 / kg (Wash Only: R38 / kg)",
       badge: "From R40 / kg",
       image: "/img/washing.jpg",
       icon: Shirt,
@@ -76,8 +87,8 @@ export default async function WhatWeOfferPage() {
       tagline: "Professional crisp steam pressing for shirts, trousers & uniforms",
       description:
         "Skip the weekend iron board. Our commercial steam stations press out every crease on business shirts, school blazers, trousers, and delicate fabrics. Returned hung on hangers or crisply folded to your preference.",
-      price: "Iron ONLY: R40 / kg (Wash/Dry/Iron: R43 / kg)",
-      badge: "From R40 / kg",
+      price: "Iron Only: R42 / kg (Wash, Dry & Iron: R43 / kg)",
+      badge: "From R42 / kg",
       image: "/img/steam-pressing.jpg",
       icon: Sparkles,
       highlights: [
@@ -94,13 +105,13 @@ export default async function WhatWeOfferPage() {
       tagline: "Heavy duvets, blankets, pillows & hospitality linen",
       description:
         "Domestic home washers can't thoroughly wash or rinse heavy feather duvets and thick winter blankets. Our large-volume commercial extractors provide deep sanitisation, thorough rinsing, and complete thermal drying to eliminate dust mites and allergens.",
-      price: "Queen & King Duvets: R150 each • Linen: R60 / kg",
-      badge: "Duvets R150 each",
+      price: "Duvets: R120–R130 each • Pillows: R35–R55 • Linen: R60 / kg",
+      badge: "Duvets from R120",
       image: "/img/bedding.jpg",
       icon: Layers,
       highlights: [
-        "King & Queen duvets washed in commercial drums (R150 each flat rate)",
-        "Feather, down, microfiber, and thick winter wool blankets (from R75/kg)",
+        "Bains Queen & King duvets (R130 each) & Single/Double duvets (R120 each)",
+        "Bains Blankets Single/Double (R75) & Queen/King blankets (R90)",
         "Sanitary high-temperature wash cycle for thorough hygiene",
         "Deep moisture extraction so fillings remain soft and lofty",
         "Returned shrink-wrapped or protected in clean poly-bags",
@@ -108,8 +119,35 @@ export default async function WhatWeOfferPage() {
     },
   ];
 
+  const offerCatalogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://laundro-hub.co.za/what-we-offer#service",
+    name: "Laundro-Hub Laundry & Ironing Price List Bloemfontein",
+    serviceType: "Laundry, Ironing & Bedding Cleaning",
+    provider: {
+      "@id": "https://laundro-hub.co.za/#organization",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Bloemfontein",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Official Price List (Effective ${pricingPolicy.effectiveDate})`,
+      itemListElement: priceList.map((item) => ({
+        "@type": "Offer",
+        name: `${item.name} (${item.flyerUnit})`,
+        price: item.price,
+        priceCurrency: "ZAR",
+        description: item.note || `${item.name} — ${item.formattedPrice} ${item.unit}`,
+      })),
+    },
+  };
+
   return (
     <div className="flex flex-col">
+      <JsonLd id="what-we-offer-jsonld" data={offerCatalogJsonLd} />
       {/* Hero Header with Brand Purple Gradient */}
       <section className="relative overflow-hidden hero-purple-gradient border-b border-brand-line/70 py-14 sm:py-20">
         <div className="absolute -top-24 -left-20 h-80 w-80 rounded-full bg-brand-purple/15 blur-3xl pointer-events-none" />
@@ -135,7 +173,7 @@ export default async function WhatWeOfferPage() {
                 className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
               >
                 <WhatsAppIcon className="h-4 w-4 shrink-0" />
-                <span>WhatsApp Quote: {BUSINESS_INFO.phone} / {BUSINESS_INFO.secondaryPhone}</span>
+                <span>WhatsApp Quote: {BUSINESS_INFO.phone}</span>
               </a>
               <Link
                 href="/my-wash"
@@ -313,16 +351,16 @@ export default async function WhatWeOfferPage() {
                   <span className="uppercase tracking-wider text-xs font-extrabold">VAT Status</span>
                 </div>
                 <h3 className="font-display text-lg font-bold text-brand-deep">
-                  Net Prices (No VAT Added)
+                  Prices Include VAT
                 </h3>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  {pricingPolicy.vatStatus} The price you see is the final price you pay.
+                  {pricingPolicy.vatStatus}
                 </p>
               </div>
               <div className="mt-4 pt-3 border-t border-brand-line/60">
                 <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-teal">
                   <CheckCircle2 className="h-3.5 w-3.5" />
-                  All Prices Net &bull; 0% VAT Added
+                  VAT Inclusive &bull; Bulk &amp; Contract Rates Available
                 </span>
               </div>
             </div>

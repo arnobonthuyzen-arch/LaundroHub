@@ -18,9 +18,19 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { BUSINESS_INFO, getSuburbs, COLLECTION_DELIVERY_PRICING } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Laundro-Hub Express | 1–2 Day Collection & Delivery in Bloemfontein",
+  title: "Express Laundry Pickup & Delivery Bloemfontein",
   description:
-    "We collect your laundry and deliver it back fresh, clean, and neatly folded within 1–2 days. Doorstep service across Langenhovenpark, Woodland Hills, and all Bloemfontein suburbs.",
+    "1–2 day laundry collection & delivery across Langenhovenpark, Westdene, Brandwag, Dan Pienaar, Fichardtpark & Woodland Hills in Bloemfontein.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/express",
+  },
+  openGraph: {
+    title: "Express Laundry Pickup & Delivery Bloemfontein | Laundro-Hub",
+    description:
+      "Doorstep laundry collection and return across Bloemfontein suburbs in 1–2 days.",
+    url: "https://laundro-hub.co.za/express",
+    images: [{ url: "/img/van.jpg", alt: "Laundro-Hub Express pickup van in Bloemfontein" }],
+  },
 };
 
 export default async function ExpressPage() {
@@ -101,7 +111,7 @@ export default async function ExpressPage() {
                   <span>Book Pickup Online (My Wash)</span>
                 </Link>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-sm hover:bg-brand-teal/90 transition-all"
@@ -493,7 +503,7 @@ export default async function ExpressPage() {
                   <span>Schedule on My Wash</span>
                 </Link>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'd%20like%20to%20book%20an%20Express%20pickup`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-white/20 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"

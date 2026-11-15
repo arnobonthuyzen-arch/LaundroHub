@@ -14,12 +14,23 @@ import {
   Shirt,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { JsonLd } from "@/components/JsonLd";
 import { BUSINESS_INFO, getPricingPlans } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Student Laundry & Residence Packages | Laundro-Hub Bloemfontein",
+  title: "Student Laundry Service Bloemfontein",
   description:
-    "Affordable student & residence laundry plans for university, college students, and residences. Scheduled doorstep pickup, individual bag washing, and fresh folding.",
+    "Affordable student & residence laundry in Bloemfontein for UFS, CUT, and communes. Individual machine washes, steam folding, and doorstep pickup.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/students",
+  },
+  openGraph: {
+    title: "Student Laundry Service Bloemfontein | Laundro-Hub",
+    description:
+      "Monthly student & residence laundry packages and walk-in R40/kg wash, dry & fold across Universitas, Brandwag, and Bloemfontein.",
+    url: "https://laundro-hub.co.za/students",
+    images: [{ url: "/img/student.jpg", alt: "Student laundry service in Bloemfontein at Laundro-Hub" }],
+  },
 };
 
 export default async function StudentsPage() {
@@ -56,8 +67,64 @@ export default async function StudentsPage() {
     "School boarding hostels and sports residences",
   ];
 
+  const studentFaqs = [
+    {
+      question: "How does student laundry pickup work in Universitas and Brandwag?",
+      answer:
+        "WhatsApp or call us on (064) 830-8785, or book via My Wash. Our Express driver schedules dynamic doorstep collection from your UFS residence, commune, or student accommodation across Bloemfontein and returns your folded clothes in 1–2 days.",
+    },
+    {
+      question: "Are my clothes washed separately from other students' laundry?",
+      answer:
+        "Yes. Every student bag is washed in its own dedicated commercial machine cycle and never mixed with another customer's garments.",
+    },
+    {
+      question: "What does the Student & Res monthly plan cost vs walk-in rates?",
+      answer: `Our ${studentPlan.name} plan is ${studentPlan.pricePerMonth} for ${studentPlan.weightLimit} of wash, dry and fold each month (packages update starting January 2027). Standard walk-in wash, dry and fold is R40/kg with no minimum order.`,
+    },
+    {
+      question: "How do I pay for student or residence laundry?",
+      answer:
+        "We accept card (Speedpoint tap/insert) and instant EFT only. For security reasons, strictly no cash is handled and we do not offer open monthly credit accounts.",
+    },
+  ];
+
+  const studentsJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://laundro-hub.co.za/students#service",
+        name: "Student & Residence Laundry Service Bloemfontein",
+        serviceType: "Student & Residence Laundry",
+        provider: {
+          "@id": "https://laundro-hub.co.za/#organization",
+        },
+        areaServed: {
+          "@type": "City",
+          name: "Bloemfontein",
+        },
+        description:
+          "Individual-machine wash, dry, and fold laundry service for university students, communes, and residences in Universitas, Brandwag, Willows, and Bloemfontein.",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://laundro-hub.co.za/students#faq",
+        mainEntity: studentFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col">
+      <JsonLd id="students-jsonld" data={studentsJsonLd} />
       {/* Hero Header with Brand Purple Gradient */}
       <section className="relative overflow-hidden hero-purple-gradient border-b border-brand-line/70 py-14 sm:py-20">
         <div className="absolute -top-24 -left-20 h-80 w-80 rounded-full bg-brand-purple/15 blur-3xl pointer-events-none" />
@@ -71,15 +138,15 @@ export default async function StudentsPage() {
                 Universities &bull; Colleges &bull; Student Residences
               </span>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-deep tracking-tight">
-                Student Laundry Made <span className="text-brand-purple">Effortless.</span>
+                Student Laundry Service in <span className="text-brand-purple">Bloemfontein.</span>
               </h1>
               <p className="text-lg sm:text-xl text-brand-body/90 leading-relaxed font-normal">
-                Dedicated monthly packages available for students and schools, alongside standard walk-in rates (Packages update starting January 2027). Drop off at The Towers or Bains Lodge, or schedule dynamic driver collection across Bloemfontein.
+                Dedicated monthly student and residence laundry packages for UFS, CUT, communes, and boarding hostels, alongside standard R40/kg walk-in rates (Packages update starting January 2027). Drop off at The Towers in Langenhovenpark or Bains Lodge, or schedule dynamic driver collection across Universitas, Brandwag, and Bloemfontein.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20student%20res%20laundry%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20interested%20in%20your%20student%20res%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -125,9 +192,9 @@ export default async function StudentsPage() {
                   Packages Update Jan 2027 &bull; Walk-Ins Welcome
                 </span>
               </div>
-              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
+              <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
                 {studentPlan.name} Plan &mdash; {studentPlan.pricePerMonth}
-              </h3>
+              </h2>
               <p className="text-sm sm:text-base text-brand-body leading-relaxed">
                 Includes <strong className="text-brand-deep">{studentPlan.weightLimit}</strong> wash, dry &amp; fold each month. Standard walk-in rates also available at R40/kg anytime. Billing strictly EFT or card (no open monthly accounts).
               </p>
@@ -178,9 +245,9 @@ export default async function StudentsPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lav text-brand-purple mb-4">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h4 className="font-display text-lg font-bold text-brand-deep">
+                  <h3 className="font-display text-lg font-bold text-brand-deep">
                     {item.title}
-                  </h4>
+                  </h3>
                   <p className="mt-2 text-xs sm:text-sm text-brand-body leading-relaxed">
                     {item.desc}
                   </p>
@@ -200,9 +267,9 @@ export default async function StudentsPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-purple">
                   Hostel &amp; Residence Group Accounts
                 </span>
-                <h3 className="mt-2 font-display text-3xl font-extrabold text-brand-deep">
+                <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-deep">
                   Live in a residence or commune?
-                </h3>
+                </h2>
                 <p className="mt-3 text-sm sm:text-base text-brand-body leading-relaxed">
                   We partner with house committees, residence management, and student communes to set up fixed collection points. Students drop their tagged bag at reception or their corridor collection spot, and we return everything fresh in 1–2 days.
                 </p>
@@ -242,20 +309,64 @@ export default async function StudentsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Student Laundry FAQs */}
       <section className="py-16 bg-brand-ground border-t border-brand-line">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-purple">
+              Student &amp; Hostel FAQs
+            </span>
+            <h2 className="mt-2 font-display text-3xl font-extrabold text-brand-deep">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {studentFaqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-brand-line bg-white p-6 shadow-sm"
+              >
+                <h3 className="font-display text-lg font-bold text-brand-deep">
+                  {faq.question}
+                </h3>
+                <p className="mt-2 text-sm text-brand-body leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-brand-purple">
+            <Link href="/what-we-offer" className="underline hover:text-brand-deep">
+              Compare official per-kg laundry prices
+            </Link>
+            <span aria-hidden="true">&bull;</span>
+            <Link href="/express" className="underline hover:text-brand-deep">
+              See Express pickup suburbs in Bloemfontein
+            </Link>
+            <span aria-hidden="true">&bull;</span>
+            <Link href="/schools" className="underline hover:text-brand-deep">
+              Boarding school &amp; sports kit laundry
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-white border-t border-brand-line">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <div className="rounded-3xl bg-brand-deep p-8 sm:p-12 text-white shadow-elevated relative overflow-hidden">
             <div className="relative z-10 space-y-4">
-              <h3 className="font-display text-3xl font-extrabold text-white">
+              <h2 className="font-display text-3xl font-extrabold text-white">
                 Get Your Laundry Sorted Today
-              </h3>
+              </h2>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
                 WhatsApp our team or sign up online. Drop off at The Towers (Langenhovenpark) or Bains Lodge (opp. security), or schedule our driver dynamically across Bloemfontein. Strictly EFT or card payment.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20a%20student%20looking%20for%20laundry%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"

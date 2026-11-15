@@ -6,9 +6,19 @@ import { MyWashForm } from "@/components/my-wash/MyWashForm";
 import { getSuburbs, BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "My Wash | Book Doorstep Laundry Pickup & Delivery in Bloemfontein",
+  title: "My Wash | Book Laundry Pickup Bloemfontein",
   description:
-    "Schedule your laundry pickup with Laundro-Hub's Express Van. Doorstep collection, individual drum washing, crisp steam ironing, and fast delivery in Bloemfontein.",
+    "Schedule your laundry pickup with Laundro-Hub Express in Bloemfontein. Individual drum washing, steam ironing, and doorstep delivery.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/my-wash",
+  },
+  openGraph: {
+    title: "My Wash | Book Laundry Pickup Bloemfontein | Laundro-Hub",
+    description:
+      "Estimate your laundry cost and book doorstep collection and delivery across Bloemfontein.",
+    url: "https://laundro-hub.co.za/my-wash",
+    images: [{ url: "/img/van.jpg", alt: "Book Laundro-Hub Express pickup in Bloemfontein" }],
+  },
 };
 
 const HOW_IT_WORKS_STEPS = [
@@ -41,7 +51,7 @@ const HOW_IT_WORKS_STEPS = [
 const FAQS = [
   {
     q: "How does the booking process work?",
-    a: "Booking is simple and direct: send a WhatsApp message or place a quick phone call to our central numbers (060 963 3688 / 064 830 8785) to arrange collection and return. You can also configure your preferences with the interactive form below and tap to dispatch via WhatsApp in one tap!",
+    a: "Booking is simple and direct: send a WhatsApp message or place a quick phone call to (064) 830-8785 to arrange collection and return. You can also configure your preferences with the interactive form below and tap to dispatch via WhatsApp in one tap!",
   },
   {
     q: "What are your delivery time slots?",
@@ -61,7 +71,7 @@ const FAQS = [
   },
   {
     q: "Do prices include VAT?",
-    a: "Laundro-Hub is not VAT registered. All prices quoted on our price list and digital invoices are net amounts — zero VAT added.",
+    a: "Yes — all prices quoted on our official price list include VAT. Special rates are also available for bulk and contract clients.",
   },
   {
     q: "Do you have physical drop-off locations?",

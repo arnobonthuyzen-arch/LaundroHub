@@ -5,9 +5,19 @@ import { CheckCircle2, HeartHandshake, Sparkles, MapPin, Users, Award } from "lu
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "About Us | Laundro-Hub Bloemfontein",
+  title: "About Us | Langenhovenpark, Bloemfontein",
   description:
-    "Learn about Laundro-Hub in Langenhovenpark, Bloemfontein. Dedicated to spotless laundry, honest service, and caring for the clothes you wear.",
+    "Learn about Laundro-Hub in Langenhovenpark, Bloemfontein. Dedicated to spotless laundry, individual-drum hygiene, and honest service.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/about",
+  },
+  openGraph: {
+    title: "About Laundro-Hub | Langenhovenpark, Bloemfontein",
+    description:
+      "We care for the clothes you wear. Meet the team behind Laundro-Hub in Langenhovenpark, Bloemfontein.",
+    url: "https://laundro-hub.co.za/about",
+    images: [{ url: "/img/fabric-bg.jpg", alt: "About Laundro-Hub Bloemfontein" }],
+  },
 };
 
 export default function AboutPage() {

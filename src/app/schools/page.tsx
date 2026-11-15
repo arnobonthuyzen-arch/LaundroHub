@@ -17,9 +17,19 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "School Uniforms, Sports Kits & Hostel Laundry | Laundro-Hub Bloemfontein",
+  title: "School Uniform, Sports Kit & Hostel Laundry",
   description:
-    "Specialised laundry services for Bloemfontein schools, sports teams, and boarding hostels. Deep mud removal for rugby/hockey kits, crisp blazers, and weekly hostel bag runs.",
+    "Laundry for Bloemfontein schools, sports teams & boarding hostels. Mud removal for rugby/hockey kits, blazer pressing, and weekly hostel runs.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/schools",
+  },
+  openGraph: {
+    title: "School Uniform, Sports Kit & Hostel Laundry | Laundro-Hub",
+    description:
+      "School uniform pressing, sports kit stain treatment, and boarding hostel laundry in Bloemfontein.",
+    url: "https://laundro-hub.co.za/schools",
+    images: [{ url: "/img/hostel.jpg", alt: "School and boarding hostel laundry in Bloemfontein" }],
+  },
 };
 
 export default function SchoolsPage() {
@@ -78,7 +88,7 @@ export default function SchoolsPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20we%20are%20a%20school/team%20interested%20in%20sports%20kit%20or%20hostel%20laundry`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20we%20are%20a%20school/team%20interested%20in%20sports%20kit%20or%20hostel%20laundry`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -247,7 +257,7 @@ export default function SchoolsPage() {
 
               <div className="lg:col-span-4 flex flex-col gap-3 justify-center">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20hostel%20monthly%20packages%20and%20rates`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20inquiring%20about%20hostel%20monthly%20packages%20and%20rates`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm"
@@ -280,7 +290,7 @@ export default function SchoolsPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20contacting%20you%20on%20behalf%20of%20a%20school/sports%20team`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20contacting%20you%20on%20behalf%20of%20a%20school/sports%20team`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"

@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Figtree, Caveat } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileBottomBar } from "@/components/MobileBottomBar";
+import { JsonLd } from "@/components/JsonLd";
 import { BUSINESS_INFO } from "@/lib/data";
 import "./globals.css";
 
@@ -33,8 +34,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://laundro-hub.co.za"),
   title: {
-    default: "Laundro-Hub | Premium Laundry & Ironing in Bloemfontein",
-    template: "%s | Laundro-Hub Bloemfontein",
+    default: "Laundro-Hub | Laundry & Ironing in Bloemfontein",
+    template: "%s | Laundro-Hub",
   },
   description:
     "Professional washing, drying, steam ironing, bedding, school hostel & student laundry, and doorstep collection & delivery in Langenhovenpark, Bloemfontein.",
@@ -83,43 +84,61 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const siteJsonLd = {
   "@context": "https://schema.org",
-  "@type": "DryCleaningOrLaundry",
-  name: BUSINESS_INFO.name,
-  description: BUSINESS_INFO.tagline,
-  url: "https://laundro-hub.co.za",
-  telephone: `${BUSINESS_INFO.phone}, ${BUSINESS_INFO.secondaryPhone}`,
-  email: BUSINESS_INFO.email,
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Entire Bloemfontein area",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: `${BUSINESS_INFO.address.name}, ${BUSINESS_INFO.address.street}`,
-    addressLocality: BUSINESS_INFO.address.city,
-    addressRegion: BUSINESS_INFO.address.province,
-    addressCountry: "ZA",
-  },
-  openingHoursSpecification: [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "07:00",
-      closes: "18:00",
+      "@type": ["DryCleaningOrLaundry", "Organization"],
+      "@id": "https://laundro-hub.co.za/#organization",
+      name: BUSINESS_INFO.name,
+      description: BUSINESS_INFO.tagline,
+      url: "https://laundro-hub.co.za",
+      logo: "https://laundro-hub.co.za/img/logo.png",
+      image: "https://laundro-hub.co.za/img/logo.png",
+      telephone: BUSINESS_INFO.phoneRaw,
+      email: BUSINESS_INFO.email,
+      areaServed: {
+        "@type": "AdministrativeArea",
+        name: "Entire Bloemfontein area",
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: `${BUSINESS_INFO.address.name}, ${BUSINESS_INFO.address.street}`,
+        addressLocality: BUSINESS_INFO.address.city,
+        addressRegion: BUSINESS_INFO.address.province,
+        addressCountry: "ZA",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "07:00",
+          closes: "17:30",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Saturday", "Sunday"],
+          opens: "09:00",
+          closes: "13:00",
+        },
+      ],
+      priceRange: "R35 - R2000",
+      currenciesAccepted: "ZAR",
+      paymentAccepted: "EFT, Credit Card, Debit Card (Strictly No Cash; No Open Monthly Accounts)",
     },
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      opens: "09:00",
-      closes: "13:00",
+      "@type": "WebSite",
+      "@id": "https://laundro-hub.co.za/#website",
+      url: "https://laundro-hub.co.za",
+      name: BUSINESS_INFO.name,
+      description:
+        "Professional washing, drying, steam ironing, bedding, student laundry, and doorstep collection & delivery in Bloemfontein.",
+      publisher: {
+        "@id": "https://laundro-hub.co.za/#organization",
+      },
+      inLanguage: "en-ZA",
     },
   ],
-  priceRange: "R35 - R2000",
-  currenciesAccepted: "ZAR",
-  paymentAccepted: "EFT, Credit Card, Debit Card (Strictly No Cash; No Open Monthly Accounts)",
-  image: "https://laundro-hub.co.za/img/logo.png",
 };
 
 export default function RootLayout({
@@ -138,10 +157,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://api.whatsapp.com" />
         <link rel="preconnect" href="https://maps.google.com" />
         <link rel="dns-prefetch" href="https://maps.google.com" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd id="site-jsonld" data={siteJsonLd} />
       </head>
       <body
         className="flex min-h-screen flex-col font-sans bg-brand-ground text-brand-ink antialiased"

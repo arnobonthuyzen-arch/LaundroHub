@@ -14,12 +14,23 @@ import {
   FileCheck,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { JsonLd } from "@/components/JsonLd";
 import { BUSINESS_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Airbnb & Short-Stay Laundry Solutions | Laundro-Hub Bloemfontein",
+  title: "Airbnb & Short-Stay Laundry Bloemfontein",
   description:
-    "Fast-turnaround laundry for Airbnb Superhosts and short-stay rentals in Bloemfontein. Crisp white linens, fluffy towels, duvet sanitisation, and doorstep delivery.",
+    "Fast-turnaround Airbnb & short-stay laundry in Bloemfontein. Crisp white linens, fluffy towels, duvet sanitisation, and doorstep delivery.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/airbnb",
+  },
+  openGraph: {
+    title: "Airbnb & Short-Stay Laundry Bloemfontein | Laundro-Hub",
+    description:
+      "Same-day and next-day turnover linen, towel, and duvet laundry for Airbnb Superhosts in Bloemfontein.",
+    url: "https://laundro-hub.co.za/airbnb",
+    images: [{ url: "/img/bedding.jpg", alt: "Airbnb and short-stay linen laundry in Bloemfontein" }],
+  },
 };
 
 export default function AirbnbPage() {
@@ -55,8 +66,26 @@ export default function AirbnbPage() {
     "Waterproof & quilted mattress protectors",
   ];
 
+  const airbnbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://laundro-hub.co.za/airbnb#service",
+    name: "Airbnb & Short-Stay Laundry Service Bloemfontein",
+    serviceType: "Commercial & Short-Stay Linen Laundry",
+    provider: {
+      "@id": "https://laundro-hub.co.za/#organization",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Bloemfontein",
+    },
+    description:
+      "Fast-turnaround laundry, rotary steam pressing, duvet sanitisation, and doorstep Express delivery for Airbnb Superhosts and short-stay rentals in Bloemfontein.",
+  };
+
   return (
     <div className="flex flex-col">
+      <JsonLd id="airbnb-jsonld" data={airbnbJsonLd} />
       {/* Hero Header with Brand Purple Gradient */}
       <section className="relative overflow-hidden hero-purple-gradient border-b border-brand-line/70 py-14 sm:py-20">
         <div className="absolute -top-24 -left-20 h-80 w-80 rounded-full bg-brand-purple/15 blur-3xl pointer-events-none" />
@@ -78,7 +107,7 @@ export default function AirbnbPage() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3.5">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I'm%20an%20Airbnb%20host%20in%20Bloemfontein%20interested%20in%20your%20turnover%20service`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I'm%20an%20Airbnb%20host%20in%20Bloemfontein%20interested%20in%20your%20turnover%20service`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3.5 text-sm font-bold text-white shadow-card hover:bg-brand-teal/90 transition-all hover:scale-[1.02]"
@@ -266,7 +295,7 @@ export default function AirbnbPage() {
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=27609633688&text=Hi%20Laundro-Hub,%20I%20host%20an%20Airbnb%20and%20want%20to%20set%20up%20a%20turnover%20account`}
+                  href={`https://api.whatsapp.com/send?phone=27648308785&text=Hi%20Laundro-Hub,%20I%20host%20an%20Airbnb%20and%20want%20to%20set%20up%20a%20turnover%20account`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-teal px-6 py-3 min-h-[44px] text-xs font-bold text-white hover:bg-brand-teal-dark active:scale-[0.98] transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-mint"

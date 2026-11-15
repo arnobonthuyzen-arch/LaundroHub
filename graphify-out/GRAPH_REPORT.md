@@ -1,16 +1,16 @@
-# Graph Report - laundro-hub-website  (2026-11-13)
+# Graph Report - laundro-hub-website  (2026-11-15)
 
 ## Corpus Check
-- 52 files · ~713,382 words
+- 54 files · ~714,977 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 253 nodes · 369 edges · 27 communities (11 shown, 4 thin omitted)
+- 262 nodes · 392 edges · 28 communities (12 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `529ea496`
+- Built from commit: `aac6579a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,20 +28,22 @@
 - my-wash/page.tsx
 - main.js
 - next.config.ts
+- robots.ts
 - tailwind.config.ts
 - NavDropdown.tsx
+- what-we-offer/page.tsx
 
 ## God Nodes (most connected - your core abstractions)
-1. `BUSINESS_INFO` - 22 edges
+1. `BUSINESS_INFO` - 23 edges
 2. `WhatsAppIcon()` - 19 edges
 3. `compilerOptions` - 16 edges
-4. `getServices()` - 9 edges
+4. `getServices()` - 11 edges
 5. `getSuburbs()` - 9 edges
 6. `getPricingPlans()` - 7 edges
-7. `Laundro-Hub website` - 6 edges
-8. `scripts` - 5 edges
-9. `submitPickupRequest()` - 5 edges
-10. `WhatWeOfferPage()` - 5 edges
+7. `JsonLd()` - 6 edges
+8. `Laundro-Hub website` - 6 edges
+9. `scripts` - 5 edges
+10. `submitPickupRequest()` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `ContactForm()` --indirect_call--> `submitContactForm()`  [INFERRED]
@@ -52,17 +54,17 @@
   src/app/contact/page.tsx → src/lib/data.ts
 - `ExpressPage()` --calls--> `getSuburbs()`  [EXTRACTED]
   src/app/express/page.tsx → src/lib/data.ts
-- `MyWashPage()` --calls--> `getSuburbs()`  [EXTRACTED]
-  src/app/my-wash/page.tsx → src/lib/data.ts
+- `GET()` --calls--> `getServices()`  [EXTRACTED]
+  src/app/llms.txt/route.ts → src/lib/data.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (27 total, 4 thin omitted)
+## Communities (28 total, 5 thin omitted)
 
 ### Community 0 - "BUSINESS_INFO"
-Cohesion: 0.10
-Nodes (18): metadata, metadata, metadata, bricolage, caveat, figtree, jsonLd, metadata (+10 more)
+Cohesion: 0.11
+Nodes (17): metadata, metadata, bricolage, caveat, figtree, metadata, siteJsonLd, viewport (+9 more)
 
 ### Community 1 - "MyWashForm.tsx"
 Cohesion: 0.12
@@ -81,8 +83,8 @@ Cohesion: 0.09
 Nodes (23): clsx, leaflet, lucide-react, next, nodemailer, dependencies, clsx, leaflet (+15 more)
 
 ### Community 5 - "data.ts"
-Cohesion: 0.09
-Nodes (27): metadata, generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, sitemap(), metadata, StudentsPage() (+19 more)
+Cohesion: 0.10
+Nodes (23): metadata, dynamic, GET(), generateMetadata(), generateStaticParams(), ServiceDetailPage(), ServicePageProps, CONTENT_UPDATED_AT (+15 more)
 
 ### Community 7 - "app/page.tsx"
 Cohesion: 0.21
@@ -104,24 +106,28 @@ Nodes (11): ContactPage(), metadata, ExpressPage(), metadata, FAQS, HOW_IT_WORKS
 Cohesion: 0.33
 Nodes (3): NavDropdown(), SECTOR_ITEMS, SectorMenuItem
 
+### Community 27 - "what-we-offer/page.tsx"
+Cohesion: 0.19
+Nodes (11): metadata, metadata, StudentsPage(), metadata, WhatWeOfferPage(), JsonLd(), JsonLdProps, JsonLdValue (+3 more)
+
 ## Knowledge Gaps
-- **104 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+99 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 146 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **107 isolated node(s):** `nextConfig`, `name`, `version`, `private`, `dev` (+102 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 148 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `BUSINESS_INFO` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `data.ts`, `app/page.tsx`, `my-wash/page.tsx`, `what-we-offer/page.tsx`?**
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `my-wash/page.tsx`, `data.ts`, `app/page.tsx`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `WhatsAppIcon()` connect `BUSINESS_INFO` to `MyWashForm.tsx`, `data.ts`, `app/page.tsx`, `my-wash/page.tsx`, `what-we-offer/page.tsx`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `nextConfig`, `name`, `version` to the rest of the system?**
-  _104 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _107 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `BUSINESS_INFO` be split into smaller, more focused modules?**
-  _Cohesion score 0.09747899159663866 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10685483870967742 - nodes in this community are weakly interconnected._
 - **Should `MyWashForm.tsx` be split into smaller, more focused modules?**
   _Cohesion score 0.11904761904761904 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**

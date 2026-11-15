@@ -110,7 +110,7 @@ export async function submitPickupRequest(
     `*Speed:* ${speedNames[data.speed] || data.speed}`
   );
 
-  const whatsappConfirmationUrl = `https://api.whatsapp.com/send?phone=27609633688&text=${waText}`;
+  const whatsappConfirmationUrl = `https://api.whatsapp.com/send?phone=27648308785&text=${waText}`;
 
   // Dispatch notification email to info@laundro-hub.co.za
   await sendPickupOrderEmail(

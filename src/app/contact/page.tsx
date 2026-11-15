@@ -7,9 +7,19 @@ import { ContactForm } from "@/components/ContactForm";
 import { BUSINESS_INFO, getSuburbs } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Drop-Off Points | Laundro-Hub Bloemfontein",
+  title: "Contact & Drop-Off Points Bloemfontein",
   description:
-    "Get in touch with Laundro-Hub Bloemfontein. 2 drop-off points: The Towers (Langenhovenpark) & Bains Lodge. Central numbers: 060 963 3688 / 064 830 8785. Dynamic driver collection across entire Bloemfontein.",
+    "Contact Laundro-Hub Bloemfontein on (064) 830-8785. Drop off at The Towers (Langenhovenpark) or Bains Lodge, or book doorstep collection.",
+  alternates: {
+    canonical: "https://laundro-hub.co.za/contact",
+  },
+  openGraph: {
+    title: "Contact & Drop-Off Points Bloemfontein | Laundro-Hub",
+    description:
+      "Visit The Towers Shopping Centre (Langenhovenpark) or Bains Lodge drop-off point, or WhatsApp us for collection across Bloemfontein.",
+    url: "https://laundro-hub.co.za/contact",
+    images: [{ url: "/img/fabric-bg.jpg", alt: "Laundro-Hub Bloemfontein drop-off locations" }],
+  },
 };
 
 export default async function ContactPage() {

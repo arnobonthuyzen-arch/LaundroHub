@@ -36,21 +36,21 @@ const AVAILABLE_SERVICES = [
   {
     id: "Steam Ironing & Pressing",
     label: "Steam Ironing & Pressing",
-    description: "Work shirts, trousers, wrinkle-free garments (R40/kg)",
+    description: "Work shirts, trousers, wrinkle-free garments (R42/kg)",
     icon: Sparkles,
     recommended: false,
   },
   {
     id: "Bedding, Duvets & Blankets",
     label: "Bedding, Duvets & Blankets",
-    description: "Blankets from R75/kg, Queen & King duvets R150 each",
+    description: "Blankets from R75, Single/Double duvets R120, Queen & King duvets R130",
     icon: Layers,
     recommended: false,
   },
   {
     id: "Delicates & Gentle Handwash",
     label: "Delicates & Gentle Handwash",
-    description: "Wool, silk, delicate fabrics on request (R42/kg)",
+    description: "Wool, silk, delicate fabrics on request (R60/kg)",
     icon: HeartHandshake,
     recommended: false,
   },
@@ -77,7 +77,7 @@ function SubmitPickupButton() {
       ) : (
         <>
           <WhatsAppIcon className="h-5 w-5 shrink-0" />
-          <span className="hidden sm:inline">Book Pickup via WhatsApp (060 963 3688 / 064 830 8785)</span>
+          <span className="hidden sm:inline">Book Pickup via WhatsApp ((064) 830-8785)</span>
           <span className="sm:hidden">Book Pickup via WhatsApp</span>
         </>
       )}
@@ -235,11 +235,11 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               <div className="flex items-center gap-2">
                 <h4 className="text-sm font-bold text-brand-deep">WhatsApp &amp; Phone Booking Desk</h4>
                 <span className="rounded-full bg-brand-teal text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wide">
-                  Central: 060 963 3688
+                  Central: (064) 830-8785
                 </span>
               </div>
               <p className="text-xs text-brand-body mt-0.5 leading-relaxed max-w-xl">
-                Simple direct phone call or WhatsApp to arrange collection and return (060 963 3688 / 064 830 8785). No fixed time slots — pick-ups are scheduled dynamically with the driver throughout the day across Bloemfontein. Strictly EFT or card payment; no open accounts.
+                Simple direct phone call or WhatsApp to arrange collection and return ((064) 830-8785). No fixed time slots — pick-ups are scheduled dynamically with the driver throughout the day across Bloemfontein. Strictly EFT or card payment; no open accounts.
               </p>
             </div>
           </div>
@@ -960,7 +960,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 className="inline-flex items-center gap-1 font-bold text-brand-teal hover:underline"
               >
                 <WhatsAppIcon className="h-3.5 w-3.5 shrink-0" />
-                060 963 3688
+                (064) 830-8785
               </a>
             </div>
           </div>
