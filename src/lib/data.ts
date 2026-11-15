@@ -75,7 +75,7 @@ export const BUSINESS_INFO = {
 };
 
 export const PRICING_POLICY: PricingPolicy = {
-  effectiveDate: "1 September 2026",
+  effectiveDate: "15 November 2026",
   vatStatus: "Prices include VAT. Special rates available for bulk & contract clients.",
   isVatRegistered: true,
   minimumOrder: "No minimum order amount applies.",

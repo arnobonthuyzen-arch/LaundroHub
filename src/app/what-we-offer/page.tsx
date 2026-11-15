@@ -419,7 +419,7 @@ export default async function WhatWeOfferPage() {
               <div>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-mint/20 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-brand-mint mb-1.5">
                   <Receipt className="h-3.5 w-3.5" />
-                  Official Tariff &bull; Effective from 1 September 2026
+                  Official Tariff &bull; Updated November 2026
                 </span>
                 <h3 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
                   Master Price List
@@ -431,7 +431,7 @@ export default async function WhatWeOfferPage() {
 
               <div className="flex items-center gap-3">
                 <a
-                  href="/img/price-list-september-2026.png"
+                  href="/img/price-list-november-2026.jpg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-mint text-brand-deep hover:bg-white px-4 py-2.5 text-xs font-bold transition-all shadow-sm"
@@ -457,14 +457,14 @@ export default async function WhatWeOfferPage() {
                   </div>
 
                   <a
-                    href="/img/price-list-september-2026.png"
+                    href="/img/price-list-november-2026.jpg"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group block relative aspect-[1/1.4] w-full max-w-sm mx-auto overflow-hidden rounded-2xl border-2 border-brand-line shadow-card hover:shadow-elevated transition-all"
                   >
                     <Image
-                      src="/img/price-list-september-2026.png"
-                      alt="Laundro-Hub Official Price List Effective 1 September 2026"
+                      src="/img/price-list-november-2026.jpg"
+                      alt="Laundro-Hub Official Price List Updated November 2026"
                       fill
                       className="object-contain p-1 group-hover:scale-[1.02] transition-transform duration-300"
                       sizes="(max-width: 1024px) 100vw, 400px"

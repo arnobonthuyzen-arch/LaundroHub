@@ -223,7 +223,7 @@ export default async function HomePage() {
             <div className="space-y-1.5 text-center md:text-left">
               <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-mint/20 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-brand-mint">
                 <Receipt className="h-3.5 w-3.5" />
-                <span>Official Tariff &bull; Effective from 1 September 2026</span>
+                <span>Official Tariff &bull; Updated November 2026</span>
               </div>
               <h3 className="font-display text-xl sm:text-2xl font-bold">
                 Wash, Dry &amp; Fold R40/kg &bull; Ironing R42/kg &bull; Duvets from R120
