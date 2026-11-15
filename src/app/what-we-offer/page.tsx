@@ -25,8 +25,6 @@ import {
   Footprints,
   Tag,
   Download,
-  ExternalLink,
-  Eye,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { JsonLd } from "@/components/JsonLd";
@@ -430,148 +428,151 @@ export default async function WhatWeOfferPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <a
-                  href="/img/price-list-november-2026.jpg"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/my-wash"
                   className="inline-flex items-center gap-2 rounded-xl bg-brand-mint text-brand-deep hover:bg-white px-4 py-2.5 text-xs font-bold transition-all shadow-sm"
                 >
-                  <Eye className="h-3.5 w-3.5" />
-                  <span>View Official Flyer</span>
-                  <ExternalLink className="h-3 w-3" />
-                </a>
+                  <Truck className="h-3.5 w-3.5" />
+                  <span>Book Pickup (My Wash)</span>
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
-              {/* Left Column: Official Printed Flyer Preview Card */}
-              <div className="lg:col-span-5 bg-gradient-to-b from-brand-ground to-brand-lav/30 p-6 sm:p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-brand-line">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-brand-teal">
-                      Official Printed Tariff
+            {/* Full-Width Extracted Clothing & Linen Price Tables (No Flyer Image) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-brand-line">
+              {/* Clothing Column */}
+              <div className="flex flex-col">
+                <div className="bg-brand-teal text-white px-6 py-3.5 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Shirt className="h-4 w-4 text-brand-mint" />
+                    <span className="font-display text-sm sm:text-base font-extrabold uppercase tracking-wider">
+                      Clothing
                     </span>
-                    <span className="text-[11px] font-bold rounded-full bg-brand-tealbg text-brand-teal px-2.5 py-0.5 border border-brand-teal/20">
-                      In-Store &amp; Dispatch
-                    </span>
                   </div>
-
-                  <a
-                    href="/img/price-list-november-2026.jpg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block relative aspect-[1/1.4] w-full max-w-sm mx-auto overflow-hidden rounded-2xl border-2 border-brand-line shadow-card hover:shadow-elevated transition-all"
-                  >
-                    <Image
-                      src="/img/price-list-november-2026.jpg"
-                      alt="Laundro-Hub Official Price List Updated November 2026"
-                      fill
-                      className="object-contain p-1 group-hover:scale-[1.02] transition-transform duration-300"
-                      sizes="(max-width: 1024px) 100vw, 400px"
-                    />
-                    <div className="absolute inset-0 bg-brand-deep/0 group-hover:bg-brand-deep/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                      <span className="rounded-xl bg-white/95 backdrop-blur-sm text-brand-deep text-xs font-bold px-3.5 py-2 shadow-md flex items-center gap-1.5">
-                        <Eye className="h-3.5 w-3.5 text-brand-purple" />
-                        Click to expand flyer
-                      </span>
-                    </div>
-                  </a>
-
-                  <p className="mt-4 text-center text-xs text-brand-muted">
-                    Click the flyer above to view or download the full-resolution copy.
-                  </p>
+                  <span className="text-[11px] font-medium text-white/90">
+                    Everyday wear, perfectly cared for
+                  </span>
                 </div>
-
-                {/* 4 Flyer Value Badges */}
-                <div className="mt-6 pt-6 border-t border-brand-line/70 grid grid-cols-2 gap-2.5 text-[11px]">
-                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                    <span>Quality You Can Trust</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                    <span>Professional Laundry Care</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                    <span>Fresh, Clean &amp; Well-Cared</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 font-bold text-brand-deep">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0" />
-                    <span>7 Days Collection &amp; Delivery</span>
-                  </div>
-                </div>
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-brand-tealbg/70 text-brand-deep uppercase text-[11px] tracking-wider border-b border-brand-line">
+                      <th className="py-2.5 px-6 font-extrabold">Service</th>
+                      <th className="py-2.5 px-3 text-center font-extrabold">Unit</th>
+                      <th className="py-2.5 px-6 text-right font-extrabold">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
+                    {priceList
+                      .filter((item) => (item.order ?? 99) <= 7)
+                      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                      .map((item, idx) => (
+                        <tr
+                          key={item.id}
+                          className={`transition-colors hover:bg-brand-tealbg/40 ${
+                            idx % 2 === 0 ? "bg-white" : "bg-[#f4faf9]"
+                          }`}
+                        >
+                          <td className="py-3.5 px-6">
+                            <span className="font-bold text-brand-deep">{item.name}</span>
+                            {item.badge && (
+                              <span className="ml-2 inline-block rounded-full bg-brand-purple text-white text-[10px] font-extrabold px-2 py-0.5">
+                                {item.badge}
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-3.5 px-3 text-center whitespace-nowrap">
+                            <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                              {item.flyerUnit || item.unit}
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-6 text-right whitespace-nowrap">
+                            <span className="font-display text-base sm:text-lg font-extrabold text-brand-teal-dark">
+                              {item.formattedPrice}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
               </div>
 
-              {/* Right Column: Exact Flyer Table Representation */}
-              <div className="lg:col-span-7 flex flex-col justify-between">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse">
-                    <thead>
-                      <tr className="bg-brand-purple text-white uppercase text-xs tracking-wider">
-                        <th className="py-3.5 px-4 sm:px-6 font-extrabold">Service</th>
-                        <th className="py-3.5 px-3 text-center font-extrabold text-[11px]">Rate Unit</th>
-                        <th className="py-3.5 px-4 sm:px-6 text-right font-extrabold">Price</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
-                      {priceList
-                        .filter((item) => (item.order ?? 99) <= 15)
-                        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-                        .map((item, idx) => (
-                          <tr
-                            key={item.id}
-                            className={`transition-colors hover:bg-brand-tealbg/50 ${
-                              idx % 2 === 0 ? "bg-white" : "bg-[#f4faf9]"
-                            }`}
-                          >
-                            <td className="py-3.5 px-4 sm:px-6">
-                              <span className="font-bold text-brand-deep">
-                                {item.name}
-                              </span>
-                              {item.badge && (
-                                <span className="ml-2 inline-block rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-extrabold px-2 py-0.5">
-                                  {item.badge}
-                                </span>
-                              )}
-                            </td>
-                            <td className="py-3.5 px-3 text-center whitespace-nowrap">
-                              <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
-                                {item.flyerUnit || item.unit}
-                              </span>
-                            </td>
-                            <td className="py-3.5 px-4 sm:px-6 text-right whitespace-nowrap">
-                              <span className="font-display text-base sm:text-lg font-extrabold text-brand-purple">
-                                {item.formattedPrice}
-                              </span>
-                            </td>
-                          </tr>
-                        ))}
-                    </tbody>
-                  </table>
+              {/* Linen & Bedding Column */}
+              <div className="flex flex-col">
+                <div className="bg-brand-purple text-white px-6 py-3.5 flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Layers className="h-4 w-4 text-brand-mint" />
+                    <span className="font-display text-sm sm:text-base font-extrabold uppercase tracking-wider">
+                      Linen &amp; Bedding
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-medium text-brand-lav/90">
+                    Hotel-quality care for your linen
+                  </span>
                 </div>
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-brand-lav/60 text-brand-deep uppercase text-[11px] tracking-wider border-b border-brand-line">
+                      <th className="py-2.5 px-6 font-extrabold">Service</th>
+                      <th className="py-2.5 px-3 text-center font-extrabold">Unit</th>
+                      <th className="py-2.5 px-6 text-right font-extrabold">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
+                    {priceList
+                      .filter((item) => (item.order ?? 99) >= 8 && (item.order ?? 99) <= 15)
+                      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                      .map((item, idx) => (
+                        <tr
+                          key={item.id}
+                          className={`transition-colors hover:bg-brand-lav/40 ${
+                            idx % 2 === 0 ? "bg-white" : "bg-brand-ground/60"
+                          }`}
+                        >
+                          <td className="py-3.5 px-6">
+                            <span className="font-bold text-brand-deep">{item.name}</span>
+                            {item.badge && (
+                              <span className="ml-2 inline-block rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-extrabold px-2 py-0.5">
+                                {item.badge}
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-3.5 px-3 text-center whitespace-nowrap">
+                            <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                              {item.flyerUnit || item.unit}
+                            </span>
+                          </td>
+                          <td className="py-3.5 px-6 text-right whitespace-nowrap">
+                            <span className="font-display text-base sm:text-lg font-extrabold text-brand-purple">
+                              {item.formattedPrice}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-                {/* Transport Van Rates Bar */}
-                <div className="p-4 sm:p-5 bg-brand-tealbg/40 border-t border-brand-line">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-brand-teal flex items-center gap-1.5">
-                      <Truck className="h-3.5 w-3.5" />
-                      Express Collection &amp; Delivery Van Rates
-                    </span>
-                    <span className="text-[11px] text-brand-muted font-semibold">
-                      No Minimum Order
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-brand-line">
-                      <span className="font-medium text-brand-body">Langenhovenpark Hub</span>
-                      <span className="font-display font-extrabold text-brand-deep">R35 / trip</span>
-                    </div>
-                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-white border border-brand-line">
-                      <span className="font-medium text-brand-body">Greater Bloemfontein</span>
-                      <span className="font-display font-extrabold text-brand-deep">R65 / trip</span>
-                    </div>
-                  </div>
+            {/* Transport Van Rates & VAT Footer */}
+            <div className="p-5 sm:p-6 bg-brand-tealbg/40 border-t border-brand-line space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="text-xs font-extrabold uppercase tracking-wider text-brand-teal flex items-center gap-1.5">
+                  <Truck className="h-3.5 w-3.5" />
+                  Express Collection &amp; Delivery Van Rates
+                </span>
+                <span className="text-[11px] text-brand-muted font-semibold">
+                  Prices include VAT &bull; Subject to change without prior notice &bull; Special rates for bulk &amp; contract clients
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div className="flex items-center justify-between p-3 rounded-xl bg-white border border-brand-line">
+                  <span className="font-medium text-brand-body">Langenhovenpark Hub</span>
+                  <span className="font-display font-extrabold text-brand-deep">R35 / trip</span>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-xl bg-white border border-brand-line">
+                  <span className="font-medium text-brand-body">Greater Bloemfontein</span>
+                  <span className="font-display font-extrabold text-brand-deep">R65 / trip</span>
                 </div>
               </div>
             </div>

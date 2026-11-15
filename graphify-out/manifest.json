@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1794740147.4705307,
-    "seen": 1794740587.283167,
-    "ast_hash": "87d9ea61dd8cffea6e2cfa341802c365",
+    "mtime": 1794744055.0775352,
+    "seen": 1794744508.2687519,
+    "ast_hash": "70383b603299ef8bef5fb17f42db1f8f",
     "semantic_hash": ""
   },
   "src/app/robots.ts": {
@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "src/lib/data.ts": {
-    "mtime": 1794740271.0416408,
-    "seen": 1794740587.283201,
-    "ast_hash": "af61370c1e8dbcf1198cdc78582e5d10",
+    "mtime": 1794744049.7740595,
+    "seen": 1794744508.268769,
+    "ast_hash": "755701ec2a9308dba83834199cfbd82a",
     "semantic_hash": ""
   },
   "src/lib/types.ts": {
@@ -804,9 +804,9 @@
     "semantic_hash": ""
   },
   "src/components/my-wash/MyWashForm.tsx": {
-    "mtime": 1794739947.3012977,
-    "seen": 1794740587.2832,
-    "ast_hash": "feecba2df41dd5f1a90da6752c042389",
+    "mtime": 1794744440.3278525,
+    "seen": 1794744508.268768,
+    "ast_hash": "a23efa34166310f1c41bb734592466ad",
     "semantic_hash": ""
   },
   "src/app/airbnb/page.tsx": {
@@ -840,9 +840,9 @@
     "semantic_hash": ""
   },
   "src/app/what-we-offer/page.tsx": {
-    "mtime": 1794739865.55364,
-    "seen": 1794740587.2831821,
-    "ast_hash": "f4bcfcc893cc2e4888868d0d25884c35",
+    "mtime": 1794744393.6438837,
+    "seen": 1794744508.26876,
+    "ast_hash": "37b818c3f1684b92ec9f5ecbd843c356",
     "semantic_hash": ""
   },
   "src/app/healthcare/page.tsx": {
@@ -1305,6 +1305,18 @@
     "mtime": 1794664783.6940598,
     "seen": 1794665359.016344,
     "ast_hash": "60b592ffef0170b2f282523928cb4bb9",
+    "semantic_hash": ""
+  },
+  "img/price-list-november-2026.jpg": {
+    "mtime": 1794744024.7115486,
+    "seen": 1794744508.268828,
+    "ast_hash": "0fd0465a0d4a4fa83239fe159a0d17a7",
+    "semantic_hash": ""
+  },
+  "public/img/price-list-november-2026.jpg": {
+    "mtime": 1794744024.7075632,
+    "seen": 1794744508.268863,
+    "ast_hash": "0fd0465a0d4a4fa83239fe159a0d17a7",
     "semantic_hash": ""
   }
 }

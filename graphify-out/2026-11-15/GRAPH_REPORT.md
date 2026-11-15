@@ -1,7 +1,7 @@
-# Graph Report - laundro-hub-website  (2026-11-14)
+# Graph Report - laundro-hub-website  (2026-11-15)
 
 ## Corpus Check
-- 54 files · ~715,023 words
+- 54 files · ~714,977 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary

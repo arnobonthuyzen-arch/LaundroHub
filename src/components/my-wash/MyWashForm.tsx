@@ -13,48 +13,32 @@ import {
   RotateCcw,
   Shirt,
   Layers,
-  HeartHandshake,
   Info,
+  Plus,
+  Minus,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { submitPickupRequest, type PickupSuccessData } from "@/actions/pickup";
 import type { ActionState } from "@/lib/types";
-import { BUSINESS_INFO, getLogisticsFee, type LogisticsOptionType, COLLECTION_DELIVERY_PRICING } from "@/lib/data";
+import {
+  BUSINESS_INFO,
+  OFFICIAL_PRICE_LIST,
+  getLogisticsFee,
+  type LogisticsOptionType,
+  COLLECTION_DELIVERY_PRICING,
+} from "@/lib/data";
 
 interface MyWashFormProps {
   suburbs: string[];
 }
 
-const AVAILABLE_SERVICES = [
-  {
-    id: "Wash, Dry & Fold",
-    label: "Wash, Dry & Fold",
-    description: "Everyday clothes, activewear, bundled crisp (R40/kg)",
-    icon: Shirt,
-    recommended: true,
-  },
-  {
-    id: "Steam Ironing & Pressing",
-    label: "Steam Ironing & Pressing",
-    description: "Work shirts, trousers, wrinkle-free garments (R42/kg)",
-    icon: Sparkles,
-    recommended: false,
-  },
-  {
-    id: "Bedding, Duvets & Blankets",
-    label: "Bedding, Duvets & Blankets",
-    description: "Blankets from R75, Single/Double duvets R120, Queen & King duvets R130",
-    icon: Layers,
-    recommended: false,
-  },
-  {
-    id: "Delicates & Gentle Handwash",
-    label: "Delicates & Gentle Handwash",
-    description: "Wool, silk, delicate fabrics on request (R60/kg)",
-    icon: HeartHandshake,
-    recommended: false,
-  },
-];
+const BOOKABLE_ITEMS = OFFICIAL_PRICE_LIST.filter((item) => (item.order ?? 99) <= 15).sort(
+  (a, b) => (a.order ?? 0) - (b.order ?? 0)
+);
+const CLOTHING_ITEMS = BOOKABLE_ITEMS.filter((item) => (item.order ?? 99) <= 7);
+const LINEN_ITEMS = BOOKABLE_ITEMS.filter(
+  (item) => (item.order ?? 99) >= 8 && (item.order ?? 99) <= 15
+);
 
 const INITIAL_STATE: ActionState<PickupSuccessData> = {
   success: false,
@@ -88,10 +72,10 @@ function SubmitPickupButton() {
 export function MyWashForm({ suburbs }: MyWashFormProps) {
   const [state, formAction] = useActionState(submitPickupRequest, INITIAL_STATE);
 
-  // Interactive local states for interactive pill toggles & live preview
-  const [selectedServices, setSelectedServices] = useState<string[]>([
-    "Wash, Dry & Fold",
-  ]);
+  // Interactive local states for itemized service selection & live estimate
+  const [itemQuantities, setItemQuantities] = useState<Record<string, number>>({
+    "wash-dry-fold": 5,
+  });
   const [selectedVolume, setSelectedVolume] = useState<string>(
     "1 Regular Basket (~5–7 kg)"
   );
@@ -119,16 +103,46 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
   const defaultDateStr = tomorrow.toISOString().split("T")[0];
   const [pickupDate, setPickupDate] = useState<string>(defaultDateStr);
 
-  const toggleService = (serviceId: string) => {
-    setSelectedServices((prev) => {
-      if (prev.includes(serviceId)) {
-        if (prev.length === 1) return prev; // keep at least 1
-        return prev.filter((s) => s !== serviceId);
+  const toggleService = (itemId: string, defaultQty: number) => {
+    setItemQuantities((prev) => {
+      const next = { ...prev };
+      if (next[itemId]) {
+        if (Object.keys(next).length === 1) return prev; // keep at least 1
+        delete next[itemId];
       } else {
-        return [...prev, serviceId];
+        next[itemId] = defaultQty;
       }
+      return next;
     });
   };
+
+  const updateItemQty = (itemId: string, delta: number) => {
+    setItemQuantities((prev) => {
+      const current = prev[itemId] ?? 1;
+      const updated = Math.max(1, Math.min(50, current + delta));
+      return { ...prev, [itemId]: updated };
+    });
+  };
+
+  const selectedLineItems = BOOKABLE_ITEMS.filter((item) => (itemQuantities[item.id] ?? 0) > 0).map(
+    (item) => {
+      const qty = itemQuantities[item.id];
+      const unitLabel = item.unit === "per kg" ? "kg" : item.unit === "per pair" ? "pair" : "each";
+      return {
+        ...item,
+        qty,
+        unitLabel,
+        subtotal: item.price * qty,
+      };
+    }
+  );
+
+  const estimatedItemsTotal = selectedLineItems.reduce((sum, item) => sum + item.subtotal, 0);
+  const estimatedGrandTotal = estimatedItemsTotal + currentFee;
+
+  const serializedServices = selectedLineItems
+    .map((item) => `${item.name} (${item.qty} ${item.unitLabel} @ R${item.price} = R${item.subtotal})`)
+    .join(", ");
 
   // SUCCESS STATE
   if (state.success && state.data) {
@@ -262,7 +276,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
           )}
 
           {/* Hidden inputs to sync component states with standard FormData */}
-          <input type="hidden" name="services" value={selectedServices.join(", ")} />
+          <input type="hidden" name="services" value={serializedServices} />
           <input type="hidden" name="estimatedBags" value={selectedVolume} />
           <input type="hidden" name="logisticsOption" value={logisticsOption} />
           <input type="hidden" name="detergentPreference" value={detergent} />
@@ -280,50 +294,195 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 Select Your Wash Services
               </h3>
             </div>
-            <p className="text-xs sm:text-sm text-brand-muted mb-4 ml-8.5">
-              Select one or more services you would like our team to handle:
+            <p className="text-xs sm:text-sm text-brand-muted mb-5 ml-8.5">
+              Select any Clothing or Linen items from our official VAT-inclusive price list and set your estimated kg or item count:
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {AVAILABLE_SERVICES.map((srv) => {
-                const isSelected = selectedServices.includes(srv.id);
-                const Icon = srv.icon;
-                return (
-                  <button
-                    key={srv.id}
-                    type="button"
-                    onClick={() => toggleService(srv.id)}
-                    className={`flex items-start gap-3.5 rounded-2xl border p-4 text-left transition-all ${
-                      isSelected
-                        ? "border-brand-purple bg-brand-purple/5 ring-1 ring-brand-purple/30"
-                        : "border-brand-line bg-white hover:border-brand-purple/40"
-                    }`}
-                  >
+            {/* Clothing Items */}
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-3">
+                <Shirt className="h-4 w-4 text-brand-teal" />
+                <h4 className="text-xs font-extrabold uppercase tracking-wider text-brand-teal">
+                  Clothing
+                </h4>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {CLOTHING_ITEMS.map((item) => {
+                  const qty = itemQuantities[item.id] ?? 0;
+                  const isSelected = qty > 0;
+                  const defaultQty = item.unit === "per kg" ? 5 : 1;
+                  const unitLabel = item.unit === "per kg" ? "kg" : "pair";
+                  return (
                     <div
-                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                      key={item.id}
+                      className={`rounded-2xl border p-4 transition-all ${
                         isSelected
-                          ? "bg-brand-purple text-white shadow-sm"
-                          : "bg-brand-lav text-brand-deep"
+                          ? "border-brand-teal bg-brand-tealbg/40 ring-1 ring-brand-teal/30"
+                          : "border-brand-line bg-white hover:border-brand-teal/40"
                       }`}
                     >
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-bold text-brand-deep">
-                          {srv.label}
+                      <button
+                        type="button"
+                        onClick={() => toggleService(item.id, defaultQty)}
+                        className="w-full flex items-start justify-between gap-3 text-left"
+                      >
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-sm font-bold text-brand-deep">{item.name}</span>
+                            {item.badge && (
+                              <span className="rounded-full bg-brand-purple text-white text-[10px] font-extrabold px-2 py-0.5">
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="mt-0.5 text-xs font-semibold text-brand-teal-dark">
+                            {item.formattedPrice} {item.unit}
+                          </p>
+                        </div>
+                        <span
+                          className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
+                            isSelected
+                              ? "border-brand-teal bg-brand-teal text-white"
+                              : "border-brand-line bg-white"
+                          }`}
+                        >
+                          {isSelected && <CheckCircle2 className="h-3.5 w-3.5" />}
                         </span>
-                        {isSelected && (
-                          <CheckCircle2 className="h-4 w-4 text-brand-purple" />
-                        )}
-                      </div>
-                      <p className="mt-1 text-xs text-brand-muted leading-relaxed">
-                        {srv.description}
-                      </p>
+                      </button>
+
+                      {isSelected && (
+                        <div className="mt-3 pt-2.5 border-t border-brand-line/70 flex items-center justify-between text-xs">
+                          <span className="font-medium text-brand-body">
+                            Est. {qty} {unitLabel} &bull; <strong className="text-brand-deep">R{item.price * qty}</strong>
+                          </span>
+                          <div className="inline-flex items-center gap-1.5 rounded-lg border border-brand-line bg-white px-1.5 py-1">
+                            <button
+                              type="button"
+                              onClick={() => updateItemQty(item.id, -1)}
+                              aria-label={`Decrease ${item.name}`}
+                              className="h-6 w-6 flex items-center justify-center rounded hover:bg-brand-lav text-brand-deep"
+                            >
+                              <Minus className="h-3 w-3" />
+                            </button>
+                            <span className="w-6 text-center font-mono font-bold text-brand-deep">
+                              {qty}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => updateItemQty(item.id, 1)}
+                              aria-label={`Increase ${item.name}`}
+                              className="h-6 w-6 flex items-center justify-center rounded hover:bg-brand-lav text-brand-deep"
+                            >
+                              <Plus className="h-3 w-3" />
+                            </button>
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </button>
-                );
-              })}
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Linen & Bedding Items */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Layers className="h-4 w-4 text-brand-purple" />
+                <h4 className="text-xs font-extrabold uppercase tracking-wider text-brand-purple">
+                  Linen &amp; Bedding
+                </h4>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {LINEN_ITEMS.map((item) => {
+                  const qty = itemQuantities[item.id] ?? 0;
+                  const isSelected = qty > 0;
+                  const defaultQty = item.unit === "per kg" ? 3 : 1;
+                  const unitLabel = item.unit === "per kg" ? "kg" : "each";
+                  return (
+                    <div
+                      key={item.id}
+                      className={`rounded-2xl border p-4 transition-all ${
+                        isSelected
+                          ? "border-brand-purple bg-brand-purple/5 ring-1 ring-brand-purple/30"
+                          : "border-brand-line bg-white hover:border-brand-purple/40"
+                      }`}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => toggleService(item.id, defaultQty)}
+                        className="w-full flex items-start justify-between gap-3 text-left"
+                      >
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-sm font-bold text-brand-deep">{item.name}</span>
+                            {item.badge && (
+                              <span className="rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-extrabold px-2 py-0.5">
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p className="mt-0.5 text-xs font-semibold text-brand-purple">
+                            {item.formattedPrice} {item.unit}
+                          </p>
+                        </div>
+                        <span
+                          className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
+                            isSelected
+                              ? "border-brand-purple bg-brand-purple text-white"
+                              : "border-brand-line bg-white"
+                          }`}
+                        >
+                          {isSelected && <CheckCircle2 className="h-3.5 w-3.5" />}
+                        </span>
+                      </button>
+
+                      {isSelected && (
+                        <div className="mt-3 pt-2.5 border-t border-brand-line/70 flex items-center justify-between text-xs">
+                          <span className="font-medium text-brand-body">
+                            Est. {qty} {unitLabel} &bull; <strong className="text-brand-deep">R{item.price * qty}</strong>
+                          </span>
+                          <div className="inline-flex items-center gap-1.5 rounded-lg border border-brand-line bg-white px-1.5 py-1">
+                            <button
+                              type="button"
+                              onClick={() => updateItemQty(item.id, -1)}
+                              aria-label={`Decrease ${item.name}`}
+                              className="h-6 w-6 flex items-center justify-center rounded hover:bg-brand-lav text-brand-deep"
+                            >
+                              <Minus className="h-3 w-3" />
+                            </button>
+                            <span className="w-6 text-center font-mono font-bold text-brand-deep">
+                              {qty}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => updateItemQty(item.id, 1)}
+                              aria-label={`Increase ${item.name}`}
+                              className="h-6 w-6 flex items-center justify-center rounded hover:bg-brand-lav text-brand-deep"
+                            >
+                              <Plus className="h-3 w-3" />
+                            </button>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Live Estimate Bar */}
+            <div className="mt-5 rounded-2xl border border-brand-purple/20 bg-brand-lav/40 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <div>
+                <span className="font-bold text-brand-deep">
+                  Estimated Order ({selectedLineItems.length} item{selectedLineItems.length === 1 ? "" : "s"} + Express Van):
+                </span>
+                <p className="text-brand-muted mt-0.5">
+                  Laundry est. R{estimatedItemsTotal} + Transport R{currentFee} &bull; Final weight confirmed on our scale (VAT included).
+                </p>
+              </div>
+              <span className="font-display text-xl font-extrabold text-brand-purple shrink-0">
+                Est. R{estimatedGrandTotal}
+              </span>
             </div>
             {errors?.services && (
               <p className="mt-2 text-xs font-medium text-red-600">{errors.services[0]}</p>
@@ -838,9 +997,15 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </span>
             </div>
             <div className="flex items-center justify-between text-brand-body pt-1.5 border-t border-brand-line/60">
-              <span className="text-brand-muted">Services:</span>
+              <span className="text-brand-muted">Services ({selectedLineItems.length}):</span>
               <span className="font-semibold text-brand-deep truncate max-w-[140px] sm:max-w-[200px]">
-                {selectedServices.join(", ") || "None"}
+                {selectedLineItems.map((i) => `${i.name} (${i.qty} ${i.unitLabel})`).join(", ") || "None"}
+              </span>
+            </div>
+            <div className="flex items-center justify-between text-brand-body pt-1.5 border-t border-brand-line/60">
+              <span className="text-brand-muted">Est. Total (incl. VAT &amp; Van):</span>
+              <span className="font-display font-extrabold text-brand-purple">
+                R{estimatedGrandTotal}
               </span>
             </div>
           </div>
@@ -874,17 +1039,29 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
 
             <div className="mt-4 space-y-3.5 text-xs">
               <div>
-                <span className="text-brand-muted block mb-1">Selected Services:</span>
-                <div className="flex flex-wrap gap-1">
-                  {selectedServices.map((srv) => (
-                    <span
-                      key={srv}
-                      className="rounded-md bg-brand-lav px-2 py-0.5 text-[11px] font-semibold text-brand-deep"
+                <span className="text-brand-muted block mb-1.5">Selected Items:</span>
+                <div className="space-y-1.5">
+                  {selectedLineItems.map((item) => (
+                    <div
+                      key={item.id}
+                      className="flex items-center justify-between rounded-md bg-brand-lav px-2.5 py-1 text-[11px] font-semibold text-brand-deep"
                     >
-                      {srv}
-                    </span>
+                      <span>
+                        {item.name} ({item.qty} {item.unitLabel})
+                      </span>
+                      <span className="font-mono font-bold text-brand-purple">
+                        R{item.subtotal}
+                      </span>
+                    </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="flex justify-between py-1.5 border-t border-brand-line/60">
+                <span className="text-brand-muted">Est. Total (incl. Van):</span>
+                <span className="font-display font-extrabold text-brand-purple text-right">
+                  R{estimatedGrandTotal}
+                </span>
               </div>
 
               <div className="flex justify-between py-1.5 border-t border-brand-line/60">
