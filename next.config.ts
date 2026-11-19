@@ -29,6 +29,21 @@ const nextConfig: NextConfig = {
         destination: "/schools",
         permanent: true,
       },
+      {
+        source: "/services",
+        destination: "/what-we-offer",
+        permanent: true,
+      },
+      {
+        source: "/author/:path*",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/category/:path*",
+        destination: "/what-we-offer",
+        permanent: true,
+      },
     ];
   },
 
@@ -40,6 +55,10 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
           },
         ],
       },
