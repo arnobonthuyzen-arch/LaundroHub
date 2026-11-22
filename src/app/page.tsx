@@ -17,7 +17,7 @@ import {
   Receipt,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
-import { getServices, getPricingPlans, getSuburbs, BUSINESS_INFO } from "@/lib/data";
+import { getServices, getSuburbs, BUSINESS_INFO } from "@/lib/data";
 import { HeroBubbles } from "@/components/HeroBubbles";
 import { HeroVideoPlayer } from "@/components/HeroVideoPlayer";
 import TowersMapWrapper from "@/components/TowersMapWrapper";
@@ -41,9 +41,8 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [services, plans, suburbs] = await Promise.all([
+  const [services, suburbs] = await Promise.all([
     getServices(),
-    getPricingPlans(),
     getSuburbs(),
   ]);
 
@@ -219,7 +218,7 @@ export default async function HomePage() {
           </div>
 
           {/* Quick Price List Callout Banner */}
-          <div className="mt-12 rounded-3xl bg-gradient-to-r from-brand-deep to-brand-plum p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-elevated">
+          <div className="mt-8 rounded-3xl bg-gradient-to-r from-brand-deep to-brand-plum p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-elevated">
             <div className="space-y-1.5 text-center md:text-left">
               <div className="inline-flex items-center gap-1.5 rounded-full bg-brand-mint/20 px-3 py-0.5 text-xs font-bold uppercase tracking-wider text-brand-mint">
                 <Receipt className="h-3.5 w-3.5" />
@@ -245,129 +244,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* School Hostels & Student Living Preview */}
-      <section className="py-20 bg-brand-lav/40 border-y border-brand-line">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-sm font-bold uppercase tracking-wider text-brand-purple">
-              Hostels &amp; Student Living
-            </span>
-            <h2 className="mt-2 font-display text-3xl sm:text-5xl font-extrabold text-brand-deep tracking-tight">
-              Boarding school &amp; hostel laundry made simple.
-            </h2>
-            <p className="mt-4 text-base text-brand-body">
-              Scheduled weekly batch runs for school boarding hostels, sports derbies &amp; tournament kits, university residences, and student communes in Bloemfontein. Tagged bags, uniform pressing, and zero mix-ups.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-            {plans.map((plan) => (
-              <div
-                key={plan.id}
-                className={`relative flex flex-col justify-between rounded-3xl p-7 sm:p-8 transition-all h-full ${
-                  plan.popular
-                    ? "bg-brand-deep text-white shadow-elevated border-2 border-brand-mint ring-4 ring-brand-purple/10"
-                    : "bg-white text-brand-ink border border-brand-line shadow-sm hover:shadow-md hover:border-brand-purple/30"
-                }`}
-              >
-                <div>
-                  {/* Category Badge & Weight Tag Row */}
-                  <div className="flex items-center justify-between gap-2 min-h-[1.75rem] mb-3">
-                    <span
-                      className={`inline-flex items-center rounded-full px-3 py-0.5 text-[11px] font-extrabold uppercase tracking-wider ${
-                        plan.popular
-                          ? "bg-brand-mint text-brand-deep"
-                          : "bg-brand-lav text-brand-purple"
-                      }`}
-                    >
-                      {plan.popular ? "★ Most Popular" : "Bulk Batch Care"}
-                    </span>
-                    <span
-                      className={`text-[11px] font-bold uppercase tracking-wider ${
-                        plan.popular ? "text-brand-mint/90" : "text-brand-teal"
-                      }`}
-                    >
-                      {plan.weightLimit}
-                    </span>
-                  </div>
-
-                  {/* Plan Name */}
-                  <h3
-                    className={`font-display text-xl sm:text-2xl font-bold min-h-[3.5rem] flex items-center leading-snug ${
-                      plan.popular ? "text-white" : "text-brand-deep"
-                    }`}
-                  >
-                    {plan.name}
-                  </h3>
-
-                  {/* Rate / Price Display */}
-                  <div className="mt-3 min-h-[3.75rem] flex items-center">
-                    <span
-                      className={`text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight ${
-                        plan.popular ? "text-brand-mint" : "text-brand-deep"
-                      }`}
-                    >
-                      {plan.pricePerMonth}
-                    </span>
-                  </div>
-
-                  {/* Description */}
-                  <p
-                    className={`mt-3 text-sm leading-relaxed min-h-[4.5rem] flex items-start ${
-                      plan.popular ? "text-brand-lav/80" : "text-brand-body"
-                    }`}
-                  >
-                    {plan.description}
-                  </p>
-
-                  {/* Divider */}
-                  <div
-                    className={`my-6 border-t ${
-                      plan.popular ? "border-white/15" : "border-brand-line/60"
-                    }`}
-                  />
-
-                  {/* Feature Checklist */}
-                  <ul className="space-y-3.5">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-xs sm:text-sm leading-snug">
-                        <CheckCircle2
-                          className={`h-4 w-4 flex-shrink-0 mt-0.5 ${
-                            plan.popular ? "text-brand-mint" : "text-brand-teal"
-                          }`}
-                        />
-                        <span className={plan.popular ? "text-white/90" : "text-brand-body"}>
-                          {f}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Bottom CTA Button */}
-                <div className="mt-8 pt-4">
-                  <Link
-                    href="/contact"
-                    className={`flex w-full min-h-[3rem] h-auto py-3 px-4 items-center justify-center gap-2 rounded-xl text-sm font-bold text-center leading-snug transition-all shadow-sm ${
-                      plan.popular
-                        ? "bg-brand-mint text-brand-deep hover:bg-brand-mint/90 hover:scale-[1.01]"
-                        : "bg-brand-purple text-white hover:bg-brand-deep hover:scale-[1.01]"
-                    }`}
-                  >
-                    <span>Inquire: {plan.name}</span>
-                    <ArrowRight className="h-4 w-4 shrink-0" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Who We Serve: Sector & Audience Highlights */}
-      <section className="py-20 bg-white border-b border-brand-line">
+      <section className="py-12 sm:py-16 bg-white border-y border-brand-line">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
               <span className="text-sm font-bold uppercase tracking-wider text-brand-purple">
                 Who We Serve
@@ -466,10 +346,10 @@ export default async function HomePage() {
       </section>
 
       {/* Collection & Delivery Suburb Coverage */}
-      <section className="py-20 bg-brand-ground">
+      <section className="py-12 sm:py-16 bg-brand-ground">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-brand-deep text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-elevated">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="rounded-3xl bg-brand-deep text-white p-6 sm:p-10 lg:p-12 relative overflow-hidden shadow-elevated">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 relative z-10">
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-mint">
                   New · Laundro-Hub Express
@@ -483,8 +363,8 @@ export default async function HomePage() {
                 </p>
 
                 {/* Suburb Coverage Tags */}
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {suburbs.map((suburb) => (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {suburbs.slice(0, 8).map((suburb) => (
                     <span
                       key={suburb}
                       className="inline-flex items-center gap-1.5 rounded-lg bg-white/10 px-3 py-1.5 text-xs font-medium text-brand-mint border border-white/15"
@@ -493,6 +373,14 @@ export default async function HomePage() {
                       {suburb}
                     </span>
                   ))}
+                  {suburbs.length > 8 && (
+                    <Link
+                      href="/express"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-brand-mint/20 px-3 py-1.5 text-xs font-bold text-brand-mint border border-brand-mint/30 hover:bg-brand-mint/30 transition-colors"
+                    >
+                      +{suburbs.length - 8} more Bloemfontein suburbs
+                    </Link>
+                  )}
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -543,8 +431,8 @@ export default async function HomePage() {
       </section>
 
       {/* Location / Visit us Section */}
-      <section className="py-16 sm:py-20 bg-white border-t border-brand-line">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="py-12 sm:py-16 bg-white border-t border-brand-line">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-5">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-teal/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-brand-teal">
