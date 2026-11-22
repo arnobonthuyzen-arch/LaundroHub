@@ -51,76 +51,76 @@ export default async function ContactPage() {
       <div className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Quick Contact Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 items-stretch">
             <a
               href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-brand-teal p-4 sm:p-5 text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3 rounded-2xl border border-brand-line bg-brand-teal p-4 text-white shadow-sm hover:bg-brand-teal/90 transition-all hover:scale-[1.01] min-w-0"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 shrink-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 shrink-0">
                 <WhatsAppIcon className="h-5 w-5 shrink-0" />
               </div>
-              <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-white/95">WhatsApp</p>
-                <p className="text-sm sm:text-base font-bold text-white">{BUSINESS_INFO.phone}</p>
-                <p className="text-[11px] text-white/95">Instant booking chat</p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-white/95 truncate">WhatsApp</p>
+                <p className="text-sm font-bold text-white truncate">{BUSINESS_INFO.phone}</p>
+                <p className="text-[11px] text-white/95 truncate">Instant booking chat</p>
               </div>
             </a>
 
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3 rounded-2xl border border-brand-line bg-white p-4 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01] min-w-0"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
                 <Phone className="h-5 w-5" />
               </div>
-              <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Dispatch &amp; Bookings</p>
-                <p className="text-sm sm:text-base font-bold text-brand-deep">{BUSINESS_INFO.phone}</p>
-                <p className="text-[11px] text-brand-muted">Direct call to driver</p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted truncate">Dispatch &amp; Bookings</p>
+                <p className="text-sm font-bold text-brand-deep truncate">{BUSINESS_INFO.phone}</p>
+                <p className="text-[11px] text-brand-muted truncate">Direct call to driver</p>
               </div>
             </a>
 
             <a
               href={`tel:${BUSINESS_INFO.secondaryPhoneRaw}`}
-              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3 rounded-2xl border border-brand-line bg-white p-4 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01] min-w-0"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
                 <Phone className="h-5 w-5" />
               </div>
-              <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Central Line</p>
-                <p className="text-sm sm:text-base font-bold text-brand-purple">{BUSINESS_INFO.secondaryPhone}</p>
-                <p className="text-[11px] text-brand-muted">Call or WhatsApp</p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted truncate">Central Line</p>
+                <p className="text-sm font-bold text-brand-purple truncate">{BUSINESS_INFO.secondaryPhone}</p>
+                <p className="text-[11px] text-brand-muted truncate">Call or WhatsApp</p>
               </div>
             </a>
 
             <a
               href={`mailto:${BUSINESS_INFO.email}`}
-              className="flex items-center gap-3.5 rounded-2xl border border-brand-line bg-white p-4 sm:p-5 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3 rounded-2xl border border-brand-line bg-white p-4 text-brand-deep shadow-sm hover:border-brand-purple/40 transition-all hover:scale-[1.01] min-w-0"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-lav text-brand-purple shrink-0">
                 <Mail className="h-5 w-5" />
               </div>
-              <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted">Email</p>
-                <p className="text-sm sm:text-base font-bold text-brand-purple truncate max-w-[160px] sm:max-w-none">{BUSINESS_INFO.email}</p>
-                <p className="text-[11px] text-brand-muted">RFQ &amp; inquiries</p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-muted truncate">Email</p>
+                <p className="text-[13px] font-bold text-brand-purple truncate" title={BUSINESS_INFO.email}>{BUSINESS_INFO.email}</p>
+                <p className="text-[11px] text-brand-muted truncate">RFQ &amp; inquiries</p>
               </div>
             </a>
 
             <Link
               href="/my-wash"
-              className="flex items-center gap-3.5 rounded-2xl border border-brand-purple/20 bg-brand-purple p-4 sm:p-5 text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.01]"
+              className="flex items-center gap-3 rounded-2xl border border-brand-purple/20 bg-brand-purple p-4 text-white shadow-sm hover:bg-brand-deep transition-all hover:scale-[1.01] min-w-0"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-brand-mint shrink-0">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-brand-mint shrink-0">
                 <Truck className="h-5 w-5" />
               </div>
-              <div>
-                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-mint">Doorstep Van</p>
-                <p className="text-sm sm:text-base font-bold">Book a Pickup</p>
-                <p className="text-[11px] text-white/80">My Wash collection →</p>
+              <div className="min-w-0 flex-1">
+                <p className="text-[11px] uppercase font-semibold tracking-wider text-brand-mint truncate">Doorstep Van</p>
+                <p className="text-sm font-bold truncate">Book a Pickup</p>
+                <p className="text-[11px] text-white/80 truncate">My Wash collection →</p>
               </div>
             </Link>
           </div>
