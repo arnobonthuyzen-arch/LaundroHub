@@ -7,7 +7,7 @@ import type { ActionState } from "@/lib/types";
 import { sendContactInquiryEmail } from "@/lib/mail";
 import { saveContactInquiry } from "@/lib/db";
 
-export const contactFormSchema = z.object({
+const contactFormSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters"),
   phone: z.string().trim().min(8, "Please enter a valid phone number (at least 8 digits)"),
   email: z.string().trim().email("Please enter a valid email address").optional().or(z.literal("")),

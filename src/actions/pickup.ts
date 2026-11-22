@@ -6,7 +6,7 @@ import type { ActionState } from "@/lib/types";
 import { sendPickupOrderEmail } from "@/lib/mail";
 import { getLogisticsFee, type LogisticsOptionType } from "@/lib/data";
 
-export const pickupRequestSchema = z.object({
+const pickupRequestSchema = z.object({
   name: z.string().trim().min(2, "Please enter your full name (at least 2 characters)"),
   phone: z.string().trim().min(8, "Please enter a valid phone number (at least 8 digits)"),
   email: z.string().trim().email("Please enter a valid email address").optional().or(z.literal("")),
