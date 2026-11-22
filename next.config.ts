@@ -16,6 +16,13 @@ const nextConfig: NextConfig = {
 
   experimental: {
     optimizePackageImports: ["lucide-react", "clsx", "tailwind-merge"],
+    serverActions: {
+      allowedOrigins: [
+        "laundro-hub.co.za",
+        "www.laundro-hub.co.za",
+        "localhost:3000",
+      ],
+    },
   },
 
   images: {

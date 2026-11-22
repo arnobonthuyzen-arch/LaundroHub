@@ -23,58 +23,71 @@ export async function submitContactForm(
   _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
-  const rawData = {
-    name: formData.get("name"),
-    phone: formData.get("phone"),
-    email: formData.get("email"),
-    accountType: formData.get("accountType") || "Commercial",
-    service: formData.get("service"),
-    estimatedVolume: formData.get("estimatedVolume"),
-    message: formData.get("message"),
-  };
-
-  const validationResult = contactFormSchema.safeParse(rawData);
-
-  if (!validationResult.success) {
-    return {
-      success: false,
-      error: "Please complete all required fields.",
-      fieldErrors: validationResult.error.flatten().fieldErrors,
-    };
-  }
-
-  const { data } = validationResult;
-
-  // Save inquiry to MySQL / MariaDB
-  let inquiryId: number | null = null;
   try {
-    inquiryId = await saveContactInquiry(data);
+    const rawData = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      accountType: formData.get("accountType") || "Commercial",
+      service: formData.get("service"),
+      estimatedVolume: formData.get("estimatedVolume"),
+      message: formData.get("message"),
+    };
+
+    const validationResult = contactFormSchema.safeParse(rawData);
+
+    if (!validationResult.success) {
+      return {
+        success: false,
+        error: "Please complete all required fields.",
+        fieldErrors: validationResult.error.flatten().fieldErrors,
+      };
+    }
+
+    const { data } = validationResult;
+
+    // Save inquiry to MySQL / MariaDB
+    let inquiryId: number | null = null;
+    try {
+      inquiryId = await saveContactInquiry(data);
+    } catch (err) {
+      console.error("[Database Error] Failed to save contact inquiry:", err);
+    }
+
+    // Dispatch notification email to info@laundro-hub.co.za
+    const emailSent = await sendContactInquiryEmail(data);
+
+    if (!inquiryId && !emailSent) {
+      return {
+        success: false,
+        error:
+          "We could not submit your inquiry right now. Please try again or reach us directly on WhatsApp.",
+      };
+    }
+
+    console.info("[Contact Us Inquiry Received]", {
+      timestamp: new Date().toISOString(),
+      inquiryId,
+      emailSent,
+      lead: data,
+    });
+
+    try {
+      revalidatePath("/contact");
+    } catch (err) {
+      console.warn("[revalidatePath] Warning:", err);
+    }
+
+    return {
+      success: true,
+      message: `Thank you, ${data.name}! We've received your ${data.accountType} inquiry for ${data.service}. Our team will review your requirements and get in touch with you directly on ${data.phone}.`,
+    };
   } catch (err) {
-    console.error("[Database Error] Failed to save contact inquiry:", err);
-  }
-
-  // Dispatch notification email to info@laundro-hub.co.za
-  const emailSent = await sendContactInquiryEmail(data);
-
-  if (!inquiryId && !emailSent) {
+    console.error("[submitContactForm Unexpected Error]", err);
     return {
       success: false,
       error:
-        "We could not submit your inquiry right now. Please try again or reach us directly on WhatsApp.",
+        "Something went wrong while sending your inquiry. Please try again or WhatsApp us on 064 830 8785.",
     };
   }
-
-  console.info("[Contact Us Inquiry Received]", {
-    timestamp: new Date().toISOString(),
-    inquiryId,
-    emailSent,
-    lead: data,
-  });
-
-  revalidatePath("/contact");
-
-  return {
-    success: true,
-    message: `Thank you, ${data.name}! We've received your ${data.accountType} inquiry for ${data.service}. Our team will review your requirements and get in touch with you directly on ${data.phone}.`,
-  };
 }
