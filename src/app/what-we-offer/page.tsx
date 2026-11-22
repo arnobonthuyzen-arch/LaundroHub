@@ -449,8 +449,8 @@ export default async function WhatWeOfferPage() {
             {/* Full-Width Extracted Clothing & Linen Price Tables (No Flyer Image) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-brand-line">
               {/* Clothing Column */}
-              <div className="flex flex-col">
-                <div className="bg-brand-teal text-white px-6 py-3.5 flex items-center justify-between">
+              <div className="flex flex-col min-w-0">
+                <div className="bg-brand-teal text-white px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-1">
                   <div className="flex items-center gap-2">
                     <Shirt className="h-4 w-4 text-brand-mint" />
                     <span className="font-display text-sm sm:text-base font-extrabold uppercase tracking-wider">
@@ -461,52 +461,54 @@ export default async function WhatWeOfferPage() {
                     Everyday wear, perfectly cared for
                   </span>
                 </div>
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="bg-brand-tealbg/70 text-brand-deep uppercase text-[11px] tracking-wider border-b border-brand-line">
-                      <th className="py-2.5 px-6 font-extrabold">Service</th>
-                      <th className="py-2.5 px-3 text-center font-extrabold">Unit</th>
-                      <th className="py-2.5 px-6 text-right font-extrabold">Price</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
-                    {priceList
-                      .filter((item) => (item.order ?? 99) <= 7)
-                      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-                      .map((item, idx) => (
-                        <tr
-                          key={item.id}
-                          className={`transition-colors hover:bg-brand-tealbg/40 ${
-                            idx % 2 === 0 ? "bg-white" : "bg-[#f4faf9]"
-                          }`}
-                        >
-                          <td className="py-3.5 px-6">
-                            <span className="font-bold text-brand-deep">{item.name}</span>
-                            {item.badge && (
-                              <span className="ml-2 inline-block rounded-full bg-brand-purple text-white text-[10px] font-extrabold px-2 py-0.5">
-                                {item.badge}
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="bg-brand-tealbg/70 text-brand-deep uppercase text-[11px] tracking-wider border-b border-brand-line">
+                        <th className="py-2.5 px-4 sm:px-6 font-extrabold">Service</th>
+                        <th className="py-2.5 px-2 sm:px-3 text-center font-extrabold">Unit</th>
+                        <th className="py-2.5 px-4 sm:px-6 text-right font-extrabold">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
+                      {priceList
+                        .filter((item) => (item.order ?? 99) <= 7)
+                        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                        .map((item, idx) => (
+                          <tr
+                            key={item.id}
+                            className={`transition-colors hover:bg-brand-tealbg/40 ${
+                              idx % 2 === 0 ? "bg-white" : "bg-[#f4faf9]"
+                            }`}
+                          >
+                            <td className="py-3.5 px-4 sm:px-6">
+                              <span className="font-bold text-brand-deep">{item.name}</span>
+                              {item.badge && (
+                                <span className="ml-2 inline-block rounded-full bg-brand-purple text-white text-[10px] font-extrabold px-2 py-0.5">
+                                  {item.badge}
+                                </span>
+                              )}
+                            </td>
+                            <td className="py-3.5 px-2 sm:px-3 text-center whitespace-nowrap">
+                              <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                                {item.flyerUnit || item.unit}
                               </span>
-                            )}
-                          </td>
-                          <td className="py-3.5 px-3 text-center whitespace-nowrap">
-                            <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
-                              {item.flyerUnit || item.unit}
-                            </span>
-                          </td>
-                          <td className="py-3.5 px-6 text-right whitespace-nowrap">
-                            <span className="font-display text-base sm:text-lg font-extrabold text-brand-teal-dark">
-                              {item.formattedPrice}
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
+                            </td>
+                            <td className="py-3.5 px-4 sm:px-6 text-right whitespace-nowrap">
+                              <span className="font-display text-base sm:text-lg font-extrabold text-brand-teal-dark">
+                                {item.formattedPrice}
+                              </span>
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               {/* Linen & Bedding Column */}
-              <div className="flex flex-col">
-                <div className="bg-brand-purple text-white px-6 py-3.5 flex items-center justify-between">
+              <div className="flex flex-col min-w-0">
+                <div className="bg-brand-purple text-white px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-1">
                   <div className="flex items-center gap-2">
                     <Layers className="h-4 w-4 text-brand-mint" />
                     <span className="font-display text-sm sm:text-base font-extrabold uppercase tracking-wider">
@@ -517,47 +519,49 @@ export default async function WhatWeOfferPage() {
                     Hotel-quality care for your linen
                   </span>
                 </div>
-                <table className="w-full text-left border-collapse">
-                  <thead>
-                    <tr className="bg-brand-lav/60 text-brand-deep uppercase text-[11px] tracking-wider border-b border-brand-line">
-                      <th className="py-2.5 px-6 font-extrabold">Service</th>
-                      <th className="py-2.5 px-3 text-center font-extrabold">Unit</th>
-                      <th className="py-2.5 px-6 text-right font-extrabold">Price</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
-                    {priceList
-                      .filter((item) => (item.order ?? 99) >= 8 && (item.order ?? 99) <= 15)
-                      .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
-                      .map((item, idx) => (
-                        <tr
-                          key={item.id}
-                          className={`transition-colors hover:bg-brand-lav/40 ${
-                            idx % 2 === 0 ? "bg-white" : "bg-brand-ground/60"
-                          }`}
-                        >
-                          <td className="py-3.5 px-6">
-                            <span className="font-bold text-brand-deep">{item.name}</span>
-                            {item.badge && (
-                              <span className="ml-2 inline-block rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-extrabold px-2 py-0.5">
-                                {item.badge}
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="bg-brand-lav/60 text-brand-deep uppercase text-[11px] tracking-wider border-b border-brand-line">
+                        <th className="py-2.5 px-4 sm:px-6 font-extrabold">Service</th>
+                        <th className="py-2.5 px-2 sm:px-3 text-center font-extrabold">Unit</th>
+                        <th className="py-2.5 px-4 sm:px-6 text-right font-extrabold">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-xs sm:text-sm divide-y divide-brand-line/60">
+                      {priceList
+                        .filter((item) => (item.order ?? 99) >= 8 && (item.order ?? 99) <= 15)
+                        .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+                        .map((item, idx) => (
+                          <tr
+                            key={item.id}
+                            className={`transition-colors hover:bg-brand-lav/40 ${
+                              idx % 2 === 0 ? "bg-white" : "bg-brand-ground/60"
+                            }`}
+                          >
+                            <td className="py-3.5 px-4 sm:px-6">
+                              <span className="font-bold text-brand-deep">{item.name}</span>
+                              {item.badge && (
+                                <span className="ml-2 inline-block rounded-full bg-brand-teal/15 text-brand-teal text-[10px] font-extrabold px-2 py-0.5">
+                                  {item.badge}
+                                </span>
+                              )}
+                            </td>
+                            <td className="py-3.5 px-2 sm:px-3 text-center whitespace-nowrap">
+                              <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
+                                {item.flyerUnit || item.unit}
                               </span>
-                            )}
-                          </td>
-                          <td className="py-3.5 px-3 text-center whitespace-nowrap">
-                            <span className="inline-block rounded-md bg-brand-lav/70 px-2 py-0.5 text-[11px] font-bold text-brand-purple uppercase tracking-wider">
-                              {item.flyerUnit || item.unit}
-                            </span>
-                          </td>
-                          <td className="py-3.5 px-6 text-right whitespace-nowrap">
-                            <span className="font-display text-base sm:text-lg font-extrabold text-brand-purple">
-                              {item.formattedPrice}
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
+                            </td>
+                            <td className="py-3.5 px-4 sm:px-6 text-right whitespace-nowrap">
+                              <span className="font-display text-base sm:text-lg font-extrabold text-brand-purple">
+                                {item.formattedPrice}
+                              </span>
+                            </td>
+                          </tr>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 

@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="mt-auto border-t border-brand-line bg-brand-foot text-white">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-16 pb-28 sm:px-6 lg:px-8 lg:pb-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand Col */}
           <div className="flex flex-col gap-4">

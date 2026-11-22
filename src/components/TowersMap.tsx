@@ -13,16 +13,16 @@ export default function TowersMap() {
     "https://maps.google.com/maps?q=The+Towers+Shopping+Centre,+Langenhovenpark,+Bloemfontein&t=m&z=16&ie=UTF8&iwloc=&output=embed";
 
   return (
-    <div className="relative w-full h-[420px] sm:h-[520px] rounded-3xl overflow-hidden border-2 border-brand-purple/20 shadow-elevated bg-slate-100">
+    <div className="relative w-full h-[380px] sm:h-[520px] rounded-3xl overflow-hidden border-2 border-brand-purple/20 shadow-elevated bg-slate-100">
       {/* Top Floating Control Bar */}
       <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap items-center justify-between gap-2.5 pointer-events-none">
         {/* Location Identity Pill */}
-        <div className="pointer-events-auto flex items-center gap-2.5 rounded-2xl bg-white/95 backdrop-blur-md px-3.5 py-2 border border-brand-line shadow-lg">
+        <div className="pointer-events-auto flex items-center gap-2.5 rounded-2xl bg-white/95 backdrop-blur-md px-3.5 py-2 border border-brand-line shadow-lg max-w-full">
           <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-brand-purple text-brand-mint shrink-0 shadow-sm">
             <MapPin className="h-4 w-4" />
           </div>
-          <div>
-            <div className="flex items-center gap-1.5">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-1.5">
               <span className="text-xs font-extrabold text-brand-deep tracking-tight">The Towers Shopping Centre</span>
               <span className="rounded-full bg-brand-teal px-2 py-0.5 text-[9px] font-extrabold text-white uppercase tracking-wider">
                 Opposite Car Wash
