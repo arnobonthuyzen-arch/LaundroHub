@@ -1,8 +1,15 @@
 import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { BUSINESS_INFO } from "./data";
 
 export const NOTIFICATION_EMAIL =
   process.env.CONTACT_NOTIFICATION_EMAIL || "info@laundro-hub.co.za";
+
+function getResendClient(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return null;
+  return new Resend(apiKey);
+}
 
 function createTransporter() {
   if (process.env.SMTP_HOST) {
@@ -28,6 +35,48 @@ function createTransporter() {
   });
 }
 
+async function deliverEmail(params: {
+  to: string;
+  from: string;
+  replyTo?: string;
+  subject: string;
+  text: string;
+  html: string;
+}): Promise<boolean> {
+  const resend = getResendClient();
+
+  if (resend) {
+    const { data, error } = await resend.emails.send({
+      from: params.from,
+      to: [params.to],
+      replyTo: params.replyTo,
+      subject: params.subject,
+      text: params.text,
+      html: params.html,
+    });
+
+    if (error) {
+      console.warn(`[Resend Error] Failed to send email:`, error);
+      return false;
+    }
+
+    console.info(`[Resend Dispatched] Email ${data?.id || ""} sent to ${params.to}`);
+    return true;
+  }
+
+  const transporter = createTransporter();
+  await transporter.sendMail({
+    to: params.to,
+    from: params.from,
+    replyTo: params.replyTo,
+    subject: params.subject,
+    text: params.text,
+    html: params.html,
+  });
+
+  return true;
+}
+
 export async function sendContactInquiryEmail(data: {
   name: string;
   phone: string;
@@ -38,9 +87,10 @@ export async function sendContactInquiryEmail(data: {
   message?: string;
 }): Promise<boolean> {
   try {
-    const transporter = createTransporter();
     const fromAddress =
-      process.env.SMTP_FROM || `"Laundro-Hub Website" <info@laundro-hub.co.za>`;
+      process.env.RESEND_FROM ||
+      process.env.SMTP_FROM ||
+      `"Laundro-Hub Website" <noreply@forms.mobulastudio.co.za>`;
 
     const htmlContent = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e5e7eb; border-radius: 12px; background-color: #ffffff;">
@@ -98,7 +148,7 @@ export async function sendContactInquiryEmail(data: {
       </div>
     `;
 
-    await transporter.sendMail({
+    const sent = await deliverEmail({
       to: NOTIFICATION_EMAIL,
       from: fromAddress,
       replyTo: data.email || undefined,
@@ -107,10 +157,12 @@ export async function sendContactInquiryEmail(data: {
       html: htmlContent,
     });
 
-    console.info(`[Email Dispatched] Inquiry sent to ${NOTIFICATION_EMAIL}`);
-    return true;
+    if (sent) {
+      console.info(`[Email Dispatched] Inquiry sent to ${NOTIFICATION_EMAIL}`);
+    }
+    return sent;
   } catch (err) {
-    console.warn(`[Email Notification Note] Failed to deliver via SMTP/sendmail:`, err);
+    console.warn(`[Email Notification Note] Failed to deliver inquiry email:`, err);
     return false;
   }
 }
@@ -135,9 +187,10 @@ export async function sendPickupOrderEmail(
   referenceNumber: string
 ): Promise<boolean> {
   try {
-    const transporter = createTransporter();
     const fromAddress =
-      process.env.SMTP_FROM || `"Laundro-Hub Express" <info@laundro-hub.co.za>`;
+      process.env.RESEND_FROM ||
+      process.env.SMTP_FROM ||
+      `"Laundro-Hub Express" <noreply@forms.mobulastudio.co.za>`;
 
     const htmlContent = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e5e7eb; border-radius: 12px; background-color: #ffffff;">
@@ -209,7 +262,7 @@ export async function sendPickupOrderEmail(
       </div>
     `;
 
-    await transporter.sendMail({
+    const sent = await deliverEmail({
       to: NOTIFICATION_EMAIL,
       from: fromAddress,
       replyTo: data.email || undefined,
@@ -218,10 +271,12 @@ export async function sendPickupOrderEmail(
       html: htmlContent,
     });
 
-    console.info(`[Email Dispatched] Pickup #${referenceNumber} sent to ${NOTIFICATION_EMAIL}`);
-    return true;
+    if (sent) {
+      console.info(`[Email Dispatched] Pickup #${referenceNumber} sent to ${NOTIFICATION_EMAIL}`);
+    }
+    return sent;
   } catch (err) {
-    console.warn(`[Email Notification Note] Failed to deliver pickup order via SMTP/sendmail:`, err);
+    console.warn(`[Email Notification Note] Failed to deliver pickup order email:`, err);
     return false;
   }
 }

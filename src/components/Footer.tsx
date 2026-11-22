@@ -211,8 +211,22 @@ export function Footer() {
                 </div>
               </div>
 
-              <div className="pt-1 text-[11px] text-brand-mint font-semibold">
-                <span>&bull; Strictly EFT / Card &bull; No Open Accounts</span>
+              <div className="pt-1 space-y-2">
+                <div className="text-[11px] text-brand-mint font-semibold">
+                  <span>&bull; Strictly EFT / Card / SAMBA &bull; No Open Accounts</span>
+                </div>
+                <div className="flex items-center gap-2 pt-0.5">
+                  <span className="text-[10px] uppercase tracking-wider text-brand-lav/60 font-semibold">
+                    Accepted:
+                  </span>
+                  <Image
+                    src="/img/samba-logo-white.png"
+                    alt="SAMBA Payments Accepted"
+                    width={110}
+                    height={26}
+                    className="h-5 w-auto object-contain opacity-95"
+                  />
+                </div>
               </div>
             </div>
           </div>

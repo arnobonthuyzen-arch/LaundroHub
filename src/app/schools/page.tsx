@@ -250,7 +250,7 @@ export default function SchoolsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4 text-brand-teal shrink-0" />
-                    <span>Strictly EFT / Card &bull; No Open Accounts</span>
+                    <span>Strictly EFT / Card / SAMBA &bull; No Open Accounts</span>
                   </div>
                 </div>
               </div>

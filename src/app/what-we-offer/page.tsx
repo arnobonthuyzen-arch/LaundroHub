@@ -393,20 +393,27 @@ export default async function WhatWeOfferPage() {
                   <span className="uppercase tracking-wider text-xs text-brand-purple font-extrabold">Payment &amp; Billing Policy</span>
                 </div>
                 <h3 className="font-display text-lg font-bold text-brand-deep flex items-center gap-2 flex-wrap">
-                  <span>EFT or Card Only</span>
+                  <span>EFT, Card or SAMBA</span>
                   <span className="rounded-md bg-red-100 text-red-700 text-[10px] font-extrabold px-2 py-0.5 uppercase tracking-wide border border-red-200">
                     Strictly NO CASH
                   </span>
                 </h3>
                 <p className="mt-2 text-xs text-brand-body leading-relaxed">
-                  We accept Speedpoint Card Tap upon collection/delivery and instant EFT. Strictly EFT or card payment; no open monthly accounts.
+                  We accept Speedpoint Card Tap upon collection/delivery, instant EFT, and SAMBA payments. Strictly EFT, card, or SAMBA payment; no open monthly accounts.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-brand-line/60">
+              <div className="mt-4 pt-3 border-t border-brand-line/60 flex items-center justify-between gap-3 flex-wrap">
                 <span className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-deep">
                   <ShieldCheck className="h-3.5 w-3.5 text-brand-teal" />
-                  Speedpoint Card Tap &bull; Instant EFT &bull; No Open Accounts
+                  Speedpoint Card &bull; Instant EFT &bull; SAMBA &bull; No Open Accounts
                 </span>
+                <Image
+                  src="/img/samba-logo-navy.png"
+                  alt="SAMBA Payments Accepted"
+                  width={120}
+                  height={28}
+                  className="h-6 w-auto object-contain"
+                />
               </div>
             </div>
           </div>

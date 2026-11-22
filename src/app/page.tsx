@@ -229,7 +229,7 @@ export default async function HomePage() {
                 Wash, Dry &amp; Fold R40/kg &bull; Ironing R42/kg &bull; Duvets from R120
               </h3>
               <p className="text-xs sm:text-sm text-brand-lav/80">
-                Transparent kg rates &bull; Sneakers R60/pair &bull; Doorstep collection from R35 &bull; Strictly EFT or Card (No cash, no open accounts)
+                Transparent kg rates &bull; Sneakers R60/pair &bull; Doorstep collection from R35 &bull; Strictly EFT, Card, or SAMBA (No cash, no open accounts)
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">

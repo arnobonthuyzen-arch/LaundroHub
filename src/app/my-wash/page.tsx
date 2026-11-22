@@ -63,7 +63,7 @@ const FAQS = [
   },
   {
     q: "How can I pay for my wash?",
-    a: "Our billing policy is strictly EFT or card payment (Speedpoint tap upon delivery/collection). For security, strictly NO CASH is handled on premises or by drivers, and we do not run open monthly accounts.",
+    a: "Our billing policy is strictly EFT, card (Speedpoint tap upon delivery/collection), or SAMBA payment. For security, strictly NO CASH is handled on premises or by drivers, and we do not run open monthly accounts.",
   },
   {
     q: "Is there a minimum order amount?",

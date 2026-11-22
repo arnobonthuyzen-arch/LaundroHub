@@ -124,7 +124,7 @@ const siteJsonLd = {
       ],
       priceRange: "R35 - R2000",
       currenciesAccepted: "ZAR",
-      paymentAccepted: "EFT, Credit Card, Debit Card (Strictly No Cash; No Open Monthly Accounts)",
+      paymentAccepted: "EFT, Credit Card, Debit Card, SAMBA (Strictly No Cash; No Open Monthly Accounts)",
     },
     {
       "@type": "WebSite",

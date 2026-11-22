@@ -291,7 +291,7 @@ export default function AirbnbPage() {
                 Partner with Bloemfontein&apos;s Trusted Airbnb Laundry
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                Join local Superhosts who trust Laundro-Hub for immaculate guest turnarounds. Strictly EFT or card payment (no open monthly accounts), dynamic driver collections throughout the day across Bloemfontein, and 2 drop-off points (The Towers &amp; Bains Lodge).
+                Join local Superhosts who trust Laundro-Hub for immaculate guest turnarounds. Strictly EFT, card, or SAMBA payment (no open monthly accounts), dynamic driver collections throughout the day across Bloemfontein, and 2 drop-off points (The Towers &amp; Bains Lodge).
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a

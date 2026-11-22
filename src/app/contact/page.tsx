@@ -235,16 +235,30 @@ export default async function ContactPage() {
                         className="flex items-center justify-center gap-1.5 w-full rounded-xl bg-brand-purple/10 hover:bg-brand-purple hover:text-white py-2 text-xs font-bold text-brand-purple transition-all"
                       >
                         <MapPin className="h-3.5 w-3.5" />
-                        Directions to {loc.name.split(" ")[0]}
+                        Directions to {loc.id === "towers" ? "The Towers" : loc.id === "bains-lodge" ? "Bains Lodge" : loc.name}
                       </a>
                     </div>
                   </div>
                 ))}
 
                 {/* Billing Policy Callout */}
-                <div className="rounded-2xl border border-brand-purple/20 bg-brand-lav/40 p-4 text-xs text-brand-body leading-relaxed">
-                  <p className="font-bold text-brand-deep mb-0.5">Billing &amp; Payment Policy</p>
-                  <p>Strictly EFT or card payment; no open monthly accounts. Strictly NO CASH accepted at either drop-off point or by drivers.</p>
+                <div className="rounded-2xl border border-brand-purple/20 bg-brand-lav/40 p-4 text-xs text-brand-body leading-relaxed space-y-2.5">
+                  <div>
+                    <p className="font-bold text-brand-deep mb-0.5">Billing &amp; Payment Policy</p>
+                    <p>Strictly EFT, card, or SAMBA payment; no open monthly accounts. Strictly NO CASH accepted at either drop-off point or by drivers.</p>
+                  </div>
+                  <div className="flex items-center gap-2 pt-2 border-t border-brand-purple/10">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-brand-purple">
+                      We Accept:
+                    </span>
+                    <Image
+                      src="/img/samba-logo-navy.png"
+                      alt="SAMBA Payments Accepted"
+                      width={110}
+                      height={26}
+                      className="h-5 w-auto object-contain"
+                    />
+                  </div>
                 </div>
               </div>
 

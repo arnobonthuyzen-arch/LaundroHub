@@ -62,7 +62,7 @@ export default function HospitalityPage() {
     "Industrial rotary steam pressing for crisp, flat presentation",
     "Moisture-controlled drying to preserve thread counts and fabric longevity",
     "Individual batch processing — your linen is never mixed with other clients",
-    "Itemised manifests with strictly EFT or card billing (no open monthly accounts)",
+    "Itemised manifests with strictly EFT, card, or SAMBA billing (no open monthly accounts)",
   ];
 
   return (
@@ -220,7 +220,7 @@ export default function HospitalityPage() {
                 Schedule a Site Visit or Quote Consultation
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                We can assess your volume and prepare an RFQ quote tailored to your linen cycles. Dynamic driver collections across Bloemfontein, or drop off at The Towers or Bains Lodge. Strictly EFT or card payment.
+                We can assess your volume and prepare an RFQ quote tailored to your linen cycles. Dynamic driver collections across Bloemfontein, or drop off at The Towers or Bains Lodge. Strictly EFT, card, or SAMBA payment.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a

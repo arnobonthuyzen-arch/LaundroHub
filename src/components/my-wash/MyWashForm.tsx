@@ -253,7 +253,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
                 </span>
               </div>
               <p className="text-xs text-brand-body mt-0.5 leading-relaxed max-w-xl">
-                Simple direct phone call or WhatsApp to arrange collection and return ((064) 830-8785). No fixed time slots — pick-ups are scheduled dynamically with the driver throughout the day across Bloemfontein. Strictly EFT or card payment; no open accounts.
+                Simple direct phone call or WhatsApp to arrange collection and return ((064) 830-8785). No fixed time slots — pick-ups are scheduled dynamically with the driver throughout the day across Bloemfontein. Strictly EFT, card, or SAMBA payment; no open accounts.
               </p>
             </div>
           </div>
@@ -1163,7 +1163,7 @@ export function MyWashForm({ suburbs }: MyWashFormProps) {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-3.5 w-3.5 text-brand-teal shrink-0 mt-0.5" />
-                <span><strong className="text-brand-deep">Card &amp; EFT (Strictly No Cash):</strong> Secure cashless payment. Zero minimum order applies; no open monthly accounts.</span>
+                <span><strong className="text-brand-deep">Card, EFT &amp; SAMBA (Strictly No Cash):</strong> Secure cashless payment. Zero minimum order applies; no open monthly accounts.</span>
               </li>
             </ul>
           </div>

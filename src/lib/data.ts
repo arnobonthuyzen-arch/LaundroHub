@@ -19,9 +19,9 @@ export const BUSINESS_INFO = {
   vatStatus: "Prices include VAT. Special rates available for bulk & contract clients.",
   isVatRegistered: true,
   minimumOrder: "No minimum order amount applies.",
-  paymentMethods: "EFT or Card payments only (Strictly NO CASH).",
-  billingPolicy: "Strictly EFT or card payment; no open monthly accounts.",
-  paymentPolicy: "Card Speedpoint tap or instant EFT only. For security reasons, strictly NO CASH is handled on premises or by drivers. No open monthly accounts.",
+  paymentMethods: "EFT, Card, or SAMBA payments only (Strictly NO CASH).",
+  billingPolicy: "Strictly EFT, card, or SAMBA payment; no open monthly accounts.",
+  paymentPolicy: "Card Speedpoint tap, instant EFT, or SAMBA only. For security reasons, strictly NO CASH is handled on premises or by drivers. No open monthly accounts.",
   // Primary Store (The Towers)
   address: {
     name: "The Towers Shopping Centre",
@@ -79,13 +79,13 @@ export const PRICING_POLICY: PricingPolicy = {
   vatStatus: "Prices include VAT. Special rates available for bulk & contract clients.",
   isVatRegistered: true,
   minimumOrder: "No minimum order amount applies.",
-  paymentMethods: ["Card (Speedpoint Tap / Insert)", "Instant EFT"],
+  paymentMethods: ["Card (Speedpoint Tap / Insert)", "Instant EFT", "SAMBA"],
   strictlyNoCash: true,
-  billingPolicy: "Strictly EFT or card payment; no open monthly accounts.",
+  billingPolicy: "Strictly EFT, card, or SAMBA payment; no open monthly accounts.",
   serviceArea: "Entire Bloemfontein area.",
   scheduling: "No fixed delivery time slots. Pick-ups are scheduled dynamically with the driver throughout the day upon request.",
   bookingProcess: "Simple direct phone call or WhatsApp to (064) 830-8785 to arrange collection and return.",
-  paymentPolicyNotice: "EFT or Card payments only — Strictly NO CASH accepted. No open monthly accounts.",
+  paymentPolicyNotice: "EFT, Card, or SAMBA payments only — Strictly NO CASH accepted. No open monthly accounts.",
 };
 
 export const OFFICIAL_PRICE_LIST: PriceListItem[] = [
@@ -409,7 +409,7 @@ const PRICING_PLANS: PricingPlan[] = [
       "School uniform washing & precision steam pressing",
       "Sports team kits & heavy red mud stain pre-treatment",
       "Dedicated monthly packages or standard walk-in rates (Packages update starting Jan 2027)",
-      "Strictly EFT or card payment; no open monthly accounts",
+      "Strictly EFT, card, or SAMBA payment; no open monthly accounts",
     ],
   },
   {
@@ -423,7 +423,7 @@ const PRICING_PLANS: PricingPlan[] = [
       "Commercial rotary steam pressing for crisp bedding & flat sheets",
       "High-temperature hygiene sanitisation for bath sheets & towels",
       "Dynamic driver collection throughout the day upon request",
-      "Strictly EFT or card payment; no open monthly accounts",
+      "Strictly EFT, card, or SAMBA payment; no open monthly accounts",
     ],
   },
   {
@@ -438,7 +438,7 @@ const PRICING_PLANS: PricingPlan[] = [
       "Bedding, duvet inners & blankets handled",
       "Dedicated monthly packages or standard walk-in rates (Packages update starting Jan 2027)",
       "Direct WhatsApp booking ((064) 830-8785)",
-      "Strictly EFT or card payment; no open monthly accounts",
+      "Strictly EFT, card, or SAMBA payment; no open monthly accounts",
     ],
   },
 ];

@@ -220,7 +220,7 @@ export default function HealthcarePage() {
                 Schedule a Consultation for Your Practice
               </h3>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                Contact our commercial desk to discuss scheduled collection days, chemical certifications, and itemised manifests with strictly EFT or card billing (no open monthly accounts).
+                Contact our commercial desk to discuss scheduled collection days, chemical certifications, and itemised manifests with strictly EFT, card, or SAMBA billing (no open monthly accounts).
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a

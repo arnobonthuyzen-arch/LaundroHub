@@ -85,7 +85,7 @@ export default async function StudentsPage() {
     {
       question: "How do I pay for student or residence laundry?",
       answer:
-        "We accept card (Speedpoint tap/insert) and instant EFT only. For security reasons, strictly no cash is handled and we do not offer open monthly credit accounts.",
+        "We accept card (Speedpoint tap/insert), instant EFT, and SAMBA only. For security reasons, strictly no cash is handled and we do not offer open monthly credit accounts.",
     },
   ];
 
@@ -196,7 +196,7 @@ export default async function StudentsPage() {
                 {studentPlan.name} Plan &mdash; {studentPlan.pricePerMonth}
               </h2>
               <p className="text-sm sm:text-base text-brand-body leading-relaxed">
-                Includes <strong className="text-brand-deep">{studentPlan.weightLimit}</strong> wash, dry &amp; fold each month. Standard walk-in rates also available at R40/kg anytime. Billing strictly EFT or card (no open monthly accounts).
+                Includes <strong className="text-brand-deep">{studentPlan.weightLimit}</strong> wash, dry &amp; fold each month. Standard walk-in rates also available at R40/kg anytime. Billing strictly EFT, card, or SAMBA (no open monthly accounts).
               </p>
             </div>
 
@@ -362,7 +362,7 @@ export default async function StudentsPage() {
                 Get Your Laundry Sorted Today
               </h2>
               <p className="text-brand-lav/90 text-sm sm:text-base max-w-xl mx-auto">
-                WhatsApp our team or sign up online. Drop off at The Towers (Langenhovenpark) or Bains Lodge (opp. security), or schedule our driver dynamically across Bloemfontein. Strictly EFT or card payment.
+                WhatsApp our team or sign up online. Drop off at The Towers (Langenhovenpark) or Bains Lodge (opp. security), or schedule our driver dynamically across Bloemfontein. Strictly EFT, card, or SAMBA payment.
               </p>
               <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
                 <a

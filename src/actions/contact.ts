@@ -5,6 +5,7 @@ import { z } from "zod";
 import type { ActionState } from "@/lib/types";
 
 import { sendContactInquiryEmail } from "@/lib/mail";
+import { saveContactInquiry } from "@/lib/db";
 
 export const contactFormSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters"),
@@ -44,11 +45,29 @@ export async function submitContactForm(
 
   const { data } = validationResult;
 
+  // Save inquiry to MySQL / MariaDB
+  let inquiryId: number | null = null;
+  try {
+    inquiryId = await saveContactInquiry(data);
+  } catch (err) {
+    console.error("[Database Error] Failed to save contact inquiry:", err);
+  }
+
   // Dispatch notification email to info@laundro-hub.co.za
-  await sendContactInquiryEmail(data);
+  const emailSent = await sendContactInquiryEmail(data);
+
+  if (!inquiryId && !emailSent) {
+    return {
+      success: false,
+      error:
+        "We could not submit your inquiry right now. Please try again or reach us directly on WhatsApp.",
+    };
+  }
 
   console.info("[Contact Us Inquiry Received]", {
     timestamp: new Date().toISOString(),
+    inquiryId,
+    emailSent,
     lead: data,
   });
 
