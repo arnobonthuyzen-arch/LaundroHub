@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useActionState } from "react";
-import { useFormStatus } from "react-dom";
+import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import {
   CheckCircle2,
@@ -16,10 +15,8 @@ import {
   Shirt,
   HeartPulse,
   Heart,
-  Trophy,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
-import { submitContactForm } from "@/actions/contact";
 import type { ActionState } from "@/lib/types";
 import { BUSINESS_INFO } from "@/lib/data";
 
@@ -79,9 +76,7 @@ const initialState: ActionState = {
   success: false,
 };
 
-function SubmitButton() {
-  const { pending } = useFormStatus();
-
+function SubmitButton({ pending }: { pending: boolean }) {
   return (
     <button
       type="submit"
@@ -104,10 +99,35 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
-  const [state, formAction] = useActionState(submitContactForm, initialState);
+  const [state, setState] = useState<ActionState>(initialState);
+  const [pending, setPending] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string>(
     "Commercial / Industrial"
   );
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (pending) return;
+
+    setPending(true);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+      const result: ActionState = await response.json();
+      setState(result);
+    } catch {
+      setState({
+        success: false,
+        error:
+          "Could not reach the server. Please try again or WhatsApp us on 064 830 8785.",
+      });
+    } finally {
+      setPending(false);
+    }
+  }
 
   if (state.success) {
     return (
@@ -173,7 +193,7 @@ export function ContactForm() {
         </Link>
       </div>
 
-      <form action={formAction} className="space-y-7">
+      <form onSubmit={handleSubmit} className="space-y-7">
         {state.error && (
           <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-700">
             {state.error}
@@ -383,7 +403,7 @@ export function ContactForm() {
               WhatsApp us
             </a>
           </p>
-          <SubmitButton />
+          <SubmitButton pending={pending} />
         </div>
       </form>
     </div>
